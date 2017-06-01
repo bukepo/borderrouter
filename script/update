@@ -37,10 +37,14 @@
 
 main()
 {
+    before_update
+
     otbr_uninstall
     wpantund_uninstall
     wpantund_update
     otbr_update
+
+    after_update
 }
 
 main

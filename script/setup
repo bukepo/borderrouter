@@ -36,10 +36,14 @@
 
 main()
 {
+    before_setup
+
     otbr_uninstall
     wpantund_uninstall
     wpantund_install
     otbr_install
+
+    after_setup
 }
 
 main

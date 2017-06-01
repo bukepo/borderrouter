@@ -32,10 +32,19 @@
 
 . "$(dirname "$0")"/_initrc
 
-if which systemctl; then
-    sudo systemctl start wpantund || true
-    sudo systemctl start otbr-web otbr-agent || true
-else
-    >&2 echo 'WARNING: systemctl not found. try script/console to start in console mode.'
-    exit 1
-fi
+main()
+{
+    before_server
+
+    if which systemctl; then
+        sudo systemctl start wpantund || true
+        sudo systemctl start otbr-web otbr-agent || true
+    else
+        >&2 echo 'WARNING: systemctl not found. try script/console to start in console mode.'
+        exit 1
+    fi
+
+    after_server
+}
+
+main

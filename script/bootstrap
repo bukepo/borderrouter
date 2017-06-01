@@ -137,10 +137,14 @@ install_cpputest()
 
 main()
 {
+    before_bootstrap
+
     install_packages
     install_uncrustify
     install_cpputest
     ./bootstrap
+
+    after_bootstrap
 }
 
 main
