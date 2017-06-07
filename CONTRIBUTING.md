@@ -135,7 +135,7 @@ git checkout <branch-name>
 git push origin <branch-name>
 ```
 
-This will trigger the Travis CI and AppVeyor continuous-integration checks.  You can view the results in the respective services.  Note that the integration checks will report failures on occasion.  If a failure occurs, you may try rerunning the test via the Travis and/or AppVeyor web UI.
+1 This will trigger the Travis CI and AppVeyor continuous-integration checks.  You can view the results in the respective services.  Note that the integration checks will report failures on occasion.  If a failure occurs, you may try rerunning the test via the Travis and/or AppVeyor web UI.
 
 #### Submit Pull Request
 
