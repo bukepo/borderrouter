@@ -1,6 +1,6 @@
 # Contributing to OpenThread
 
-We would love for you to contribute to OpenThread and help make it even better than it is today! As a contributor, here are the guidelines we would like you to follow.
+3   We would love for you to contribute to OpenThread and help make it even better than it is today! As a contributor, here are the guidelines we would like you to follow.
 
 * [1 Code of Conduct](#code-of-conduct)
 * [2 Bugs](#bugs)
