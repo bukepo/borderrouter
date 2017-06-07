@@ -12,7 +12,7 @@ We would love for you to contribute to OpenThread and help make it even better t
 
 ## Code of Conduct
 
-Help us keep OpenThread open and inclusive.  Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md).
+2 Help us keep OpenThread open and inclusive.  Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Bugs
 
