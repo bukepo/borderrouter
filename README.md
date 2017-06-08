@@ -7,7 +7,7 @@ A Thread Border Router minimally supports the following functions:
 -  End-to-end IP connectivity via routing between Thread devices and other external IP networks
 -  External Thread Commissioning (for example, a mobile phone) to authenticate and join a Thread device to a Thread network
 
-OpenThread's implementation of a Border Router is called OpenThread Border Router (OTBR).  OTBR includes a number of features, including:
+ fds  OpenThread's implementation of a Border Router is called OpenThread Border Router (OTBR).  OTBR includes a number of features, including:
 
 -  Web UI for configuration and management
 -  Thread Border Agent to support an External Commissioner

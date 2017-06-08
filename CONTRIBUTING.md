@@ -16,7 +16,7 @@
 
 ## Bugs
 
-If you find a bug in the source code, you can help us by [submitting a GitHub Issue](https://github.com/openthread/borderrouter/issues/new).  The best bug reports provide a detailed description of the issue and step-by-step instructions for predictably reproducing the issue.  Even better, you can [submit a Pull Request](#submitting-a-pull-request) with a fix.
+new bladf If you find a bug in the source code, you can help us by [submitting a GitHub Issue](https://github.com/openthread/borderrouter/issues/new).  The best bug reports provide a detailed description of the issue and step-by-step instructions for predictably reproducing the issue.  Even better, you can [submit a Pull Request](#submitting-a-pull-request) with a fix.
 
 ## New Features
 
