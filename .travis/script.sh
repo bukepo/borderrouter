@@ -87,9 +87,13 @@ script-check)
     sleep 10
     netstat -an | grep 49191 || die 'Service otbr-agent not ready!'
     netstat -an | grep 80 || die 'Service otbr-web not ready!'
-    kill $SERVICES_PID || die 'Failed to stop services'
-    killall ot-ncp-ftd
-    killall socat
+    kill $SERVICES_PID || die 'Failed to stop services!'
+    sudo killall otbr-web || true
+    sudo killall otbr-agent || true
+    sudo killall wpantund || true
+    killall ot-ncp-ftd || die 'Failed to end OpenThread!'
+    killall socat || die 'Failed to end socat!'
+    jobs
     echo 'Waiting for services to end...'
     wait
     ;;
