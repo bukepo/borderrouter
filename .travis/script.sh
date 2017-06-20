@@ -81,13 +81,13 @@ script-check)
     # default configuration for Thread device is /dev/ttyUSB0
     sudo ln -s $WPANTUND_PTY /dev/ttyUSB0 || die 'Failed to create ttyUSB0!'
 
-    ot-ncp-ftd 1 > $DEVICE_PTY < $DEVICE_PTY &
-    ./script/server || die 'Failed to start services'
+    ot-ncp-ftd 1 > $DEVICE_PTY < $DEVICE_PTY & || die 'Failed to start OpenThread!'
+    ./script/console & SERVICES_PID=$! || die 'Failed to start services!'
     echo 'Waiting for services to be ready...'
     sleep 10
     netstat -an | grep 49191 || die 'Service otbr-agent not ready!'
     netstat -an | grep 80 || die 'Service otbr-web not ready!'
-    sudo systemctl stop otbr-agent otbr-web wpantund || die 'Failed to stop services'
+    kill $SERVICES_PID || die 'Failed to stop services'
     killall ot-ncp-ftd
     killall socat
     echo 'Waiting for services to end...'
