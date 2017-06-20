@@ -60,6 +60,40 @@ scan-build)
     [ `< bugfiles grep -v 'third_party' | wc -l` = '0' ] || die
     ;;
 
+script-check)
+    RELEASE=1 ./script/bootstrap || die 'Failed to bootstrap for release!'
+    ./script/bootstrap || die 'Failed to bootstrap for development!'
+    ./script/setup || die 'Failed to setup!'
+    SOCAT_OUTPUT=/tmp/ot-socat
+
+    socat -d -d pty,raw,echo=0 pty,raw,echo=0 > /dev/null 2> $SOCAT_OUTPUT &
+    while true; do
+        if test $(head -n2 $SOCAT_OUTPUT | wc -l) = 2; then
+            DEVICE_PTY=$(head -n1 $SOCAT_OUTPUT | grep -o '/dev/.\+')
+            WPANTUND_PTY=$(head -n2 $SOCAT_OUTPUT | tail -n1 | grep -o '/dev/.\+')
+            break
+        fi
+        echo 'Waiting for socat ready...'
+        sleep 1
+    done
+    echo 'DEVICE_PTY' $DEVICE_PTY
+    echo 'WPANTUND_PTY' $WPANTUND_PTY
+    # default configuration for Thread device is /dev/ttyUSB0
+    sudo ln -s $WPANTUND_PTY /dev/ttyUSB0 || die 'Failed to create ttyUSB0!'
+
+    ot-ncp-ftd 1 > $DEVICE_PTY < $DEVICE_PTY &
+    ./script/server || die 'Failed to start services'
+    echo 'Waiting for services to be ready...'
+    sleep 10
+    netstat -an | grep 49191 || die 'Service otbr-agent not ready!'
+    netstat -an | grep 80 || die 'Service otbr-web not ready!'
+    sudo systemctl stop otbr-agent otbr-web wpantund || die 'Failed to stop services'
+    killall ot-ncp-ftd
+    killall socat
+    echo 'Waiting for services to end...'
+    wait
+    ;;
+
 raspbian-gcc)
     IMAGE_FILE=2017-04-10-raspbian-jessie-lite.img
     STAGE_DIR=/tmp/raspbian
