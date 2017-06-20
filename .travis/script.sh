@@ -81,8 +81,8 @@ script-check)
     # default configuration for Thread device is /dev/ttyUSB0
     sudo ln -s $WPANTUND_PTY /dev/ttyUSB0 || die 'Failed to create ttyUSB0!'
 
-    ot-ncp-ftd 1 > $DEVICE_PTY < $DEVICE_PTY & || die 'Failed to start OpenThread!'
-    ./script/console & SERVICES_PID=$! || die 'Failed to start services!'
+    ot-ncp-ftd 1 > $DEVICE_PTY < $DEVICE_PTY &
+    ./script/console & SERVICES_PID=$!
     echo 'Waiting for services to be ready...'
     sleep 10
     netstat -an | grep 49191 || die 'Service otbr-agent not ready!'
