@@ -55,6 +55,7 @@ libotbr_agent_la_SOURCES                                      = \
     dtls_mbedtls.cpp                                            \
     mdns_avahi.cpp                                              \
     ncp_wpantund.cpp                                            \
+    router_advertiser.cpp                                       \
     $(NULL)
 
 libotbr_agent_la_LIBADD                                       = \
@@ -89,19 +90,20 @@ libotbr_agent_la_CPPFLAGS                                                  = \
     $(DBUS_CFLAGS)                                                           \
     $(NULL)
 
-noinst_HEADERS        = \
-    agent_instance.hpp  \
-    border_agent.hpp    \
-    coap.hpp            \
-    coap_libcoap.hpp    \
-    dtls.hpp            \
-    dtls_mbedtls.hpp    \
-    mdns.hpp            \
-    mdns_avahi.hpp      \
-    ncp.hpp             \
-    ncp_wpantund.hpp    \
-    libcoap.h           \
-    uris.hpp            \
+noinst_HEADERS            = \
+    agent_instance.hpp      \
+    border_agent.hpp        \
+    coap.hpp                \
+    coap_libcoap.hpp        \
+    dtls.hpp                \
+    dtls_mbedtls.hpp        \
+    mdns.hpp                \
+    mdns_avahi.hpp          \
+    ncp.hpp                 \
+    ncp_wpantund.hpp        \
+    router_advertiser.hpp   \
+    libcoap.h               \
+    uris.hpp                \
     $(NULL)
 
 EXTRA_DIST                = \

@@ -84,7 +84,7 @@ script-check)
     ot-ncp-ftd 1 > $DEVICE_PTY < $DEVICE_PTY &
     ./script/console & SERVICES_PID=$!
     echo 'Waiting for services to be ready...'
-    sleep 10
+    sleep 15
     netstat -an | grep 49191 || die 'Service otbr-agent not ready!'
     netstat -an | grep 80 || die 'Service otbr-web not ready!'
     kill $SERVICES_PID || die 'Failed to stop services!'

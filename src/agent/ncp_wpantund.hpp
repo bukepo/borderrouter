@@ -157,6 +157,7 @@ private:
                                                         void *aContext);
     DBusHandlerResult HandleProperyChangedSignal(DBusConnection &aConnection, DBusMessage &aMessage);
 
+    void ProcessPropertyMessage(const char *aKey, DBusMessageIter &aIter);
     DBusMessage *RequestProperty(const char *aKey);
     otbrError GetProperty(const char *aKey, uint8_t *aBuffer, size_t &aSize);
 

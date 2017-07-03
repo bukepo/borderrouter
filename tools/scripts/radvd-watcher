@@ -1,4 +1,4 @@
-#!/bin/sh
+#! /bin/sh
 #
 #  Copyright (c) 2017, The OpenThread Authors.
 #  All rights reserved.
@@ -27,31 +27,61 @@
 #  POSSIBILITY OF SUCH DAMAGE.
 #
 #   Description:
-#       This script builds and installs border router and dependencies.
+#       This script watches and radvd configuration changes.
 #
+RADVD_CONFD=/etc/radvd.d
+RADVD_CONF=/etc/radvd.conf
+THREAD_CONF=/etc/radvd.d/thread.conf
+PID_FILE=/var/run/otbr-radvd-watcher.pid
 
-. "$(dirname "$0")"/_initrc
-. script/_wpantund
-. script/_otbr
-. script/_ipforward
-. script/_nat64
-. script/_radvd_watcher
+set -x
 
-main()
+if ! which inotifywait; then
+    >&2 echo 'No inotifywait found!'
+    exit 1
+fi
+
+if test -f $PID_FILE; then
+    >&2 echo 'Another watcher already running!'
+    exit 1
+fi
+
+# Get the pgid for stopping this daemon.
+ps -o pgid -h -p $$ > $PID_FILE
+
+release_lock()
 {
-    . $BEFORE_HOOK
-    otbr_uninstall
-    radvd_watcher_uninstall
-    wpantund_uninstall
-    nat64_uninstall
-    ipforward_uninstall
-
-    ipforward_install
-    nat64_install
-    wpantund_install
-    radvd_watcher_install
-    otbr_install
-    . $AFTER_HOOK
+    test ! -f $PID_FILE || rm -v $PID_FILE
+    exit 0
 }
 
-main
+trap release_lock INT TERM EXIT
+
+while true; do
+    # Put these creation here in case files are deleted.
+    test -d $RADVD_CONFD || mkdir -p $RADVD_CONFD
+    test -f $THREAD_CONF || touch $THREAD_CONF
+
+    echo -n 'Regenerating radvd configuration...'
+    cat $RADVD_CONFD/*.conf > $RADVD_CONF
+    echo 'done'
+
+    echo -n 'Restarting radvd...'
+    if which systemctl; then
+        systemctl restart radvd
+    elif which service; then
+        service radvd restart
+    fi
+    echo 'done'
+
+    echo -n 'Waiting for changes...'
+    inotifywait -e modify $THREAD_CONF || {
+        echo "error $?!"
+        sleep 5
+        continue
+    }
+    echo 'Thread configuration changed.'
+
+    # delay for file changes finish.
+    sleep 5
+done

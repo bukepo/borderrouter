@@ -58,6 +58,9 @@ enum otbrError
 
 namespace ot {
 
+/**
+ * Size constants.
+ */
 enum
 {
     kSizePSKc  = 16, ///< Size of PSKc.

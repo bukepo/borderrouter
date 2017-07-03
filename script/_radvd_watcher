@@ -27,31 +27,25 @@
 #  POSSIBILITY OF SUCH DAMAGE.
 #
 #   Description:
-#       This script builds and installs border router and dependencies.
+#       This script manipulates radvd watcher configuration.
 #
 
-. "$(dirname "$0")"/_initrc
-. script/_wpantund
-. script/_otbr
-. script/_ipforward
-. script/_nat64
-. script/_radvd_watcher
-
-main()
+radvd_watcher_install()
 {
-    . $BEFORE_HOOK
-    otbr_uninstall
-    radvd_watcher_uninstall
-    wpantund_uninstall
-    nat64_uninstall
-    ipforward_uninstall
+    sudo install -pv tools/scripts/radvd-watcher /usr/sbin/otbr-radvd-watcher
+    sudo install -pv tools/scripts/radvd-watcher.init /etc/init.d/otbr-radvd-watcher
 
-    ipforward_install
-    nat64_install
-    wpantund_install
-    radvd_watcher_install
-    otbr_install
-    . $AFTER_HOOK
+    if which systemctl; then
+        sudo systemctl daemon-reload
+    fi
 }
 
-main
+radvd_watcher_uninstall()
+{
+    sudo rm -v /usr/sbin/otbr-radvd-watcher || true
+    sudo rm -v /etc/init.d/otbr-radvd-watcher || true
+
+    if which systemctl; then
+        sudo systemctl daemon-reload
+    fi
+}

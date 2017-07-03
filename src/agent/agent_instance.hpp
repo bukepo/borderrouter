@@ -42,6 +42,7 @@
 #include "coap.hpp"
 #include "border_agent.hpp"
 #include "ncp.hpp"
+#include "router_advertiser.hpp"
 
 namespace ot {
 
@@ -57,21 +58,22 @@ public:
     /**
      * The constructor to initialize the Thread border router agent instance.
      *
-     * @param[in]   aInterfaceName  interface name string.
+     * @param[in]   aThreadIfName   Thread interface name.
+     * @param[in]   aUplinkIfName   Uplink interface name.
      *
      */
-    AgentInstance(const char *aInterfaceName);
+    AgentInstance(const char *aThreadIfName, const char *aUplinkIfName);
 
     ~AgentInstance(void);
 
     /**
      * This method updates the file descriptor sets and timeout for mainloop.
      *
-     * @param[inout]  aReadFdSet   A reference to read file descriptors.
-     * @param[inout]  aWriteFdSet  A reference to write file descriptors.
-     * @param[inout]  aErrorFdSet  A reference to error file descriptors.
-     * @param[inout]  aMaxFd       A reference to the max file descriptor.
-     * @param[inout]  aTimeout     A reference to timeout.
+     * @param[inout]  aReadFdSet    A reference to read file descriptors.
+     * @param[inout]  aWriteFdSet   A reference to write file descriptors.
+     * @param[inout]  aErrorFdSet   A reference to error file descriptors.
+     * @param[inout]  aMaxFd        A reference to the max file descriptor.
+     * @param[inout]  aTimeout      A reference to timeout.
      *
      */
     void UpdateFdSet(fd_set &aReadFdSet, fd_set &aWriteFdSet, fd_set &aErrorFdSet, int &aMaxFd, timeval &aTimeout);
@@ -95,6 +97,7 @@ private:
     Ncp::Controller *mNcp;
     Coap::Agent     *mCoap;
     BorderAgent      mBorderAgent;
+    RouterAdvertiser mRouterAdvertiser;
 };
 
 } // namespace BorderRouter

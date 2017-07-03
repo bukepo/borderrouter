@@ -40,16 +40,17 @@
 #include "common/types.hpp"
 
 static const char kSyslogIdent[] = "otbr-agent";
-static const char kDefaultInterfaceName[] = "wpan0";
+static const char kDefaultThreadIfName[] = "wpan0";
+static const char kDefaultUplinkIfName[] = "eth0";
 
 // Default poll timeout.
 static const struct timeval kPollTimeout = {10, 0};
 
-int Mainloop(const char *aInterfaceName)
+int Mainloop(const char *aThreadIfName, const char *aUplinkIfName)
 {
     int rval = 0;
 
-    ot::BorderRouter::AgentInstance instance(aInterfaceName);
+    ot::BorderRouter::AgentInstance instance(aThreadIfName, aUplinkIfName);
 
     otbrLog(OTBR_LOG_INFO, "Border router agent started.");
 
@@ -88,12 +89,13 @@ void PrintVersion(void)
 
 int main(int argc, char *argv[])
 {
-    const char *interfaceName = kDefaultInterfaceName;
+    const char *threadIfName = kDefaultThreadIfName;
+    const char *uplinkIfName = kDefaultUplinkIfName;
     int         logLevel = OTBR_LOG_INFO;
     int         opt;
     int         ret = 0;
 
-    while ((opt = getopt(argc, argv, "d:I:v")) != -1)
+    while ((opt = getopt(argc, argv, "d:I:U:v")) != -1)
     {
         switch (opt)
         {
@@ -102,7 +104,11 @@ int main(int argc, char *argv[])
             break;
 
         case 'I':
-            interfaceName = optarg;
+            threadIfName = optarg;
+            break;
+
+        case 'U':
+            uplinkIfName = optarg;
             break;
 
         case 'v':
@@ -111,16 +117,22 @@ int main(int argc, char *argv[])
             break;
 
         default:
-            fprintf(stderr, "Usage: %s [-I interfaceName] [-d DEBUG_LEVEL] [-v]\n", argv[0]);
+            fprintf(stderr,
+                    "Usage: %s [-d DEBUG_LEVEL] [-I THREAD_IFNAME] [-U UPLINK_IFNAME] [-v]\n"
+                    "   -d DEBUG_LEVEL     Debug level, 1 ~ 7.\n"
+                    "   -I THREAD_IFNAME   Thread interface name.\n"
+                    "   -U UPLINK_IFNAME   Uplink interface name.\n"
+                    "   -v                 Print version.\n",
+                    argv[0]);
             ExitNow(ret = -1);
             break;
         }
     }
 
     otbrLogInit(kSyslogIdent, logLevel);
-    otbrLog(OTBR_LOG_INFO, "Starting border router agent on %s...", interfaceName);
+    otbrLog(OTBR_LOG_INFO, "Starting border router agent on %s...", threadIfName);
 
-    ret = Mainloop(interfaceName);
+    ret = Mainloop(threadIfName, uplinkIfName);
 
     otbrLogDeinit();
 

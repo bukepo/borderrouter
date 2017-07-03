@@ -1,4 +1,4 @@
-#!/bin/sh
+#! /bin/sh
 #
 #  Copyright (c) 2017, The OpenThread Authors.
 #  All rights reserved.
@@ -26,32 +26,56 @@
 #  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 #  POSSIBILITY OF SUCH DAMAGE.
 #
-#   Description:
-#       This script builds and installs border router and dependencies.
-#
+### BEGIN INIT INFO
+# Provides:          otbr-radvd-watcher
+# Required-Start:    radvd
+# Required-Stop:
+# Should-Start:
+# Should-Stop:
+# Default-Start:     2 3 4 5
+# Default-Stop:
+# Short-Description: radvd watcher
+# Description:       radvd watcher is required for advertising Thread's network
+#                    route information.
+### END INIT INFO
 
-. "$(dirname "$0")"/_initrc
-. script/_wpantund
-. script/_otbr
-. script/_ipforward
-. script/_nat64
-. script/_radvd_watcher
+. /lib/lsb/init-functions
+. /lib/init/vars.sh
 
-main()
+DAEMON=otbr-radvd-watcher
+PID_FILE=/var/run/$DAEMON.pid
+
+# in case the shell has built-in kill
+KILLER=/bin/kill
+
+do_start()
 {
-    . $BEFORE_HOOK
-    otbr_uninstall
-    radvd_watcher_uninstall
-    wpantund_uninstall
-    nat64_uninstall
-    ipforward_uninstall
-
-    ipforward_install
-    nat64_install
-    wpantund_install
-    radvd_watcher_install
-    otbr_install
-    . $AFTER_HOOK
+    $DAEMON &
 }
 
-main
+do_stop()
+{
+    # kill if running, always return true in case the pid was not
+    # deleted after stopped last time.
+    test ! -f $PID_FILE || $KILLER -TERM -$(cat $PID_FILE) || true
+}
+
+case "$1" in
+    start)
+        do_start
+        ;;
+
+    restart|reload|force-reload)
+        do_stop
+        do_start
+        ;;
+
+    stop)
+        do_stop
+        ;;
+
+    *)
+        echo "Usage: $0 start|stop|restart|reload|force-reload|stop" >&2
+        exit 3
+        ;;
+esac

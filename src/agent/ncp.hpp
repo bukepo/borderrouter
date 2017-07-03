@@ -34,6 +34,8 @@
 #ifndef NCP_HPP_
 #define NCP_HPP_
 
+#include <sys/select.h>
+
 #include "common/event_emitter.hpp"
 
 namespace ot {
@@ -57,8 +59,10 @@ namespace Ncp {
  */
 enum
 {
-    kEventPSKc           = 0x40 + 3,    ///< PSKc arrived.
-    kEventTmfProxyStream = 0x1500 + 18, ///< TMF proxy stream arrived.
+    kEventPSKc             = 0x40 + 3,    ///< PSKc arrived.
+    kEventRloc16           = 0x1500 + 1,  ///< RLOC16 of NCP node.
+    kEventTmfProxyStream   = 0x1500 + 18, ///< TMF proxy stream arrived.
+    kEventMeshLocalAddress = 0x1600 + 1,  ///< Mesh local address.
 };
 
 /**

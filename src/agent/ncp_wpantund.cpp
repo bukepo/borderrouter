@@ -72,7 +72,6 @@ DBusHandlerResult ControllerWpantund::HandleProperyChangedSignal(DBusConnection 
     DBusMessageIter   iter;
     DBusHandlerResult result = DBUS_HANDLER_RESULT_HANDLED;
     const char       *key = NULL;
-    const uint8_t    *pskc = NULL;
     const char       *sender = dbus_message_get_sender(&aMessage);
     const char       *path = dbus_message_get_path(&aMessage);
 
@@ -94,18 +93,31 @@ DBusHandlerResult ControllerWpantund::HandleProperyChangedSignal(DBusConnection 
     dbus_message_iter_next(&iter);
     otbrLog(OTBR_LOG_INFO, "NCP property %s changed.", key);
 
-    if (!strcmp(key, kWPANTUNDProperty_NetworkPSKc))
+    ProcessPropertyMessage(key, iter);
+
+exit:
+    (void)aConnection;
+
+    return result;
+}
+
+void ControllerWpantund::ProcessPropertyMessage(const char *aKey, DBusMessageIter &aIter)
+{
+    otbrError error = OTBR_ERROR_ERRNO;
+
+    if (!strcmp(aKey, kWPANTUNDProperty_NetworkPSKc))
     {
+        const char     *pskc = NULL;
         int             count = 0;
         DBusMessageIter subIter;
 
-        dbus_message_iter_recurse(&iter, &subIter);
+        dbus_message_iter_recurse(&aIter, &subIter);
         dbus_message_iter_get_fixed_array(&subIter, &pskc, &count);
-        VerifyOrExit(count == kSizePSKc, result = DBUS_HANDLER_RESULT_NOT_YET_HANDLED);
+        VerifyOrExit(count == kSizePSKc, errno = EINVAL);
 
         EventEmitter::Emit(kEventPSKc, pskc);
     }
-    else if (!strcmp(key, kWPANTUNDProperty_TmfProxyStream))
+    else if (!strcmp(aKey, kWPANTUNDProperty_TmfProxyStream))
     {
         const uint8_t *buf = NULL;
         uint16_t       locator = 0;
@@ -115,7 +127,7 @@ DBusHandlerResult ControllerWpantund::HandleProperyChangedSignal(DBusConnection 
             DBusMessageIter sub_iter;
             int             nelements = 0;
 
-            dbus_message_iter_recurse(&iter, &sub_iter);
+            dbus_message_iter_recurse(&aIter, &sub_iter);
             dbus_message_iter_get_fixed_array(&sub_iter, &buf, &nelements);
             len = static_cast<uint16_t>(nelements);
         }
@@ -128,16 +140,34 @@ DBusHandlerResult ControllerWpantund::HandleProperyChangedSignal(DBusConnection 
 
         EventEmitter::Emit(kEventTmfProxyStream, buf, len, locator, port);
     }
+    else if (!strcmp(aKey, kWPANTUNDProperty_IPv6MeshLocalAddress))
+    {
+        const char *ip = NULL;
+        dbus_message_iter_get_basic(&aIter, &ip);
+        printf("mesh local prefix is %s\n", ip);
+        in6_addr in6;
+        inet_pton(AF_INET6, ip, &in6);
+        EventEmitter::Emit(kEventMeshLocalAddress, in6.s6_addr);
+    }
+    else if (!strcmp(aKey, kWPANTUNDProperty_ThreadRLOC16))
+    {
+        uint16_t rloc16;
+        dbus_message_iter_get_basic(&aIter, &rloc16);
+
+        EventEmitter::Emit(kEventRloc16, rloc16);
+    }
     else
     {
-        result = DBUS_HANDLER_RESULT_NOT_YET_HANDLED;
+        ; // Not interested property.
     }
 
+    error = OTBR_ERROR_NONE;
+
 exit:
-
-    (void)aConnection;
-
-    return result;
+    if (error)
+    {
+        otbrLog(OTBR_LOG_ERR, "Failed to process property %s!", aKey);
+    }
 }
 
 dbus_bool_t ControllerWpantund::AddDBusWatch(struct DBusWatch *aWatch, void *aContext)
@@ -440,15 +470,28 @@ exit:
 
 otbrError ControllerWpantund::RequestEvent(int aEvent)
 {
-    otbrError    ret = OTBR_ERROR_ERRNO;
-    DBusMessage *message = NULL;
-    const char  *key = NULL;
+    otbrError       ret = OTBR_ERROR_ERRNO;
+    int             timeout = DEFAULT_TIMEOUT_IN_SECONDS * 1000;
+    DBusMessageIter iter;
+    DBusMessage    *message = NULL;
+    DBusMessage    *reply = NULL;
+    DBusError       error;
+    const char     *key = NULL;
 
     switch (aEvent)
     {
     case kEventPSKc:
         key = kWPANTUNDProperty_NetworkPSKc;
         break;
+
+    case kEventMeshLocalAddress:
+        key = kWPANTUNDProperty_IPv6MeshLocalAddress;
+        break;
+
+    case kEventRloc16:
+        key = kWPANTUNDProperty_ThreadRLOC16;
+        break;
+
     default:
         otbrLog(OTBR_LOG_WARNING, "Unknown event %d", aEvent);
         break;
@@ -465,7 +508,19 @@ otbrError ControllerWpantund::RequestEvent(int aEvent)
     VerifyOrExit(dbus_message_append_args(message, DBUS_TYPE_STRING, &key, DBUS_TYPE_INVALID),
                  errno = EINVAL);
 
-    VerifyOrExit(dbus_connection_send(mDBus, message, NULL), errno = ENOMEM);
+    dbus_error_init(&error);
+    reply = dbus_connection_send_with_reply_and_block(mDBus, message, timeout, &error);
+    VerifyOrExit(reply != NULL);
+
+    VerifyOrExit(dbus_message_iter_init(reply, &iter));
+
+    dbus_message_iter_get_basic(&iter, &ret);
+
+    VerifyOrExit(ret == 0);
+
+    dbus_message_iter_next(&iter);
+
+    ProcessPropertyMessage(key, iter);
 
     ret = OTBR_ERROR_NONE;
 
@@ -474,6 +529,11 @@ exit:
     if (message)
     {
         dbus_message_unref(message);
+    }
+
+    if (reply)
+    {
+        dbus_message_unref(reply);
     }
 
     return ret;

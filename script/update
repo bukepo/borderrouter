@@ -36,11 +36,13 @@
 . script/_wpantund
 . script/_ipforward
 . script/_nat64
+. script/_radvd_watcher
 
 main()
 {
     . $BEFORE_HOOK
     otbr_uninstall
+    radvd_watcher_uninstall
     wpantund_uninstall
     nat64_uninstall
     ipforward_uninstall
@@ -48,6 +50,7 @@ main()
     ipforward_install
     nat64_install
     wpantund_update
+    radvd_watcher_install
     otbr_update
     . $AFTER_HOOK
 }

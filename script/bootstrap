@@ -64,6 +64,9 @@ install_packages_apt()
 
     # libjsoncpp
     sudo apt-get install -y libjsoncpp-dev
+
+    # router advertisement service
+    sudo apt-get install -y radvd inotify-tools
 }
 
 install_packages_opkg()

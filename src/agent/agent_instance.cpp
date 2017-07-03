@@ -44,10 +44,11 @@ namespace ot {
 
 namespace BorderRouter {
 
-AgentInstance::AgentInstance(const char *aIfName) :
-    mNcp(Ncp::Controller::Create(aIfName)),
+AgentInstance::AgentInstance(const char *aThreadIfName, const char *aUplinkIfName) :
+    mNcp(Ncp::Controller::Create(aThreadIfName)),
     mCoap(Coap::Agent::Create(SendCoap, this)),
-    mBorderAgent(mNcp, mCoap)
+    mBorderAgent(mNcp, mCoap),
+    mRouterAdvertiser(aUplinkIfName, mNcp)
 {
     otbrError error = OTBR_ERROR_NONE;
 
@@ -56,6 +57,8 @@ AgentInstance::AgentInstance(const char *aIfName) :
     SuccessOrExit(error = mNcp->TmfProxyStart());
 
     SuccessOrExit(error = mBorderAgent.Start());
+
+    SuccessOrExit(error = mRouterAdvertiser.Start());
 
 exit:
     if (error != OTBR_ERROR_NONE)
