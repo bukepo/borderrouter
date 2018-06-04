@@ -22,9 +22,11 @@
 
 #include "NCPInstanceBase.h"
 #include "SpinelNCPControlInterface.h"
+#include "SpinelNCPThreadDataset.h"
 #include "nlpt.h"
 #include "SocketWrapper.h"
 #include "SocketAsyncOp.h"
+#include "ValueMap.h"
 
 #include <queue>
 #include <set>
@@ -95,6 +97,7 @@ class SpinelNCPInstance : public NCPInstanceBase {
 	friend class SpinelNCPTaskForm;
 	friend class SpinelNCPTaskScan;
 	friend class SpinelNCPTaskLeave;
+	friend class SpinelNCPTaskPeek;
 	friend class SpinelNCPTaskSendCommand;
 	friend class SpinelNCPTaskGetNetworkTopology;
 	friend class SpinelNCPTaskGetMsgBufferCounters;
@@ -139,16 +142,44 @@ protected:
 	void handle_ncp_spinel_value_removed(spinel_prop_key_t key, const uint8_t* value_data_ptr, spinel_size_t value_data_len);
 	void handle_ncp_state_change(NCPState new_ncp_state, NCPState old_ncp_state);
 
-	virtual void address_was_added(const struct in6_addr& addr, int prefix_len);
-	virtual void address_was_removed(const struct in6_addr& addr, int prefix_len);
+	void handle_ncp_spinel_value_is_OFF_MESH_ROUTE(const uint8_t* value_data_ptr, spinel_size_t value_data_len);
 
-	void check_operation_status(std::string operation, int status);
+	bool should_filter_address(const struct in6_addr &address, uint8_t prefix_len);
+	void filter_addresses(void);
+
+	virtual void add_unicast_address_on_ncp(const struct in6_addr &addr, uint8_t prefix_len,
+					CallbackWithStatus cb);
+	virtual void remove_unicast_address_on_ncp(const struct in6_addr& addr, uint8_t prefix_len,
+					CallbackWithStatus cb);
+
+	virtual void add_multicast_address_on_ncp(const struct in6_addr &addr, CallbackWithStatus cb);
+	virtual void remove_multicast_address_on_ncp(const struct in6_addr &addr, CallbackWithStatus cb);
+
+	virtual void add_on_mesh_prefix_on_ncp(const struct in6_addr &addr, uint8_t prefix_len, uint8_t flags, bool stable,
+					CallbackWithStatus cb);
+	virtual void remove_on_mesh_prefix_on_ncp(const struct in6_addr &addr, uint8_t prefix_len, uint8_t flags,
+					bool stable, CallbackWithStatus cb);
+
+	virtual void add_route_on_ncp(const struct in6_addr &route, uint8_t prefix_len, RoutePreference preference,
+					bool stable, CallbackWithStatus cb);
+	virtual void remove_route_on_ncp(const struct in6_addr &route, uint8_t prefix_len, RoutePreference preference,
+					bool stable, CallbackWithStatus cb);
+
+	static RoutePreference convert_flags_to_route_preference(uint8_t flags);
+	static uint8_t convert_route_preference_to_flags(RoutePreference priority);
 
 	uint32_t get_default_channel_mask(void);
 
 private:
+	void update_node_type(NodeType node_type);
+	void update_link_local_address(struct in6_addr *addr);
+	void update_mesh_local_address(struct in6_addr *addr);
+	void update_mesh_local_prefix(struct in6_addr *addr);
 
-	void refresh_on_mesh_prefix(struct in6_addr *addr, uint8_t prefix_len, bool stable, uint8_t flags, bool isLocal);
+private:
+	void get_dataset_command_help(std::list<std::string> &list);
+	int unpack_and_set_local_dataset(const uint8_t *data_in, spinel_size_t data_len);
+	void perform_dataset_command(const std::string& command, CallbackWithStatus cb);
 
 public:
 	static bool setup_property_supported_by_class(const std::string& prop_name);
@@ -165,6 +196,10 @@ public:
 	virtual void reset_tasks(wpantund_status_t status = kWPANTUNDStatus_Canceled);
 
 	static void handle_ncp_log(const uint8_t* data_ptr, int data_len);
+
+	static std::string thread_mode_to_string(uint8_t mode);
+
+	uint8_t get_thread_mode(void);
 
 	virtual void process(void);
 
@@ -202,7 +237,7 @@ private:
 
 	uint8_t mLastHeader;
 
-	uint8_t mInboundFrame[SPINEL_FRAME_MAX_SIZE];
+	uint8_t mInboundFrame[SPINEL_FRAME_BUFFER_SIZE];
 	uint8_t mInboundHeader;
 	spinel_size_t mInboundFrameSize;
 	uint8_t mInboundFrameDataType;
@@ -211,21 +246,25 @@ private:
 	uint16_t mInboundFrameHDLCCRC;
 
 	uint8_t mOutboundBufferHeader[3];
-	uint8_t mOutboundBuffer[SPINEL_FRAME_MAX_SIZE];
+	uint8_t mOutboundBuffer[SPINEL_FRAME_BUFFER_SIZE];
 	uint8_t mOutboundBufferType;
 	spinel_ssize_t mOutboundBufferLen;
 	spinel_ssize_t mOutboundBufferSent;
-	uint8_t mOutboundBufferEscaped[SPINEL_FRAME_MAX_SIZE*2];
+	uint8_t mOutboundBufferEscaped[SPINEL_FRAME_BUFFER_SIZE*2];
 	spinel_ssize_t mOutboundBufferEscapedLen;
 	boost::function<void(int)> mOutboundCallback;
 
 	int mTXPower;
+	uint8_t mThreadMode;
+	bool mIsCommissioned;
+	bool mFilterRLOCAddresses;
 
 	std::set<unsigned int> mCapabilities;
-	uint32_t mDefaultChannelMask;
 
 	bool mSetSteeringDataWhenJoinable;
 	uint8_t mSteeringDataAddress[8];
+
+	ThreadDataset mLocalDataset;
 
 	SettingsMap mSettings;
 	SettingsMap::iterator mSettingsIter;

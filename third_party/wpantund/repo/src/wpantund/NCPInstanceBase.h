@@ -35,7 +35,7 @@
 namespace nl {
 namespace wpantund {
 
-class NCPInstanceBase : public NCPInstance, public EventHandler{
+class NCPInstanceBase : public NCPInstance, public EventHandler {
 public:
 
 	enum {
@@ -124,7 +124,7 @@ public:
 	// ========================================================================
 	// MARK: Network Interface Methods
 
-	int set_online(bool x);
+	int set_online(bool is_online);
 
 	void set_mac_address(const uint8_t addr[8]);
 
@@ -136,38 +136,82 @@ public:
 
 public:
 	// ========================================================================
-	// MARK: On Mesh Prefix Management
+	// MARK: Global address/prefix/route management
 
-	void add_prefix(const struct in6_addr &address, uint32_t valid_lifetime = UINT32_MAX, uint32_t preferred_lifetime = UINT32_MAX, uint8_t flags = 0);
+	enum Origin {
+		kOriginThreadNCP,
+		kOriginPrimaryInterface,
+		kOriginUser,
+	};
 
-public:
-	// ========================================================================
-	// MARK: Global Address Management
+	typedef NCPControlInterface::ExternalRoutePriority  RoutePreference;
 
+	void unicast_address_was_added(Origin origin, const struct in6_addr &address,
+			uint8_t prefix_len = 64, uint32_t valid_lifetime = UINT32_MAX, uint32_t preferred_lifetime = UINT32_MAX);
 
-	void add_address(const struct in6_addr &address, uint8_t prefix = 64, uint32_t valid_lifetime = UINT32_MAX, uint32_t preferred_lifetime = UINT32_MAX);
-	void remove_address(const struct in6_addr &address);
+	void unicast_address_was_removed(Origin origin, const struct in6_addr &address);
 
-	void refresh_global_addresses(void);
+	void multicast_address_was_joined(Origin origin, const struct in6_addr &address);
 
-	//! Removes all non-permanent global address entries
-	void clear_nonpermanent_global_addresses();
-
-	void restore_global_addresses(void);
-
-	bool is_address_known(const struct in6_addr &address);
-
-	bool lookup_address_for_prefix(struct in6_addr *address, const struct in6_addr &prefix, int prefix_len_in_bits = 64);
+	void multicast_address_was_left(Origin origin, const struct in6_addr &address);
 
 	int join_multicast_group(const std::string &group_name);
 
-public:
+	void on_mesh_prefix_was_added(Origin origin, const struct in6_addr &prefix, uint8_t prefix_len = 64,
+			uint8_t flags = 0, bool stable = true, CallbackWithStatus cb = NilReturn());
+
+	void on_mesh_prefix_was_removed(Origin origin, const struct in6_addr &prefix, uint8_t prefix_len = 64,
+			CallbackWithStatus cb = NilReturn());
+
+	void route_was_added(Origin origin, const struct in6_addr &route, uint8_t prefix_len = 64,
+			RoutePreference preference = NCPControlInterface::ROUTE_MEDIUM_PREFERENCE,  bool stable = true,
+			uint16_t rloc16 = 0, bool next_hop_is_host = true, CallbackWithStatus cb = NilReturn());
+
+	void route_was_removed(Origin origin, const struct in6_addr &route, uint8_t prefix_len = 64,
+			RoutePreference preference = NCPControlInterface::ROUTE_MEDIUM_PREFERENCE,  bool stable = true,
+			uint16_t rloc16 = 0, CallbackWithStatus cb = NilReturn());
+
+	bool lookup_address_for_prefix(struct in6_addr *address, const struct in6_addr &prefix, int prefix_len = 64);
+
+	static std::string on_mesh_prefix_flags_to_string(uint8_t flags, bool detailed = false);
+
+protected:
+	void refresh_address_route_prefix_entries(void);
+
+	void remove_all_address_prefix_route_entries(void);
+
+	void remove_ncp_originated_address_prefix_route_entries(void);
+
+	void restore_address_prefix_route_entries_on_ncp(void);
+
+protected:
 	// ========================================================================
-	// MARK: Subclass Hooks
+	// MARK: Subclass hooks related to address/prefix/route management
 
-	virtual void address_was_added(const struct in6_addr& addr, int prefix_len);
+	virtual void add_unicast_address_on_ncp(const struct in6_addr &addr, uint8_t prefix_len, CallbackWithStatus cb) = 0;
 
-	virtual void address_was_removed(const struct in6_addr& addr, int prefix_len);
+	virtual void remove_unicast_address_on_ncp(const struct in6_addr &addr, uint8_t prefix_len,
+					CallbackWithStatus cb) = 0;
+
+	virtual void add_multicast_address_on_ncp(const struct in6_addr &addr, CallbackWithStatus cb) = 0;
+
+	virtual void remove_multicast_address_on_ncp(const struct in6_addr &addr, CallbackWithStatus cb) = 0;
+
+	virtual void add_on_mesh_prefix_on_ncp(const struct in6_addr &addr, uint8_t prefix_len, uint8_t flags, bool stable,
+					CallbackWithStatus cb) = 0;
+
+	virtual void remove_on_mesh_prefix_on_ncp(const struct in6_addr &addr, uint8_t prefix_len, uint8_t flags,
+					bool stable, CallbackWithStatus cb) = 0;
+
+	virtual void add_route_on_ncp(const struct in6_addr &route, uint8_t prefix_len, RoutePreference preference,
+					bool stable, CallbackWithStatus cb) = 0;
+
+	virtual void remove_route_on_ncp(const struct in6_addr &route, uint8_t prefix_len, RoutePreference preference,
+					bool stable, CallbackWithStatus cb) = 0;
+
+protected:
+	//========================================================================
+	// MARK: Tunnel/Legacy Interface Signal Callbacks
 
 	virtual void link_state_changed(bool is_up, bool is_running);
 
@@ -243,8 +287,175 @@ protected:
 	struct nlpt mNCPToDriverPumpPT;
 	struct nlpt mDriverToNCPPumpPT;
 
-	std::map<struct in6_addr, GlobalAddressEntry> mGlobalAddresses;
-	std::map<struct in6_addr, GlobalAddressEntry> mOnMeshPrefixes;
+protected:
+	//==========================================================================
+	// MARK: Global entries: Unicast IPv6 addresses, multicast IPv6 addresses,
+	// on-mesh prefixes, routes.
+
+	class IPv6Prefix {
+	public:
+		IPv6Prefix(const in6_addr &prefix, uint8_t prefix_len);
+
+		const struct in6_addr &get_prefix(void) const { return mPrefix; }
+		uint8_t get_length(void) const { return mLength; }
+
+		bool operator==(const IPv6Prefix &another_prefix) const;
+		bool operator!=(const IPv6Prefix &another_prefix) const { return !(*this == another_prefix); }
+		bool operator<(const IPv6Prefix &another_prefix) const;
+
+		std::string to_string(void) const;
+
+	private:
+		struct in6_addr mPrefix;
+		uint8_t mLength;
+	};
+
+	class EntryBase {
+	public:
+		EntryBase(Origin origin = kOriginThreadNCP) : mOrigin(origin) { }
+
+		Origin get_origin(void) const { return mOrigin; }
+		bool is_from_interface(void) const { return (mOrigin == kOriginPrimaryInterface); }
+		bool is_from_ncp(void) const { return (mOrigin == kOriginThreadNCP); }
+		bool is_from_user(void) const { return (mOrigin == kOriginUser); }
+
+	protected:
+		std::string get_origin_as_string(void) const;
+
+	private:
+		Origin mOrigin;
+	};
+
+	class UnicastAddressEntry : public EntryBase {
+	public:
+		UnicastAddressEntry(
+			Origin origin = kOriginThreadNCP,
+			uint8_t prefix_len = 64,
+			uint32_t valid_lifetime = UINT32_MAX,
+			uint32_t preferred_lifetime = UINT32_MAX
+		);
+
+		uint8_t get_prefix_len(void) const { return mPrefixLen; }
+		uint32_t get_valid_lifetime(void) const { return mValidLifetime; }
+		uint32_t get_preferred_lifetime(void) const { return mPreferredLifetime; }
+		void set_valid_lifetime(uint32_t valid_lifetime) { mValidLifetime = valid_lifetime; }
+		void set_preferred_lifetime(uint32_t preferred_lifetime) { mPreferredLifetime = preferred_lifetime; }
+
+		std::string get_description(const struct in6_addr &address, bool align = false) const;
+
+	private:
+		uint8_t mPrefixLen;
+		uint32_t mValidLifetime;
+		uint32_t mPreferredLifetime;
+	};
+
+	class MulticastAddressEntry : public EntryBase {
+	public:
+		MulticastAddressEntry(Origin origin = kOriginThreadNCP) : EntryBase(origin) { }
+		std::string get_description(const struct in6_addr &address, bool align = false) const;
+	};
+
+	class OnMeshPrefixEntry : public EntryBase {
+	public:
+
+		enum {
+			kFlagOnMesh              = (1 << 0),
+			kFlagDefaultRoute        = (1 << 1),
+			kFlagConfigure           = (1 << 2),
+			kFlagDHCP                = (1 << 3),
+			kFlagSLAAC               = (1 << 4),
+			kFlagPreferred           = (1 << 5),
+
+			kPreferenceOffset        = 6,
+			kPreferenceMask          = (3 << kPreferenceOffset),
+
+			kPreferenceHigh          = (1 << kPreferenceOffset),
+			kPreferenceMedium        = (0 << kPreferenceOffset),
+			kPreferenceLow           = (3 << kPreferenceOffset),
+		};
+
+		OnMeshPrefixEntry(Origin origin = kOriginThreadNCP, uint8_t flags = 0, uint8_t prefix_len = 64, bool stable = true)
+			: EntryBase(origin), mFlags(flags), mPrefixLen(prefix_len), mStable(stable) { }
+
+		uint8_t get_prefix_len(void) const { return mPrefixLen; }
+		uint8_t is_stable(void) const { return mStable; }
+
+		uint8_t get_flags(void) const { return mFlags; }
+		void set_flags(uint8_t flags) { mFlags = flags; }
+
+		bool is_on_mesh(void) const { return (mFlags & kFlagOnMesh) == kFlagOnMesh; }
+		bool is_slaac(void) const { return (mFlags & kFlagSLAAC) == kFlagSLAAC; }
+
+		std::string get_description(const struct in6_addr &preifx, bool align = false) const;
+
+	private:
+		uint8_t mFlags;
+		uint8_t mPrefixLen;
+		bool mStable;
+	};
+
+	class OffMeshRouteEntry : public EntryBase {
+	public:
+		OffMeshRouteEntry(Origin origin, RoutePreference preference = NCPControlInterface::ROUTE_MEDIUM_PREFERENCE,
+			bool stable = true, uint16_t rloc16 = 0, bool next_hop_is_host = false)
+			: EntryBase(origin), mPreference(preference), mStable(stable), mRloc(rloc16)
+			, mNextHopIsHost(next_hop_is_host) { }
+
+		uint8_t is_stable(void) const { return mStable; }
+		RoutePreference get_preference(void) const { return mPreference; }
+		uint16_t get_rloc(void) const { return mRloc; }
+		bool is_next_hop_host(void) const { return mNextHopIsHost; }
+
+		bool operator==(const OffMeshRouteEntry &entry);
+
+		std::string get_description(const IPv6Prefix &route, bool align = false) const;
+
+	private:
+		RoutePreference mPreference;
+		bool mStable;
+		uint16_t mRloc;
+		bool mNextHopIsHost;
+	};
+
+	class InterfaceRouteEntry
+	{
+	public:
+		// Mapping the 3 route preference values to Linux route metric (note that larger metric means lower priority)
+		enum {
+			kRouteMetricHigh     = 1,
+			kRouteMetricMedium   = 256,
+			kRouteMetricLow      = 512,
+		};
+
+		InterfaceRouteEntry(uint32_t metric = 512)
+			: mMetric(metric) { }
+
+		uint32_t get_metric(void) const { return mMetric; }
+
+		std::string get_description(const IPv6Prefix &route, bool align = false) const;
+
+	private:
+		uint32_t mMetric;
+	};
+
+private:
+	void add_address_on_ncp_and_update_prefixes(const in6_addr &address, const UnicastAddressEntry &entry);
+	void remove_address_on_ncp_and_update_prefixes(const in6_addr &address, const UnicastAddressEntry &entry);
+	std::multimap<IPv6Prefix, OffMeshRouteEntry>::iterator find_route_entry(const IPv6Prefix &route, const OffMeshRouteEntry &entry);
+	void refresh_routes_on_interface(void);
+	bool should_add_route_on_interface(const IPv6Prefix &route, uint32_t &metric);
+	void check_ncp_entry_update_status(int status, std::string operation, CallbackWithStatus cb);
+
+protected:
+
+	std::map<struct in6_addr, UnicastAddressEntry> mUnicastAddresses;
+	std::map<struct in6_addr, MulticastAddressEntry> mMulticastAddresses;
+	std::map<struct in6_addr, OnMeshPrefixEntry> mOnMeshPrefixes;
+
+	std::multimap<IPv6Prefix, OffMeshRouteEntry> mOffMeshRoutes;
+	std::map<IPv6Prefix, InterfaceRouteEntry> mInterfaceRoutes;
+
+protected:
 
 	IPv6PacketMatcherRule mCommissioningRule;
 	IPv6PacketMatcher mInsecureFirewall;
@@ -262,9 +473,58 @@ protected:
 	int mAutoDeepSleepTimeout; // In seconds
 	uint16_t mCommissionerPort;
 
+	// This boolean flag indicates whether wpantund would listen for
+	// unicast IPv6 address-added/removed events from the interface and
+	// then update the addresses on the NCP. By default this feature
+	// is enabled. It can be changed using a configuration wpantund
+	// property "Daemon:IPv6:AutoUpdateInterfaceAddrsOnNCP"
+	//
+	bool mAutoUpdateInterfaceIPv6AddrsOnNCP;
+
+	// This boolean flag indicates whether wpantund should skip adding
+	// user (or interface) originated link-local IPv6 addresses on NCP.
+	// By default this is enabled. It can be changed using a configuration
+	// wpantund property "Daemon:IPv6:FilterUserAddedLinkLocal"
+	bool mFilterUserAddedLinkLocalIPv6Address;
+
+	// When an unicast address is added on interface, the related on-mesh prefix
+	// is updated on NCP if `mDefaultRouteForAutoAddedPrefix` is true the prefix
+	// is added with flag "DefaultRoute" set.
+	bool mSetDefaultRouteForAutoAddedPrefix;
+	bool mSetSLAACForAutoAddedPrefix;
+
+	// This boolean flag determines whether wpantund should manage the routes
+	// on the primary interface. When set to `true` wpantund will add/remove
+	// off-mesh routes provided by devices within the network on the host
+	// interface. By default it is enabled (`true`).
+	//
+	bool mAutoAddOffMeshRoutesOnInterface;
+
+	// This boolean flag controls how the off-mesh-routes are managed
+	// on the primary interface (this is applicable only if the
+	// `mAutoAddOffMeshRoutesOnInterface` is enabled).
+	//
+	// This impacts the behavior where the same off-mesh route is provided
+	// by multiple devices within the network including the device itself.
+	//
+	// When set to `true`, self-added off-mesh-routes are always filtered
+	// and never added on the host interface (independent of the priority
+	// levels at which they are added).
+	//
+	// If it is set to `false`, then the priority of routes are considered
+	// and the off-mesh-route is added on the interface if another device
+	// within the network provides the same route at a higher preference
+	// level than the self added one.
+	//
+	// By default this is enabled (`true`).
+	//
+	bool mFilterSelfAutoAddedOffMeshRoutes;
+
 private:
 	NCPState mNCPState;
 	bool mIsInitializingNCP;
+	bool mIsInterfaceOnline;
+	bool mRequestRouteRefresh;
 
 protected:
 	//! This is set to the currently used MAC address (EUI64).
@@ -305,18 +565,18 @@ private:
 	// ========================================================================
 	// MARK: Private Data
 
-	int mResetFD; //!^ File descriptor for resetting NCP.
-	char mResetFD_BeginReset; //!^ Value for entering reset
-	char mResetFD_EndReset; //!^ Value for leaving reset
+	boost::shared_ptr<SocketWrapper> mResetSocket;
+	char mResetSocket_BeginReset; //!^ Value for entering reset
+	char mResetSocket_EndReset; //!^ Value for leaving reset
 
-	int mPowerFD; //!^ File descriptor for controlling NCP power.
-	char mPowerFD_PowerOn; //!^ Value for the power being on.
-	char mPowerFD_PowerOff; //!^ Value for the power being off.
-
-	int mMCFD; //!^ File descriptor for multicast stuff.
+	boost::shared_ptr<SocketWrapper> mPowerSocket;
+	char mPowerSocket_PowerOn; //!^ Value for the power being on.
+	char mPowerSocket_PowerOff; //!^ Value for the power being off.
 
 	bool mWasBusy;
 	cms_t mLastChangedBusy;
+
+	bool mNCPIsMisbehaving;
 
 	FirmwareUpgrade mFirmwareUpgrade;
 

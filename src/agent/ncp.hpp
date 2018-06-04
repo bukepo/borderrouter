@@ -34,6 +34,8 @@
 #ifndef NCP_HPP_
 #define NCP_HPP_
 
+#include <netinet/in.h>
+
 #include "common/event_emitter.hpp"
 
 namespace ot {
@@ -61,7 +63,7 @@ enum
     kEventNetworkName,    ///< Network name arrived.
     kEventPSKc,           ///< PSKc arrived.
     kEventThreadState,    ///< Thread State.
-    kEventTmfProxyStream, ///< TMF proxy stream arrived.
+    kEventUdpProxyStream, ///< TMF proxy stream arrived.
 };
 
 /**
@@ -87,7 +89,7 @@ public:
      * @retval  OTBR_ERROR_ERRNO        Failed to start, error info in errno.
      *
      */
-    virtual otbrError TmfProxyStart(void) = 0;
+    virtual otbrError UdpProxyStart(void) = 0;
 
     /**
      * This method request the NCP to stop the TMF proxy service.
@@ -96,7 +98,7 @@ public:
      * @retval  OTBR_ERROR_ERRNO        Failed to send the packet.
      *
      */
-    virtual otbrError TmfProxyStop(void) = 0;
+    virtual otbrError UdpProxyStop(void) = 0;
 
     /**
      * This method sends a packet through TMF proxy service.
@@ -105,8 +107,7 @@ public:
      * @retval  OTBR_ERROR_ERRNO        Failed to send the packet.
      *
      */
-    virtual otbrError TmfProxySend(const uint8_t *aBuffer, uint16_t aLength,
-                                   uint16_t aLocator, uint16_t aPort) = 0;
+    virtual otbrError UdpProxySend(const uint8_t *aBuffer, uint16_t aLength, uint16_t aPeerPort, const in6_addr &aPeerAddr, uint16_t aSockPort) = 0;
 
     /**
      * This method updates the fd_set to poll.

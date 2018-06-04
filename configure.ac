@@ -411,7 +411,6 @@ AC_CONFIG_FILES([
 Makefile
 third_party/Makefile
 third_party/Simple-web-server/Makefile
-third_party/libcoap/Makefile
 third_party/mbedtls/Makefile
 third_party/wpantund/Makefile
 third_party/mdl/Makefile
@@ -431,8 +430,6 @@ tools/Makefile
 doc/Makefile
 ])
 
-ac_configure_args="$ac_configure_args --disable-examples --disable-documentation"
-AC_CONFIG_SUBDIRS([third_party/libcoap/repo])
 #
 # Generate the auto-generated files for the package
 #

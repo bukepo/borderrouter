@@ -31,4 +31,3 @@ More information about Thread can be found at [threadgroup.org](http://threadgro
 [ot-appveyor-svg]: https://ci.appveyor.com/api/projects/status/r5qwyhn9p26nmfk3?svg=true
 [ot-codecov]: https://codecov.io/gh/openthread/openthread
 [ot-codecov-svg]: https://codecov.io/gh/openthread/openthread/branch/master/graph/badge.svg
-

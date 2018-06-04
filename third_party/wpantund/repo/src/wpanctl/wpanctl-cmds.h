@@ -42,8 +42,11 @@
 #include "tool-cmd-config-gateway.h"
 #include "tool-cmd-add-route.h"
 #include "tool-cmd-remove-route.h"
+#include "tool-cmd-peek.h"
+#include "tool-cmd-poke.h"
 #include "tool-cmd-pcap.h"
 #include "tool-cmd-commissioner.h"
+#include "tool-cmd-dataset.h"
 
 #include "wpanctl-utils.h"
 
@@ -175,6 +178,21 @@
 		"pcap", \
 		"Start a packet capture", \
 		&tool_cmd_pcap \
+	}, \
+	{ \
+		"peek", \
+		"Peek into NCP memory", \
+		&tool_cmd_peek \
+	}, \
+	{ \
+		"poke", \
+		"Poke NCP memory (change content at a NCP memory address)", \
+		&tool_cmd_poke \
+	}, \
+	{ \
+		"dataset", \
+		"Issue commands related to the local dataset", \
+		&tool_cmd_dataset \
 	}, \
 	{ "cd",   "Change current interface (command mode)", \
 	  &tool_cmd_cd                                            }

@@ -32,6 +32,7 @@
 #include "SuperSocket.h"
 #include "wpantund.h"
 #include "any-to.h"
+#include "IPv6Helpers.h"
 
 using namespace nl;
 using namespace wpantund;
@@ -46,32 +47,41 @@ NCPInstanceBase::NCPInstanceBase(const Settings& settings):
 {
 	std::string wpan_interface_name = "wpan0";
 
-	mResetFD = -1;
-	mResetFD_BeginReset = '0';
-	mResetFD_EndReset = '1';
+	mResetSocket_BeginReset = '0';
+	mResetSocket_EndReset = '1';
 
-	mPowerFD = -1;
-	mPowerFD_PowerOff = '0';
-	mPowerFD_PowerOn = '1';
-
-	mMCFD = -1;
+	mPowerSocket_PowerOff = '0';
+	mPowerSocket_PowerOn = '1';
 
 	NLPT_INIT(&mNCPToDriverPumpPT);
 	NLPT_INIT(&mDriverToNCPPumpPT);
 
+	mAutoDeepSleep = false;
+	mAutoDeepSleepTimeout = 10;
+	mAutoResume = true;
+	mAutoUpdateFirmware = false;
+	mCommissionerPort = 5684;
 	mCommissioningExpiration = 0;
 	mEnabled = true;
-	mTerminateOnFault = false;
-	mAutoUpdateFirmware = false;
-	mAutoResume = true;
-	mAutoDeepSleep = false;
-	mIsInitializingNCP = false;
-	mNCPState = UNINITIALIZED;
-	mNodeType = UNKNOWN;
 	mFailureCount = 0;
 	mFailureThreshold = 3;
-	mAutoDeepSleepTimeout = 10;
-	mCommissionerPort = 5684;
+	mIsInitializingNCP = false;
+	mIsInterfaceOnline = false;
+	mLastChangedBusy = 0;
+	mLegacyInterfaceEnabled = false;
+	mNCPState = UNINITIALIZED;
+	mRequestRouteRefresh = false;
+	mNodeType = UNKNOWN;
+	mNodeTypeSupportsLegacy = false;
+	mAutoUpdateInterfaceIPv6AddrsOnNCP = true;
+	mFilterUserAddedLinkLocalIPv6Address = true;
+	mSetDefaultRouteForAutoAddedPrefix = false;
+	mSetSLAACForAutoAddedPrefix = false;
+	mAutoAddOffMeshRoutesOnInterface = true;
+	mFilterSelfAutoAddedOffMeshRoutes = true;
+	mTerminateOnFault = false;
+	mWasBusy = false;
+	mNCPIsMisbehaving = false;
 
 	memset(mNCPMeshLocalAddress.s6_addr, 0, sizeof(mNCPMeshLocalAddress));
 	memset(mNCPLinkLocalAddress.s6_addr, 0, sizeof(mNCPLinkLocalAddress));
@@ -84,10 +94,10 @@ NCPInstanceBase::NCPInstanceBase(const Settings& settings):
 
 		for(iter = settings.begin(); iter != settings.end(); iter++) {
 			if (strcaseequal(iter->first.c_str(), kWPANTUNDProperty_ConfigNCPHardResetPath)) {
-				mResetFD = open_super_socket(iter->second.c_str());
+				mResetSocket = SuperSocket::create(iter->second);
 
 			} else if (strcaseequal(iter->first.c_str(), kWPANTUNDProperty_ConfigNCPPowerPath)) {
-				mPowerFD = open_super_socket(iter->second.c_str());
+				mPowerSocket = SuperSocket::create(iter->second);
 
 			} else if (strcaseequal(iter->first.c_str(), kWPANTUNDProperty_ConfigNCPSocketPath)) {
 				mRawSerialAdapter = SuperSocket::create(iter->second);
@@ -111,7 +121,7 @@ NCPInstanceBase::NCPInstanceBase(const Settings& settings):
 	}
 
 	if (!mRawSerialAdapter) {
-		syslog(LOG_WARNING, kWPANTUNDProperty_ConfigNCPSocketPath" was not specified. Using \"/dev/null\" instead.");
+		syslog(LOG_WARNING, kWPANTUNDProperty_ConfigNCPSocketPath " was not specified. Using \"/dev/null\" instead.");
 		mRawSerialAdapter = SuperSocket::create("/dev/null");
 	}
 
@@ -122,8 +132,8 @@ NCPInstanceBase::NCPInstanceBase(const Settings& settings):
 	mSerialAdapter = mRawSerialAdapter;
 
 	mPrimaryInterface = boost::shared_ptr<TunnelIPv6Interface>(new TunnelIPv6Interface(wpan_interface_name));
-	mPrimaryInterface->mAddressWasAdded.connect(boost::bind(&NCPInstanceBase::address_was_added, this, _1, _2));
-	mPrimaryInterface->mAddressWasRemoved.connect(boost::bind(&NCPInstanceBase::address_was_removed, this, _1, _2));
+	mPrimaryInterface->mAddressWasAdded.connect(boost::bind(&NCPInstanceBase::unicast_address_was_added, this, kOriginPrimaryInterface, _1, _2, UINT32_MAX, UINT32_MAX));
+	mPrimaryInterface->mAddressWasRemoved.connect(boost::bind(&NCPInstanceBase::unicast_address_was_removed, this, kOriginPrimaryInterface, _1));
 	mPrimaryInterface->mLinkStateChanged.connect(boost::bind(&NCPInstanceBase::link_state_changed, this, _1, _2));
 
 	set_ncp_power(true);
@@ -189,9 +199,6 @@ NCPInstanceBase::setup_property_supported_by_class(const std::string& prop_name)
 
 NCPInstanceBase::~NCPInstanceBase()
 {
-	close(mMCFD);
-	close(mPowerFD);
-	close(mResetFD);
 }
 
 const std::string &
@@ -265,13 +272,18 @@ NCPInstanceBase::get_supported_property_keys(void) const
 	properties.insert(kWPANTUNDProperty_IPv6MeshLocalAddress);
 	properties.insert(kWPANTUNDProperty_IPv6LinkLocalAddress);
 	properties.insert(kWPANTUNDProperty_IPv6AllAddresses);
+	properties.insert(kWPANTUNDProperty_IPv6MulticastAddresses);
+	properties.insert(kWPANTUNDProperty_IPv6SetSLAACForAutoAddedPrefix);
+	properties.insert(kWPANTUNDProperty_IPv6InterfaceRoutes);
 
 	properties.insert(kWPANTUNDProperty_ThreadOnMeshPrefixes);
+	properties.insert(kWPANTUNDProperty_ThreadOffMeshRoutes);
 
 	properties.insert(kWPANTUNDProperty_DaemonAutoAssociateAfterReset);
 	properties.insert(kWPANTUNDProperty_DaemonAutoDeepSleep);
 	properties.insert(kWPANTUNDProperty_DaemonReadyForHostSleep);
 	properties.insert(kWPANTUNDProperty_DaemonTerminateOnFault);
+	properties.insert(kWPANTUNDProperty_DaemonSetDefRouteForAutoAddedPrefix);
 
 	properties.insert(kWPANTUNDProperty_NestLabs_NetworkAllowingJoin);
 
@@ -374,6 +386,15 @@ NCPInstanceBase::property_get_value(
 	} else if (strcaseequal(key.c_str(), kWPANTUNDProperty_DaemonTerminateOnFault)) {
 		cb(0, boost::any(mTerminateOnFault));
 
+	} else if (strcaseequal(key.c_str(), kWPANTUNDProperty_DaemonIPv6AutoUpdateIntfaceAddrOnNCP)) {
+		cb(0, boost::any(mAutoUpdateInterfaceIPv6AddrsOnNCP));
+
+	} else if (strcaseequal(key.c_str(), kWPANTUNDProperty_DaemonIPv6FilterUserAddedLinkLocal)) {
+		cb(0, boost::any(mFilterUserAddedLinkLocalIPv6Address));
+
+	} else if (strcaseequal(key.c_str(), kWPANTUNDProperty_DaemonSetDefRouteForAutoAddedPrefix)) {
+		cb(0, boost::any(mSetDefaultRouteForAutoAddedPrefix));
+
 	} else if (strcaseequal(key.c_str(), kWPANTUNDProperty_NestLabs_NetworkPassthruPort)) {
 		cb(0, boost::any(mCommissionerPort));
 
@@ -382,6 +403,15 @@ NCPInstanceBase::property_get_value(
 
 	} else if (strcaseequal(key.c_str(), kWPANTUNDProperty_NCPHardwareAddress)) {
 		cb(0, boost::any(nl::Data(mMACHardwareAddress, sizeof(mMACHardwareAddress))));
+
+	} else if (strcaseequal(key.c_str(), kWPANTUNDProperty_IPv6SetSLAACForAutoAddedPrefix)) {
+		cb(0, boost::any(mSetSLAACForAutoAddedPrefix));
+
+	} else if (strcaseequal(key.c_str(), kWPANTUNDProperty_DaemonOffMeshRouteAutoAddOnInterface)) {
+		cb(0, boost::any(mAutoAddOffMeshRoutesOnInterface));
+
+	} else if (strcaseequal(key.c_str(), kWPANTUNDProperty_DaemonOffMeshRouteFilterSelfAutoAdded)) {
+		cb(0, boost::any(mFilterSelfAutoAddedOffMeshRoutes));
 
 	} else if (strcaseequal(key.c_str(), kWPANTUNDProperty_IPv6MeshLocalPrefix)) {
 		if (buffer_is_nonzero(mNCPV6Prefix, sizeof(mNCPV6Prefix))) {
@@ -441,15 +471,17 @@ NCPInstanceBase::property_get_value(
 
 	} else if (strcaseequal(key.c_str(), kWPANTUNDProperty_ThreadOnMeshPrefixes)) {
 		std::list<std::string> result;
-		std::map<struct in6_addr, GlobalAddressEntry>::const_iterator it;
-		static const char flag_lookup[] = "ppPSDCRM";
-		char address_string[INET6_ADDRSTRLEN];
+		std::map<struct in6_addr, OnMeshPrefixEntry>::const_iterator iter;
+		for (iter = mOnMeshPrefixes.begin(); iter != mOnMeshPrefixes.end(); iter++ ) {
+			result.push_back(iter->second.get_description(iter->first, true));
+		}
+		cb(0, boost::any(result));
 
-		for ( it = mOnMeshPrefixes.begin();
-			  it != mOnMeshPrefixes.end();
-			  it++ ) {
-			inet_ntop(AF_INET6,	&it->first,	address_string, sizeof(address_string));
-			result.push_back(std::string(address_string) + "  " + flags_to_string(it->second.mFlags, flag_lookup).c_str());
+	} else if (strcaseequal(key.c_str(), kWPANTUNDProperty_ThreadOffMeshRoutes)) {
+		std::list<std::string> result;
+		std::multimap<IPv6Prefix, OffMeshRouteEntry>::const_iterator iter;
+		for (iter = mOffMeshRoutes.begin(); iter != mOffMeshRoutes.end(); iter++ ) {
+			result.push_back(iter->second.get_description(iter->first, true));
 		}
 		cb(0, boost::any(result));
 
@@ -457,13 +489,25 @@ NCPInstanceBase::property_get_value(
 		|| strcaseequal(key.c_str(), kWPANTUNDProperty_DebugIPv6GlobalIPAddressList)
 	) {
 		std::list<std::string> result;
-		std::map<struct in6_addr, GlobalAddressEntry>::const_iterator it;
-		char address_string[INET6_ADDRSTRLEN];
-		for ( it = mGlobalAddresses.begin();
-			  it != mGlobalAddresses.end();
-			  it++ ) {
-			inet_ntop(AF_INET6,	&it->first,	address_string, sizeof(address_string));
-			result.push_back(std::string(address_string)+ "  " + it->second.get_description());
+		std::map<struct in6_addr, UnicastAddressEntry>::const_iterator iter;
+		for (iter = mUnicastAddresses.begin(); iter != mUnicastAddresses.end(); iter++ ) {
+			result.push_back(iter->second.get_description(iter->first, true));
+		}
+		cb(0, boost::any(result));
+
+	} else if (strcaseequal(key.c_str(), kWPANTUNDProperty_IPv6MulticastAddresses)) {
+		std::list<std::string> result;
+		std::map<struct in6_addr, MulticastAddressEntry>::const_iterator iter;
+		for (iter = mMulticastAddresses.begin(); iter != mMulticastAddresses.end(); iter++ ) {
+			result.push_back(iter->second.get_description(iter->first, true));
+		}
+		cb(0, boost::any(result));
+
+	} else if (strcaseequal(key.c_str(), kWPANTUNDProperty_IPv6InterfaceRoutes)) {
+		std::list<std::string> result;
+		std::map<IPv6Prefix, InterfaceRouteEntry>::const_iterator iter;
+		for (iter = mInterfaceRoutes.begin(); iter != mInterfaceRoutes.end(); iter++ ) {
+			result.push_back(iter->second.get_description(iter->first, true));
 		}
 		cb(0, boost::any(result));
 
@@ -583,6 +627,30 @@ NCPInstanceBase::property_set_value(
 				reinitialize_ncp();
 			}
 
+		} else if (strcaseequal(key.c_str(), kWPANTUNDProperty_DaemonIPv6AutoUpdateIntfaceAddrOnNCP)) {
+			mAutoUpdateInterfaceIPv6AddrsOnNCP = any_to_bool(value);
+			cb(0);
+
+		} else if (strcaseequal(key.c_str(), kWPANTUNDProperty_DaemonIPv6FilterUserAddedLinkLocal)) {
+			mFilterUserAddedLinkLocalIPv6Address = any_to_bool(value);
+			cb(0);
+
+		} else if (strcaseequal(key.c_str(), kWPANTUNDProperty_DaemonSetDefRouteForAutoAddedPrefix)) {
+			mSetDefaultRouteForAutoAddedPrefix = any_to_bool(value);
+			cb(0);
+
+		} else if (strcaseequal(key.c_str(), kWPANTUNDProperty_IPv6SetSLAACForAutoAddedPrefix)) {
+			mSetSLAACForAutoAddedPrefix = any_to_bool(value);
+			cb(0);
+
+		} else if (strcaseequal(key.c_str(), kWPANTUNDProperty_DaemonOffMeshRouteAutoAddOnInterface)) {
+			mAutoAddOffMeshRoutesOnInterface = any_to_bool(value);
+			cb(0);
+
+		} else if (strcaseequal(key.c_str(), kWPANTUNDProperty_DaemonOffMeshRouteFilterSelfAutoAdded)) {
+			mFilterSelfAutoAddedOffMeshRoutes = any_to_bool(value);
+			cb(0);
+
 		} else if (strcaseequal(key.c_str(), kWPANTUNDProperty_IPv6MeshLocalPrefix)
 			|| strcaseequal(key.c_str(), kWPANTUNDProperty_IPv6MeshLocalAddress)
 		) {
@@ -630,7 +698,9 @@ NCPInstanceBase::property_set_value(
 			}
 
 		} else if (strcaseequal(key.c_str(), kWPANTUNDProperty_DaemonSyslogMask)) {
+#if !FUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION
 			setlogmask(strtologmask(any_to_string(value).c_str(), setlogmask(0)));
+#endif
 			cb(0);
 
 		} else if (StatCollector::is_a_stat_property(key)) {
@@ -782,7 +852,7 @@ NCPInstanceBase::handle_ncp_state_change(NCPState new_ncp_state, NCPState old_nc
 		// from the NCP. This requires a hard reset.
 		set_ncp_power(true);
 
-		if (mResetFD >= 0) {
+		if (mResetSocket != NULL) {
 			// If we have a way to hard reset the NCP,
 			// then do it. We do the check above to make
 			// sure that we don't end up calling mSerialAdapter->reset()
@@ -843,6 +913,7 @@ NCPInstanceBase::handle_ncp_state_change(NCPState new_ncp_state, NCPState old_nc
 	// (Special case of InterfaceUp -> InterfaceDown)
 	} else if (ncp_state_is_commissioned(old_ncp_state)
 		&& !ncp_state_is_commissioned(new_ncp_state)
+		&& !ncp_state_is_joining(new_ncp_state)
 		&& !ncp_state_is_sleeping(new_ncp_state)
 		&& (new_ncp_state != UNINITIALIZED)
 	) {
@@ -851,10 +922,9 @@ NCPInstanceBase::handle_ncp_state_change(NCPState new_ncp_state, NCPState old_nc
 
 	// Uninitialized -> Offline
 	// If we are transitioning from uninitialized to offline,
-	// and we have global addresses, then need to clear them out.
+	// we clear all addresses/prefixes.
 	} else if (old_ncp_state == UNINITIALIZED
 		&& new_ncp_state == OFFLINE
-		&& !mGlobalAddresses.empty()
 	) {
 		reset_interface();
 
@@ -962,14 +1032,7 @@ NCPInstanceBase::update_busy_indication(void)
 void
 NCPInstanceBase::ncp_is_misbehaving(void)
 {
-	mFailureCount++;
-	hard_reset_ncp();
-	reset_tasks();
-	reinitialize_ncp();
-
-	if (mFailureCount >= mFailureThreshold) {
-		change_ncp_state(FAULT);
-	}
+	mNCPIsMisbehaving = true;
 }
 
 // ----------------------------------------------------------------------------

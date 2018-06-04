@@ -87,7 +87,7 @@ DBusHandlerResult ControllerWpantund::HandlePropertyChangedSignal(DBusMessage &a
         // We have to restart the border agent proxy.
         otbrLog(OTBR_LOG_WARNING, "NCP DBus name changed.");
 
-        TmfProxyStart();
+        UdpProxyStart();
     }
 
     VerifyOrExit(dbus_message_is_signal(&aMessage, WPANTUND_DBUS_APIv1_INTERFACE, WPANTUND_IF_SIGNAL_PROP_CHANGED),
@@ -111,12 +111,26 @@ otbrError ControllerWpantund::ParseEvent(const char *aKey, DBusMessageIter *aIte
 {
     otbrError ret = OTBR_ERROR_NONE;
 
-    if (!strcmp(aKey, kWPANTUNDProperty_TmfProxyStream))
+    if (!strcmp(aKey, kWPANTUNDProperty_NetworkPSKc))
+    {
+        const uint8_t  *pskc = NULL;
+        int             count = 0;
+        DBusMessageIter subIter;
+
+        dbus_message_iter_recurse(aIter, &subIter);
+        dbus_message_iter_get_fixed_array(&subIter, &pskc, &count);
+        VerifyOrExit(count == kSizePSKc, ret = OTBR_ERROR_DBUS);
+
+        EventEmitter::Emit(kEventPSKc, pskc);
+    }
+    else if (!strcmp(aKey, kWPANTUNDProperty_UdpProxyStream))
     {
         const uint8_t *buf = NULL;
-        uint16_t       locator = 0;
-        uint16_t       port = 0;
+        uint16_t       peerPort = 0;
+        in6_addr       peerAddr;
+        uint16_t       sockPort = 0;
         uint16_t       len = 0;
+
         {
             DBusMessageIter sub_iter;
             int             nelements = 0;
@@ -127,12 +141,14 @@ otbrError ControllerWpantund::ParseEvent(const char *aKey, DBusMessageIter *aIte
         }
 
         // both port and locator are encoded in network endian.
-        port = buf[--len];
-        port |= buf[--len] << 8;
-        locator = buf[--len];
-        locator |= buf[--len] << 8;
+        sockPort = buf[--len];
+        sockPort |= buf[--len] << 8;
+        len -= sizeof(in6_addr);
+        memcpy(peerAddr.s6_addr, &buf[len], sizeof(peerAddr));
+        peerPort = buf[--len];
+        peerPort |= buf[--len] << 8;
 
-        EventEmitter::Emit(kEventTmfProxyStream, buf, len, locator, port);
+        EventEmitter::Emit(kEventUdpProxyStream, buf, len, peerPort, &peerAddr, sockPort);
     }
     else if (!strcmp(aKey, kWPANTUNDProperty_NCPState))
     {
@@ -216,11 +232,11 @@ void ControllerWpantund::ToggleDBusWatch(struct DBusWatch *aWatch, void *aContex
     static_cast<ControllerWpantund *>(aContext)->mWatches[aWatch] = (dbus_watch_get_enabled(aWatch) ? true : false);
 }
 
-otbrError ControllerWpantund::TmfProxyEnable(dbus_bool_t aEnable)
+otbrError ControllerWpantund::UdpProxyEnable(dbus_bool_t aEnable)
 {
     otbrError    ret = OTBR_ERROR_ERRNO;
     DBusMessage *message = NULL;
-    const char  *key = kWPANTUNDProperty_TmfProxyEnabled;
+    const char  *key = kWPANTUNDProperty_UdpProxyEnabled;
 
     message = dbus_message_new_method_call(
         mInterfaceDBusName,
@@ -315,7 +331,7 @@ exit:
 
 ControllerWpantund::~ControllerWpantund(void)
 {
-    TmfProxyStop();
+    UdpProxyStop();
 
     if (mDBus)
     {
@@ -324,7 +340,7 @@ ControllerWpantund::~ControllerWpantund(void)
     }
 }
 
-otbrError ControllerWpantund::TmfProxyStart(void)
+otbrError ControllerWpantund::UdpProxyStart(void)
 {
     otbrError ret = OTBR_ERROR_ERRNO;
 
@@ -335,28 +351,33 @@ otbrError ControllerWpantund::TmfProxyStart(void)
     // Populate the path according to source code of wpanctl, better to export a function.
     snprintf(mInterfaceDBusPath, sizeof(mInterfaceDBusPath), "%s/%s", WPANTUND_DBUS_PATH, mInterfaceName);
 
-    ret = TmfProxyEnable(TRUE);
+    ret = UdpProxyEnable(TRUE);
 
 exit:
 
     return ret;
 }
 
-otbrError ControllerWpantund::TmfProxySend(const uint8_t *aBuffer, uint16_t aLength, uint16_t aLocator,
-                                           uint16_t aPort)
+otbrError ControllerWpantund::UdpProxySend(const uint8_t *aBuffer, uint16_t aLength, uint16_t aPeerPort, const in6_addr &aPeerAddr, uint16_t aSockPort)
 {
     otbrError    ret = OTBR_ERROR_ERRNO;
     DBusMessage *message = NULL;
 
-    std::vector<uint8_t> data(aLength + sizeof(aLocator) + sizeof(aPort));
+    std::vector<uint8_t> data(aLength + sizeof(aPeerPort) + sizeof(aPeerAddr) + sizeof(aSockPort));
     const uint8_t       *value = data.data();
-    const char          *key = kWPANTUNDProperty_TmfProxyStream;
+    const char          *key = kWPANTUNDProperty_UdpProxyStream;
 
     memcpy(data.data(), aBuffer, aLength);
-    data[aLength] = (aLocator >> 8);
-    data[aLength + 1] = (aLocator & 0xff);
-    data[aLength + 2] = (aPort >> 8);
-    data[aLength + 3] = (aPort & 0xff);
+    int index = aLength;
+    data[index] = (aPeerPort >> 8);
+    data[index + 1] = (aPeerPort & 0xff);
+    index += sizeof(aPeerPort);
+
+    memcpy(&data[index], aPeerAddr.s6_addr, sizeof(aPeerAddr));
+    index += sizeof(aPeerAddr);
+
+    data[index] = (aSockPort >> 8);
+    data[index + 1] = (aSockPort & 0xff);
 
     message = dbus_message_new_method_call(
         mInterfaceDBusName,
@@ -375,6 +396,7 @@ otbrError ControllerWpantund::TmfProxySend(const uint8_t *aBuffer, uint16_t aLen
     VerifyOrExit(dbus_connection_send(mDBus, message, NULL), errno = ENOMEM);
 
     ret = OTBR_ERROR_NONE;
+    otbrDump(OTBR_LOG_INFO, "UdpProxySend success", value, data.size());
 
 exit:
 
@@ -383,12 +405,17 @@ exit:
         dbus_message_unref(message);
     }
 
+    if (ret != OTBR_ERROR_NONE)
+    {
+        otbrLog(OTBR_LOG_INFO, "UdpProxySend failed: ", otbrErrorString(ret));
+    }
+
     return ret;
 }
 
-otbrError ControllerWpantund::TmfProxyStop(void)
+otbrError ControllerWpantund::UdpProxyStop(void)
 {
-    return mInterfaceDBusName[0] == '\0' ? OTBR_ERROR_NONE : TmfProxyEnable(FALSE);
+    return mInterfaceDBusName[0] == '\0' ? OTBR_ERROR_NONE : UdpProxyEnable(FALSE);
 }
 
 void ControllerWpantund::UpdateFdSet(fd_set &aReadFdSet, fd_set &aWriteFdSet, fd_set &aErrorFdSet, int &aMaxFd)

@@ -37,7 +37,7 @@ using namespace wpantund;
 bool
 NCPInstanceBase::can_set_ncp_power(void)
 {
-	return mPowerFD >= 0;
+	return mPowerSocket != NULL;
 }
 
 int
@@ -45,18 +45,18 @@ NCPInstanceBase::set_ncp_power(bool power)
 {
 	ssize_t ret = -1;
 
-	if (mPowerFD >= 0) {
+	if (can_set_ncp_power()) {
 		// Since controlling the power such a low-level
 		// operation, we break with our usual "no blocking calls"
 		// rule here for code clarity and to avoid
 		// unnecessary complexity.
 
-		IGNORE_RETURN_VALUE( lseek(mPowerFD, 0, SEEK_SET));
+		IGNORE_RETURN_VALUE( mPowerSocket->lseek(0, SEEK_SET));
 
 		if (power) {
-			ret = write(mPowerFD, static_cast<const void*>(&mPowerFD_PowerOn), 1);
+			ret = mPowerSocket->write(static_cast<const void*>(&mPowerSocket_PowerOn), 1);
 		} else {
-			ret = write(mPowerFD, static_cast<const void*>(&mPowerFD_PowerOff), 1);
+			ret = mPowerSocket->write(static_cast<const void*>(&mPowerSocket_PowerOff), 1);
 		}
 
 		require_string(ret >= 0, bail, strerror(errno));
@@ -66,7 +66,7 @@ NCPInstanceBase::set_ncp_power(bool power)
 		// fails. This happens when writing directly to GPIO
 		// files. We write the "\n" anyway to make it easier
 		// for non-GPIO sockets to parse.
-		IGNORE_RETURN_VALUE( write(mPowerFD, static_cast<const void*>("\n"), 1) );
+		IGNORE_RETURN_VALUE( mPowerSocket->write(static_cast<const void*>("\n"), 1) );
 	}
 
 	if (ret > 0) {
@@ -84,7 +84,7 @@ NCPInstanceBase::hard_reset_ncp(void)
 	NLPT_INIT(&mDriverToNCPPumpPT);
 	NLPT_INIT(&mNCPToDriverPumpPT);
 
-	if (mResetFD >= 0) {
+	if (mResetSocket != NULL) {
 		// Since hardware resets are such a low-level
 		// operation, we break with our usual "no blocking calls"
 		// rule here for code clarity and to avoid
@@ -92,9 +92,9 @@ NCPInstanceBase::hard_reset_ncp(void)
 
 		ssize_t wret = -1;
 
-		IGNORE_RETURN_VALUE( lseek(mResetFD, 0, SEEK_SET) );
+		IGNORE_RETURN_VALUE( mResetSocket->lseek(0, SEEK_SET) );
 
-		wret = write(mResetFD, static_cast<const void*>(&mResetFD_BeginReset), 1);
+		wret = mResetSocket->write(static_cast<const void*>(&mResetSocket_BeginReset), 1);
 
 		check_string(wret != -1, strerror(errno));
 
@@ -103,17 +103,17 @@ NCPInstanceBase::hard_reset_ncp(void)
 		// fails. This happens when writing directly to GPIO
 		// files. We write the "\n" anyway to make it easier
 		// for non-GPIO sockets to parse.
-		IGNORE_RETURN_VALUE( write(mResetFD, static_cast<const void*>("\n"), 1) );
+		IGNORE_RETURN_VALUE( mResetSocket->write(static_cast<const void*>("\n"), 1) );
 
 		usleep(20 * USEC_PER_MSEC);
 
-		IGNORE_RETURN_VALUE( lseek(mResetFD, 0, SEEK_SET) );
+		IGNORE_RETURN_VALUE( mResetSocket->lseek(0, SEEK_SET) );
 
-		wret = write(mResetFD, static_cast<const void*>(&mResetFD_EndReset), 1);
+		wret = mResetSocket->write(static_cast<const void*>(&mResetSocket_EndReset), 1);
 
 		check_string(wret != -1, strerror(errno));
 
-		IGNORE_RETURN_VALUE( write(mResetFD, static_cast<const void*>("\n"), 1) );
+		IGNORE_RETURN_VALUE( mResetSocket->write(static_cast<const void*>("\n"), 1) );
 	} else {
 		mSerialAdapter->reset();
 	}
@@ -151,6 +151,14 @@ NCPInstanceBase::get_ms_to_next_event(void)
 		if (ret > BUSY_DEBOUNCE_TIME_IN_MS && !is_busy()) {
 			ret = BUSY_DEBOUNCE_TIME_IN_MS;
 		}
+	}
+
+	if (mRequestRouteRefresh) {
+		ret = 0;
+	}
+
+	if (mNCPIsMisbehaving) {
+		ret = 0;
 	}
 
 	if (ret < 0) {
@@ -202,6 +210,20 @@ NCPInstanceBase::process(void)
 {
 	int ret = 0;
 
+	if (mNCPIsMisbehaving) {
+		mFailureCount++;
+		hard_reset_ncp();
+		reset_tasks();
+		reinitialize_ncp();
+
+		if (mFailureCount >= mFailureThreshold) {
+			change_ncp_state(FAULT);
+		}
+
+		mNCPIsMisbehaving = false;
+		goto socket_failure;
+	}
+
 	mRunawayResetBackoffManager.update();
 
 	mFirmwareUpgrade.process();
@@ -209,7 +231,7 @@ NCPInstanceBase::process(void)
 	mPcapManager.process();
 
 	if (get_upgrade_status() != EINPROGRESS) {
-		refresh_global_addresses();
+		refresh_address_route_prefix_entries();
 
 		require_noerr(ret = mPrimaryInterface->process(), socket_failure);
 

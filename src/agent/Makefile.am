@@ -55,15 +55,11 @@ libotbr_agent_la_CXXFLAGS                                     = \
 libotbr_agent_la_SOURCES                                      = \
     agent_instance.cpp                                          \
     border_agent.cpp                                            \
-    coap_libcoap.cpp                                            \
-    dtls_mbedtls.cpp                                            \
     mdns_avahi.cpp                                              \
     ncp_wpantund.cpp                                            \
     $(NULL)
 
 libotbr_agent_la_LIBADD                                       = \
-    $(top_builddir)/third_party/libcoap/repo/libcoap-1.la       \
-    $(top_builddir)/third_party/mbedtls/libmbedtls.la           \
     $(top_builddir)/third_party/wpantund/libwpanctl.la          \
     $(top_builddir)/src/common/libotbr-logging.la               \
     $(top_builddir)/src/common/libotbr-event-emitter.la         \
@@ -79,12 +75,7 @@ libotbr_agent_la_LDFLAGS = \
 
 libotbr_agent_la_CPPFLAGS                                                  = \
     -DMBEDTLS_CONFIG_FILE='<config-thread.h>'                                \
-    -I$(top_srcdir)/third_party/mbedtls/repo/configs                         \
-    -I$(top_srcdir)/third_party/mbedtls/repo/include                         \
-    -I$(top_builddir)/third_party/libcoap/repo                               \
     -I$(top_srcdir)/src                                                      \
-    -I$(top_srcdir)/third_party/libcoap/repo                                 \
-    -I$(top_srcdir)/third_party/libcoap/repo/include                         \
     -I$(top_srcdir)/third_party/wpantund/repo/src                            \
     -I$(top_srcdir)/third_party/wpantund/repo/src                            \
     -I$(top_srcdir)/third_party/wpantund/repo/src/ipc-dbus                   \
@@ -97,16 +88,10 @@ libotbr_agent_la_CPPFLAGS                                                  = \
 noinst_HEADERS        = \
     agent_instance.hpp  \
     border_agent.hpp    \
-    coap.hpp            \
-    coap_libcoap.hpp    \
-    dtls.hpp            \
-    dtls_mbedtls.hpp    \
     mdns.hpp            \
     mdns_avahi.hpp      \
     ncp.hpp             \
     ncp_wpantund.hpp    \
-    libcoap.h           \
-    uris.hpp            \
     $(NULL)
 
 EXTRA_DIST                = \

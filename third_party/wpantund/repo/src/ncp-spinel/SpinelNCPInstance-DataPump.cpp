@@ -31,6 +31,10 @@
 #include <sys/file.h>
 #include "SuperSocket.h"
 
+#if OPENTHREAD_ENABLE_NCP_SPINEL_ENCRYPTER
+#include "spinel_encrypter.hpp"
+#endif // OPENTHREAD_ENABLE_NCP_SPINEL_ENCRYPTER
+
 using namespace nl;
 using namespace wpantund;
 
@@ -299,14 +303,28 @@ SpinelNCPInstance::ncp_to_driver_pump()
 			goto on_error;
 		}
 
+#if OPENTHREAD_ENABLE_NCP_SPINEL_ENCRYPTER
+		size_t dataLen = mInboundFrameSize;
+		if (!SpinelEncrypter::DecryptInbound(mInboundFrame, sizeof(mInboundFrame), &dataLen))
+		{
+			syslog(LOG_ERR, "[-NCP-]: Unable to transform inbound data");
+			break;
+		}
+		mInboundFrameSize = dataLen;
+#endif // OPENTHREAD_ENABLE_NCP_SPINEL_ENCRYPTER
+
 		if (spinel_datatype_unpack(mInboundFrame, mInboundFrameSize, "Ci", &mInboundHeader, &command_value) > 0) {
 			if ((mInboundHeader&SPINEL_HEADER_FLAG) != SPINEL_HEADER_FLAG) {
 				// Unrecognized frame.
+				syslog(LOG_ERR, "[-NCP-]: Unrecognized frame (0x%02X)", mInboundHeader);
 				break;
 			}
 
 			if (SPINEL_HEADER_GET_IID(mInboundHeader) != 0) {
 				// We only support IID zero for now.
+#if DEBUG
+				syslog(LOG_INFO, "[-NCP-]: Unsupported IID: %d", SPINEL_HEADER_GET_IID(mInboundHeader));
+#endif
 				break;
 			}
 
@@ -342,6 +360,11 @@ SpinelNCPInstance::driver_to_ncp_pump()
 			// we shouldn't try any of the checks below, since it
 			// will delay processing.
 
+#if FUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION
+		} else {
+			NLPT_YIELD_UNTIL(pt,(mOutboundBufferLen > 0));
+		}
+#else
 		} else if (static_cast<bool>(mLegacyInterface) && is_legacy_interface_enabled()) {
 			NLPT_YIELD_UNTIL_READABLE2_OR_COND(
 				pt,
@@ -359,6 +382,7 @@ SpinelNCPInstance::driver_to_ncp_pump()
 				mPrimaryInterface->can_read() || (mOutboundBufferLen > 0)
 			);
 		}
+#endif
 
 		// Get packet or management command, and also
 		// perform any necessary filtering.
@@ -385,6 +409,16 @@ SpinelNCPInstance::driver_to_ncp_pump()
 				syslog(LOG_INFO, "[->NCP] CMD_RESET tid:%d", SPINEL_HEADER_GET_TID(mOutboundBuffer[0]));
 			} else if (mOutboundBuffer[1] == SPINEL_CMD_NET_CLEAR) {
 				syslog(LOG_INFO, "[->NCP] CMD_NET_CLEAR tid:%d", SPINEL_HEADER_GET_TID(mOutboundBuffer[0]));
+			} else if (mOutboundBuffer[1] == SPINEL_CMD_PEEK) {
+				uint32_t address = 0;
+				uint16_t count = 0;
+				spinel_datatype_unpack(mOutboundBuffer, mOutboundBufferLen, "CiLS", NULL, NULL, &address, &count);
+				syslog(LOG_INFO, "[->NCP] CMD_PEEK(0x%x,%d) tid:%d", address, count, SPINEL_HEADER_GET_TID(mOutboundBuffer[0]));
+			} else if (mOutboundBuffer[1] == SPINEL_CMD_POKE) {
+				uint32_t address = 0;
+				uint16_t count = 0;
+				spinel_datatype_unpack(mOutboundBuffer, mOutboundBufferLen, "CiLS", NULL, NULL, &address, &count);
+				syslog(LOG_INFO, "[->NCP] CMD_NET_POKE(0x%x,%d) tid:%d", address, count, SPINEL_HEADER_GET_TID(mOutboundBuffer[0]));
 			} else {
 				syslog(LOG_INFO, "[->NCP] Spinel command 0x%02X tid:%d", mOutboundBuffer[1], SPINEL_HEADER_GET_TID(mOutboundBuffer[0]));
 			}
@@ -448,7 +482,7 @@ SpinelNCPInstance::driver_to_ncp_pump()
 			}
 		}
 
-#if VERBOSE_DEBUG || 1
+#if VERBOSE_DEBUG
 		// Very verbose debugging. Dumps out all outbound packets.
 		{
 			char readable_buffer[300];
@@ -457,7 +491,7 @@ SpinelNCPInstance::driver_to_ncp_pump()
 			                        readable_buffer,
 			                        sizeof(readable_buffer),
 			                        0);
-			syslog(LOG_INFO, "\t↳ %s", (const char*)readable_buffer);
+			syslog(LOG_DEBUG, "\t↳ %s", (const char*)readable_buffer);
 		}
 #endif // VERBOSE_DEBUG
 
@@ -485,6 +519,17 @@ SpinelNCPInstance::driver_to_ncp_pump()
 			spinel_ssize_t i;
 			uint8_t byte;
 			uint16_t crc(0xFFFF);
+
+#if OPENTHREAD_ENABLE_NCP_SPINEL_ENCRYPTER
+			size_t dataLen = mOutboundBufferLen;
+			if (!SpinelEncrypter::EncryptOutbound(mOutboundBuffer, sizeof(mOutboundBuffer), &dataLen))
+			{
+				syslog(LOG_ERR, "[-NCP-]: Unable to transform outbound data");
+				break;
+			}
+			mOutboundBufferLen = dataLen;
+#endif // OPENTHREAD_ENABLE_NCP_SPINEL_ENCRYPTER
+
 			for (i = 0; i < mOutboundBufferLen; i++) {
 				byte = mOutboundBuffer[i];
 				crc = hdlc_crc16(crc, byte);

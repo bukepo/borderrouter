@@ -23,6 +23,7 @@
 #include <list>
 #include <string>
 #include "ValueMap.h"
+#include "IPv6Helpers.h"
 #include "SpinelNCPTask.h"
 #include "SpinelNCPInstance.h"
 
@@ -39,7 +40,10 @@ public:
 	enum Type
 	{
 		kChildTable,                   // Get the child table
-		kNeighborTable                 // Get the neighbor table
+		kChildTableAddresses,          // Get the child table addresses (including registered IPv6 addresses)
+		kNeighborTable,                // Get the neighbor table
+		kRouterTable,                  // Get the router table
+		kNeighborTableErrorRates,      // Get the neighbor's (frame/message) error rates
 	};
 
 	enum ResultFormat
@@ -56,16 +60,21 @@ public:
 		kThreadMode_FullNetworkData     = (1 << 0),
 	};
 
-	// This struct defines a common table entry to store either a child info or a neighbor info
+	// This struct defines a common table entry to store a child info (or child addresses info), a neighbor info, or a
+	// router info.
 	struct TableEntry
 	{
-		Type      mType;     // Indicates if this entry is for a child or a neighbor
+		Type      mType;
+
+		// Common fields for all types
+		uint8_t   mExtAddress[8];
+		uint16_t  mRloc16;
+
+		// Common fields for child info, neighbor info, and router info
+		uint32_t  mAge;
+		uint8_t   mLinkQualityIn;
 
 		// Common fields for both child info and neighbor info
-		uint8_t   mExtAddress[8];
-		uint32_t  mAge;
-		uint16_t  mRloc16;
-		uint8_t   mLinkQualityIn;
 		int8_t    mAverageRssi;
 		int8_t    mLastRssi;
 		bool      mRxOnWhenIdle : 1;
@@ -82,8 +91,25 @@ public:
 		uint32_t  mMleFrameCounter;
 		bool      mIsChild : 1;
 
+		// Router info only
+		uint8_t   mRouterId;
+		uint8_t   mNextHop;
+		uint8_t   mPathCost;
+		uint8_t   mLinkQualityOut;
+		bool      mLinkEstablished : 1;
+
+		// Child info addresses only
+		std::list<struct in6_addr> mIPv6Addresses;
+
+		// Neighbor info error rate only
+		uint16_t mFrameErrorRate;
+		uint16_t mMessageErrorRate;
+
 	public:
-		std::string get_as_string(void) const;
+		TableEntry(void);
+
+		void clear(void);
+		std::string get_as_string(void);
 		ValueMap get_as_valuemap(void) const;
 	};
 
@@ -98,13 +124,25 @@ public:
 	);
 	virtual int vprocess_event(int event, va_list args);
 
-	// Parses the spinel child table property and updates the child_table
-	static int prase_child_table(const uint8_t *data_in, spinel_size_t data_len, Table& child_table);
+	// Parse a single child/neighbor/router entry and update the passed-in `TableEntry`
+	static int parse_child_entry(const uint8_t *data_in, spinel_size_t data_len, TableEntry& child_info);
+	static int parse_child_addresses_entry(const uint8_t *data_in, spinel_size_t data_len, TableEntry& child_addr_info);
+	static int parse_neighbor_entry(const uint8_t *data_in, spinel_size_t data_len, TableEntry& neighbor_info);
+	static int parse_neighbor_error_rates_entry(const uint8_t *data_in, spinel_size_t data_len, TableEntry& neighbor_err_rates_info);
+	static int parse_router_entry(const uint8_t *data_in, spinel_size_t data_len, TableEntry& router_info);
 
-	// Parses the spinel neighbor table property and updates the neighbor_table
-	static int prase_neighbor_table(const uint8_t *data_in, spinel_size_t data_len, Table& neighbor_table);
+	// Parse the spinel child/neighbor/router table property and updates the passed-in `Table`
+
+	static int parse_child_table(const uint8_t *data_in, spinel_size_t data_len, Table& child_table);
+	static int parse_child_addresses_table(const uint8_t *data_in, spinel_size_t data_len, Table& child_addr_table);
+	static int parse_neighbor_table(const uint8_t *data_in, spinel_size_t data_len, Table& neighbor_table);
+	static int prase_neighbor_error_rates_table(const uint8_t *data_in, spinel_size_t data_len, Table& neighbor_err_rate_table);
+	static int parse_router_table(const uint8_t *data_in, spinel_size_t data_len, Table& router_table);
 
 private:
+	static int parse_table(Type type, const uint8_t *data_in, spinel_size_t data_len, Table& table);
+	static unsigned int property_key_for_type(Type type);
+
 	Type mType;
 	Table mTable;
 	ResultFormat mResultFormat;

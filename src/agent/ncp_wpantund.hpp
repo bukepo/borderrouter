@@ -77,31 +77,31 @@ public:
     otbrError Init(void);
 
     /**
-     * This method request the Ncp to start the TMF proxy service.
+     * This method request the Ncp to start the UDP proxy service.
      *
-     * @retval OTBR_ERROR_NONE          Successfully started TMF proxy.
+     * @retval OTBR_ERROR_NONE          Successfully started UDP proxy.
      * @retval OTBR_ERROR_ERRNO         Failed to start, error info in errno.
      *
      */
-    virtual otbrError TmfProxyStart(void);
+    virtual otbrError UdpProxyStart(void);
 
     /**
-     * This method request the Ncp to stop the TMF proxy service.
+     * This method request the Ncp to stop the UDP proxy service.
      *
-     * @retval  OTBR_ERROR_NONE         Successfully stopped TMF proxy.
+     * @retval  OTBR_ERROR_NONE         Successfully stopped UDP proxy.
      * @retval  OTBR_ERROR_ERRNO        Failed to stop, error info in errno.
      *
      */
-    virtual otbrError TmfProxyStop(void);
+    virtual otbrError UdpProxyStop(void);
 
     /**
-     * This method sends a packet through TMF proxy service.
+     * This method sends a packet through UDP proxy service.
      *
      * @retval  OTBR_ERROR_NONE         Successfully sent the packet.
      * @retval  OTBR_ERROR_ERRNO        Failed to send the packet, erro info in errno.
      *
      */
-    virtual otbrError TmfProxySend(const uint8_t *aBuffer, uint16_t aLength, uint16_t aLocator, uint16_t aPort);
+    virtual otbrError UdpProxySend(const uint8_t *aBuffer, uint16_t aLength, uint16_t aPeerPort, const in6_addr &aPeerAddr, uint16_t aSockPort);
 
     /**
      * This method updates the fd_set to poll.
@@ -160,7 +160,7 @@ private:
     otbrError GetProperty(const char *aKey, uint8_t *aBuffer, size_t &aSize);
     otbrError ParseEvent(const char *aKey, DBusMessageIter *aIter);
 
-    otbrError TmfProxyEnable(dbus_bool_t aEnable);
+    otbrError UdpProxyEnable(dbus_bool_t aEnable);
 
     static dbus_bool_t AddDBusWatch(struct DBusWatch *aWatch, void *aContext);
     static void RemoveDBusWatch(struct DBusWatch *aWatch, void *aContext);

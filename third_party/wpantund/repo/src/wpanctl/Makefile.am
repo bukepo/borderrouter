@@ -28,7 +28,9 @@ AM_CPPFLAGS = \
 
 DISTCLEANFILES = .deps Makefile
 
+if !ENABLE_FUZZ_TARGETS
 bin_PROGRAMS = wpanctl
+endif
 
 wpanctl_SOURCES = \
 	wpanctl.c \
@@ -85,8 +87,14 @@ wpanctl_SOURCES = \
 	tool-cmd-remove-route.h \
 	tool-cmd-pcap.h \
 	tool-cmd-pcap.c \
+	tool-cmd-peek.h \
+	tool-cmd-peek.c \
+	tool-cmd-poke.h \
+	tool-cmd-poke.c \
 	tool-cmd-commissioner.h \
 	tool-cmd-commissioner.c \
+	tool-cmd-dataset.h \
+	tool-cmd-dataset.c \
 	tool-updateprop.h \
 	$(NULL)
 
