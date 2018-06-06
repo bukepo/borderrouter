@@ -86,8 +86,7 @@ DBusHandlerResult ControllerWpantund::HandlePropertyChangedSignal(DBusMessage &a
         // DBus name of the interface has changed, possibly caused by wpantund restarted,
         // We have to restart the border agent proxy.
         otbrLog(OTBR_LOG_WARNING, "NCP DBus name changed.");
-
-        UdpProxyStart();
+        SuccessOrExit(UpdateInterfaceDBusPath());
     }
 
     VerifyOrExit(dbus_message_is_signal(&aMessage, WPANTUND_DBUS_APIv1_INTERFACE, WPANTUND_IF_SIGNAL_PROP_CHANGED),
@@ -232,44 +231,28 @@ void ControllerWpantund::ToggleDBusWatch(struct DBusWatch *aWatch, void *aContex
     static_cast<ControllerWpantund *>(aContext)->mWatches[aWatch] = (dbus_watch_get_enabled(aWatch) ? true : false);
 }
 
-otbrError ControllerWpantund::UdpProxyEnable(dbus_bool_t aEnable)
-{
-    otbrError    ret = OTBR_ERROR_ERRNO;
-    DBusMessage *message = NULL;
-    const char  *key = kWPANTUNDProperty_UdpProxyEnabled;
-
-    message = dbus_message_new_method_call(
-        mInterfaceDBusName,
-        mInterfaceDBusPath,
-        WPANTUND_DBUS_APIv1_INTERFACE,
-        WPANTUND_IF_CMD_PROP_SET);
-
-    VerifyOrExit(message != NULL, errno = ENOMEM);
-
-    VerifyOrExit(dbus_message_append_args(
-                     message,
-                     DBUS_TYPE_STRING, &key,
-                     DBUS_TYPE_BOOLEAN, &aEnable,
-                     DBUS_TYPE_INVALID), errno = EINVAL);
-
-    VerifyOrExit(dbus_connection_send(mDBus, message, NULL), errno = ENOMEM);
-
-    ret = OTBR_ERROR_NONE;
-
-exit:
-    if (message != NULL)
-    {
-        dbus_message_unref(message);
-    }
-
-    return ret;
-}
-
 ControllerWpantund::ControllerWpantund(const char *aInterfaceName) :
     mDBus(NULL)
 {
     mInterfaceDBusName[0] = '\0';
     strncpy(mInterfaceName, aInterfaceName, sizeof(mInterfaceName));
+}
+
+otbrError ControllerWpantund::UpdateInterfaceDBusPath()
+{
+    otbrError ret = OTBR_ERROR_ERRNO;
+
+    VerifyOrExit(lookup_dbus_name_from_interface(mInterfaceDBusName, mInterfaceName) == 0,
+            otbrLog(OTBR_LOG_ERR, "NCP failed to find the interface!"),
+            errno = ENODEV);
+
+    // Populate the path according to source code of wpanctl, better to export a function.
+    snprintf(mInterfaceDBusPath, sizeof(mInterfaceDBusPath), "%s/%s", WPANTUND_DBUS_PATH, mInterfaceName);
+
+    ret = OTBR_ERROR_NONE;
+
+exit:
+    return ret;
 }
 
 otbrError ControllerWpantund::Init(void)
@@ -308,7 +291,7 @@ otbrError ControllerWpantund::Init(void)
 
     VerifyOrExit(dbus_connection_add_filter(mDBus, HandlePropertyChangedSignal, this, NULL));
 
-    ret = OTBR_ERROR_NONE;
+    ret = UpdateInterfaceDBusPath();
 
 exit:
     if (dbus_error_is_set(&error))
@@ -331,31 +314,11 @@ exit:
 
 ControllerWpantund::~ControllerWpantund(void)
 {
-    UdpProxyStop();
-
     if (mDBus)
     {
         dbus_connection_unref(mDBus);
         mDBus = NULL;
     }
-}
-
-otbrError ControllerWpantund::UdpProxyStart(void)
-{
-    otbrError ret = OTBR_ERROR_ERRNO;
-
-    VerifyOrExit(lookup_dbus_name_from_interface(mInterfaceDBusName, mInterfaceName) == 0,
-                 otbrLog(OTBR_LOG_ERR, "NCP failed to find the interface!"),
-                 errno = ENODEV);
-
-    // Populate the path according to source code of wpanctl, better to export a function.
-    snprintf(mInterfaceDBusPath, sizeof(mInterfaceDBusPath), "%s/%s", WPANTUND_DBUS_PATH, mInterfaceName);
-
-    ret = UdpProxyEnable(TRUE);
-
-exit:
-
-    return ret;
 }
 
 otbrError ControllerWpantund::UdpProxySend(const uint8_t *aBuffer, uint16_t aLength, uint16_t aPeerPort, const in6_addr &aPeerAddr, uint16_t aSockPort)
@@ -411,11 +374,6 @@ exit:
     }
 
     return ret;
-}
-
-otbrError ControllerWpantund::UdpProxyStop(void)
-{
-    return mInterfaceDBusName[0] == '\0' ? OTBR_ERROR_NONE : UdpProxyEnable(FALSE);
 }
 
 void ControllerWpantund::UpdateFdSet(fd_set &aReadFdSet, fd_set &aWriteFdSet, fd_set &aErrorFdSet, int &aMaxFd)

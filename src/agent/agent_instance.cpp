@@ -52,8 +52,6 @@ otbrError AgentInstance::Init(void)
 
     SuccessOrExit(error = mNcp->Init());
 
-    SuccessOrExit(error = mNcp->UdpProxyStart());
-
     SuccessOrExit(error = mBorderAgent.Start());
 
 exit:
@@ -80,13 +78,6 @@ void AgentInstance::Process(const fd_set &aReadFdSet, const fd_set &aWriteFdSet,
 
 AgentInstance::~AgentInstance(void)
 {
-    otbrError error = OTBR_ERROR_NONE;
-
-    if ((error = mNcp->UdpProxyStop()))
-    {
-        otbrLog(OTBR_LOG_ERR, "Failed to stop TMF proxy: %d!", error);
-    }
-
     Ncp::Controller::Destroy(mNcp);
 }
 

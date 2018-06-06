@@ -77,24 +77,6 @@ public:
     otbrError Init(void);
 
     /**
-     * This method request the Ncp to start the UDP proxy service.
-     *
-     * @retval OTBR_ERROR_NONE          Successfully started UDP proxy.
-     * @retval OTBR_ERROR_ERRNO         Failed to start, error info in errno.
-     *
-     */
-    virtual otbrError UdpProxyStart(void);
-
-    /**
-     * This method request the Ncp to stop the UDP proxy service.
-     *
-     * @retval  OTBR_ERROR_NONE         Successfully stopped UDP proxy.
-     * @retval  OTBR_ERROR_ERRNO        Failed to stop, error info in errno.
-     *
-     */
-    virtual otbrError UdpProxyStop(void);
-
-    /**
      * This method sends a packet through UDP proxy service.
      *
      * @retval  OTBR_ERROR_NONE         Successfully sent the packet.
@@ -160,7 +142,7 @@ private:
     otbrError GetProperty(const char *aKey, uint8_t *aBuffer, size_t &aSize);
     otbrError ParseEvent(const char *aKey, DBusMessageIter *aIter);
 
-    otbrError UdpProxyEnable(dbus_bool_t aEnable);
+    otbrError UpdateInterfaceDBusPath();
 
     static dbus_bool_t AddDBusWatch(struct DBusWatch *aWatch, void *aContext);
     static void RemoveDBusWatch(struct DBusWatch *aWatch, void *aContext);

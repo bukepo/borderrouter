@@ -63,7 +63,7 @@ enum
     kEventNetworkName,    ///< Network name arrived.
     kEventPSKc,           ///< PSKc arrived.
     kEventThreadState,    ///< Thread State.
-    kEventUdpProxyStream, ///< TMF proxy stream arrived.
+    kEventUdpProxyStream, ///< UDP proxy stream arrived.
 };
 
 /**
@@ -83,25 +83,7 @@ public:
     virtual otbrError Init(void) = 0;
 
     /**
-     * This method request the NCP to start the TMF proxy service.
-     *
-     * @retval  OTBR_ERROR_NONE         Successfully started TMF proxy.
-     * @retval  OTBR_ERROR_ERRNO        Failed to start, error info in errno.
-     *
-     */
-    virtual otbrError UdpProxyStart(void) = 0;
-
-    /**
-     * This method request the NCP to stop the TMF proxy service.
-     *
-     * @retval  OTBR_ERROR_NONE         Successfully sent the packet.
-     * @retval  OTBR_ERROR_ERRNO        Failed to send the packet.
-     *
-     */
-    virtual otbrError UdpProxyStop(void) = 0;
-
-    /**
-     * This method sends a packet through TMF proxy service.
+     * This method sends a packet through UDP proxy service.
      *
      * @retval  OTBR_ERROR_NONE         Successfully sent the packet.
      * @retval  OTBR_ERROR_ERRNO        Failed to send the packet.
