@@ -53,12 +53,7 @@ install_packages_apt()
     # mDNS
     sudo apt-get install -y libavahi-common-dev libavahi-client-dev avahi-daemon
 
-    # Doxygen
-    # TODO remove this in release mode
-    sudo apt-get install -y doxygen
-
     # For libcoap to generate .sym and .map
-    # TODO remove this in release mode
     sudo apt-get install -y ctags
 
     # Boost
