@@ -73,7 +73,7 @@ scan-build)
 script-check)
     docker run -d --name systemd --security-opt seccomp=unconfined --tmpfs /run --tmpfs /run/lock -v /sys/fs/cgroup:/sys/fs/cgroup:ro -t solita/ubuntu-systemd
     docker cp . systemd:/root/borderrouter
-    docker exec -it systemd sh -c 'apt-get update; apt-get install -y git lsb-release; cd /root/borderrouter; .travis/script_check'
+    docker exec -it systemd sh -c 'apt-get update; apt-get install -y git lsb-release sudo; cd /root/borderrouter; .travis/script_check'
     ;;
 
 raspbian-gcc)
