@@ -9,6 +9,8 @@ cache:
 
 before_install: .travis/before_install.sh
 script: .travis/script.sh
+services:
+  - docker
 matrix:
   include:
     - env: BUILD_TARGET="pretty-check"
