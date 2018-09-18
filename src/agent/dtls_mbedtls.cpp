@@ -437,13 +437,17 @@ exit:
         }
         else
         {
-            otbrLog(OTBR_LOG_ERR, "DTLS handshake failed: -0x%04x!", -ret);
-            if (ret != MBEDTLS_ERR_SSL_HELLO_VERIFY_REQUIRED)
+            if (ret == MBEDTLS_ERR_SSL_HELLO_VERIFY_REQUIRED)
             {
+                otbrLog(OTBR_LOG_ERR, "DTLS hello verification required.");
+            }
+            else
+            {
+                otbrLog(OTBR_LOG_ERR, "DTLS handshake failed: -0x%04x!", -ret);
                 mbedtls_ssl_send_alert_message(&mSsl, MBEDTLS_SSL_ALERT_LEVEL_FATAL,
                                                MBEDTLS_SSL_ALERT_MSG_HANDSHAKE_FAILURE);
+                mState = kStateError;
             }
-            mState = kStateError;
         }
     }
 
