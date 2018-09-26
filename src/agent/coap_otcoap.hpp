@@ -68,17 +68,6 @@ public:
      */
     MessageOtCoap(Type aType, Code aCode, uint16_t aMessageId, const uint8_t *aToken, uint8_t aTokenLength);
 
-    /**
-     * The constructor to wrap an otcoap pdu.
-     *
-     * @param[in]   aPdu    A pointer to the otcoap pdu.
-     *
-     */
-    MessageOtCoap(coap_pdu_t *aPdu)
-        : mPdu(aPdu)
-    {
-    }
-
     virtual ~MessageOtCoap(void) {}
 
     /**
@@ -174,13 +163,17 @@ public:
      */
     void Free(void);
 
+    otMessage *ToMessage(void) const;
+
 private:
     enum
     {
-        kMaxOptionSize = 128, ///< Maximum bytes allowed for all CoAP options.
+        kMaxOptionSize = 128,  ///< Maximum bytes allowed for all CoAP options.
+        kMaxPayload    = 1280, ///< Maxium bytes allowed for payload.
     };
     otCoapHeader mHeader;
-    otMessage *  mMessage;
+    uint8_t      mPayload[kMaxPayload];
+    uint16_t     mLength;
 };
 
 /**
@@ -305,11 +298,10 @@ private:
                                unsigned char *        aBuffer,
                                size_t                 aLength);
 
-    Resources      mResources;
-    NetworkSender  mNetworkSender;
-    void *         mContext;
-    coap_context_t mCoap;
-    coap_packet_t  mPacket;
+    Resources     mResources;
+    NetworkSender mNetworkSender;
+    void *        mContext;
+    otInstance *  mInstance;
 };
 
 /**

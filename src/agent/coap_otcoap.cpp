@@ -78,7 +78,7 @@ Code MessageOtCoap::GetCode(void) const
 
 void MessageOtCoap::SetCode(Code aCode)
 {
-    assert(false);
+    mHeader.mHeader.mCode = aCode;
 }
 
 Type MessageOtCoap::GetType(void) const
@@ -98,16 +98,11 @@ void MessageOtCoap::SetToken(const uint8_t *aToken, uint8_t aLength)
 
 void MessageOtCoap::Free(void)
 {
-    if (mMessage)
-    {
-        otMessageFree(mMessage);
-        mMessage = NULL;
-    }
 }
 
 void MessageOtCoap::SetPath(const char *aPath)
 {
-    if (otCoapHeaderAppendUriPathOptions(&mHeader, aPath))
+    if (otCoapHeaderAppendUriPathOptions(&mHeader, aPath) != OT_ERROR_NONE)
     {
         assert(false);
     }
@@ -115,15 +110,30 @@ void MessageOtCoap::SetPath(const char *aPath)
 
 void MessageOtCoap::SetPayload(const uint8_t *aPayload, uint16_t aLength)
 {
-    otCoapHeaderSetPayloadMarker(&mHeader);
-    mMessage = otCoapNewMessage(NULL, &mHeader);
-    otMessageAppend(aPayload, aLength);
+    mLength = aLength;
+    memcpy(mPayload, aPayload, aLength);
 }
 
 const uint8_t *MessageOtCoap::GetPayload(uint16_t &aLength) const
 {
-    // TODO read
-    return NULL;
+    return mPayload;
+}
+
+otMessage *ToMessage(void) const
+{
+    otMessage *message = NULL;
+    if (mLength > 0)
+    {
+        otCoapHeaderSetPayloadMarker(&mHeader);
+        message = otCoapNewMessage(NULL, &mHeader);
+        otMessageAppend(aPayload, aLength);
+    }
+    else
+    {
+        message = otCoapNewMessage(NULL, &mHeader);
+    }
+
+    return message;
 }
 
 Message *AgentOtCoap::NewMessage(Type aType, Code aCode, const uint8_t *aToken, uint8_t aTokenLength)
@@ -147,110 +157,32 @@ otbrError AgentOtCoap::Send(Message &       aMessage,
 
     if (aHandler)
     {
-        otCoapSendRequest(aMessage);
+        ot_coap_send_request(message.GetMessage(), aIp6, aPort, aHandler, aContext);
     }
     else
     {
-        otCoapSendResponse(aMessage);
+        ot_coap_send_response(message, aIp6, aPort);
     }
 
     ret = OTBR_ERROR_NONE;
 
 exit:
+    aMessage.Free();
+
     if (ret != OTBR_ERROR_NONE)
     {
-        otbrLog(OTBR_LOG_ERR, "CoAP no memory for callback!");
-        message.Free();
+        if (message != NULL)
+        {
+            otMessageFree(message);
+        }
     }
 
     return ret;
 }
 
-void AgentOtCoap::HandleRequest(coap_context_t *        aCoap,
-                                struct coap_resource_t *aResource,
-                                const coap_endpoint_t * aEndPoint,
-                                coap_address_t *        aAddress,
-                                coap_pdu_t *            aRequest,
-                                str *                   aToken,
-                                coap_pdu_t *            aResponse)
-{
-    AgentOtCoap *agent = reinterpret_cast<AgentOtCoap *>(CONTAINING_RECORD(aCoap, AgentOtCoap, mCoap));
-
-    agent->HandleRequest(aResource, aRequest, aResponse, aAddress->addr.sin6.sin6_addr.s6_addr,
-                         ntohs(aAddress->addr.sin6.sin6_port));
-
-    (void)aEndPoint;
-    (void)aToken;
-}
-
-void AgentOtCoap::HandleRequest(struct coap_resource_t *aResource,
-                                coap_pdu_t *            aRequest,
-                                coap_pdu_t *            aResponse,
-                                const uint8_t *         aAddress,
-                                uint16_t                aPort)
-{
-    VerifyOrExit(mResources.count(aResource), otbrLog(OTBR_LOG_WARNING, "CoAP received unexpected request!"));
-
-    {
-        const Resource &resource = *mResources[aResource];
-        MessageOtCoap   req(aRequest);
-        MessageOtCoap   res(aResponse);
-
-        assert(!strncmp(reinterpret_cast<const char *>(aResource->uri.s), resource.mPath, aResource->uri.length));
-
-        // Set code to kCoapEmpty to use separate response if no response set by handler.
-        // Handler should later respond an Non-ACK response.
-        res.SetCode(kCodeEmpty);
-        resource.mHandler(resource, req, res, aAddress, aPort, resource.mContext);
-    }
-
-exit:
-    return;
-}
-
-void AgentOtCoap::Input(const void *aBuffer, uint16_t aLength, const uint8_t *aIp6, uint16_t aPort)
-{
-    mPacket.length    = aLength;
-    mPacket.interface = mCoap.endpoint;
-    mPacket.dst       = mCoap.endpoint->addr;
-    // memset(mPacket.dst.addr.sin6.sin6_addr.s6_addr, 0, sizeof(mPacket.dst.addr.sin6.sin6_addr));
-    CoapAddressInit(mPacket.src, aIp6, aPort);
-    memcpy(mPacket.payload, aBuffer, aLength);
-    coap_handle_message(&mCoap, &mPacket);
-}
-
-void AgentOtCoap::HandleResponse(coap_context_t *       aCoap,
-                                 const coap_endpoint_t *aLocalInterface,
-                                 const coap_address_t * aRemote,
-                                 coap_pdu_t *           aSent,
-                                 coap_pdu_t *           aReceived,
-                                 const coap_tid_t       aId)
-{
-    MessageMeta meta;
-
-    VerifyOrExit(aSent != NULL, otbrLog(OTBR_LOG_ERR, "request not found!"));
-
-    memcpy(&meta, aSent->hdr + aSent->length, sizeof(meta));
-
-    if (meta.mHandler)
-    {
-        MessageOtCoap message(aReceived);
-        meta.mHandler(message, meta.mContext);
-    }
-
-exit:
-    (void)aCoap;
-    (void)aLocalInterface;
-    (void)aRemote;
-    (void)aId;
-
-    return;
-}
-
 otbrError AgentOtCoap::AddResource(const Resource &aResource)
 {
-    otbrError        ret      = OTBR_ERROR_ERRNO;
-    coap_resource_t *resource = NULL;
+    otbrError ret = OTBR_ERROR_ERRNO;
 
     for (Resources::iterator it = mResources.begin(); it != mResources.end(); ++it)
     {
@@ -261,12 +193,6 @@ otbrError AgentOtCoap::AddResource(const Resource &aResource)
             break;
         }
     }
-
-    resource = coap_resource_init(reinterpret_cast<const unsigned char *>(aResource.mPath), strlen(aResource.mPath), 0);
-    coap_register_handler(resource, COAP_REQUEST_POST, AgentOtCoap::HandleRequest);
-    coap_add_resource(&mCoap, resource);
-    mResources[resource] = &aResource;
-    ret                  = OTBR_ERROR_NONE;
 
 exit:
     return ret;
@@ -299,35 +225,13 @@ AgentOtCoap::AgentOtCoap(NetworkSender aNetworkSender, void *aContext)
 {
     mContext       = aContext;
     mNetworkSender = aNetworkSender;
-    coap_clock_init();
 
-    time_t clock_offset = time(NULL);
-    memset(&mCoap, 0, sizeof(mCoap));
-    prng_init(reinterpret_cast<unsigned long>(aNetworkSender) ^ static_cast<unsigned long>(clock_offset));
-    prng(reinterpret_cast<unsigned char *>(&mCoap.message_id), sizeof(unsigned short));
-
-    coap_address_t addr;
-    coap_address_init(&addr);
-    addr.addr.sin6.sin6_family = AF_INET6;
-    mCoap.endpoint             = coap_new_endpoint(&addr, COAP_ENDPOINT_NOSEC);
-    mCoap.network_send         = AgentOtCoap::NetworkSend;
-
-    coap_register_response_handler(&mCoap, AgentOtCoap::HandleResponse);
+    ot_coap_init();
 }
 
-ssize_t AgentOtCoap::NetworkSend(coap_context_t *       aCoap,
-                                 const coap_endpoint_t *aLocalInterface,
-                                 const coap_address_t * aDestination,
-                                 unsigned char *        aBuffer,
-                                 size_t                 aLength)
+AgentOtCoap::Input(const void *aBuffer, uint16_t aLength, const uint8_t *aIp6, uint16_t aPort)
 {
-    (void)aLocalInterface;
-
-    AgentOtCoap *agent = static_cast<AgentOtCoap *>(CONTAINING_RECORD(aCoap, AgentOtCoap, mCoap));
-
-    return agent->mNetworkSender(aBuffer, static_cast<uint16_t>(aLength),
-                                 reinterpret_cast<const uint8_t *>(&aDestination->addr.sin6.sin6_addr),
-                                 ntohs(aDestination->addr.sin6.sin6_port), agent->mContext);
+    ot_coap_input(aBuffer, aLength, aIp6, aPort);
 }
 
 Agent *Agent::Create(NetworkSender aNetworkSender, void *aContext)
