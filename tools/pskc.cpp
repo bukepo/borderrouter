@@ -53,7 +53,7 @@ void help(void)
            "SYNTAX:\n"
            "    pskc <PASSPHRASE> <EXTPANID> <NETWORK_NAME>\n"
            "EXAMPLE:\n"
-           "    pskc 654321 1122334455667788 OpenThread\n");
+           "    pskc 123456 dead00beef00cafe OpenThread\n");
 }
 
 int printPSKc(const char *aPassphrase, const char *aExtPanId, const char *aNetworkName)
