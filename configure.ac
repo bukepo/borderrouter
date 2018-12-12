@@ -481,6 +481,8 @@ src/commissioner/Makefile
 src/common/Makefile
 src/utils/Makefile
 src/web/Makefile
+src/openweave/Makefile
+src/openweave/device-layer/Makefile
 tests/Makefile
 tests/mdns/Makefile
 tests/tools/Makefile

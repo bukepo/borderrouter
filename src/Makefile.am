@@ -34,6 +34,7 @@ DIST_SUBDIRS                                         = \
     agent                                              \
     commissioner                                       \
     common                                             \
+    openweave                                          \
     utils                                              \
     web                                                \
     $(NULL)
@@ -45,6 +46,7 @@ SUBDIRS                                              = \
     utils                                              \
     agent                                              \
     commissioner                                       \
+    openweave                                          \
     $(NULL)
 
 if OTBR_ENABLE_WEB_SERVICE
@@ -61,6 +63,7 @@ PRETTY_SUBDIRS                                       = \
     common                                             \
     utils                                              \
     web                                                \
+    openweave                                          \
     $(NULL)
 
 include $(abs_top_nlbuild_autotools_dir)/automake/post.am

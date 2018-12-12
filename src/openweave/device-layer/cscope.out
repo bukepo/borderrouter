@@ -1,0 +1,20777 @@
+cscope 15 $HOME/Code/borderrouter/third_party/openweave/posix -q 0000001299 0000130179
+	@AESBlockCipher.cpp
+
+25 
+	~<W—ve/DeviûLay”/š‹º®/W—veDeviûLay”IÁ”Çl.h
+>
+
+27 
+	~<¡ršg.h
+>
+
+29 
+	~<W—ve/SuµÜt/üy±o/W—veCry±o.h
+>
+
+30 
+	~<W—ve/SuµÜt/üy±o/AESBlockCh”.h
+>
+
+32 
+	~<hwüy±o/«s.h
+>
+
+34 
+Çme¥aû
+ 
+	gÆ
+ {
+
+35 
+Çme¥aû
+ 
+	gW—ve
+ {
+
+36 
+Çme¥aû
+ 
+	gPÏtfÜm
+ {
+
+37 
+Çme¥aû
+ 
+	gSecur™y
+ {
+
+39 
+usšg
+ 
+Çme¥aû
+ 
+	gÆ
+::
+W—ve
+::
+Cry±o
+;
+
+41 
+	gAES128BlockCh”
+::
+AES128BlockCh”
+()
+
+43 
+mem£t
+(&
+mKey
+, 0, (mKey));
+
+46 
+	gAES128BlockCh”
+::~
+AES128BlockCh”
+()
+
+48 
+Re£t
+();
+
+51 
+	gAES128BlockCh”
+::
+Re£t
+()
+
+53 
+CË¬Seü‘D©a
+((
+ušt8_t
+ *)&
+mKey
+, (mKey));
+
+56 
+	gAES128BlockCh”Enc
+::
+S‘Key
+(cÚ¡ 
+ušt8_t
+ *
+key
+)
+
+58 
+memıy
+(
+mKey
+, 
+key
+, 
+kKeyL’gth
+);
+
+61 
+	gAES128BlockCh”Enc
+::
+Enüy±Block
+(cÚ¡ 
+ušt8_t
+ *
+šBlock
+, ušt8_ˆ*
+outBlock
+)
+
+63 
+e¥_«s_cÚ‹xt
+ 
+	gùx
+;
+
+65 
+e¥_«s_š™
+(&
+ùx
+);
+
+66 
+e¥_«s_£tkey
+(&
+ùx
+, 
+mKey
+, 
+kKeyL’gthB™s
+);
+
+67 
+e¥_«s_’üy±
+(&
+ùx
+, 
+šBlock
+, 
+outBlock
+);
+
+68 
+e¥_«s_ä“
+(&
+ùx
+);
+
+71 
+	gAES128BlockCh”Dec
+::
+S‘Key
+(cÚ¡ 
+ušt8_t
+ *
+key
+)
+
+73 
+memıy
+(
+mKey
+, 
+key
+, 
+kKeyL’gth
+);
+
+76 
+	gAES128BlockCh”Dec
+::
+Deüy±Block
+(cÚ¡ 
+ušt8_t
+ *
+šBlock
+, ušt8_ˆ*
+outBlock
+)
+
+78 
+e¥_«s_cÚ‹xt
+ 
+	gùx
+;
+
+80 
+e¥_«s_š™
+(&
+ùx
+);
+
+81 
+e¥_«s_£tkey
+(&
+ùx
+, 
+mKey
+, 
+kKeyL’gthB™s
+);
+
+82 
+e¥_«s_deüy±
+(&
+ùx
+, 
+šBlock
+, 
+outBlock
+);
+
+83 
+e¥_«s_ä“
+(&
+ùx
+);
+
+86 
+	gAES256BlockCh”
+::
+AES256BlockCh”
+()
+
+88 
+mem£t
+(&
+mKey
+, 0, (mKey));
+
+91 
+	gAES256BlockCh”
+::~
+AES256BlockCh”
+()
+
+93 
+Re£t
+();
+
+96 
+	gAES256BlockCh”
+::
+Re£t
+()
+
+98 
+CË¬Seü‘D©a
+((
+ušt8_t
+ *)&
+mKey
+, (mKey));
+
+101 
+	gAES256BlockCh”Enc
+::
+S‘Key
+(cÚ¡ 
+ušt8_t
+ *
+key
+)
+
+103 
+memıy
+(
+mKey
+, 
+key
+, 
+kKeyL’gth
+);
+
+106 
+	gAES256BlockCh”Enc
+::
+Enüy±Block
+(cÚ¡ 
+ušt8_t
+ *
+šBlock
+, ušt8_ˆ*
+outBlock
+)
+
+108 
+e¥_«s_cÚ‹xt
+ 
+	gùx
+;
+
+110 
+e¥_«s_š™
+(&
+ùx
+);
+
+111 
+e¥_«s_£tkey
+(&
+ùx
+, 
+mKey
+, 
+kKeyL’gthB™s
+);
+
+112 
+e¥_«s_’üy±
+(&
+ùx
+, 
+šBlock
+, 
+outBlock
+);
+
+113 
+e¥_«s_ä“
+(&
+ùx
+);
+
+116 
+	gAES256BlockCh”Dec
+::
+S‘Key
+(cÚ¡ 
+ušt8_t
+ *
+key
+)
+
+118 
+memıy
+(
+mKey
+, 
+key
+, 
+kKeyL’gth
+);
+
+121 
+	gAES256BlockCh”Dec
+::
+Deüy±Block
+(cÚ¡ 
+ušt8_t
+ *
+šBlock
+, ušt8_ˆ*
+outBlock
+)
+
+123 
+e¥_«s_cÚ‹xt
+ 
+	gùx
+;
+
+125 
+e¥_«s_š™
+(&
+ùx
+);
+
+126 
+e¥_«s_£tkey
+(&
+ùx
+, 
+mKey
+, 
+kKeyL’gthB™s
+);
+
+127 
+e¥_«s_deüy±
+(&
+ùx
+, 
+šBlock
+, 
+outBlock
+);
+
+128 
+e¥_«s_ä“
+(&
+ùx
+);
+
+	@BLEManagerImpl.cpp
+
+25 
+	~<W—ve/DeviûLay”/š‹º®/W—veDeviûLay”IÁ”Çl.h
+>
+
+26 
+	~<W—ve/DeviûLay”/š‹º®/BLEMªag”.h
+>
+
+27 
+	~<Ãw
+>
+
+29 #ià
+WEAVE_DEVICE_CONFIG_ENABLE_WOBLE
+
+
+31 
+	~"e¥_bt.h
+"
+
+32 
+	~"e¥_bt_maš.h
+"
+
+33 
+	~"e¥_g­_bË_­i.h
+"
+
+34 
+	~"e¥_g©ts_­i.h
+"
+
+35 
+	~"e¥_g©t_commÚ_­i.h
+"
+
+36 
+	~"e¥_log.h
+"
+
+38 
+usšg
+ 
+	gÇme¥aû
+ ::
+Æ
+;
+
+39 
+usšg
+ 
+	gÇme¥aû
+ ::
+Æ
+::
+BË
+;
+
+41 
+Çme¥aû
+ 
+	gÆ
+ {
+
+42 
+Çme¥aû
+ 
+	gW—ve
+ {
+
+43 
+Çme¥aû
+ 
+	gDeviûLay”
+ {
+
+44 
+Çme¥aû
+ 
+	gIÁ”Çl
+ {
+
+46 
+	gÇme¥aû
+ {
+
+48 
+	sW—veS”viûD©a
+
+
+50 
+ušt8_t
+ 
+	gS”viûUUID
+[2];
+
+51 
+ušt8_t
+ 
+	gD©aBlockL’
+;
+
+52 
+ušt8_t
+ 
+	gD©aBlockTy³
+;
+
+53 
+ušt8_t
+ 
+	gD©aBlockMajÜV”siÚ
+;
+
+54 
+ušt8_t
+ 
+	gD©aBlockMšÜV”siÚ
+;
+
+55 
+ušt8_t
+ 
+	gDeviûV’dÜId
+[2];
+
+56 
+ušt8_t
+ 
+	gDeviûProduùId
+[2];
+
+57 
+ušt8_t
+ 
+	gDeviûId
+[8];
+
+58 
+ušt8_t
+ 
+	gPaœšgStus
+;
+
+61 cÚ¡ 
+ušt16_t
+ 
+	gWoBLEAµId
+ = 0x235A;
+
+63 cÚ¡ 
+ušt8_t
+ 
+	gUUID_Prim¬yS”viû
+[] = { 0x00, 0x28 };
+
+64 cÚ¡ 
+ušt8_t
+ 
+	gUUID_Ch¬Deş
+[] = { 0x03, 0x28 };
+
+65 cÚ¡ 
+ušt8_t
+ 
+	gUUID_Cl›ÁCh¬CÚfigDesc
+[] = { 0x02, 0x29 };
+
+66 cÚ¡ 
+ušt8_t
+ 
+	gUUID_WoBLES”viû
+[] = { 0xFB, 0x34, 0x9B, 0x5F, 0x80, 0x00, 0x00, 0x80, 0x00, 0x10, 0x00, 0x00, 0xAF, 0xFE, 0x00, 0x00 };
+
+67 cÚ¡ 
+ušt8_t
+ 
+	gShÜtUUID_WoBLES”viû
+[] = { 0xAF, 0xFE };
+
+68 cÚ¡ 
+ušt8_t
+ 
+	gUUID_WoBLECh¬_RX
+[] = { 0x11, 0x9D, 0x9F, 0x42, 0x9C, 0x4F, 0x9F, 0x95, 0x59, 0x45, 0x3D, 0x26, 0xF5, 0x2E, 0xEE, 0x18 };
+
+69 cÚ¡ 
+ušt8_t
+ 
+	gUUID_WoBLECh¬_TX
+[] = { 0x12, 0x9D, 0x9F, 0x42, 0x9C, 0x4F, 0x9F, 0x95, 0x59, 0x45, 0x3D, 0x26, 0xF5, 0x2E, 0xEE, 0x18 };
+
+70 cÚ¡ 
+W—veBËUUID
+ 
+	gW—veUUID_WoBLECh¬_RX
+ = { { 0x18, 0xEE, 0x2E, 0xF5, 0x26, 0x3D, 0x45, 0x59, 0x95, 0x9F, 0x4F, 0x9C, 0x42, 0x9F, 0x9D, 0x11 } };
+
+71 cÚ¡ 
+W—veBËUUID
+ 
+	gW—veUUID_WoBLECh¬_TX
+ = { { 0x18, 0xEE, 0x2E, 0xF5, 0x26, 0x3D, 0x45, 0x59, 0x95, 0x9F, 0x4F, 0x9C, 0x42, 0x9F, 0x9D, 0x12 } };
+
+73 cÚ¡ 
+ušt8_t
+ 
+	gCh¬Prİs_R—dNÙify
+ = 
+ESP_GATT_CHAR_PROP_BIT_READ
+ | 
+ESP_GATT_CHAR_PROP_BIT_NOTIFY
+;
+
+74 cÚ¡ 
+ušt8_t
+ 
+	gCh¬Prİs_Wr™e
+ = 
+ESP_GATT_CHAR_PROP_BIT_WRITE
+;
+
+79 
+	gkA‰rIndex_S”viûDeş¬©iÚ
+ = 0,
+
+80 
+	gkA‰rIndex_RXCh¬V®ue
+ = 2,
+
+81 
+	gkA‰rIndex_TXCh¬V®ue
+ = 4,
+
+82 
+	gkA‰rIndex_TXCh¬CCCDV®ue
+ = 5,
+
+86 cÚ¡ 
+e¥_g©ts_©Œ_db_t
+ 
+	gWoBLEGATTA‰rs
+[] =
+
+89 { { 
+ESP_GATT_AUTO_RSP
+ }, { 
+ESP_UUID_LEN_16
+, (
+ušt8_t
+ *)
+UUID_Prim¬yS”viû
+, 
+ESP_GATT_PERM_READ
+, 
+ESP_UUID_LEN_128
+, ESP_UUID_LEN_128, (ušt8_ˆ*)
+UUID_WoBLES”viû
+ } },
+
+94 { { 
+ESP_GATT_AUTO_RSP
+ }, { 
+ESP_UUID_LEN_16
+, (
+ušt8_t
+ *)
+UUID_Ch¬Deş
+, 
+ESP_GATT_PERM_READ
+, 1, 1, (ušt8_ˆ*)&
+Ch¬Prİs_Wr™e
+ } },
+
+96 { { 
+ESP_GATT_RSP_BY_APP
+ }, { 
+ESP_UUID_LEN_128
+, (
+ušt8_t
+ *)
+UUID_WoBLECh¬_RX
+, 
+ESP_GATT_PERM_WRITE
+, 512, 0, 
+NULL
+ } },
+
+101 { { 
+ESP_GATT_AUTO_RSP
+ }, { 
+ESP_UUID_LEN_16
+, (
+ušt8_t
+ *)
+UUID_Ch¬Deş
+, 
+ESP_GATT_PERM_READ
+, 1, 1, (ušt8_ˆ*)&
+Ch¬Prİs_R—dNÙify
+ } },
+
+103 { { 
+ESP_GATT_RSP_BY_APP
+ }, { 
+ESP_UUID_LEN_128
+, (
+ušt8_t
+ *)
+UUID_WoBLECh¬_TX
+, 
+ESP_GATT_PERM_READ
+, 512, 0, 
+NULL
+ } },
+
+105 { { 
+ESP_GATT_RSP_BY_APP
+ }, { 
+ESP_UUID_LEN_16
+, (
+ušt8_t
+ *)
+UUID_Cl›ÁCh¬CÚfigDesc
+, 
+ESP_GATT_PERM_READ
+|
+ESP_GATT_PERM_WRITE
+, 2, 0, 
+NULL
+ } },
+
+108 cÚ¡ 
+ušt16_t
+ 
+	gWoBLEGATTA‰rCouÁ
+ = (
+WoBLEGATTA‰rs
+) / (WoBLEGATTAttrs[0]);
+
+113 
+BLEMªag”Im¶
+ 
+	gBLEMªag”Im¶
+::
+sIn¡ªû
+;
+
+115 
+WEAVE_ERROR
+ 
+	gBLEMªag”Im¶
+::
+_In™
+()
+
+117 
+WEAVE_ERROR
+ 
+”r
+;
+
+120 
+	g”r
+ = 
+BËLay”
+::
+In™
+(
+this
+,his, &
+Sy¡emLay”
+);
+
+121 
+SucûssOrEx™
+(
+”r
+);
+
+123 
+mem£t
+(
+mCÚs
+, 0, (mCons));
+
+124 
+	gmS”viûMode
+ = 
+CÚÃùiv™yMªag”
+::
+kWoBLES”viûMode_EÇbËd
+;
+
+125 
+	gmAµIf
+ = 
+ESP_GATT_IF_NONE
+;
+
+126 
+	gmS”viûA‰rHªdË
+ = 0;
+
+127 
+	gmRXCh¬A‰rHªdË
+ = 0;
+
+128 
+	gmTXCh¬A‰rHªdË
+ = 0;
+
+129 
+	gmTXCh¬CCCDA‰rHªdË
+ = 0;
+
+130 
+	gmFÏgs
+ = 
+kFÏg_Adv”tisšgEÇbËd
+;
+
+131 
+mem£t
+(
+mDeviûName
+, 0, (mDeviceName));
+
+133 
+PÏtfÜmMgr
+().
+ScheduËWÜk
+(
+DriveBLES‹
+, 0);
+
+135 
+	gex™
+:
+
+136  
+”r
+;
+
+139 
+WEAVE_ERROR
+ 
+	gBLEMªag”Im¶
+::
+_S‘WoBLES”viûMode
+(
+WoBLES”viûMode
+ 
+v®
+)
+
+141 
+WEAVE_ERROR
+ 
+”r
+ = 
+WEAVE_NO_ERROR
+;
+
+143 
+V”ifyOrEx™
+(
+v®
+ !ğ
+CÚÃùiv™yMªag”
+::
+kWoBLES”viûMode_NÙSuµÜ‹d
+, 
+”r
+ = 
+WEAVE_ERROR_INVALID_ARGUMENT
+);
+
+144 
+V”ifyOrEx™
+(
+mS”viûMode
+ =ğ
+CÚÃùiv™yMªag”
+::
+kWoBLES”viûMode_NÙSuµÜ‹d
+, 
+”r
+ = 
+WEAVE_ERROR_UNSUPPORTED_WEAVE_FEATURE
+);
+
+146 ià(
+	gv®
+ !ğ
+mS”viûMode
+)
+
+148 
+mS”viûMode
+ = 
+v®
+;
+
+149 
+PÏtfÜmMgr
+().
+ScheduËWÜk
+(
+DriveBLES‹
+, 0);
+
+152 
+	gex™
+:
+
+153  
+”r
+;
+
+156 
+WEAVE_ERROR
+ 
+	gBLEMªag”Im¶
+::
+_S‘Adv”tisšgEÇbËd
+(
+boŞ
+ 
+v®
+)
+
+158 
+WEAVE_ERROR
+ 
+”r
+ = 
+WEAVE_NO_ERROR
+;
+
+160 
+V”ifyOrEx™
+(
+mS”viûMode
+ =ğ
+CÚÃùiv™yMªag”
+::
+kWoBLES”viûMode_NÙSuµÜ‹d
+, 
+”r
+ = 
+WEAVE_ERROR_UNSUPPORTED_WEAVE_FEATURE
+);
+
+162 ià(
+	gv®
+ !ğ
+mS”viûMode
+)
+
+164 
+S‘FÏg
+(
+mFÏgs
+, 
+kFÏg_Adv”tisšgEÇbËd
+, 
+v®
+);
+
+165 
+PÏtfÜmMgr
+().
+ScheduËWÜk
+(
+DriveBLES‹
+, 0);
+
+168 
+	gex™
+:
+
+169  
+”r
+;
+
+172 
+WEAVE_ERROR
+ 
+	gBLEMªag”Im¶
+::
+_S‘Fa¡Adv”tisšgEÇbËd
+(
+boŞ
+ 
+v®
+)
+
+174 
+WEAVE_ERROR
+ 
+”r
+ = 
+WEAVE_NO_ERROR
+;
+
+176 
+V”ifyOrEx™
+(
+mS”viûMode
+ =ğ
+CÚÃùiv™yMªag”
+::
+kWoBLES”viûMode_NÙSuµÜ‹d
+, 
+”r
+ = 
+WEAVE_ERROR_UNSUPPORTED_WEAVE_FEATURE
+);
+
+178 ià(
+	gv®
+ !ğ
+mS”viûMode
+)
+
+180 
+S‘FÏg
+(
+mFÏgs
+, 
+kFÏg_Fa¡Adv”tisšgEÇbËd
+, 
+v®
+);
+
+181 
+PÏtfÜmMgr
+().
+ScheduËWÜk
+(
+DriveBLES‹
+, 0);
+
+184 
+	gex™
+:
+
+185  
+”r
+;
+
+188 
+WEAVE_ERROR
+ 
+	gBLEMªag”Im¶
+::
+_G‘DeviûName
+(* 
+buf
+, 
+size_t
+ 
+bufSize
+)
+
+190 ià(
+¡¾’
+(
+mDeviûName
+è>ğ
+bufSize
+)
+
+192  
+WEAVE_ERROR_BUFFER_TOO_SMALL
+;
+
+194 
+¡rıy
+(
+buf
+, 
+mDeviûName
+);
+
+195  
+	gWEAVE_NO_ERROR
+;
+
+198 
+WEAVE_ERROR
+ 
+	gBLEMªag”Im¶
+::
+_S‘DeviûName
+(cÚ¡ * 
+deviûName
+)
+
+200 ià(
+mS”viûMode
+ =ğ
+CÚÃùiv™yMªag”
+::
+kWoBLES”viûMode_NÙSuµÜ‹d
+)
+
+202  
+WEAVE_ERROR_UNSUPPORTED_WEAVE_FEATURE
+;
+
+204 ià(
+	gdeviûName
+ !ğ
+NULL
+ && 
+deviûName
+[0] != 0)
+
+206 ià(
+¡¾’
+(
+deviûName
+è>ğ
+kMaxDeviûNameL’gth
+)
+
+208  
+WEAVE_ERROR_INVALID_ARGUMENT
+;
+
+210 
+¡rıy
+(
+mDeviûName
+, 
+deviûName
+);
+
+211 
+S‘FÏg
+(
+mFÏgs
+, 
+kFÏg_U£Cu¡omDeviûName
+);
+
+215 
+	gmDeviûName
+[0] = 0;
+
+216 
+CË¬FÏg
+(
+mFÏgs
+, 
+kFÏg_U£Cu¡omDeviûName
+);
+
+218  
+	gWEAVE_NO_ERROR
+;
+
+221 
+	gBLEMªag”Im¶
+::
+_OnPÏtfÜmEv’t
+(cÚ¡ 
+W—veDeviûEv’t
+ * 
+ev’t
+)
+
+223 
+ev’t
+->
+Ty³
+)
+
+225 
+DeviûEv’tTy³
+::
+kWoBLESubsüibe
+:
+
+226 
+HªdËSubsüibeReûived
+(
+ev’t
+->
+WoBLESubsüibe
+.
+CÚId
+, &
+WEAVE_BLE_SVC_ID
+, &
+W—veUUID_WoBLECh¬_TX
+);
+
+228 
+W—veDeviûEv’t
+ 
+	gev’t
+;
+
+229 
+	gev’t
+.
+	gTy³
+ = 
+DeviûEv’tTy³
+::
+kWoBLECÚÃùiÚE¡ablished
+;
+
+230 
+PÏtfÜmMgr
+().
+Po¡Ev’t
+(&
+ev’t
+);
+
+234 
+	gDeviûEv’tTy³
+::
+kWoBLEUnsubsüibe
+:
+
+235 
+HªdËUnsubsüibeReûived
+(
+ev’t
+->
+WoBLEUnsubsüibe
+.
+CÚId
+, &
+WEAVE_BLE_SVC_ID
+, &
+W—veUUID_WoBLECh¬_TX
+);
+
+238 
+	gDeviûEv’tTy³
+::
+kWoBLEWr™eReûived
+:
+
+239 
+HªdËWr™eReûived
+(
+ev’t
+->
+WoBLEWr™eReûived
+.
+CÚId
+, &
+WEAVE_BLE_SVC_ID
+, &
+W—veUUID_WoBLECh¬_RX
+,ƒv’t->WoBLEWr™eReûived.
+D©a
+);
+
+242 
+	gDeviûEv’tTy³
+::
+kWoBLEIndiÿ‹CÚfœm
+:
+
+243 
+HªdËIndiÿtiÚCÚfœm©iÚ
+(
+ev’t
+->
+WoBLEIndiÿ‹CÚfœm
+.
+CÚId
+, &
+WEAVE_BLE_SVC_ID
+, &
+W—veUUID_WoBLECh¬_TX
+);
+
+246 
+	gDeviûEv’tTy³
+::
+kWoBLECÚÃùiÚE¼Ü
+:
+
+247 
+HªdËCÚÃùiÚE¼Ü
+(
+ev’t
+->
+WoBLECÚÃùiÚE¼Ü
+.
+CÚId
+,ƒv’t->WoBLECÚÃùiÚE¼Ü.
+R—sÚ
+);
+
+255 
+boŞ
+ 
+	gBLEMªag”Im¶
+::
+SubsüibeCh¬aù”i¡ic
+(
+BLE_CONNECTION_OBJECT
+ 
+cÚId
+, cÚ¡ 
+W—veBËUUID
+ * 
+svcId
+, cÚ¡ W—veBËUUID * 
+ch¬Id
+)
+
+257 
+W—veLogProg»ss
+(
+DeviûLay”
+, "BLEManagerImpl::SubscribeCharacteristic()‚ot supported");
+
+258  
+	gçl£
+;
+
+261 
+boŞ
+ 
+	gBLEMªag”Im¶
+::
+UnsubsüibeCh¬aù”i¡ic
+(
+BLE_CONNECTION_OBJECT
+ 
+cÚId
+, cÚ¡ 
+W—veBËUUID
+ * 
+svcId
+, cÚ¡ W—veBËUUID * 
+ch¬Id
+)
+
+263 
+W—veLogProg»ss
+(
+DeviûLay”
+, "BLEManagerImpl::UnsubscribeCharacteristic()‚ot supported");
+
+264  
+	gçl£
+;
+
+267 
+boŞ
+ 
+	gBLEMªag”Im¶
+::
+Clo£CÚÃùiÚ
+(
+BLE_CONNECTION_OBJECT
+ 
+cÚId
+)
+
+269 
+WEAVE_ERROR
+ 
+”r
+;
+
+271 
+W—veLogProg»ss
+(
+DeviûLay”
+, "Closšg BLE GATT cÚÃùiÚ (cÚ %u)", 
+cÚId
+);
+
+274 
+	g”r
+ = 
+e¥_bË_g©ts_şo£
+(
+mAµIf
+, 
+cÚId
+);
+
+276 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_bË_g©ts_şo£(èçed: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+280 
+R–—£CÚÃùiÚS‹
+(
+cÚId
+);
+
+284 
+CË¬FÏg
+(
+mFÏgs
+, 
+kFÏg_Adv”tisšg
+);
+
+285 
+PÏtfÜmMgr
+().
+ScheduËWÜk
+(
+DriveBLES‹
+, 0);
+
+287  (
+	g”r
+ =ğ
+WEAVE_NO_ERROR
+);
+
+290 
+ušt16_t
+ 
+	gBLEMªag”Im¶
+::
+G‘MTU
+(
+BLE_CONNECTION_OBJECT
+ 
+cÚId
+) const
+
+292 
+WoBLECÚS‹
+ * 
+cÚS‹
+ = 
+cÚ¡_ÿ¡
+<
+BLEMªag”Im¶
+ *>(
+this
+)->
+G‘CÚÃùiÚS‹
+(
+cÚId
+);
+
+293  (
+	gcÚS‹
+ !ğ
+NULL
+è? 
+cÚS‹
+->
+MTU
+ : 0;
+
+296 
+boŞ
+ 
+	gBLEMªag”Im¶
+::
+S’dIndiÿtiÚ
+(
+BLE_CONNECTION_OBJECT
+ 
+cÚId
+, cÚ¡ 
+W—veBËUUID
+ * 
+svcId
+, cÚ¡ W—veBËUUID * 
+ch¬Id
+, 
+Pack‘Bufãr
+ * 
+d©a
+)
+
+298 
+WEAVE_ERROR
+ 
+	g”r
+ = 
+WEAVE_NO_ERROR
+;
+
+299 
+WoBLECÚS‹
+ * 
+	gcÚS‹
+ = 
+G‘CÚÃùiÚS‹
+(
+cÚId
+);
+
+301 
+ESP_LOGD
+(
+TAG
+, "S’dšg indiÿtiÚ fÜ WoBLE TX ch¬aù”i¡iø(cÚ %u,†’ %u)", 
+cÚId
+, 
+d©a
+->
+D©aL’gth
+());
+
+303 
+V”ifyOrEx™
+(
+cÚS‹
+ !ğ
+NULL
+, 
+”r
+ = 
+WEAVE_ERROR_INVALID_ARGUMENT
+);
+
+305 
+V”ifyOrEx™
+(
+cÚS‹
+->
+P’dšgIndBuf
+ =ğ
+NULL
+, 
+”r
+ = 
+WEAVE_ERROR_INCORRECT_STATE
+);
+
+307 
+	g”r
+ = 
+e¥_bË_g©ts_£nd_šdiÿ‹
+(
+mAµIf
+, 
+cÚId
+, 
+mTXCh¬A‰rHªdË
+, 
+d©a
+->
+D©aL’gth
+(), d©a->
+S¹
+(), 
+çl£
+);
+
+308 ià(
+	g”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+310 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_bË_g©ts_£nd_šdiÿ‹(èçed: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+311 
+Ex™Now
+();
+
+316 
+	gcÚS‹
+->
+	gP’dšgIndBuf
+ = 
+d©a
+;
+
+317 
+	gd©a
+ = 
+NULL
+;
+
+319 
+	gex™
+:
+
+320 ià(
+”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+322 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "BLEMªag”Im¶::S’dIndiÿtiÚ(èçed: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+323 
+	gPack‘Bufãr
+::
+F»e
+(
+d©a
+);
+
+324  
+	gçl£
+;
+
+326  
+	gŒue
+;
+
+329 
+boŞ
+ 
+	gBLEMªag”Im¶
+::
+S’dWr™eReque¡
+(
+BLE_CONNECTION_OBJECT
+ 
+cÚId
+, cÚ¡ 
+W—veBËUUID
+ * 
+svcId
+, cÚ¡ W—veBËUUID * 
+ch¬Id
+, 
+Pack‘Bufãr
+ * 
+pBuf
+)
+
+331 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "BLEManagerImpl::SendWriteRequest()‚ot supported");
+
+332  
+	gçl£
+;
+
+335 
+boŞ
+ 
+	gBLEMªag”Im¶
+::
+S’dR—dReque¡
+(
+BLE_CONNECTION_OBJECT
+ 
+cÚId
+, cÚ¡ 
+W—veBËUUID
+ * 
+svcId
+, cÚ¡ W—veBËUUID * 
+ch¬Id
+, 
+Pack‘Bufãr
+ * 
+pBuf
+)
+
+337 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "BLEManagerImpl::SendReadRequest()‚ot supported");
+
+338  
+	gçl£
+;
+
+341 
+boŞ
+ 
+	gBLEMªag”Im¶
+::
+S’dR—dRe¥Ú£
+(
+BLE_CONNECTION_OBJECT
+ 
+cÚId
+, 
+BLE_READ_REQUEST_CONTEXT
+ 
+»que¡CÚ‹xt
+, cÚ¡ 
+W—veBËUUID
+ * 
+svcId
+, cÚ¡ W—veBËUUID * 
+ch¬Id
+)
+
+343 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "BLEManagerImpl::SendReadResponse()‚ot supported");
+
+344  
+	gçl£
+;
+
+347 
+	gBLEMªag”Im¶
+::
+NÙifyW—veCÚÃùiÚClo£d
+(
+BLE_CONNECTION_OBJECT
+ 
+cÚId
+)
+
+351 
+BLEMªag”Im¶
+::
+DriveBLES‹
+()
+
+353 
+WEAVE_ERROR
+ 
+”r
+ = 
+WEAVE_NO_ERROR
+;
+
+356 
+V”ifyOrEx™
+(!
+G‘FÏg
+(
+mFÏgs
+, 
+kFÏg_CÚŒŞOpInProg»ss
+), );
+
+359 ià(
+	gmS”viûMode
+ =ğ
+CÚÃùiv™yMªag”
+::
+kWoBLES”viûMode_EÇbËd
+ && !
+G‘FÏg
+(
+mFÏgs
+, 
+kFÏg_ESPBLELay”In™Ÿlized
+))
+
+361 
+	g”r
+ = 
+In™ESPBËLay”
+();
+
+362 
+SucûssOrEx™
+(
+”r
+);
+
+366 ià(
+	gmS”viûMode
+ =ğ
+CÚÃùiv™yMªag”
+::
+kWoBLES”viûMode_EÇbËd
+ && !
+G‘FÏg
+(
+mFÏgs
+, 
+kFÏg_AµRegi¡”ed
+))
+
+368 
+	g”r
+ = 
+e¥_bË_g©ts_­p_»gi¡”
+(
+WoBLEAµId
+);
+
+369 ià(
+	g”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+371 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_bË_g©ts_­p_»gi¡”(èçed: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+372 
+Ex™Now
+();
+
+375 
+S‘FÏg
+(
+mFÏgs
+, 
+kFÏg_CÚŒŞOpInProg»ss
+);
+
+377 
+Ex™Now
+();
+
+381 ià(
+	gmS”viûMode
+ =ğ
+CÚÃùiv™yMªag”
+::
+kWoBLES”viûMode_EÇbËd
+ && !
+G‘FÏg
+(
+mFÏgs
+, 
+kFÏg_A‰rsRegi¡”ed
+))
+
+383 
+	g”r
+ = 
+e¥_bË_g©ts_ü—‹_©Œ_b
+(
+WoBLEGATTA‰rs
+, 
+mAµIf
+, 
+WoBLEGATTA‰rCouÁ
+, 0);
+
+384 ià(
+	g”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+386 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_bË_g©ts_ü—‹_©Œ_b(èçed: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+387 
+Ex™Now
+();
+
+390 
+S‘FÏg
+(
+mFÏgs
+, 
+kFÏg_CÚŒŞOpInProg»ss
+);
+
+392 
+Ex™Now
+();
+
+396 ià(
+	gmS”viûMode
+ =ğ
+CÚÃùiv™yMªag”
+::
+kWoBLES”viûMode_EÇbËd
+ && !
+G‘FÏg
+(
+mFÏgs
+, 
+kFÏg_GATTS”viûS¹ed
+))
+
+398 
+	g”r
+ = 
+e¥_bË_g©ts_¡¬t_£rviû
+(
+mS”viûA‰rHªdË
+);
+
+399 ià(
+	g”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+401 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_bË_g©ts_¡¬t_£rviû(èçed: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+402 
+Ex™Now
+();
+
+405 
+S‘FÏg
+(
+mFÏgs
+, 
+kFÏg_CÚŒŞOpInProg»ss
+);
+
+407 
+Ex™Now
+();
+
+411 ià(
+	gmS”viûMode
+ =ğ
+CÚÃùiv™yMªag”
+::
+kWoBLES”viûMode_EÇbËd
+ && 
+G‘FÏg
+(
+mFÏgs
+, 
+kFÏg_Adv”tisšgEÇbËd
+))
+
+414 ià(!
+G‘FÏg
+(
+mFÏgs
+, 
+kFÏg_Adv”tisšgCÚfigu»d
+))
+
+416 
+	g”r
+ = 
+CÚfigu»Adv”tisšgD©a
+();
+
+417 
+Ex™Now
+();
+
+421 ià(!
+G‘FÏg
+(
+mFÏgs
+, 
+kFÏg_Adv”tisšg
+))
+
+423 
+	g”r
+ = 
+S¹Adv”tisšg
+();
+
+424 
+Ex™Now
+();
+
+431 ià(
+G‘FÏg
+(
+mFÏgs
+, 
+kFÏg_Adv”tisšg
+))
+
+433 
+	g”r
+ = 
+e¥_bË_g­_¡İ_adv”tisšg
+();
+
+434 ià(
+	g”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+436 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_bË_g­_¡İ_adv”tisšg(èçed: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+437 
+Ex™Now
+();
+
+440 
+S‘FÏg
+(
+mFÏgs
+, 
+kFÏg_CÚŒŞOpInProg»ss
+);
+
+442 
+Ex™Now
+();
+
+447 ià(
+	gmS”viûMode
+ !ğ
+CÚÃùiv™yMªag”
+::
+kWoBLES”viûMode_EÇbËd
+ && 
+G‘FÏg
+(
+mFÏgs
+, 
+kFÏg_GATTS”viûS¹ed
+))
+
+451 
+	g”r
+ = 
+e¥_bË_g©ts_¡İ_£rviû
+(
+mS”viûA‰rHªdË
+);
+
+452 ià(
+	g”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+454 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_bË_g©ts_¡İ_£rviû(èçed: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+455 
+Ex™Now
+();
+
+458 
+S‘FÏg
+(
+mFÏgs
+, 
+kFÏg_CÚŒŞOpInProg»ss
+);
+
+460 
+Ex™Now
+();
+
+463 
+	gex™
+:
+
+464 ià(
+”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+466 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "Di§blšg WoBLE s”viû dutØ”rÜ: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+467 
+	gmS”viûMode
+ = 
+CÚÃùiv™yMªag”
+::
+kWoBLES”viûMode_Di§bËd
+;
+
+471 
+WEAVE_ERROR
+ 
+	gBLEMªag”Im¶
+::
+In™ESPBËLay”
+()
+
+473 
+WEAVE_ERROR
+ 
+”r
+ = 
+WEAVE_NO_ERROR
+;
+
+475 
+V”ifyOrEx™
+(!
+G‘FÏg
+(
+mFÏgs
+, 
+kFÏg_ESPBLELay”In™Ÿlized
+), );
+
+478 ià(
+e¥_bt_cÚŒŞËr_g‘_¡©us
+(è=ğ
+ESP_BT_CONTROLLER_STATUS_IDLE
+)
+
+481 
+”r
+ = 
+e¥_bt_cÚŒŞËr_mem_»Ëa£
+(
+ESP_BT_MODE_CLASSIC_BT
+);
+
+482 ià(
+	g”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+484 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_bt_cÚŒŞËr_mem_»Ëa£(èçed: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+485 
+Ex™Now
+();
+
+489 
+e¥_bt_cÚŒŞËr_cÚfig_t
+ 
+	gbt_cfg
+ = 
+BT_CONTROLLER_INIT_CONFIG_DEFAULT
+();
+
+490 
+	g”r
+ = 
+e¥_bt_cÚŒŞËr_š™
+(&
+bt_cfg
+);
+
+491 ià(
+	g”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+493 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_bt_cÚŒŞËr_š™(èçed: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+494 
+Ex™Now
+();
+
+499 ià(
+e¥_bt_cÚŒŞËr_g‘_¡©us
+(è!ğ
+ESP_BT_CONTROLLER_STATUS_ENABLED
+)
+
+501 
+”r
+ = 
+e¥_bt_cÚŒŞËr_’abË
+(
+ESP_BT_MODE_BLE
+);
+
+502 ià(
+	g”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+504 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_bt_cÚŒŞËr_’abË(èçed: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+505 
+Ex™Now
+();
+
+510 ià(
+e¥_bluedroid_g‘_¡©us
+(è=ğ
+ESP_BLUEDROID_STATUS_UNINITIALIZED
+)
+
+512 
+”r
+ = 
+e¥_bluedroid_š™
+();
+
+513 ià(
+	g”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+515 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_bluedroid_š™(èçed: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+516 
+Ex™Now
+();
+
+521 ià(
+e¥_bluedroid_g‘_¡©us
+(è!ğ
+ESP_BLUEDROID_STATUS_ENABLED
+)
+
+523 
+”r
+ = 
+e¥_bluedroid_’abË
+();
+
+524 ià(
+	g”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+526 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_bluedroid_’abË(èçed: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+527 
+Ex™Now
+();
+
+532 
+	g”r
+ = 
+e¥_bË_g©ts_»gi¡”_ÿÎback
+(
+HªdËGATTEv’t
+);
+
+533 ià(
+	g”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+535 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_bË_g©ts_»gi¡”_ÿÎback(èçed: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+536 
+Ex™Now
+();
+
+540 
+	g”r
+ = 
+e¥_bË_g­_»gi¡”_ÿÎback
+(
+HªdËGAPEv’t
+);
+
+541 ià(
+	g”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+543 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_bË_g­_»gi¡”_ÿÎback(èçed: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+544 
+Ex™Now
+();
+
+548 
+	g”r
+ = 
+e¥_bË_g©t_£t_loÿl_mtu
+(
+ESP_GATT_MAX_MTU_SIZE
+);
+
+549 ià(
+	g”r
+ !ğ
+WEAVE_NO_ERROR
+){
+
+550 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_bË_g©t_£t_loÿl_mtu(èçed: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+552 
+SucûssOrEx™
+(
+”r
+);
+
+554 
+S‘FÏg
+(
+mFÏgs
+, 
+kFÏg_ESPBLELay”In™Ÿlized
+);
+
+556 
+	gex™
+:
+
+557  
+”r
+;
+
+560 
+WEAVE_ERROR
+ 
+	gBLEMªag”Im¶
+::
+CÚfigu»Adv”tisšgD©a
+()
+
+562 
+WEAVE_ERROR
+ 
+”r
+;
+
+563 
+e¥_bË_adv_d©a_t
+ 
+	gadv”tD©a
+;
+
+564 
+W—veS”viûD©a
+ 
+	gw—veS”viûD©a
+;
+
+568 ià(!
+G‘FÏg
+(
+mFÏgs
+, 
+kFÏg_U£Cu¡omDeviûName
+))
+
+570 
+¢´štf
+(
+mDeviûName
+, (mDeviûName), "%s%04" 
+PRIX32
+,
+
+571 
+WEAVE_DEVICE_CONFIG_BLE_DEVICE_NAME_PREFIX
+,
+
+572 (
+ušt32_t
+)
+FabricS‹
+.
+LoÿlNodeId
+);
+
+573 
+	gmDeviûName
+[
+kMaxDeviûNameL’gth
+] = 0;
+
+577 
+	g”r
+ = 
+e¥_bË_g­_£t_deviû_Çme
+(
+mDeviûName
+);
+
+578 ià(
+	g”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+580 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_bË_g­_£t_deviû_Çme(èçed: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+581 
+Ex™Now
+();
+
+585 
+mem£t
+(&
+adv”tD©a
+, 0, (advertData));
+
+586 
+	gadv”tD©a
+.
+	g£t_sÿn_r¥
+ = 
+çl£
+;
+
+587 
+	gadv”tD©a
+.
+	gšşude_Çme
+ = 
+Œue
+;
+
+588 
+	gadv”tD©a
+.
+	gšşude_txpow”
+ = 
+çl£
+;
+
+589 
+	gadv”tD©a
+.
+	gmš_š‹rv®
+ = 0;
+
+590 
+	gadv”tD©a
+.
+	gmax_š‹rv®
+ = 0;
+
+591 
+	gadv”tD©a
+.
+	g­³¬ªû
+ = 0;
+
+592 
+	gadv”tD©a
+.
+	gmªuçùu»r_Ën
+ = 0;
+
+593 
+	gadv”tD©a
+.
+	gp_mªuçùu»r_d©a
+ = 
+NULL
+;
+
+594 
+	gadv”tD©a
+.
+	g£rviû_d©a_Ën
+ = 0;
+
+595 
+	gadv”tD©a
+.
+	gp_£rviû_d©a
+ = 
+NULL
+;
+
+596 
+	gadv”tD©a
+.
+	g£rviû_uuid_Ën
+ = (
+UUID_WoBLES”viû
+);
+
+597 
+	gadv”tD©a
+.
+	gp_£rviû_uuid
+ = (
+ušt8_t
+ *)
+UUID_WoBLES”viû
+;
+
+598 
+	gadv”tD©a
+.
+	gæag
+ = 
+ESP_BLE_ADV_FLAG_GEN_DISC
+ | 
+ESP_BLE_ADV_FLAG_BREDR_NOT_SPT
+;
+
+599 
+	g”r
+ = 
+e¥_bË_g­_cÚfig_adv_d©a
+(&
+adv”tD©a
+);
+
+600 ià(
+	g”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+602 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_bË_g­_cÚfig_adv_d©a(<adv”tisšg d©a>èçed: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+603 
+Ex™Now
+();
+
+607 
+memıy
+(
+w—veS”viûD©a
+.
+S”viûUUID
+, 
+ShÜtUUID_WoBLES”viû
+, (weaveServiceData.ServiceUUID));
+
+608 
+	gw—veS”viûD©a
+.
+	gD©aBlockL’
+ = 16;
+
+609 
+	gw—veS”viûD©a
+.
+	gD©aBlockTy³
+ = 1;
+
+610 
+	gw—veS”viûD©a
+.
+	gD©aBlockMajÜV”siÚ
+ = 0;
+
+611 
+	gw—veS”viûD©a
+.
+	gD©aBlockMšÜV”siÚ
+ = 1;
+
+612 
+	gEncodšg
+::
+L™eEndŸn
+::
+Put16
+(
+w—veS”viûD©a
+.
+DeviûV’dÜId
+, (
+ušt16_t
+)
+WEAVE_DEVICE_CONFIG_DEVICE_VENDOR_ID
+);
+
+613 
+	gEncodšg
+::
+L™eEndŸn
+::
+Put16
+(
+w—veS”viûD©a
+.
+DeviûProduùId
+, (
+ušt16_t
+)
+WEAVE_DEVICE_CONFIG_DEVICE_PRODUCT_ID
+);
+
+614 
+	gEncodšg
+::
+L™eEndŸn
+::
+Put64
+(
+w—veS”viûD©a
+.
+DeviûId
+, 
+FabricS‹
+.
+LoÿlNodeId
+);
+
+615 
+	gw—veS”viûD©a
+.
+	gPaœšgStus
+ = 
+CÚfigu¿tiÚMgr
+().
+IsPaœedToAccouÁ
+() ? 1 : 0;
+
+618 
+mem£t
+(&
+adv”tD©a
+, 0, (advertData));
+
+619 
+	gadv”tD©a
+.
+	g£t_sÿn_r¥
+ = 
+Œue
+;
+
+620 
+	gadv”tD©a
+.
+	gšşude_Çme
+ = 
+çl£
+;
+
+621 
+	gadv”tD©a
+.
+	gšşude_txpow”
+ = 
+Œue
+;
+
+622 
+	gadv”tD©a
+.
+	gmš_š‹rv®
+ = 0;
+
+623 
+	gadv”tD©a
+.
+	gmax_š‹rv®
+ = 0;
+
+624 
+	gadv”tD©a
+.
+	g­³¬ªû
+ = 0;
+
+625 
+	gadv”tD©a
+.
+	gmªuçùu»r_Ën
+ = 0;
+
+626 
+	gadv”tD©a
+.
+	gp_mªuçùu»r_d©a
+ = 
+NULL
+;
+
+627 
+	gadv”tD©a
+.
+	g£rviû_d©a_Ën
+ = (
+w—veS”viûD©a
+);
+
+628 
+	gadv”tD©a
+.
+	gp_£rviû_d©a
+ = (
+ušt8_t
+ *)&
+w—veS”viûD©a
+;
+
+629 
+	gadv”tD©a
+.
+	g£rviû_uuid_Ën
+ = 0;
+
+630 
+	gadv”tD©a
+.
+	gp_£rviû_uuid
+ = 
+NULL
+;
+
+631 
+	gadv”tD©a
+.
+	gæag
+ = 0;
+
+632 
+	g”r
+ = 
+e¥_bË_g­_cÚfig_adv_d©a
+(&
+adv”tD©a
+);
+
+633 ià(
+	g”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+635 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_bË_g­_cÚfig_adv_d©a(<sÿÀ»¥Ú£>èçed: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+636 
+Ex™Now
+();
+
+639 
+S‘FÏg
+(
+mFÏgs
+, 
+kFÏg_CÚŒŞOpInProg»ss
+);
+
+641 
+	gex™
+:
+
+642  
+”r
+;
+
+645 
+WEAVE_ERROR
+ 
+	gBLEMªag”Im¶
+::
+S¹Adv”tisšg
+()
+
+647 
+WEAVE_ERROR
+ 
+”r
+;
+
+648 
+e¥_bË_adv_·¿ms_t
+ 
+	gadv”tP¬ams
+ =
+
+652 
+ADV_TYPE_IND
+,
+
+653 
+BLE_ADDR_TYPE_PUBLIC
+,
+
+655 
+BLE_ADDR_TYPE_RANDOM
+,
+
+656 
+ADV_CHNL_ALL
+,
+
+657 
+ADV_FILTER_ALLOW_SCAN_ANY_CON_ANY
+,
+
+661 
+size_t
+ 
+	gnumCÚs
+ = 
+NumCÚÃùiÚs
+();
+
+662 
+boŞ
+ 
+	gcÚÃùabË
+ = (
+numCÚs
+ < 
+kMaxCÚÃùiÚs
+);
+
+663 
+	gadv”tP¬ams
+.
+	gadv_ty³
+ = 
+cÚÃùabË
+ ? 
+ADV_TYPE_IND
+ : 
+ADV_TYPE_NONCONN_IND
+;
+
+666 
+	gadv”tP¬ams
+.
+	gadv_št_mš
+ = 
+adv”tP¬ams
+.
+adv_št_max
+ =
+
+667 (
+numCÚs
+ =ğ0 && !
+CÚfigu¿tiÚMgr
+().
+IsPaœedToAccouÁ
+())
+
+668 ? 
+WEAVE_DEVICE_CONFIG_BLE_FAST_ADVERTISING_INTERVAL
+
+
+669 : 
+WEAVE_DEVICE_CONFIG_BLE_SLOW_ADVERTISING_INTERVAL
+;
+
+671 
+W—veLogProg»ss
+(
+DeviûLay”
+, "CÚfiguršg BLE‡dv”tisšg (š‹rv® %" 
+PRIu32
+ " ms, %sconnectable, device‚ame %s)",
+
+672 (((
+ušt32_t
+)
+adv”tP¬ams
+.
+adv_št_mš
+) * 10) / 16,
+
+673 (
+cÚÃùabË
+) ? "" : "non-",
+
+674 
+mDeviûName
+);
+
+676 
+	g”r
+ = 
+e¥_bË_g­_¡¬t_adv”tisšg
+(&
+adv”tP¬ams
+);
+
+677 ià(
+	g”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+679 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_bË_g­_¡¬t_adv”tisšg(èçed: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+680 
+Ex™Now
+();
+
+683 
+S‘FÏg
+(
+mFÏgs
+, 
+kFÏg_CÚŒŞOpInProg»ss
+);
+
+685 
+	gex™
+:
+
+686  
+”r
+;
+
+689 
+	gBLEMªag”Im¶
+::
+HªdËGATTCÚŒŞEv’t
+(
+e¥_g©ts_cb_ev’t_t
+ 
+ev’t
+, 
+e¥_g©t_if_t
+ 
+g©ts_if
+, 
+e¥_bË_g©ts_cb_·¿m_t
+ * 
+·¿m
+)
+
+691 
+WEAVE_ERROR
+ 
+	g”r
+ = 
+WEAVE_NO_ERROR
+;
+
+692 
+boŞ
+ 
+	gcÚŒŞOpCom¶‘e
+ = 
+çl£
+;
+
+695 ià(
+	gev’t
+ !ğ
+ESP_GATTS_REG_EVT
+ && (!
+G‘FÏg
+(
+mFÏgs
+, 
+kFÏg_AµRegi¡”ed
+è|| 
+	gg©ts_if
+ !ğ
+mAµIf
+))
+
+697 
+Ex™Now
+();
+
+700 
+	gev’t
+)
+
+702 
+	gESP_GATTS_REG_EVT
+:
+
+704 ià(
+·¿m
+->
+»g
+.
+­p_id
+ =ğ
+WoBLEAµId
+)
+
+706 ià(
+·¿m
+->
+»g
+.
+¡©us
+ !ğ
+ESP_GATT_OK
+)
+
+708 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "ESP_GATTS_REG_EVTƒ¼Ü: %d", ()
+·¿m
+->
+»g
+.
+¡©us
+);
+
+709 
+Ex™Now
+(
+”r
+ = 
+ESP_ERR_INVALID_RESPONSE
+);
+
+713 
+	gmAµIf
+ = 
+g©ts_if
+;
+
+715 
+S‘FÏg
+(
+mFÏgs
+, 
+kFÏg_AµRegi¡”ed
+);
+
+716 
+	gcÚŒŞOpCom¶‘e
+ = 
+Œue
+;
+
+721 
+	gESP_GATTS_CREAT_ATTR_TAB_EVT
+:
+
+723 ià(
+·¿m
+->
+add_©Œ_b
+.
+¡©us
+ !ğ
+ESP_GATT_OK
+)
+
+725 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "ESP_GATTS_CREAT_ATTR_TAB_EVTƒ¼Ü: %d", ()
+·¿m
+->
+add_©Œ_b
+.
+¡©us
+);
+
+726 
+Ex™Now
+(
+”r
+ = 
+ESP_ERR_INVALID_RESPONSE
+);
+
+730 
+	gmS”viûA‰rHªdË
+ = 
+·¿m
+->
+add_©Œ_b
+.
+hªdËs
+[
+kA‰rIndex_S”viûDeş¬©iÚ
+];
+
+731 
+	gmRXCh¬A‰rHªdË
+ = 
+·¿m
+->
+add_©Œ_b
+.
+hªdËs
+[
+kA‰rIndex_RXCh¬V®ue
+];
+
+732 
+	gmTXCh¬A‰rHªdË
+ = 
+·¿m
+->
+add_©Œ_b
+.
+hªdËs
+[
+kA‰rIndex_TXCh¬V®ue
+];
+
+733 
+	gmTXCh¬CCCDA‰rHªdË
+ = 
+·¿m
+->
+add_©Œ_b
+.
+hªdËs
+[
+kA‰rIndex_TXCh¬CCCDV®ue
+];
+
+735 
+S‘FÏg
+(
+mFÏgs
+, 
+kFÏg_A‰rsRegi¡”ed
+);
+
+736 
+	gcÚŒŞOpCom¶‘e
+ = 
+Œue
+;
+
+740 
+	gESP_GATTS_START_EVT
+:
+
+742 ià(
+·¿m
+->
+¡¬t
+.
+¡©us
+ !ğ
+ESP_GATT_OK
+)
+
+744 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "ESP_GATTS_START_EVTƒ¼Ü: %d", ()
+·¿m
+->
+¡¬t
+.
+¡©us
+);
+
+745 
+Ex™Now
+(
+”r
+ = 
+ESP_ERR_INVALID_RESPONSE
+);
+
+748 
+W—veLogProg»ss
+(
+DeviûLay”
+, "WoBLE GATT service started");
+
+750 
+S‘FÏg
+(
+mFÏgs
+, 
+kFÏg_GATTS”viûS¹ed
+);
+
+751 
+	gcÚŒŞOpCom¶‘e
+ = 
+Œue
+;
+
+756 
+	gESP_GATTS_STOP_EVT
+:
+
+758 ià(
+·¿m
+->
+¡İ
+.
+¡©us
+ !ğ
+ESP_GATT_OK
+)
+
+760 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "ESP_GATTS_STOP_EVTƒ¼Ü: %d", ()
+·¿m
+->
+¡İ
+.
+¡©us
+);
+
+761 
+Ex™Now
+(
+”r
+ = 
+ESP_ERR_INVALID_RESPONSE
+);
+
+764 
+W—veLogProg»ss
+(
+DeviûLay”
+, "WoBLE GATT service stopped");
+
+766 
+CË¬FÏg
+(
+mFÏgs
+, 
+kFÏg_GATTS”viûS¹ed
+);
+
+767 
+	gcÚŒŞOpCom¶‘e
+ = 
+Œue
+;
+
+771 
+	gESP_GATTS_RESPONSE_EVT
+:
+
+772 
+ESP_LOGD
+(
+TAG
+, "ESP_GATTS_RESPONSE_EVT (hªdË %u, stu %d)", 
+·¿m
+->
+r¥
+.
+hªdË
+, (í¬am->r¥.
+¡©us
+);
+
+780 
+	gex™
+:
+
+781 ià(
+”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+783 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "Di§blšg WoBLE s”viû dutØ”rÜ: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+784 
+	gmS”viûMode
+ = 
+CÚÃùiv™yMªag”
+::
+kWoBLES”viûMode_Di§bËd
+;
+
+786 ià(
+	gcÚŒŞOpCom¶‘e
+)
+
+788 
+CË¬FÏg
+(
+mFÏgs
+, 
+kFÏg_CÚŒŞOpInProg»ss
+);
+
+789 
+PÏtfÜmMgr
+().
+ScheduËWÜk
+(
+DriveBLES‹
+, 0);
+
+793 
+	gBLEMªag”Im¶
+::
+HªdËGATTCommEv’t
+(
+e¥_g©ts_cb_ev’t_t
+ 
+ev’t
+, 
+e¥_g©t_if_t
+ 
+g©ts_if
+, 
+e¥_bË_g©ts_cb_·¿m_t
+ * 
+·¿m
+)
+
+797 ià(!
+G‘FÏg
+(
+sIn¡ªû
+.
+mFÏgs
+, 
+kFÏg_GATTS”viûS¹ed
+è|| 
+	gg©ts_if
+ !ğsIn¡ªû.
+mAµIf
+)
+
+802 
+	gev’t
+)
+
+804 
+	gESP_GATTS_CONNECT_EVT
+:
+
+805 
+W—veLogProg»ss
+(
+DeviûLay”
+, "BLE GATT cÚÃùiÚƒ¡ablished (cÚ %u)", 
+·¿m
+->
+cÚÃù
+.
+cÚn_id
+);
+
+808 
+G‘CÚÃùiÚS‹
+(
+·¿m
+->
+mtu
+.
+cÚn_id
+, 
+Œue
+);
+
+811 
+CË¬FÏg
+(
+mFÏgs
+, 
+kFÏg_Adv”tisšg
+);
+
+812 
+PÏtfÜmMgr
+().
+ScheduËWÜk
+(
+DriveBLES‹
+, 0);
+
+816 
+	gESP_GATTS_DISCONNECT_EVT
+:
+
+817 
+HªdËDiscÚÃù
+(
+·¿m
+);
+
+820 
+	gESP_GATTS_READ_EVT
+:
+
+821 ià(
+·¿m
+->
+»ad
+.
+hªdË
+ =ğ
+mTXCh¬A‰rHªdË
+)
+
+823 
+HªdËTXCh¬R—d
+(
+·¿m
+);
+
+825 ià(
+	g·¿m
+->
+	g»ad
+.
+	ghªdË
+ =ğ
+mTXCh¬CCCDA‰rHªdË
+)
+
+827 
+HªdËTXCh¬CCCDR—d
+(
+·¿m
+);
+
+831 
+	gESP_GATTS_WRITE_EVT
+:
+
+832 ià(
+·¿m
+->
+wr™e
+.
+hªdË
+ =ğ
+mRXCh¬A‰rHªdË
+)
+
+834 
+HªdËRXCh¬Wr™e
+(
+·¿m
+);
+
+836 ià(
+	g·¿m
+->
+	gwr™e
+.
+	ghªdË
+ =ğ
+mTXCh¬CCCDA‰rHªdË
+)
+
+838 
+HªdËTXCh¬CCCDWr™e
+(
+·¿m
+);
+
+842 
+	gESP_GATTS_CONF_EVT
+:
+
+844 
+WoBLECÚS‹
+ * 
+cÚS‹
+ = 
+G‘CÚÃùiÚS‹
+(
+·¿m
+->
+cÚf
+.
+cÚn_id
+);
+
+845 ià(
+	gcÚS‹
+ !ğ
+NULL
+)
+
+847 
+HªdËTXCh¬CÚfœm
+(
+cÚS‹
+, 
+·¿m
+);
+
+852 
+	gESP_GATTS_MTU_EVT
+:
+
+854 
+ESP_LOGD
+(
+TAG
+, "MTU fÜ cÚ %u: %u", 
+·¿m
+->
+mtu
+.
+cÚn_id
+,…aram->mtu.mtu);
+
+855 
+WoBLECÚS‹
+ * 
+	gcÚS‹
+ = 
+G‘CÚÃùiÚS‹
+(
+·¿m
+->
+mtu
+.
+cÚn_id
+);
+
+856 ià(
+	gcÚS‹
+ !ğ
+NULL
+)
+
+858 
+cÚS‹
+->
+MTU
+ = 
+·¿m
+->
+mtu
+.mtu;
+
+868 
+	gBLEMªag”Im¶
+::
+HªdËRXCh¬Wr™e
+(
+e¥_bË_g©ts_cb_·¿m_t
+ * 
+·¿m
+)
+
+870 
+WEAVE_ERROR
+ 
+”r
+ = 
+WEAVE_NO_ERROR
+;
+
+871 
+Pack‘Bufãr
+ * 
+	gbuf
+ = 
+NULL
+;
+
+872 
+boŞ
+ 
+	gÃedRe¥
+ = 
+·¿m
+->
+wr™e
+.
+Ãed_r¥
+;
+
+874 
+ESP_LOGD
+(
+TAG
+, "Wr™»que¡„eûived fÜ WoBLE RX ch¬aù”i¡iø(cÚ %u,†’ %u)", 
+·¿m
+->
+wr™e
+.
+cÚn_id
+,…¬am->wr™e.
+Ën
+);
+
+877 
+V”ifyOrEx™
+(
+·¿m
+->
+wr™e
+.
+is_´•
+ =ğ
+çl£
+, 
+”r
+ = 
+WEAVE_ERROR_INVALID_ARGUMENT
+);
+
+880 
+	gbuf
+ = 
+Pack‘Bufãr
+::
+New
+(0);
+
+881 
+V”ifyOrEx™
+(
+buf
+ !ğ
+NULL
+, 
+”r
+ = 
+WEAVE_ERROR_NO_MEMORY
+);
+
+882 
+V”ifyOrEx™
+(
+buf
+->
+AvaabËD©aL’gth
+(è>ğ
+·¿m
+->
+wr™e
+.
+Ën
+, 
+”r
+ = 
+WEAVE_ERROR_BUFFER_TOO_SMALL
+);
+
+883 
+memıy
+(
+buf
+->
+S¹
+(), 
+·¿m
+->
+wr™e
+.
+v®ue
+,…¬am->wr™e.
+Ën
+);
+
+884 
+	gbuf
+->
+S‘D©aL’gth
+(
+·¿m
+->
+wr™e
+.
+Ën
+);
+
+887 ià(
+	gÃedRe¥
+)
+
+889 
+e¥_bË_g©ts_£nd_»¥Ú£
+(
+mAµIf
+, 
+·¿m
+->
+wr™e
+.
+cÚn_id
+,…¬am->wr™e.
+Œªs_id
+, 
+ESP_GATT_OK
+, 
+NULL
+);
+
+890 
+	gÃedRe¥
+ = 
+çl£
+;
+
+895 
+W—veDeviûEv’t
+ 
+	gev’t
+;
+
+896 
+	gev’t
+.
+	gTy³
+ = 
+DeviûEv’tTy³
+::
+kWoBLEWr™eReûived
+;
+
+897 
+	gev’t
+.
+	gWoBLEWr™eReûived
+.
+	gCÚId
+ = 
+·¿m
+->
+wr™e
+.
+cÚn_id
+;
+
+898 
+	gev’t
+.
+	gWoBLEWr™eReûived
+.
+	gD©a
+ = 
+buf
+;
+
+899 
+PÏtfÜmMgr
+().
+Po¡Ev’t
+(&
+ev’t
+);
+
+900 
+	gbuf
+ = 
+NULL
+;
+
+903 
+	gex™
+:
+
+904 ià(
+”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+906 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "HªdËRXCh¬Wr™e(èçed: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+907 ià(
+	gÃedRe¥
+)
+
+909 
+e¥_bË_g©ts_£nd_»¥Ú£
+(
+mAµIf
+, 
+·¿m
+->
+wr™e
+.
+cÚn_id
+,…¬am->wr™e.
+Œªs_id
+, 
+ESP_GATT_INTERNAL_ERROR
+, 
+NULL
+);
+
+913 
+	gPack‘Bufãr
+::
+F»e
+(
+buf
+);
+
+916 
+	gBLEMªag”Im¶
+::
+HªdËTXCh¬R—d
+(
+e¥_bË_g©ts_cb_·¿m_t
+ * 
+·¿m
+)
+
+918 
+WEAVE_ERROR
+ 
+”r
+;
+
+919 
+e¥_g©t_r¥_t
+ 
+	gr¥
+;
+
+921 
+ESP_LOGD
+(
+TAG
+, "R—d„eque¡„eûived fÜ WoBLE TX ch¬aù”i¡iø(cÚ %u)", 
+·¿m
+->
+»ad
+.
+cÚn_id
+);
+
+924 
+mem£t
+(&
+r¥
+, 0, (
+e¥_g©t_r¥_t
+));
+
+925 
+	gr¥
+.
+	g©Œ_v®ue
+.
+	ghªdË
+ = 
+·¿m
+->
+»ad
+.
+hªdË
+;
+
+926 
+	g”r
+ = 
+e¥_bË_g©ts_£nd_»¥Ú£
+(
+mAµIf
+, 
+·¿m
+->
+»ad
+.
+cÚn_id
+,…¬am->»ad.
+Œªs_id
+, 
+ESP_GATT_OK
+, &
+r¥
+);
+
+927 ià(
+	g”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+929 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_bË_g©ts_£nd_»¥Ú£(èçed: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+933 
+	gBLEMªag”Im¶
+::
+HªdËTXCh¬CCCDR—d
+(
+e¥_bË_g©ts_cb_·¿m_t
+ * 
+·¿m
+)
+
+935 
+WEAVE_ERROR
+ 
+”r
+;
+
+936 
+WoBLECÚS‹
+ * 
+	gcÚS‹
+;
+
+937 
+e¥_g©t_r¥_t
+ 
+	gr¥
+;
+
+939 
+ESP_LOGD
+(
+TAG
+, "R—d„eque¡„eûived fÜ WoBLE TX ch¬aù”i¡iøCCCD (cÚ %u)", 
+·¿m
+->
+»ad
+.
+cÚn_id
+);
+
+942 
+	gcÚS‹
+ = 
+G‘CÚÃùiÚS‹
+(
+·¿m
+->
+»ad
+.
+cÚn_id
+);
+
+945 
+mem£t
+(&
+r¥
+, 0, (
+e¥_g©t_r¥_t
+));
+
+946 
+	gr¥
+.
+	g©Œ_v®ue
+.
+	ghªdË
+ = 
+·¿m
+->
+»ad
+.
+hªdË
+;
+
+947 ià(
+	gcÚS‹
+ !ğ
+NULL
+)
+
+949 
+r¥
+.
+©Œ_v®ue
+.
+Ën
+ = 2;
+
+950 
+	gr¥
+.
+	g©Œ_v®ue
+.
+	gv®ue
+[0] = 
+cÚS‹
+->
+Subsüibed
+ ? 1 : 0;
+
+952 
+	g”r
+ = 
+e¥_bË_g©ts_£nd_»¥Ú£
+(
+mAµIf
+, 
+·¿m
+->
+»ad
+.
+cÚn_id
+,…¬am->»ad.
+Œªs_id
+, (
+cÚS‹
+ !ğ
+NULL
+è? 
+ESP_GATT_OK
+ : 
+ESP_GATT_INTERNAL_ERROR
+, &
+r¥
+);
+
+953 ià(
+	g”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+955 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_bË_g©ts_£nd_»¥Ú£(èçed: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+959 
+	gBLEMªag”Im¶
+::
+HªdËTXCh¬CCCDWr™e
+(
+e¥_bË_g©ts_cb_·¿m_t
+ * 
+·¿m
+)
+
+961 
+WEAVE_ERROR
+ 
+”r
+ = 
+WEAVE_NO_ERROR
+;
+
+962 
+WoBLECÚS‹
+ * 
+	gcÚS‹
+;
+
+963 
+boŞ
+ 
+	gÃedRe¥
+ = 
+·¿m
+->
+wr™e
+.
+Ãed_r¥
+;
+
+964 
+boŞ
+ 
+	gšdiÿtiÚsEÇbËd
+;
+
+966 
+ESP_LOGD
+(
+TAG
+, "Wr™»que¡„eûived fÜ WoBLE TX ch¬aù”i¡iøCCCD (cÚ %u,†’ %u)", 
+·¿m
+->
+wr™e
+.
+cÚn_id
+,…¬am->wr™e.
+Ën
+);
+
+969 
+	gcÚS‹
+ = 
+G‘CÚÃùiÚS‹
+(
+·¿m
+->
+»ad
+.
+cÚn_id
+);
+
+970 
+V”ifyOrEx™
+(
+cÚS‹
+ !ğ
+NULL
+, 
+”r
+ = 
+WEAVE_ERROR_NO_MEMORY
+);
+
+973 
+V”ifyOrEx™
+(
+·¿m
+->
+wr™e
+.
+is_´•
+ =ğ
+çl£
+, 
+”r
+ = 
+WEAVE_ERROR_INVALID_ARGUMENT
+);
+
+976 
+	gšdiÿtiÚsEÇbËd
+ = (
+·¿m
+->
+wr™e
+.
+Ën
+ > 0 && (·¿m->wr™e.
+v®ue
+[0] != 0));
+
+979 ià(
+	gÃedRe¥
+)
+
+981 
+e¥_bË_g©ts_£nd_»¥Ú£
+(
+mAµIf
+, 
+·¿m
+->
+wr™e
+.
+cÚn_id
+,…¬am->wr™e.
+Œªs_id
+, 
+ESP_GATT_OK
+, 
+NULL
+);
+
+982 
+	gÃedRe¥
+ = 
+çl£
+;
+
+988 
+W—veDeviûEv’t
+ 
+	gev’t
+;
+
+989 
+	gev’t
+.
+	gTy³
+ = (
+šdiÿtiÚsEÇbËd
+è? 
+DeviûEv’tTy³
+::
+kWoBLESubsüibe
+ : DeviûEv’tTy³::
+kWoBLEUnsubsüibe
+;
+
+990 
+	gev’t
+.
+	gWoBLESubsüibe
+.
+	gCÚId
+ = 
+·¿m
+->
+wr™e
+.
+cÚn_id
+;
+
+991 
+PÏtfÜmMgr
+().
+Po¡Ev’t
+(&
+ev’t
+);
+
+994 
+W—veLogProg»ss
+(
+DeviûLay”
+, "WoBLE % »ûived", 
+šdiÿtiÚsEÇbËd
+ ? "subscribe" : "unsubscribe");
+
+996 
+	gex™
+:
+
+997 ià(
+”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+999 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "HªdËTXCh¬CCCDWr™e(èçed: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+1000 ià(
+	gÃedRe¥
+)
+
+1002 
+e¥_bË_g©ts_£nd_»¥Ú£
+(
+mAµIf
+, 
+·¿m
+->
+wr™e
+.
+cÚn_id
+,…¬am->wr™e.
+Œªs_id
+, 
+ESP_GATT_INTERNAL_ERROR
+, 
+NULL
+);
+
+1008 
+	gBLEMªag”Im¶
+::
+HªdËTXCh¬CÚfœm
+(
+WoBLECÚS‹
+ * 
+cÚS‹
+, 
+e¥_bË_g©ts_cb_·¿m_t
+ * 
+·¿m
+)
+
+1010 
+ESP_LOGD
+(
+TAG
+, "CÚfœm„eûived fÜ WoBLE TX ch¬aù”i¡iøšdiÿtiÚ (cÚ %u, stu %u)", 
+·¿m
+->
+cÚf
+.
+cÚn_id
+,…¬am->cÚf.
+¡©us
+);
+
+1013 
+	gPack‘Bufãr
+::
+F»e
+(
+cÚS‹
+->
+P’dšgIndBuf
+);
+
+1014 
+	gcÚS‹
+->
+	gP’dšgIndBuf
+ = 
+NULL
+;
+
+1017 ià(
+	g·¿m
+->
+	gcÚf
+.
+	g¡©us
+ =ğ
+ESP_GATT_OK
+)
+
+1020 
+W—veDeviûEv’t
+ 
+ev’t
+;
+
+1021 
+	gev’t
+.
+	gTy³
+ = 
+DeviûEv’tTy³
+::
+kWoBLEIndiÿ‹CÚfœm
+;
+
+1022 
+	gev’t
+.
+	gWoBLEIndiÿ‹CÚfœm
+.
+	gCÚId
+ = 
+·¿m
+->
+cÚf
+.
+cÚn_id
+;
+
+1023 
+PÏtfÜmMgr
+().
+Po¡Ev’t
+(&
+ev’t
+);
+
+1028 
+W—veDeviûEv’t
+ 
+	gev’t
+;
+
+1029 
+	gev’t
+.
+	gTy³
+ = 
+DeviûEv’tTy³
+::
+kWoBLECÚÃùiÚE¼Ü
+;
+
+1030 
+	gev’t
+.
+	gWoBLECÚÃùiÚE¼Ü
+.
+	gCÚId
+ = 
+·¿m
+->
+discÚÃù
+.
+cÚn_id
+;
+
+1031 
+	gev’t
+.
+	gWoBLECÚÃùiÚE¼Ü
+.
+	gR—sÚ
+ = 
+BLE_ERROR_WOBLE_PROTOCOL_ABORT
+;
+
+1032 
+PÏtfÜmMgr
+().
+Po¡Ev’t
+(&
+ev’t
+);
+
+1036 
+	gBLEMªag”Im¶
+::
+HªdËDiscÚÃù
+(
+e¥_bË_g©ts_cb_·¿m_t
+ * 
+·¿m
+)
+
+1038 
+W—veLogProg»ss
+(
+DeviûLay”
+, "BLE GATT cÚÃùiÚ clo£d (cÚ %u,„—sÚ %u)", 
+·¿m
+->
+discÚÃù
+.
+cÚn_id
+,…¬am->discÚÃù.
+»asÚ
+);
+
+1042 ià(
+R–—£CÚÃùiÚS‹
+(
+·¿m
+->
+discÚÃù
+.
+cÚn_id
+))
+
+1044 
+W—veDeviûEv’t
+ 
+	gev’t
+;
+
+1045 
+	gev’t
+.
+	gTy³
+ = 
+DeviûEv’tTy³
+::
+kWoBLECÚÃùiÚE¼Ü
+;
+
+1046 
+	gev’t
+.
+	gWoBLECÚÃùiÚE¼Ü
+.
+	gCÚId
+ = 
+·¿m
+->
+discÚÃù
+.
+cÚn_id
+;
+
+1047 
+	g·¿m
+->
+	gdiscÚÃù
+.
+	g»asÚ
+)
+
+1049 
+	gESP_GATT_CONN_TERMINATE_PEER_USER
+:
+
+1050 
+ev’t
+.
+WoBLECÚÃùiÚE¼Ü
+.
+R—sÚ
+ = 
+BLE_ERROR_REMOTE_DEVICE_DISCONNECTED
+;
+
+1052 
+	gESP_GATT_CONN_TERMINATE_LOCAL_HOST
+:
+
+1053 
+ev’t
+.
+WoBLECÚÃùiÚE¼Ü
+.
+R—sÚ
+ = 
+BLE_ERROR_APP_CLOSED_CONNECTION
+;
+
+1056 
+ev’t
+.
+WoBLECÚÃùiÚE¼Ü
+.
+R—sÚ
+ = 
+BLE_ERROR_WOBLE_PROTOCOL_ABORT
+;
+
+1059 
+PÏtfÜmMgr
+().
+Po¡Ev’t
+(&
+ev’t
+);
+
+1063 
+CË¬FÏg
+(
+mFÏgs
+, 
+kFÏg_Adv”tisšg
+);
+
+1064 
+PÏtfÜmMgr
+().
+ScheduËWÜk
+(
+DriveBLES‹
+, 0);
+
+1068 
+	gBLEMªag”Im¶
+::
+WoBLECÚS‹
+ * 
+BLEMªag”Im¶
+::
+G‘CÚÃùiÚS‹
+(
+ušt16_t
+ 
+cÚId
+, 
+boŞ
+ 
+®loÿ‹
+)
+
+1070 
+ušt16_t
+ 
+	gä“Index
+ = 
+kMaxCÚÃùiÚs
+;
+
+1072 
+ušt16_t
+ 
+	gi
+ = 0; i < 
+	gkMaxCÚÃùiÚs
+; i++)
+
+1074 ià(
+	gmCÚs
+[
+i
+].
+	gAÎoÿ‹d
+ == 1)
+
+1076 ià(
+mCÚs
+[
+i
+].
+CÚId
+ =ğ
+cÚId
+)
+
+1078  &
+mCÚs
+[
+i
+];
+
+1082 ià(
+	gi
+ < 
+	gä“Index
+)
+
+1084 
+	gä“Index
+ = 
+i
+;
+
+1088 ià(
+	g®loÿ‹
+)
+
+1090 ià(
+	gä“Index
+ < 
+	gkMaxCÚÃùiÚs
+)
+
+1092 
+mem£t
+(&
+mCÚs
+[
+ä“Index
+], 0, (
+WoBLECÚS‹
+));
+
+1093 
+	gmCÚs
+[
+ä“Index
+].
+	gAÎoÿ‹d
+ = 1;
+
+1094 
+	gmCÚs
+[
+ä“Index
+].
+	gCÚId
+ = 
+cÚId
+;
+
+1095  &
+	gmCÚs
+[
+ä“Index
+];
+
+1098 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "Failedo‡llocate WoBLEConState");
+
+1101  
+	gNULL
+;
+
+1104 
+boŞ
+ 
+	gBLEMªag”Im¶
+::
+R–—£CÚÃùiÚS‹
+(
+ušt16_t
+ 
+cÚId
+)
+
+1106 
+ušt16_t
+ 
+i
+ = 0; 
+	gi
+ < 
+	gkMaxCÚÃùiÚs
+; i++)
+
+1108 ià(
+	gmCÚs
+[
+i
+].
+	gAÎoÿ‹d
+ && mCÚs[i].
+	gCÚId
+ =ğ
+cÚId
+)
+
+1110 
+Pack‘Bufãr
+::
+F»e
+(
+mCÚs
+[
+i
+].
+P’dšgIndBuf
+);
+
+1111 
+	gmCÚs
+[
+i
+].
+	gAÎoÿ‹d
+ = 0;
+
+1112  
+	gŒue
+;
+
+1116  
+	gçl£
+;
+
+1119 
+ušt16_t
+ 
+	gBLEMªag”Im¶
+::
+_NumCÚÃùiÚs
+()
+
+1121 
+ušt16_t
+ 
+numCÚs
+ = 0;
+
+1122 
+ušt16_t
+ 
+	gi
+ = 0; i < 
+	gkMaxCÚÃùiÚs
+; i++)
+
+1124 ià(
+	gmCÚs
+[
+i
+].
+	gAÎoÿ‹d
+)
+
+1126 
+	gnumCÚs
+++;
+
+1130  
+	gnumCÚs
+;
+
+1133 
+	gBLEMªag”Im¶
+::
+HªdËGATTEv’t
+(
+e¥_g©ts_cb_ev’t_t
+ 
+ev’t
+, 
+e¥_g©t_if_t
+ 
+g©ts_if
+, 
+e¥_bË_g©ts_cb_·¿m_t
+ * 
+·¿m
+)
+
+1135 
+ESP_LOGV
+(
+TAG
+, "GATT Ev’t: %d (ià%d)", ()
+ev’t
+, ()
+g©ts_if
+);
+
+1139 
+PÏtfÜmMgr
+().
+LockW—veSck
+();
+
+1141 
+	gsIn¡ªû
+.
+HªdËGATTCÚŒŞEv’t
+(
+ev’t
+, 
+g©ts_if
+, 
+·¿m
+);
+
+1142 
+	gsIn¡ªû
+.
+HªdËGATTCommEv’t
+(
+ev’t
+, 
+g©ts_if
+, 
+·¿m
+);
+
+1144 
+PÏtfÜmMgr
+().
+UÆockW—veSck
+();
+
+1147 
+	gBLEMªag”Im¶
+::
+HªdËGAPEv’t
+(
+e¥_g­_bË_cb_ev’t_t
+ 
+ev’t
+, 
+e¥_bË_g­_cb_·¿m_t
+ *
+·¿m
+)
+
+1149 
+WEAVE_ERROR
+ 
+	g”r
+ = 
+WEAVE_NO_ERROR
+;
+
+1151 
+ESP_LOGV
+(
+TAG
+, "GAP Ev’t: %d", ()
+ev’t
+);
+
+1155 
+PÏtfÜmMgr
+().
+LockW—veSck
+();
+
+1157 
+	gev’t
+)
+
+1159 
+	gESP_GAP_BLE_ADV_DATA_SET_COMPLETE_EVT
+:
+
+1161 ià(
+·¿m
+->
+adv_d©a_cm¶
+.
+¡©us
+ !ğ
+ESP_BT_STATUS_SUCCESS
+)
+
+1163 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "ESP_GAP_BLE_ADV_DATA_SET_COMPLETE_EVTƒ¼Ü: %d", ()
+·¿m
+->
+adv_d©a_cm¶
+.
+¡©us
+);
+
+1164 
+Ex™Now
+(
+”r
+ = 
+ESP_ERR_INVALID_RESPONSE
+);
+
+1167 
+S‘FÏg
+(
+sIn¡ªû
+.
+mFÏgs
+, 
+kFÏg_Adv”tisšgCÚfigu»d
+);
+
+1168 
+CË¬FÏg
+(
+sIn¡ªû
+.
+mFÏgs
+, 
+kFÏg_CÚŒŞOpInProg»ss
+);
+
+1172 
+	gESP_GAP_BLE_ADV_START_COMPLETE_EVT
+:
+
+1174 ià(
+·¿m
+->
+adv_¡¬t_cm¶
+.
+¡©us
+ !ğ
+ESP_BT_STATUS_SUCCESS
+)
+
+1176 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "ESP_GAP_BLE_ADV_START_COMPLETE_EVTƒ¼Ü: %d", ()
+·¿m
+->
+adv_¡¬t_cm¶
+.
+¡©us
+);
+
+1177 
+Ex™Now
+(
+”r
+ = 
+ESP_ERR_INVALID_RESPONSE
+);
+
+1180 
+W—veLogProg»ss
+(
+DeviûLay”
+, "BLE‡dvertising started");
+
+1182 
+S‘FÏg
+(
+sIn¡ªû
+.
+mFÏgs
+, 
+kFÏg_Adv”tisšg
+);
+
+1183 
+CË¬FÏg
+(
+sIn¡ªû
+.
+mFÏgs
+, 
+kFÏg_CÚŒŞOpInProg»ss
+);
+
+1187 
+	gESP_GAP_BLE_ADV_STOP_COMPLETE_EVT
+:
+
+1189 ià(
+·¿m
+->
+adv_¡İ_cm¶
+.
+¡©us
+ !ğ
+ESP_BT_STATUS_SUCCESS
+)
+
+1191 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "ESP_GAP_BLE_ADV_STOP_COMPLETE_EVTƒ¼Ü: %d", ()
+·¿m
+->
+adv_¡İ_cm¶
+.
+¡©us
+);
+
+1192 
+Ex™Now
+(
+”r
+ = 
+ESP_ERR_INVALID_RESPONSE
+);
+
+1195 
+W—veLogProg»ss
+(
+DeviûLay”
+, "BLE‡dvertising stopped");
+
+1197 
+CË¬FÏg
+(
+sIn¡ªû
+.
+mFÏgs
+, 
+kFÏg_Adv”tisšg
+);
+
+1198 
+CË¬FÏg
+(
+sIn¡ªû
+.
+mFÏgs
+, 
+kFÏg_CÚŒŞOpInProg»ss
+);
+
+1206 
+	gex™
+:
+
+1207 ià(
+”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+1209 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "Di§blšg WoBLE s”viû dutØ”rÜ: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+1210 
+	gsIn¡ªû
+.
+	gmS”viûMode
+ = 
+CÚÃùiv™yMªag”
+::
+kWoBLES”viûMode_Di§bËd
+;
+
+1212 
+PÏtfÜmMgr
+().
+ScheduËWÜk
+(
+DriveBLES‹
+, 0);
+
+1213 
+PÏtfÜmMgr
+().
+UÆockW—veSck
+();
+
+1216 
+	gBLEMªag”Im¶
+::
+DriveBLES‹
+(
+šŒ_t
+ 
+¬g
+)
+
+1218 
+sIn¡ªû
+.
+DriveBLES‹
+();
+
+	@ConfigurationManagerImpl.cpp
+
+25 
+	~<W—ve/DeviûLay”/š‹º®/W—veDeviûLay”IÁ”Çl.h
+>
+
+26 
+	~<W—ve/DeviûLay”/CÚfigu¿tiÚMªag”.h
+>
+
+27 
+	~<W—ve/CÜe/W—veKeyIds.h
+>
+
+28 
+	~<W—ve/CÜe/W—veV’dÜId’tif›rs.hµ
+>
+
+29 
+	~<W—ve/Profes/£cur™y/W—veAµliÿtiÚKeys.h
+>
+
+30 
+	~<W—ve/DeviûLay”/ESP32/GroupKeyStÜeIm¶.h
+>
+
+31 
+	~<W—ve/DeviûLay”/ESP32/ESP32CÚfig.h
+>
+
+32 
+	~<W—ve/DeviûLay”/š‹º®/G’”icCÚfigu¿tiÚMªag”Im¶.p
+>
+
+34 
+	~"e¥_wifi.h
+"
+
+35 
+	~"nvs_æash.h
+"
+
+36 
+	~"nvs.h
+"
+
+38 
+Çme¥aû
+ 
+	gÆ
+ {
+
+39 
+Çme¥aû
+ 
+	gW—ve
+ {
+
+40 
+Çme¥aû
+ 
+	gDeviûLay”
+ {
+
+42 
+usšg
+ 
+	gÇme¥aû
+ ::
+Æ
+::
+W—ve
+::
+Profes
+::
+Secur™y
+::
+AµKeys
+;
+
+43 
+usšg
+ 
+	gÇme¥aû
+ ::
+Æ
+::
+W—ve
+::
+Profes
+::
+DeviûDesütiÚ
+;
+
+44 
+usšg
+ 
+	gÇme¥aû
+ ::
+Æ
+::
+W—ve
+::
+DeviûLay”
+::
+IÁ”Çl
+;
+
+46 
+	gusšg
+ ::
+Æ
+::
+W—ve
+::
+kW—veV’dÜ_Ne¡Labs
+;
+
+48 
+	gÇme¥aû
+ {
+
+52 
+	gkNe¡W—veProduù_CÚÃù
+ = 0x0016
+
+61 
+GroupKeyStÜeIm¶
+ 
+	ggGroupKeyStÜe
+;
+
+67 
+‹m¶©e
+ 
+şass
+ 
+	gIÁ”Çl
+::
+G’”icCÚfigu¿tiÚMªag”Im¶
+<
+CÚfigu¿tiÚMªag”Im¶
+>;
+
+72 
+CÚfigu¿tiÚMªag”Im¶
+ 
+	gCÚfigu¿tiÚMªag”Im¶
+::
+sIn¡ªû
+;
+
+75 
+WEAVE_ERROR
+ 
+	gCÚfigu¿tiÚMªag”Im¶
+::
+_In™
+()
+
+77 
+WEAVE_ERROR
+ 
+”r
+;
+
+78 
+boŞ
+ 
+	gçSaãArmed
+;
+
+81 
+	g”r
+ = 
+Ensu»Name¥aû
+(
+kCÚfigName¥aû_W—veFaùÜy
+);
+
+82 
+SucûssOrEx™
+(
+”r
+);
+
+83 
+	g”r
+ = 
+Ensu»Name¥aû
+(
+kCÚfigName¥aû_W—veCÚfig
+);
+
+84 
+SucûssOrEx™
+(
+”r
+);
+
+85 
+	g”r
+ = 
+Ensu»Name¥aû
+(
+kCÚfigName¥aû_W—veCouÁ”s
+);
+
+86 
+SucûssOrEx™
+(
+”r
+);
+
+89 
+	g”r
+ = 
+IÁ”Çl
+::
+G’”icCÚfigu¿tiÚMªag”Im¶
+<
+CÚfigu¿tiÚMªag”Im¶
+>::
+_In™
+();
+
+90 
+SucûssOrEx™
+(
+”r
+);
+
+93 
+	g”r
+ = 
+gGroupKeyStÜe
+.
+In™
+();
+
+94 
+SucûssOrEx™
+(
+”r
+);
+
+97 ià(
+_G‘FaSaãArmed
+(
+çSaãArmed
+è=ğ
+WEAVE_NO_ERROR
+ && failSafeArmed)
+
+99 
+W—veLogProg»ss
+(
+DeviûLay”
+, "Detected fail-safe‡rmed on„eboot; initiating factory„eset");
+
+100 
+_In™Ÿ‹FaùÜyRe£t
+();
+
+102 
+	g”r
+ = 
+WEAVE_NO_ERROR
+;
+
+104 
+	gex™
+:
+
+105  
+”r
+;
+
+108 
+WEAVE_ERROR
+ 
+	gCÚfigu¿tiÚMªag”Im¶
+::
+_G‘Prim¬yWiFiMACAdd»ss
+(
+ušt8_t
+ * 
+buf
+)
+
+110  
+e¥_wifi_g‘_mac
+(
+ESP_IF_WIFI_STA
+, 
+buf
+);
+
+113 
+WEAVE_ERROR
+ 
+	gCÚfigu¿tiÚMªag”Im¶
+::
+_G‘DeviûDesütÜ
+(::
+Æ
+::
+W—ve
+::
+Profes
+::
+DeviûDesütiÚ
+::
+W—veDeviûDesütÜ
+ & 
+deviûDesc
+)
+
+115 
+WEAVE_ERROR
+ 
+”r
+;
+
+118 
+	g”r
+ = 
+IÁ”Çl
+::
+G’”icCÚfigu¿tiÚMªag”Im¶
+<
+CÚfigu¿tiÚMªag”Im¶
+>::
+_G‘DeviûDesütÜ
+(
+deviûDesc
+);
+
+119 
+SucûssOrEx™
+(
+”r
+);
+
+124 ià(
+	gWEAVE_DEVICE_CONFIG_DEVICE_VENDOR_ID
+ =ğ
+kW—veV’dÜ_Ne¡Labs
+ &&
+
+125 
+WEAVE_DEVICE_CONFIG_DEVICE_PRODUCT_ID
+ =ğ
+kNe¡W—veProduù_CÚÃù
+)
+
+127 
+Encodšg
+::
+BigEndŸn
+::
+Put64
+(
+deviûDesc
+.
+Prim¬y802154MACAdd»ss
+, deviûDesc.
+DeviûId
+);
+
+128 
+	gdeviûDesc
+.
+	gDeviûId
+ = 
+kNodeIdNÙS³cif›d
+;
+
+131 
+	gex™
+:
+
+132  
+”r
+;
+
+135 ::
+Æ
+::
+W—ve
+::
+Profes
+::
+Secur™y
+::
+AµKeys
+::
+GroupKeyStÜeBa£
+ * 
+CÚfigu¿tiÚMªag”Im¶
+::
+_G‘GroupKeyStÜe
+()
+
+137  &
+gGroupKeyStÜe
+;
+
+140 
+boŞ
+ 
+	gCÚfigu¿tiÚMªag”Im¶
+::
+_CªFaùÜyRe£t
+()
+
+143  
+Œue
+;
+
+146 
+	gCÚfigu¿tiÚMªag”Im¶
+::
+_In™Ÿ‹FaùÜyRe£t
+()
+
+148 
+PÏtfÜmMgr
+().
+ScheduËWÜk
+(
+DoFaùÜyRe£t
+);
+
+151 
+WEAVE_ERROR
+ 
+	gCÚfigu¿tiÚMªag”Im¶
+::
+_R—dP”si¡edStÜageV®ue
+(::
+Æ
+::
+W—ve
+::
+PÏtfÜm
+::
+P”si¡edStÜage
+::
+Key
+ 
+key
+, 
+ušt32_t
+ & 
+v®ue
+)
+
+153 
+	gESP32CÚfig
+::
+Key
+ 
+cÚfigKey
+ { 
+kCÚfigName¥aû_W—veCouÁ”s
+, 
+	gkey
+ };
+
+155 
+WEAVE_ERROR
+ 
+	g”r
+ = 
+R—dCÚfigV®ue
+(
+cÚfigKey
+, 
+v®ue
+);
+
+156 ià(
+	g”r
+ =ğ
+WEAVE_DEVICE_ERROR_CONFIG_NOT_FOUND
+)
+
+158 
+”r
+ = 
+WEAVE_ERROR_PERSISTED_STORAGE_VALUE_NOT_FOUND
+;
+
+160  
+	g”r
+;
+
+163 
+WEAVE_ERROR
+ 
+	gCÚfigu¿tiÚMªag”Im¶
+::
+_Wr™eP”si¡edStÜageV®ue
+(::
+Æ
+::
+W—ve
+::
+PÏtfÜm
+::
+P”si¡edStÜage
+::
+Key
+ 
+key
+, 
+ušt32_t
+ 
+v®ue
+)
+
+165 
+	gESP32CÚfig
+::
+Key
+ 
+cÚfigKey
+ { 
+kCÚfigName¥aû_W—veCouÁ”s
+, 
+	gkey
+ };
+
+166  
+Wr™eCÚfigV®ue
+(
+cÚfigKey
+, 
+v®ue
+);
+
+169 
+WEAVE_ERROR
+ 
+	gCÚfigu¿tiÚMªag”Im¶
+::
+G‘WiFiStiÚSecur™yTy³
+(
+Profes
+::
+N‘wÜkProvisiÚšg
+::
+WiFiSecur™yTy³
+ & 
+£cTy³
+)
+
+171 
+WEAVE_ERROR
+ 
+”r
+;
+
+172 
+ušt32_t
+ 
+	g£cTy³IÁ
+;
+
+174 
+	g”r
+ = 
+R—dCÚfigV®ue
+(
+kCÚfigKey_WiFiStiÚSecTy³
+, 
+£cTy³IÁ
+);
+
+175 ià(
+	g”r
+ =ğ
+WEAVE_NO_ERROR
+)
+
+177 
+£cTy³
+ = (
+Profes
+::
+N‘wÜkProvisiÚšg
+::
+WiFiSecur™yTy³
+)
+£cTy³IÁ
+;
+
+179  
+	g”r
+;
+
+182 
+WEAVE_ERROR
+ 
+	gCÚfigu¿tiÚMªag”Im¶
+::
+Upd©eWiFiStiÚSecur™yTy³
+(
+Profes
+::
+N‘wÜkProvisiÚšg
+::
+WiFiSecur™yTy³
+ 
+£cTy³
+)
+
+184 
+WEAVE_ERROR
+ 
+”r
+;
+
+185 
+	gProfes
+::
+N‘wÜkProvisiÚšg
+::
+WiFiSecur™yTy³
+ 
+curSecTy³
+;
+
+187 ià(
+	g£cTy³
+ !ğ
+Profes
+::
+N‘wÜkProvisiÚšg
+::
+kWiFiSecur™yTy³_NÙS³cif›d
+)
+
+189 
+”r
+ = 
+G‘WiFiStiÚSecur™yTy³
+(
+curSecTy³
+);
+
+190 ià(
+	g”r
+ =ğ
+WEAVE_DEVICE_ERROR_CONFIG_NOT_FOUND
+ || (
+”r
+ =ğ
+WEAVE_NO_ERROR
+ && 
+£cTy³
+ !ğ
+curSecTy³
+))
+
+192 
+ušt32_t
+ 
+£cTy³IÁ
+ = 
+£cTy³
+;
+
+193 
+	g”r
+ = 
+Wr™eCÚfigV®ue
+(
+kCÚfigKey_WiFiStiÚSecTy³
+, 
+£cTy³IÁ
+);
+
+195 
+SucûssOrEx™
+(
+”r
+);
+
+199 
+	g”r
+ = 
+CË¬CÚfigV®ue
+(
+kCÚfigKey_WiFiStiÚSecTy³
+);
+
+200 
+SucûssOrEx™
+(
+”r
+);
+
+203 
+	gex™
+:
+
+204  
+”r
+;
+
+207 
+	gCÚfigu¿tiÚMªag”Im¶
+::
+DoFaùÜyRe£t
+(
+šŒ_t
+ 
+¬g
+)
+
+209 
+WEAVE_ERROR
+ 
+”r
+;
+
+211 
+W—veLogProg»ss
+(
+DeviûLay”
+, "Performing factory„eset");
+
+214 
+	g”r
+ = 
+CË¬Name¥aû
+(
+kCÚfigName¥aû_W—veCÚfig
+);
+
+215 ià(
+	g”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+217 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "CË¬Name¥aû(W—veCÚfigèçed: %s", 
+Æ
+::
+E¼ÜSŒ
+(
+”r
+));
+
+221 
+	g”r
+ = 
+e¥_wifi_»¡Üe
+();
+
+222 ià(
+	g”r
+ !ğ
+ESP_OK
+)
+
+224 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_wifi_»¡Üe(èçed: %s", 
+Æ
+::
+E¼ÜSŒ
+(
+”r
+));
+
+228 
+W—veLogProg»ss
+(
+DeviûLay”
+, "System„estarting");
+
+229 
+e¥_»¡¬t
+();
+
+	@ConnectivityManagerImpl.cpp
+
+19 
+	~<W—ve/DeviûLay”/š‹º®/W—veDeviûLay”IÁ”Çl.h
+>
+
+20 
+	~<W—ve/DeviûLay”/CÚÃùiv™yMªag”.h
+>
+
+21 
+	~<W—ve/DeviûLay”/š‹º®/N‘wÜkProvisiÚšgS”v”.h
+>
+
+22 
+	~<W—ve/DeviûLay”/š‹º®/N‘wÜkInfo.h
+>
+
+23 
+	~<W—ve/DeviûLay”/š‹º®/S”viûTuÂ–Ag’t.h
+>
+
+24 
+	~<W—ve/DeviûLay”/š‹º®/BLEMªag”.h
+>
+
+25 
+	~<W—ve/Profes/W—veProfes.h
+>
+
+26 
+	~<W—ve/Profes/commÚ/CommÚProfe.h
+>
+
+27 
+	~<W¬m/W¬m.h
+>
+
+29 
+	~<W—ve/DeviûLay”/ESP32/ESP32Uts.h
+>
+
+31 
+	~"e¥_ev’t.h
+"
+
+32 
+	~"e¥_wifi.h
+"
+
+34 
+	~<lw/_addr.h
+>
+
+35 
+	~<lw/Ãtif.h
+>
+
+36 
+	~<lw/nd6.h
+>
+
+37 
+	~<lw/dns.h
+>
+
+39 
+	~<Ãw
+>
+
+41 
+usšg
+ 
+	gÇme¥aû
+ ::
+Æ
+;
+
+42 
+usšg
+ 
+	gÇme¥aû
+ ::
+Æ
+::
+W—ve
+;
+
+43 
+usšg
+ 
+	gÇme¥aû
+ ::
+Æ
+::
+W—ve
+::
+TLV
+;
+
+44 
+usšg
+ 
+	gÇme¥aû
+ ::
+Æ
+::
+W—ve
+::
+Profes
+::
+CommÚ
+;
+
+45 
+usšg
+ 
+	gÇme¥aû
+ ::
+Æ
+::
+W—ve
+::
+Profes
+::
+N‘wÜkProvisiÚšg
+;
+
+46 
+usšg
+ 
+	gÇme¥aû
+ ::
+Æ
+::
+W—ve
+::
+Profes
+::
+W—veTuÂ–
+;
+
+47 
+usšg
+ 
+	gÇme¥aû
+ ::
+Æ
+::
+W—ve
+::
+DeviûLay”
+::
+IÁ”Çl
+;
+
+49 
+usšg
+ 
+	gProfes
+::
+kW—veProfe_CommÚ
+;
+
+50 
+usšg
+ 
+	gProfes
+::
+kW—veProfe_N‘wÜkProvisiÚšg
+;
+
+52 
+Çme¥aû
+ 
+	gÆ
+ {
+
+53 
+Çme¥aû
+ 
+	gW—ve
+ {
+
+54 
+Çme¥aû
+ 
+	gDeviûLay”
+ {
+
+56 
+	gÇme¥aû
+ {
+
+58 
+šlše
+ 
+CÚÃùiv™yChªge
+ 
+G‘CÚÃùiv™yChªge
+(
+boŞ
+ 
+´evS‹
+, boŞ 
+ÃwS‹
+)
+
+60 ià(
+	g´evS‹
+ =ğ
+ÃwS‹
+)
+
+61  
+kCÚÃùiv™y_NoChªge
+;
+
+62 ià(
+	gÃwS‹
+)
+
+63  
+	gkCÚÃùiv™y_E¡ablished
+;
+
+65  
+	gkCÚÃùiv™y_Lo¡
+;
+
+71 
+CÚÃùiv™yMªag”Im¶
+ 
+	gCÚÃùiv™yMªag”Im¶
+::
+sIn¡ªû
+;
+
+73 
+	gCÚÃùiv™yMªag”
+::
+WiFiStiÚMode
+ 
+CÚÃùiv™yMªag”Im¶
+::
+_G‘WiFiStiÚMode
+()
+
+75 ià(
+mWiFiStiÚMode
+ !ğ
+kWiFiStiÚMode_AµliÿtiÚCÚŒŞËd
+)
+
+77 
+boŞ
+ 
+autoCÚÃù
+;
+
+78 
+	gmWiFiStiÚMode
+ = (
+e¥_wifi_g‘_auto_cÚÃù
+(&
+autoCÚÃù
+è=ğ
+ESP_OK
+ &&‡utoConnect)
+
+79 ? 
+kWiFiStiÚMode_EÇbËd
+
+
+80 : 
+kWiFiStiÚMode_Di§bËd
+;
+
+82  
+	gmWiFiStiÚMode
+;
+
+85 
+boŞ
+ 
+	gCÚÃùiv™yMªag”Im¶
+::
+_IsWiFiStiÚEÇbËd
+()
+
+87  
+G‘WiFiStiÚMode
+(è=ğ
+kWiFiStiÚMode_EÇbËd
+;
+
+90 
+WEAVE_ERROR
+ 
+	gCÚÃùiv™yMªag”Im¶
+::
+_S‘WiFiStiÚMode
+(
+WiFiStiÚMode
+ 
+v®
+)
+
+92 
+WEAVE_ERROR
+ 
+”r
+ = 
+WEAVE_NO_ERROR
+;
+
+94 
+V”ifyOrEx™
+(
+v®
+ !ğ
+kWiFiStiÚMode_NÙSuµÜ‹d
+, 
+”r
+ = 
+WEAVE_ERROR_INVALID_ARGUMENT
+);
+
+96 ià(
+	gv®
+ !ğ
+kWiFiStiÚMode_AµliÿtiÚCÚŒŞËd
+)
+
+98 
+boŞ
+ 
+autoCÚÃù
+ = (
+v®
+ =ğ
+kWiFiStiÚMode_EÇbËd
+);
+
+99 
+	g”r
+ = 
+e¥_wifi_£t_auto_cÚÃù
+(
+autoCÚÃù
+);
+
+100 
+SucûssOrEx™
+(
+”r
+);
+
+102 
+	gSy¡emLay”
+.
+ScheduËWÜk
+(
+DriveStiÚS‹
+, 
+NULL
+);
+
+105 ià(
+	gmWiFiStiÚMode
+ !ğ
+v®
+)
+
+107 
+W—veLogProg»ss
+(
+DeviûLay”
+, "WiF˜¡©iÚ modchªge: % -> %s", 
+WiFiStiÚModeToSŒ
+(
+mWiFiStiÚMode
+), WiFiStiÚModeToSŒ(
+v®
+));
+
+110 
+	gmWiFiStiÚMode
+ = 
+v®
+;
+
+112 
+	gex™
+:
+
+113  
+”r
+;
+
+116 
+boŞ
+ 
+	gCÚÃùiv™yMªag”Im¶
+::
+_IsWiFiStiÚProvisiÚed
+()
+
+118  
+ESP32Uts
+::
+IsStiÚProvisiÚed
+();
+
+121 
+	gCÚÃùiv™yMªag”Im¶
+::
+_CË¬WiFiStiÚProvisiÚ
+()
+
+123 ià(
+mWiFiStiÚMode
+ !ğ
+kWiFiStiÚMode_AµliÿtiÚCÚŒŞËd
+)
+
+125 
+wifi_cÚfig_t
+ 
+¡©iÚCÚfig
+;
+
+127 
+mem£t
+(&
+¡©iÚCÚfig
+, 0, (stationConfig));
+
+128 
+e¥_wifi_£t_cÚfig
+(
+ESP_IF_WIFI_STA
+, &
+¡©iÚCÚfig
+);
+
+130 
+	gSy¡emLay”
+.
+ScheduËWÜk
+(
+DriveStiÚS‹
+, 
+NULL
+);
+
+131 
+	gSy¡emLay”
+.
+ScheduËWÜk
+(
+DriveAPS‹
+, 
+NULL
+);
+
+135 
+WEAVE_ERROR
+ 
+	gCÚÃùiv™yMªag”Im¶
+::
+_S‘WiFiAPMode
+(
+WiFiAPMode
+ 
+v®
+)
+
+137 
+WEAVE_ERROR
+ 
+”r
+ = 
+WEAVE_NO_ERROR
+;
+
+139 
+V”ifyOrEx™
+(
+v®
+ !ğ
+kWiFiAPMode_NÙSuµÜ‹d
+, 
+”r
+ = 
+WEAVE_ERROR_INVALID_ARGUMENT
+);
+
+141 ià(
+	gmWiFiAPMode
+ !ğ
+v®
+)
+
+143 
+W—veLogProg»ss
+(
+DeviûLay”
+, "WiF˜AP modchªge: % -> %s", 
+WiFiAPModeToSŒ
+(
+mWiFiAPMode
+), WiFiAPModeToSŒ(
+v®
+));
+
+146 
+	gmWiFiAPMode
+ = 
+v®
+;
+
+148 
+	gSy¡emLay”
+.
+ScheduËWÜk
+(
+DriveAPS‹
+, 
+NULL
+);
+
+150 
+	gex™
+:
+
+151  
+”r
+;
+
+154 
+	gCÚÃùiv™yMªag”Im¶
+::
+_DemªdS¹WiFiAP
+()
+
+156 ià(
+mWiFiAPMode
+ =ğ
+kWiFiAPMode_OnDemªd
+ ||
+
+157 
+mWiFiAPMode
+ =ğ
+kWiFiAPMode_OnDemªd_NoStiÚProvisiÚ
+)
+
+159 
+mLa¡APDemªdTime
+ = 
+Sy¡em
+::
+Lay”
+::
+G‘Clock_MÚÙÚicMS
+();
+
+160 
+	gSy¡emLay”
+.
+ScheduËWÜk
+(
+DriveAPS‹
+, 
+NULL
+);
+
+164 
+	gCÚÃùiv™yMªag”Im¶
+::
+_StİOnDemªdWiFiAP
+()
+
+166 ià(
+mWiFiAPMode
+ =ğ
+kWiFiAPMode_OnDemªd
+ ||
+
+167 
+mWiFiAPMode
+ =ğ
+kWiFiAPMode_OnDemªd_NoStiÚProvisiÚ
+)
+
+169 
+mLa¡APDemªdTime
+ = 0;
+
+170 
+	gSy¡emLay”
+.
+ScheduËWÜk
+(
+DriveAPS‹
+, 
+NULL
+);
+
+174 
+	gCÚÃùiv™yMªag”Im¶
+::
+_MaššOnDemªdWiFiAP
+()
+
+176 ià(
+mWiFiAPMode
+ =ğ
+kWiFiAPMode_OnDemªd
+ ||
+
+177 
+mWiFiAPMode
+ =ğ
+kWiFiAPMode_OnDemªd_NoStiÚProvisiÚ
+)
+
+179 ià(
+mWiFiAPS‹
+ =ğ
+kWiFiAPS‹_Aùiv©šg
+ || mWiFiAPS‹ =ğ
+kWiFiAPS‹_Aùive
+)
+
+181 
+mLa¡APDemªdTime
+ = 
+Sy¡em
+::
+Lay”
+::
+G‘Clock_MÚÙÚicMS
+();
+
+186 
+	gCÚÃùiv™yMªag”Im¶
+::
+_S‘WiFiAPIdËTimeoutMS
+(
+ušt32_t
+ 
+v®
+)
+
+188 
+mWiFiAPIdËTimeoutMS
+ = 
+v®
+;
+
+189 
+	gSy¡emLay”
+.
+ScheduËWÜk
+(
+DriveAPS‹
+, 
+NULL
+);
+
+192 
+WEAVE_ERROR
+ 
+	gCÚÃùiv™yMªag”Im¶
+::
+_S‘S”viûTuÂ–Mode
+(
+S”viûTuÂ–Mode
+ 
+v®
+)
+
+194 
+WEAVE_ERROR
+ 
+”r
+ = 
+WEAVE_NO_ERROR
+;
+
+196 
+V”ifyOrEx™
+(
+v®
+ !ğ
+kS”viûTuÂ–Mode_NÙSuµÜ‹d
+, 
+”r
+ = 
+WEAVE_ERROR_INVALID_ARGUMENT
+);
+
+198 
+	gmS”viûTuÂ–Mode
+ = 
+v®
+;
+
+200 
+	gSy¡emLay”
+.
+ScheduËWÜk
+(
+DriveS”viûTuÂ–S‹
+, 
+NULL
+);
+
+202 
+	gex™
+:
+
+203  
+”r
+;
+
+206 
+boŞ
+ 
+	gCÚÃùiv™yMªag”Im¶
+::
+_IsS”viûTuÂ–CÚÃùed
+()
+
+208 
+W—veTuÂ–Ag’t
+::
+Ag’tS‹
+ 
+tuÂ–S‹
+ = 
+S”viûTuÂ–Ag’t
+.
+G‘W—veTuÂ–Ag’tS‹
+();
+
+209  (
+	gtuÂ–S‹
+ =ğ
+W—veTuÂ–Ag’t
+::
+kS‹_Prim¬yTunModeE¡ablished
+ ||
+
+210 
+tuÂ–S‹
+ =ğ
+W—veTuÂ–Ag’t
+::
+kS‹_Prim¬yAndBkupTunModeE¡ablished
+ ||
+
+211 
+tuÂ–S‹
+ =ğ
+W—veTuÂ–Ag’t
+::
+kS‹_BkupOÆyTunModeE¡ablished
+);
+
+214 
+boŞ
+ 
+	gCÚÃùiv™yMªag”Im¶
+::
+_IsS”viûTuÂ–Re¡riùed
+()
+
+216  
+S”viûTuÂ–Ag’t
+.
+IsTuÂ–RoutšgRe¡riùed
+();
+
+219 
+boŞ
+ 
+	gCÚÃùiv™yMªag”Im¶
+::
+_HaveS”viûCÚÃùiv™y
+()
+
+221  
+IsS”viûTuÂ–CÚÃùed
+(è&& !
+IsS”viûTuÂ–Re¡riùed
+();
+
+224 
+	gCÚÃùiv™yMªag”
+::
+WoBLES”viûMode
+ 
+CÚÃùiv™yMªag”Im¶
+::
+_G‘WoBLES”viûMode
+()
+
+226 #ià
+WEAVE_DEVICE_CONFIG_ENABLE_WOBLE
+
+
+227  
+BLEMgr
+().
+G‘WoBLES”viûMode
+();
+
+229  
+	gkWoBLES”viûMode_NÙSuµÜ‹d
+;
+
+233 
+WEAVE_ERROR
+ 
+	gCÚÃùiv™yMªag”Im¶
+::
+_S‘WoBLES”viûMode
+(
+WoBLES”viûMode
+ 
+v®
+)
+
+235 #ià
+WEAVE_DEVICE_CONFIG_ENABLE_WOBLE
+
+
+236  
+BLEMgr
+().
+S‘WoBLES”viûMode
+(
+v®
+);
+
+238  
+	gWEAVE_ERROR_UNSUPPORTED_WEAVE_FEATURE
+;
+
+242 
+boŞ
+ 
+	gCÚÃùiv™yMªag”Im¶
+::
+_IsBLEAdv”tisšgEÇbËd
+()
+
+244 #ià
+WEAVE_DEVICE_CONFIG_ENABLE_WOBLE
+
+
+245  
+BLEMgr
+().
+IsAdv”tisšgEÇbËd
+();
+
+247  
+	gçl£
+;
+
+251 
+WEAVE_ERROR
+ 
+	gCÚÃùiv™yMªag”Im¶
+::
+_S‘BLEAdv”tisšgEÇbËd
+(
+boŞ
+ 
+v®
+)
+
+253 #ià
+WEAVE_DEVICE_CONFIG_ENABLE_WOBLE
+
+
+254  
+BLEMgr
+().
+S‘Adv”tisšgEÇbËd
+(
+v®
+);
+
+256  
+	gWEAVE_ERROR_UNSUPPORTED_WEAVE_FEATURE
+;
+
+260 
+boŞ
+ 
+	gCÚÃùiv™yMªag”Im¶
+::
+_IsBLEFa¡Adv”tisšgEÇbËd
+()
+
+262 #ià
+WEAVE_DEVICE_CONFIG_ENABLE_WOBLE
+
+
+263  
+BLEMgr
+().
+IsFa¡Adv”tisšgEÇbËd
+();
+
+265  
+	gçl£
+;
+
+269 
+WEAVE_ERROR
+ 
+	gCÚÃùiv™yMªag”Im¶
+::
+_S‘BLEFa¡Adv”tisšgEÇbËd
+(
+boŞ
+ 
+v®
+)
+
+271 #ià
+WEAVE_DEVICE_CONFIG_ENABLE_WOBLE
+
+
+272  
+BLEMgr
+().
+S‘Fa¡Adv”tisšgEÇbËd
+(
+v®
+);
+
+274  
+	gWEAVE_ERROR_UNSUPPORTED_WEAVE_FEATURE
+;
+
+278 
+WEAVE_ERROR
+ 
+	gCÚÃùiv™yMªag”Im¶
+::
+_G‘BLEDeviûName
+(* 
+buf
+, 
+size_t
+ 
+bufSize
+)
+
+280 #ià
+WEAVE_DEVICE_CONFIG_ENABLE_WOBLE
+
+
+281  
+BLEMgr
+().
+G‘DeviûName
+(
+buf
+, 
+bufSize
+);
+
+283  
+	gWEAVE_ERROR_UNSUPPORTED_WEAVE_FEATURE
+;
+
+287 
+WEAVE_ERROR
+ 
+	gCÚÃùiv™yMªag”Im¶
+::
+_S‘BLEDeviûName
+(cÚ¡ * 
+deviûName
+)
+
+289 #ià
+WEAVE_DEVICE_CONFIG_ENABLE_WOBLE
+
+
+290  
+BLEMgr
+().
+S‘DeviûName
+(
+deviûName
+);
+
+292  
+	gWEAVE_ERROR_UNSUPPORTED_WEAVE_FEATURE
+;
+
+296 
+ušt16_t
+ 
+	gCÚÃùiv™yMªag”Im¶
+::
+_NumBLECÚÃùiÚs
+()
+
+298 #ià
+WEAVE_DEVICE_CONFIG_ENABLE_WOBLE
+
+
+299  
+BLEMgr
+().
+NumCÚÃùiÚs
+();
+
+307 
+WEAVE_ERROR
+ 
+	gCÚÃùiv™yMªag”Im¶
+::
+_In™
+()
+
+309 
+WEAVE_ERROR
+ 
+”r
+;
+
+311 
+	gmLa¡StiÚCÚÃùFaTime
+ = 0;
+
+312 
+	gmLa¡APDemªdTime
+ = 0;
+
+313 
+	gmWiFiStiÚMode
+ = 
+kWiFiStiÚMode_Di§bËd
+;
+
+314 
+	gmWiFiStiÚS‹
+ = 
+kWiFiStiÚS‹_NÙCÚÃùed
+;
+
+315 
+	gmWiFiAPMode
+ = 
+kWiFiAPMode_Di§bËd
+;
+
+316 
+	gmWiFiAPS‹
+ = 
+kWiFiAPS‹_NÙAùive
+;
+
+317 
+	gmS”viûTuÂ–Mode
+ = 
+kS”viûTuÂ–Mode_EÇbËd
+;
+
+318 
+	gmWiFiStiÚRecÚÃùIÁ”v®MS
+ = 
+WEAVE_DEVICE_CONFIG_WIFI_STATION_RECONNECT_INTERVAL
+;
+
+319 
+	gmWiFiAPIdËTimeoutMS
+ = 
+WEAVE_DEVICE_CONFIG_WIFI_AP_IDLE_TIMEOUT
+;
+
+320 
+	gmFÏgs
+ = 0;
+
+323 
+	g”r
+ = 
+W¬m
+::
+In™
+(
+FabricS‹
+);
+
+324 
+SucûssOrEx™
+(
+”r
+);
+
+327 
+	g”r
+ = 
+In™S”viûTuÂ–Ag’t
+();
+
+328 
+SucûssOrEx™
+(
+”r
+);
+
+329 
+	gS”viûTuÂ–Ag’t
+.
+	gOnS”viûTunStusNÙify
+ = 
+HªdËS”viûTuÂ–NÙifiÿtiÚ
+;
+
+332 
+	g”r
+ = 
+ESP32Uts
+::
+EÇbËStiÚMode
+();
+
+333 
+SucûssOrEx™
+(
+”r
+);
+
+336 ià(!
+IsWiFiStiÚProvisiÚed
+())
+
+339 ià(
+	gCONFIG_DEFAULT_WIFI_SSID
+[0] != 0)
+
+341 
+W—veLogProg»ss
+(
+DeviûLay”
+, "S‘tšg deçuÉ WiF˜¡©iÚ cÚfigu¿tiÚ (SSID: %s)", 
+CONFIG_DEFAULT_WIFI_SSID
+);
+
+344 
+wifi_cÚfig_t
+ 
+	gwifiCÚfig
+;
+
+345 
+mem£t
+(&
+wifiCÚfig
+, 0, (wifiConfig));
+
+346 
+memıy
+(
+wifiCÚfig
+.
+¡a
+.
+ssid
+, 
+CONFIG_DEFAULT_WIFI_SSID
+, 
+¡¾’
+(CONFIG_DEFAULT_WIFI_SSID) + 1);
+
+347 
+memıy
+(
+wifiCÚfig
+.
+¡a
+.
+·sswÜd
+, 
+CONFIG_DEFAULT_WIFI_PASSWORD
+, 
+¡¾’
+(CONFIG_DEFAULT_WIFI_PASSWORD) + 1);
+
+348 
+	gwifiCÚfig
+.
+	g¡a
+.
+	gsÿn_m‘hod
+ = 
+WIFI_ALL_CHANNEL_SCAN
+;
+
+349 
+	gwifiCÚfig
+.
+	g¡a
+.
+	gsÜt_m‘hod
+ = 
+WIFI_CONNECT_AP_BY_SIGNAL
+;
+
+350 
+	g”r
+ = 
+e¥_wifi_£t_cÚfig
+(
+ESP_IF_WIFI_STA
+, &
+wifiCÚfig
+);
+
+351 ià(
+	g”r
+ !ğ
+ESP_OK
+)
+
+353 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_wifi_£t_cÚfig(èçed: %s", 
+Æ
+::
+E¼ÜSŒ
+(
+”r
+));
+
+355 
+	g”r
+ = 
+WEAVE_NO_ERROR
+;
+
+358 
+	g”r
+ = 
+S‘WiFiStiÚMode
+(
+kWiFiStiÚMode_EÇbËd
+);
+
+359 
+SucûssOrEx™
+(
+”r
+);
+
+365 
+	g”r
+ = 
+S‘WiFiStiÚMode
+(
+kWiFiStiÚMode_Di§bËd
+);
+
+366 
+SucûssOrEx™
+(
+”r
+);
+
+371 
+	g”r
+ = 
+ESP32Uts
+::
+S‘APMode
+(
+çl£
+);
+
+372 
+SucûssOrEx™
+(
+”r
+);
+
+375 
+	g”r
+ = 
+Sy¡emLay”
+.
+ScheduËWÜk
+(
+DriveStiÚS‹
+, 
+NULL
+);
+
+376 
+SucûssOrEx™
+(
+”r
+);
+
+377 
+	g”r
+ = 
+Sy¡emLay”
+.
+ScheduËWÜk
+(
+DriveAPS‹
+, 
+NULL
+);
+
+378 
+SucûssOrEx™
+(
+”r
+);
+
+380 
+	gex™
+:
+
+381  
+”r
+;
+
+384 
+	gCÚÃùiv™yMªag”Im¶
+::
+_OnPÏtfÜmEv’t
+(cÚ¡ 
+W—veDeviûEv’t
+ * 
+ev’t
+)
+
+387 ià(
+ev’t
+->
+Ty³
+ =ğ
+DeviûEv’tTy³
+::
+kESPSy¡emEv’t
+)
+
+389 
+ev’t
+->
+PÏtfÜm
+.
+ESPSy¡emEv’t
+.
+ev’t_id
+) {
+
+390 
+SYSTEM_EVENT_STA_START
+:
+
+391 
+W—veLogProg»ss
+(
+DeviûLay”
+, "SYSTEM_EVENT_STA_START");
+
+392 
+DriveStiÚS‹
+();
+
+394 
+	gSYSTEM_EVENT_STA_CONNECTED
+:
+
+395 
+W—veLogProg»ss
+(
+DeviûLay”
+, "SYSTEM_EVENT_STA_CONNECTED");
+
+396 ià(
+	gmWiFiStiÚS‹
+ =ğ
+kWiFiStiÚS‹_CÚÃùšg
+)
+
+398 
+ChªgeWiFiStiÚS‹
+(
+kWiFiStiÚS‹_CÚÃùšg_Sucûeded
+);
+
+400 
+DriveStiÚS‹
+();
+
+402 
+	gSYSTEM_EVENT_STA_DISCONNECTED
+:
+
+403 
+W—veLogProg»ss
+(
+DeviûLay”
+, "SYSTEM_EVENT_STA_DISCONNECTED");
+
+404 ià(
+	gmWiFiStiÚS‹
+ =ğ
+kWiFiStiÚS‹_CÚÃùšg
+)
+
+406 
+ChªgeWiFiStiÚS‹
+(
+kWiFiStiÚS‹_CÚÃùšg_Faed
+);
+
+408 
+DriveStiÚS‹
+();
+
+410 
+	gSYSTEM_EVENT_STA_STOP
+:
+
+411 
+W—veLogProg»ss
+(
+DeviûLay”
+, "SYSTEM_EVENT_STA_STOP");
+
+412 
+DriveStiÚS‹
+();
+
+414 
+	gSYSTEM_EVENT_STA_GOT_IP
+:
+
+415 
+W—veLogProg»ss
+(
+DeviûLay”
+, "SYSTEM_EVENT_STA_GOT_IP");
+
+416 
+OnStiÚIPv4Add»ssAvaabË
+(
+ev’t
+->
+PÏtfÜm
+.
+ESPSy¡emEv’t
+.
+ev’t_šfo
+.
+gÙ_
+);
+
+418 
+	gSYSTEM_EVENT_STA_LOST_IP
+:
+
+419 
+W—veLogProg»ss
+(
+DeviûLay”
+, "SYSTEM_EVENT_STA_LOST_IP");
+
+420 
+OnStiÚIPv4Add»ssLo¡
+();
+
+422 
+	gSYSTEM_EVENT_GOT_IP6
+:
+
+423 
+W—veLogProg»ss
+(
+DeviûLay”
+, "SYSTEM_EVENT_GOT_IP6");
+
+424 
+OnIPv6Add»ssAvaabË
+(
+ev’t
+->
+PÏtfÜm
+.
+ESPSy¡emEv’t
+.
+ev’t_šfo
+.
+gÙ_6
+);
+
+426 
+	gSYSTEM_EVENT_AP_START
+:
+
+427 
+W—veLogProg»ss
+(
+DeviûLay”
+, "SYSTEM_EVENT_AP_START");
+
+428 
+ChªgeWiFiAPS‹
+(
+kWiFiAPS‹_Aùive
+);
+
+429 
+DriveAPS‹
+();
+
+431 
+	gSYSTEM_EVENT_AP_STOP
+:
+
+432 
+W—veLogProg»ss
+(
+DeviûLay”
+, "SYSTEM_EVENT_AP_STOP");
+
+433 
+ChªgeWiFiAPS‹
+(
+kWiFiAPS‹_NÙAùive
+);
+
+434 
+DriveAPS‹
+();
+
+436 
+	gSYSTEM_EVENT_AP_STACONNECTED
+:
+
+437 
+W—veLogProg»ss
+(
+DeviûLay”
+, "SYSTEM_EVENT_AP_STACONNECTED");
+
+438 
+MaššOnDemªdWiFiAP
+();
+
+446 ià(
+	gev’t
+->
+	gTy³
+ =ğ
+DeviûEv’tTy³
+::
+kFabricMemb”shChªge
+)
+
+448 
+DriveS”viûTuÂ–S‹
+();
+
+452 ià(
+	gev’t
+->
+	gTy³
+ =ğ
+DeviûEv’tTy³
+::
+kS”viûProvisiÚšgChªge
+)
+
+454 
+DriveS”viûTuÂ–S‹
+();
+
+457 #ià!
+WEAVE_DEVICE_CONFIG_DISABLE_ACCOUNT_PAIRING
+
+
+460 ià(
+	gev’t
+->
+	gTy³
+ =ğ
+DeviûEv’tTy³
+::
+kAccouÁPaœšgChªge
+)
+
+467 ià(
+ev’t
+->
+AccouÁPaœšgChªge
+.
+IsPaœedToAccouÁ
+ &&
+
+468 
+G‘FÏg
+(
+mFÏgs
+, 
+kFÏg_S”viûTuÂ–S¹ed
+) &&
+
+469 
+S”viûTuÂ–Ag’t
+.
+IsTuÂ–RoutšgRe¡riùed
+())
+
+471 
+W—veLogProg»ss
+(
+DeviûLay”
+, "Restarting serviceunnelo†ift„outing„estrictions");
+
+472 
+CË¬FÏg
+(
+mFÏgs
+, 
+kFÏg_S”viûTuÂ–S¹ed
+);
+
+473 
+	gS”viûTuÂ–Ag’t
+.
+StİS”viûTuÂ–
+(
+WEAVE_ERROR_TUNNEL_FORCE_ABORT
+);
+
+474 
+DriveS”viûTuÂ–S‹
+();
+
+481 
+	gCÚÃùiv™yMªag”Im¶
+::
+_OnWiFiSÿnDÚe
+()
+
+485 
+Sy¡emLay”
+.
+ScheduËWÜk
+(
+DriveStiÚS‹
+, 
+NULL
+);
+
+488 
+	gCÚÃùiv™yMªag”Im¶
+::
+_OnWiFiStiÚProvisiÚChªge
+()
+
+491 
+Sy¡emLay”
+.
+ScheduËWÜk
+(
+DriveStiÚS‹
+, 
+NULL
+);
+
+496 
+	gCÚÃùiv™yMªag”Im¶
+::
+DriveStiÚS‹
+()
+
+498 
+WEAVE_ERROR
+ 
+”r
+ = 
+WEAVE_NO_ERROR
+;
+
+499 
+boŞ
+ 
+	g¡©iÚCÚÃùed
+;
+
+504 
+G‘WiFiStiÚMode
+();
+
+507 ià(
+	gmWiFiStiÚMode
+ !ğ
+kWiFiStiÚMode_AµliÿtiÚCÚŒŞËd
+)
+
+510 
+”r
+ = 
+ESP32Uts
+::
+S¹WiFiLay”
+();
+
+511 
+SucûssOrEx™
+(
+”r
+);
+
+514 
+	g”r
+ = 
+ESP32Uts
+::
+EÇbËStiÚMode
+();
+
+515 
+SucûssOrEx™
+(
+”r
+);
+
+519 
+	g”r
+ = 
+ESP32Uts
+::
+IsStiÚCÚÃùed
+(
+¡©iÚCÚÃùed
+);
+
+520 
+SucûssOrEx™
+(
+”r
+);
+
+523 ià(
+	g¡©iÚCÚÃùed
+)
+
+527 ià(
+	gmWiFiStiÚS‹
+ =ğ
+kWiFiStiÚS‹_NÙCÚÃùed
+ ||
+
+528 
+mWiFiStiÚS‹
+ =ğ
+kWiFiStiÚS‹_CÚÃùšg_Sucûeded
+)
+
+530 
+ChªgeWiFiStiÚS‹
+(
+kWiFiStiÚS‹_CÚÃùed
+);
+
+531 
+W—veLogProg»ss
+(
+DeviûLay”
+, "WiFi station interface connected");
+
+532 
+	gmLa¡StiÚCÚÃùFaTime
+ = 0;
+
+533 
+OnStiÚCÚÃùed
+();
+
+539 ià(
+	gmWiFiStiÚMode
+ !ğ
+kWiFiStiÚMode_AµliÿtiÚCÚŒŞËd
+ &&
+
+540 (
+mWiFiStiÚMode
+ !ğ
+kWiFiStiÚMode_EÇbËd
+ || !
+IsWiFiStiÚProvisiÚed
+()))
+
+542 
+W—veLogProg»ss
+(
+DeviûLay”
+, "Disconnecting WiFi station interface");
+
+543 
+	g”r
+ = 
+e¥_wifi_discÚÃù
+();
+
+544 ià(
+	g”r
+ !ğ
+ESP_OK
+)
+
+546 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_wifi_discÚÃù(èçed: %s", 
+Æ
+::
+E¼ÜSŒ
+(
+”r
+));
+
+548 
+SucûssOrEx™
+(
+”r
+);
+
+550 
+ChªgeWiFiStiÚS‹
+(
+kWiFiStiÚS‹_DiscÚÃùšg
+);
+
+557 
+ušt64_t
+ 
+	gnow
+ = 
+Sy¡em
+::
+Lay”
+::
+G‘Clock_MÚÙÚicMS
+();
+
+561 ià(
+	gmWiFiStiÚS‹
+ =ğ
+kWiFiStiÚS‹_CÚÃùed
+ ||
+
+562 
+mWiFiStiÚS‹
+ =ğ
+kWiFiStiÚS‹_DiscÚÃùšg
+ ||
+
+563 
+mWiFiStiÚS‹
+ =ğ
+kWiFiStiÚS‹_CÚÃùšg_Faed
+)
+
+565 
+WiFiStiÚS‹
+ 
+´evS‹
+ = 
+mWiFiStiÚS‹
+;
+
+566 
+ChªgeWiFiStiÚS‹
+(
+kWiFiStiÚS‹_NÙCÚÃùed
+);
+
+567 ià(
+	g´evS‹
+ !ğ
+kWiFiStiÚS‹_CÚÃùšg_Faed
+)
+
+569 
+W—veLogProg»ss
+(
+DeviûLay”
+, "WiFi station interface disconnected");
+
+570 
+	gmLa¡StiÚCÚÃùFaTime
+ = 0;
+
+571 
+OnStiÚDiscÚÃùed
+();
+
+575 
+	gmLa¡StiÚCÚÃùFaTime
+ = 
+now
+;
+
+582 ià(
+	gmWiFiStiÚMode
+ =ğ
+kWiFiStiÚMode_EÇbËd
+ && 
+IsWiFiStiÚProvisiÚed
+(è&& !
+N‘wÜkProvisiÚšgSvr
+().
+SÿnInProg»ss
+())
+
+586 ià(
+mLa¡StiÚCÚÃùFaTime
+ =ğ0 || 
+now
+ >ğmLa¡StiÚCÚÃùFaTim+ 
+mWiFiStiÚRecÚÃùIÁ”v®MS
+)
+
+588 
+W—veLogProg»ss
+(
+DeviûLay”
+, "Attemptingo connect WiFi station interface");
+
+589 
+	g”r
+ = 
+e¥_wifi_cÚÃù
+();
+
+590 ià(
+	g”r
+ !ğ
+ESP_OK
+)
+
+592 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_wifi_cÚÃù(èçed: %s", 
+Æ
+::
+E¼ÜSŒ
+(
+”r
+));
+
+594 
+SucûssOrEx™
+(
+”r
+);
+
+596 
+ChªgeWiFiStiÚS‹
+(
+kWiFiStiÚS‹_CÚÃùšg
+);
+
+602 
+ušt32_t
+ 
+	gtimeToNextCÚÃù
+ = (ušt32_t)((
+mLa¡StiÚCÚÃùFaTime
+ + 
+mWiFiStiÚRecÚÃùIÁ”v®MS
+è- 
+now
+);
+
+604 
+W—veLogProg»ss
+(
+DeviûLay”
+, "NexˆWiF˜¡©iÚ„ecÚÃù iÀ%" 
+PRIu32
+ " ms", 
+timeToNextCÚÃù
+);
+
+606 
+	g”r
+ = 
+Sy¡emLay”
+.
+S¹Tim”
+(
+timeToNextCÚÃù
+, 
+DriveStiÚS‹
+, 
+NULL
+);
+
+607 
+SucûssOrEx™
+(
+”r
+);
+
+612 
+	gex™
+:
+
+616 
+N‘wÜkProvisiÚšgSvr
+().
+S¹P’dšgSÿn
+();
+
+619 
+	gCÚÃùiv™yMªag”Im¶
+::
+OnStiÚCÚÃùed
+()
+
+621 
+WEAVE_ERROR
+ 
+”r
+;
+
+624 
+	g”r
+ = 
+tı_ad­‹r_ü—‹_6_lškloÿl
+(
+TCPIP_ADAPTER_IF_STA
+);
+
+625 ià(
+	g”r
+ !ğ
+ESP_OK
+)
+
+627 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "tı_ad­‹r_ü—‹_6_lškloÿl(TCPIP_ADAPTER_IF_STAèçed: %s", 
+Æ
+::
+E¼ÜSŒ
+(
+”r
+));
+
+631 
+	gW¬m
+::
+WiFiIÁ”çûS‹Chªge
+(
+W¬m
+::
+kIÁ”çûS‹Up
+);
+
+634 
+W—veDeviûEv’t
+ 
+	gev’t
+;
+
+635 
+	gev’t
+.
+	gTy³
+ = 
+DeviûEv’tTy³
+::
+kWiFiCÚÃùiv™yChªge
+;
+
+636 
+	gev’t
+.
+	gWiFiCÚÃùiv™yChªge
+.
+	gResuÉ
+ = 
+kCÚÃùiv™y_E¡ablished
+;
+
+637 
+PÏtfÜmMgr
+().
+Po¡Ev’t
+(&
+ev’t
+);
+
+639 
+Upd©eIÁ”ÃtCÚÃùiv™yS‹
+();
+
+642 
+	gCÚÃùiv™yMªag”Im¶
+::
+OnStiÚDiscÚÃùed
+()
+
+645 
+W¬m
+::
+WiFiIÁ”çûS‹Chªge
+(W¬m::
+kIÁ”çûS‹Down
+);
+
+648 
+W—veDeviûEv’t
+ 
+	gev’t
+;
+
+649 
+	gev’t
+.
+	gTy³
+ = 
+DeviûEv’tTy³
+::
+kWiFiCÚÃùiv™yChªge
+;
+
+650 
+	gev’t
+.
+	gWiFiCÚÃùiv™yChªge
+.
+	gResuÉ
+ = 
+kCÚÃùiv™y_Lo¡
+;
+
+651 
+PÏtfÜmMgr
+().
+Po¡Ev’t
+(&
+ev’t
+);
+
+653 
+Upd©eIÁ”ÃtCÚÃùiv™yS‹
+();
+
+656 
+	gCÚÃùiv™yMªag”Im¶
+::
+ChªgeWiFiStiÚS‹
+(
+WiFiStiÚS‹
+ 
+ÃwS‹
+)
+
+658 ià(
+mWiFiStiÚS‹
+ !ğ
+ÃwS‹
+)
+
+660 
+W—veLogProg»ss
+(
+DeviûLay”
+, "WiF˜¡©iÚ s‹ chªge: % -> %s", 
+WiFiStiÚS‹ToSŒ
+(
+mWiFiStiÚS‹
+), WiFiStiÚS‹ToSŒ(
+ÃwS‹
+));
+
+661 
+	gmWiFiStiÚS‹
+ = 
+ÃwS‹
+;
+
+665 
+	gCÚÃùiv™yMªag”Im¶
+::
+DriveStiÚS‹
+(
+Æ
+::
+W—ve
+::
+Sy¡em
+::
+Lay”
+ * 
+aLay”
+, * 
+aAµS‹
+,‚l::W—ve::Sy¡em::
+E¼Ü
+ 
+aE¼Ü
+)
+
+667 
+sIn¡ªû
+.
+DriveStiÚS‹
+();
+
+670 
+	gCÚÃùiv™yMªag”Im¶
+::
+DriveAPS‹
+()
+
+672 
+WEAVE_ERROR
+ 
+”r
+ = 
+WEAVE_NO_ERROR
+;
+
+673 
+WiFiAPS‹
+ 
+	grg‘S‹
+;
+
+674 
+ušt64_t
+ 
+	gnow
+;
+
+675 
+ušt32_t
+ 
+	g­Timeout
+;
+
+676 
+boŞ
+ 
+	ge¥APModeEÇbËd
+;
+
+679 
+	g”r
+ = 
+ESP32Uts
+::
+IsAPEÇbËd
+(
+e¥APModeEÇbËd
+);
+
+680 
+SucûssOrEx™
+(
+”r
+);
+
+683 ià(
+	ge¥APModeEÇbËd
+ && (
+	gmWiFiAPS‹
+ =ğ
+kWiFiAPS‹_NÙAùive
+ || 
+mWiFiAPS‹
+ =ğ
+kWiFiAPS‹_D—ùiv©šg
+))
+
+685 
+ChªgeWiFiAPS‹
+(
+kWiFiAPS‹_Aùiv©šg
+);
+
+687 ià(!
+	ge¥APModeEÇbËd
+ && (
+	gmWiFiAPS‹
+ =ğ
+kWiFiAPS‹_Aùive
+ || 
+mWiFiAPS‹
+ =ğ
+kWiFiAPS‹_Aùiv©šg
+))
+
+689 
+ChªgeWiFiAPS‹
+(
+kWiFiAPS‹_D—ùiv©šg
+);
+
+693 ià(
+	gmWiFiAPMode
+ !ğ
+kWiFiAPMode_AµliÿtiÚCÚŒŞËd
+)
+
+696 
+”r
+ = 
+ESP32Uts
+::
+S¹WiFiLay”
+();
+
+697 
+SucûssOrEx™
+(
+”r
+);
+
+702 ià(
+	gmWiFiAPMode
+ =ğ
+kWiFiAPMode_Di§bËd
+)
+
+704 
+rg‘S‹
+ = 
+kWiFiAPS‹_NÙAùive
+;
+
+708 ià(
+	gmWiFiAPMode
+ =ğ
+kWiFiAPMode_EÇbËd
+)
+
+710 
+rg‘S‹
+ = 
+kWiFiAPS‹_Aùive
+;
+
+716 ià(
+	gmWiFiAPMode
+ =ğ
+kWiFiAPMode_OnDemªd_NoStiÚProvisiÚ
+ &&
+
+717 (!
+IsWiFiStiÚProvisiÚed
+(è|| 
+G‘WiFiStiÚMode
+(è=ğ
+kWiFiStiÚMode_Di§bËd
+))
+
+719 
+rg‘S‹
+ = 
+kWiFiAPS‹_Aùive
+;
+
+724 ià(
+	gmWiFiAPMode
+ =ğ
+kWiFiAPMode_OnDemªd
+ ||
+
+725 
+mWiFiAPMode
+ =ğ
+kWiFiAPMode_OnDemªd_NoStiÚProvisiÚ
+)
+
+727 
+now
+ = 
+Sy¡em
+::
+Lay”
+::
+G‘Clock_MÚÙÚicMS
+();
+
+729 ià(
+	gmLa¡APDemªdTime
+ !ğ0 && 
+now
+ < (
+mLa¡APDemªdTime
+ + 
+mWiFiAPIdËTimeoutMS
+))
+
+731 
+rg‘S‹
+ = 
+kWiFiAPS‹_Aùive
+;
+
+735 
+	g­Timeout
+ = (
+ušt32_t
+)((
+mLa¡APDemªdTime
+ + 
+mWiFiAPIdËTimeoutMS
+è- 
+now
+);
+
+736 
+	g”r
+ = 
+Sy¡emLay”
+.
+S¹Tim”
+(
+­Timeout
+, 
+DriveAPS‹
+, 
+NULL
+);
+
+737 
+SucûssOrEx™
+(
+”r
+);
+
+738 
+W—veLogProg»ss
+(
+DeviûLay”
+, "NexˆWiF˜APimeouˆš %" 
+PRIu32
+ " ms", 
+­Timeout
+);
+
+742 
+	grg‘S‹
+ = 
+kWiFiAPS‹_NÙAùive
+;
+
+749 
+	grg‘S‹
+ = 
+kWiFiAPS‹_NÙAùive
+;
+
+753 ià(
+	gmWiFiAPS‹
+ !ğ
+rg‘S‹
+)
+
+759 ià(
+rg‘S‹
+ =ğ
+kWiFiAPS‹_Aùive
+)
+
+761 ià(
+mWiFiAPS‹
+ !ğ
+kWiFiAPS‹_Aùiv©šg
+)
+
+763 
+”r
+ = 
+ESP32Uts
+::
+S‘APMode
+(
+Œue
+);
+
+764 
+SucûssOrEx™
+(
+”r
+);
+
+766 
+	g”r
+ = 
+CÚfigu»WiFiAP
+();
+
+767 
+SucûssOrEx™
+(
+”r
+);
+
+769 
+ChªgeWiFiAPS‹
+(
+kWiFiAPS‹_Aùiv©šg
+);
+
+778 ià(
+	gmWiFiAPS‹
+ !ğ
+kWiFiAPS‹_D—ùiv©šg
+)
+
+780 
+”r
+ = 
+ESP32Uts
+::
+S‘APMode
+(
+çl£
+);
+
+781 
+SucûssOrEx™
+(
+”r
+);
+
+783 
+ChªgeWiFiAPS‹
+(
+kWiFiAPS‹_D—ùiv©šg
+);
+
+791 ià(
+	gmWiFiAPS‹
+ =ğ
+kWiFiAPS‹_Aùive
+ &&
+
+792 
+ESP32Uts
+::
+IsIÁ”çûUp
+(
+TCPIP_ADAPTER_IF_AP
+) &&
+
+793 !
+ESP32Uts
+::
+HasIPv6LškLoÿlAdd»ss
+(
+TCPIP_ADAPTER_IF_AP
+))
+
+795 
+”r
+ = 
+tı_ad­‹r_ü—‹_6_lškloÿl
+(
+TCPIP_ADAPTER_IF_AP
+);
+
+796 ià(
+	g”r
+ !ğ
+ESP_OK
+)
+
+798 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "tı_ad­‹r_ü—‹_6_lškloÿl(TCPIP_ADAPTER_IF_APèçed: %s", 
+Æ
+::
+E¼ÜSŒ
+(
+”r
+));
+
+800 
+SucûssOrEx™
+(
+”r
+);
+
+803 
+	gex™
+:
+
+804 ià(
+”r
+ !ğ
+WEAVE_NO_ERROR
+ && 
+mWiFiAPMode
+ !ğ
+kWiFiAPMode_AµliÿtiÚCÚŒŞËd
+)
+
+806 
+S‘WiFiAPMode
+(
+kWiFiAPMode_Di§bËd
+);
+
+807 
+	gESP32Uts
+::
+S‘APMode
+(
+çl£
+);
+
+811 
+WEAVE_ERROR
+ 
+	gCÚÃùiv™yMªag”Im¶
+::
+CÚfigu»WiFiAP
+()
+
+813 
+WEAVE_ERROR
+ 
+”r
+ = 
+WEAVE_NO_ERROR
+;
+
+814 
+wifi_cÚfig_t
+ 
+	gwifiCÚfig
+;
+
+816 
+mem£t
+(&
+wifiCÚfig
+, 0, (wifiConfig));
+
+817 
+	g”r
+ = 
+CÚfigu¿tiÚMgr
+().
+G‘WiFiAPSSID
+((*)
+wifiCÚfig
+.
+­
+.
+ssid
+, (wifiConfig.ap.ssid));
+
+818 
+SucûssOrEx™
+(
+”r
+);
+
+819 
+	gwifiCÚfig
+.
+	g­
+.
+	gchªÃl
+ = 
+WEAVE_DEVICE_CONFIG_WIFI_AP_CHANNEL
+;
+
+820 
+	gwifiCÚfig
+.
+	g­
+.
+	gauthmode
+ = 
+WIFI_AUTH_OPEN
+;
+
+821 
+	gwifiCÚfig
+.
+	g­
+.
+	gmax_cÚÃùiÚ
+ = 
+WEAVE_DEVICE_CONFIG_WIFI_AP_MAX_STATIONS
+;
+
+822 
+	gwifiCÚfig
+.
+	g­
+.
+	gb—cÚ_š‹rv®
+ = 
+WEAVE_DEVICE_CONFIG_WIFI_AP_BEACON_INTERVAL
+;
+
+823 
+W—veLogProg»ss
+(
+DeviûLay”
+, "CÚfiguršg WiF˜AP: SSID %s, chªÃÈ%u", 
+wifiCÚfig
+.
+­
+.
+ssid
+, wifiCÚfig.­.
+chªÃl
+);
+
+824 
+	g”r
+ = 
+e¥_wifi_£t_cÚfig
+(
+ESP_IF_WIFI_AP
+, &
+wifiCÚfig
+);
+
+825 ià(
+	g”r
+ !ğ
+ESP_OK
+)
+
+827 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_wifi_£t_cÚfig(ESP_IF_WIFI_APèçed: %s", 
+Æ
+::
+E¼ÜSŒ
+(
+”r
+));
+
+829 
+SucûssOrEx™
+(
+”r
+);
+
+831 
+	gex™
+:
+
+832  
+”r
+;
+
+835 
+	gCÚÃùiv™yMªag”Im¶
+::
+ChªgeWiFiAPS‹
+(
+WiFiAPS‹
+ 
+ÃwS‹
+)
+
+837 ià(
+mWiFiAPS‹
+ !ğ
+ÃwS‹
+)
+
+839 
+W—veLogProg»ss
+(
+DeviûLay”
+, "WiF˜AP s‹ chªge: % -> %s", 
+WiFiAPS‹ToSŒ
+(
+mWiFiAPS‹
+), WiFiAPS‹ToSŒ(
+ÃwS‹
+));
+
+840 
+	gmWiFiAPS‹
+ = 
+ÃwS‹
+;
+
+844 
+	gCÚÃùiv™yMªag”Im¶
+::
+DriveAPS‹
+(
+Æ
+::
+W—ve
+::
+Sy¡em
+::
+Lay”
+ * 
+aLay”
+, * 
+aAµS‹
+,‚l::W—ve::Sy¡em::
+E¼Ü
+ 
+aE¼Ü
+)
+
+846 
+sIn¡ªû
+.
+DriveAPS‹
+();
+
+849 
+	gCÚÃùiv™yMªag”Im¶
+::
+Upd©eIÁ”ÃtCÚÃùiv™yS‹
+()
+
+851 
+boŞ
+ 
+haveIPv4CÚn
+ = 
+çl£
+;
+
+852 
+boŞ
+ 
+	ghaveIPv6CÚn
+ = 
+çl£
+;
+
+853 
+boŞ
+ 
+	ghadIPv4CÚn
+ = 
+G‘FÏg
+(
+mFÏgs
+, 
+kFÏg_HaveIPv4IÁ”ÃtCÚÃùiv™y
+);
+
+854 
+boŞ
+ 
+	ghadIPv6CÚn
+ = 
+G‘FÏg
+(
+mFÏgs
+, 
+kFÏg_HaveIPv6IÁ”ÃtCÚÃùiv™y
+);
+
+857 ià(
+	gmWiFiStiÚS‹
+ =ğ
+kWiFiStiÚS‹_CÚÃùed
+)
+
+860 
+Ãtif
+ *‚‘iàğ
+ESP32Uts
+::
+G‘StiÚN‘if
+();
+
+863 ià(
+	gÃtif
+ !ğ
+NULL
+ && 
+Ãtif_is_up
+(
+Ãtif
+è&& 
+Ãtif_is_lšk_up
+(netif))
+
+866 
+_addr_t
+ 
+dnsS”v”Addr
+ = 
+dns_g‘£rv”
+(0);
+
+867 ià(!
+_addr_i§ny_v®
+(
+dnsS”v”Addr
+))
+
+872 ià(!
+4_addr_i§ny_v®
+(*
+Ãtif_4_addr
+(
+Ãtif
+)) &&
+
+873 !
+4_addr_i§ny_v®
+(*
+Ãtif_4_gw
+(
+Ãtif
+)))
+
+875 
+	ghaveIPv4CÚn
+ = 
+Œue
+;
+
+880 
+ušt8_t
+ 
+	gi
+ = 0; i < 
+	gLWIP_IPV6_NUM_ADDRESSES
+; i++)
+
+882 ià(
+6_addr_isglob®
+(
+Ãtif_6_addr
+(
+Ãtif
+, 
+i
+)) &&
+
+883 
+6_addr_isv®id
+(
+Ãtif_6_addr_¡©e
+(
+Ãtif
+, 
+i
+)))
+
+888 ià(
+nd6_£Ëù_rou‹r
+(
+IP6_ADDR_ANY6
+, 
+Ãtif
+) >= 0)
+
+890 
+haveIPv6CÚn
+ = 
+Œue
+;
+
+899 ià(
+	ghaveIPv4CÚn
+ !ğ
+hadIPv4CÚn
+ || 
+haveIPv6CÚn
+ !ğ
+hadIPv6CÚn
+)
+
+902 
+S‘FÏg
+(
+mFÏgs
+, 
+kFÏg_HaveIPv4IÁ”ÃtCÚÃùiv™y
+, 
+haveIPv4CÚn
+);
+
+903 
+S‘FÏg
+(
+mFÏgs
+, 
+kFÏg_HaveIPv6IÁ”ÃtCÚÃùiv™y
+, 
+haveIPv6CÚn
+);
+
+906 
+W—veDeviûEv’t
+ 
+	gev’t
+;
+
+907 
+	gev’t
+.
+	gTy³
+ = 
+DeviûEv’tTy³
+::
+kIÁ”ÃtCÚÃùiv™yChªge
+;
+
+908 
+	gev’t
+.
+	gIÁ”ÃtCÚÃùiv™yChªge
+.
+	gIPv4
+ = 
+G‘CÚÃùiv™yChªge
+(
+hadIPv4CÚn
+, 
+haveIPv4CÚn
+);
+
+909 
+	gev’t
+.
+	gIÁ”ÃtCÚÃùiv™yChªge
+.
+	gIPv6
+ = 
+G‘CÚÃùiv™yChªge
+(
+hadIPv6CÚn
+, 
+haveIPv6CÚn
+);
+
+910 
+PÏtfÜmMgr
+().
+Po¡Ev’t
+(&
+ev’t
+);
+
+912 ià(
+	ghaveIPv4CÚn
+ !ğ
+hadIPv4CÚn
+)
+
+914 
+W—veLogProg»ss
+(
+DeviûLay”
+, "% IÁ”ÃˆcÚÃùiv™y %s", "IPv4", (
+haveIPv4CÚn
+) ? "ESTABLISHED" : "LOST");
+
+917 ià(
+	ghaveIPv6CÚn
+ !ğ
+hadIPv6CÚn
+)
+
+919 
+W—veLogProg»ss
+(
+DeviûLay”
+, "% IÁ”ÃˆcÚÃùiv™y %s", "IPv6", (
+haveIPv6CÚn
+) ? "ESTABLISHED" : "LOST");
+
+922 
+DriveS”viûTuÂ–S‹
+();
+
+926 
+	gCÚÃùiv™yMªag”Im¶
+::
+OnStiÚIPv4Add»ssAvaabË
+(cÚ¡ 
+sy¡em_ev’t_¡a_gÙ__t
+ & 
+gÙ_
+)
+
+928 #ià
+WEAVE_PROGRESS_LOGGING
+
+
+930 
+AddrSŒ
+[
+INET_ADDRSTRLEN
+], 
+	gÃtMaskSŒ
+[INET_ADDRSTRLEN], 
+	gg©ewaySŒ
+[INET_ADDRSTRLEN];
+
+931 
+	gIPAdd»ss
+::
+FromIPv4
+(
+gÙ_
+.
+_šfo
+.
+
+).
+ToSŒšg
+(
+AddrSŒ
+, (ipAddrStr));
+
+932 
+	gIPAdd»ss
+::
+FromIPv4
+(
+gÙ_
+.
+_šfo
+.
+Ãtmask
+).
+ToSŒšg
+(
+ÃtMaskSŒ
+, (netMaskStr));
+
+933 
+	gIPAdd»ss
+::
+FromIPv4
+(
+gÙ_
+.
+_šfo
+.
+gw
+).
+ToSŒšg
+(
+g©ewaySŒ
+, (gatewayStr));
+
+934 
+W—veLogProg»ss
+(
+DeviûLay”
+, "IPv4‡ddress %s on WiFi station interface: %s/%s gateway %s",
+
+935 (
+gÙ_
+.
+_chªged
+) ? "changed" : "ready",
+
+936 
+AddrSŒ
+, 
+ÃtMaskSŒ
+, 
+g©ewaySŒ
+);
+
+940 
+ReäeshMes§geLay”
+();
+
+942 
+Upd©eIÁ”ÃtCÚÃùiv™yS‹
+();
+
+945 
+	gCÚÃùiv™yMªag”Im¶
+::
+OnStiÚIPv4Add»ssLo¡
+()
+
+947 
+W—veLogProg»ss
+(
+DeviûLay”
+, "IPv4‡ddress†ost on WiFi station interface");
+
+949 
+ReäeshMes§geLay”
+();
+
+951 
+Upd©eIÁ”ÃtCÚÃùiv™yS‹
+();
+
+954 
+	gCÚÃùiv™yMªag”Im¶
+::
+OnIPv6Add»ssAvaabË
+(cÚ¡ 
+sy¡em_ev’t_gÙ_6_t
+ & 
+gÙ_
+)
+
+956 #ià
+WEAVE_PROGRESS_LOGGING
+
+
+958 
+IPAdd»ss
+ 
+Addr
+ = IPAdd»ss::
+FromIPv6
+(
+gÙ_
+.
+6_šfo
+.
+
+);
+
+959 
+	gAddrSŒ
+[
+INET6_ADDRSTRLEN
+];
+
+960 
+	gAddr
+.
+ToSŒšg
+(
+AddrSŒ
+, (ipAddrStr));
+
+961 
+W—veLogProg»ss
+(
+DeviûLay”
+, "%s„eady on %s interface: %s",
+
+962 
+Ch¬aù”izeIPv6Add»ss
+(
+Addr
+),
+
+963 
+ESP32Uts
+::
+IÁ”çûIdToName
+(
+gÙ_
+.
+if_šdex
+),
+
+964 
+AddrSŒ
+);
+
+968 
+ReäeshMes§geLay”
+();
+
+970 
+Upd©eIÁ”ÃtCÚÃùiv™yS‹
+();
+
+973 
+	gCÚÃùiv™yMªag”Im¶
+::
+DriveS”viûTuÂ–S‹
+()
+
+975 
+WEAVE_ERROR
+ 
+”r
+;
+
+976 
+boŞ
+ 
+	g¡¬tS”viûTuÂ–
+;
+
+979 
+	g¡¬tS”viûTuÂ–
+ = (
+mS”viûTuÂ–Mode
+ =ğ
+kS”viûTuÂ–Mode_EÇbËd
+
+
+980 && 
+G‘FÏg
+(
+mFÏgs
+, 
+kFÏg_HaveIPv4IÁ”ÃtCÚÃùiv™y
+)
+
+981 && 
+CÚfigu¿tiÚMgr
+().
+IsMemb”OfFabric
+()
+
+982 #ià!
+WEAVE_DEVICE_CONFIG_ENABLE_FIXED_TUNNEL_SERVER
+
+
+983 && 
+CÚfigu¿tiÚMgr
+().
+IsS”viûProvisiÚed
+()
+
+988 ià(
+	g¡¬tS”viûTuÂ–
+ !ğ
+G‘FÏg
+(
+mFÏgs
+, 
+kFÏg_S”viûTuÂ–S¹ed
+))
+
+991 
+S‘FÏg
+(
+mFÏgs
+, 
+kFÏg_S”viûTuÂ–S¹ed
+, 
+¡¬tS”viûTuÂ–
+);
+
+994 ià(
+	g¡¬tS”viûTuÂ–
+)
+
+996 
+W—veLogProg»ss
+(
+DeviûLay”
+, "Starting serviceunnel");
+
+998 
+	g”r
+ = 
+S”viûTuÂ–Ag’t
+.
+S¹S”viûTuÂ–
+();
+
+999 ià(
+	g”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+1001 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "S¹S”viûTuÂ–(èçed: %s", 
+Æ
+::
+E¼ÜSŒ
+(
+”r
+));
+
+1002 
+CË¬FÏg
+(
+mFÏgs
+, 
+kFÏg_S”viûTuÂ–S¹ed
+);
+
+1008 
+W—veLogProg»ss
+(
+DeviûLay”
+, "Stopping serviceunnel");
+
+1009 
+	gS”viûTuÂ–Ag’t
+.
+StİS”viûTuÂ–
+();
+
+1014 
+	gCÚÃùiv™yMªag”Im¶
+::
+DriveS”viûTuÂ–S‹
+(
+Æ
+::
+W—ve
+::
+Sy¡em
+::
+Lay”
+ * 
+aLay”
+, * 
+aAµS‹
+,‚l::W—ve::Sy¡em::
+E¼Ü
+ 
+aE¼Ü
+)
+
+1016 
+sIn¡ªû
+.
+DriveS”viûTuÂ–S‹
+();
+
+1019 cÚ¡ * 
+	gCÚÃùiv™yMªag”Im¶
+::
+_WiFiStiÚModeToSŒ
+(
+WiFiStiÚMode
+ 
+mode
+)
+
+1021 
+mode
+)
+
+1023 
+kWiFiStiÚMode_NÙSuµÜ‹d
+:
+
+1025 
+	gkWiFiStiÚMode_AµliÿtiÚCÚŒŞËd
+:
+
+1027 
+	gkWiFiStiÚMode_EÇbËd
+:
+
+1029 
+	gkWiFiStiÚMode_Di§bËd
+:
+
+1036 cÚ¡ * 
+	gCÚÃùiv™yMªag”Im¶
+::
+_WiFiAPModeToSŒ
+(
+WiFiAPMode
+ 
+mode
+)
+
+1038 
+mode
+)
+
+1040 
+kWiFiAPMode_NÙSuµÜ‹d
+:
+
+1042 
+	gkWiFiAPMode_AµliÿtiÚCÚŒŞËd
+:
+
+1044 
+	gkWiFiAPMode_Di§bËd
+:
+
+1046 
+	gkWiFiAPMode_EÇbËd
+:
+
+1048 
+	gkWiFiAPMode_OnDemªd
+:
+
+1050 
+	gkWiFiAPMode_OnDemªd_NoStiÚProvisiÚ
+:
+
+1057 cÚ¡ * 
+	gCÚÃùiv™yMªag”Im¶
+::
+_S”viûTuÂ–ModeToSŒ
+(
+S”viûTuÂ–Mode
+ 
+mode
+)
+
+1059 
+mode
+)
+
+1061 
+kS”viûTuÂ–Mode_NÙSuµÜ‹d
+:
+
+1063 
+	gkS”viûTuÂ–Mode_Di§bËd
+:
+
+1065 
+	gkS”viûTuÂ–Mode_EÇbËd
+:
+
+1072 cÚ¡ * 
+	gCÚÃùiv™yMªag”Im¶
+::
+_WoBLES”viûModeToSŒ
+(
+WoBLES”viûMode
+ 
+mode
+)
+
+1074 
+mode
+)
+
+1076 
+kWoBLES”viûMode_NÙSuµÜ‹d
+:
+
+1078 
+	gkWoBLES”viûMode_EÇbËd
+:
+
+1080 
+	gkWoBLES”viûMode_Di§bËd
+:
+
+1087 cÚ¡ * 
+	gCÚÃùiv™yMªag”Im¶
+::
+WiFiStiÚS‹ToSŒ
+(
+WiFiStiÚS‹
+ 
+¡©e
+)
+
+1089 
+¡©e
+)
+
+1091 
+kWiFiStiÚS‹_NÙCÚÃùed
+:
+
+1093 
+	gkWiFiStiÚS‹_CÚÃùšg
+:
+
+1095 
+	gkWiFiStiÚS‹_CÚÃùšg_Sucûeded
+:
+
+1097 
+	gkWiFiStiÚS‹_CÚÃùšg_Faed
+:
+
+1099 
+	gkWiFiStiÚS‹_CÚÃùed
+:
+
+1101 
+	gkWiFiStiÚS‹_DiscÚÃùšg
+:
+
+1108 cÚ¡ * 
+	gCÚÃùiv™yMªag”Im¶
+::
+WiFiAPS‹ToSŒ
+(
+WiFiAPS‹
+ 
+¡©e
+)
+
+1110 
+¡©e
+)
+
+1112 
+kWiFiAPS‹_NÙAùive
+:
+
+1114 
+	gkWiFiAPS‹_Aùiv©šg
+:
+
+1116 
+	gkWiFiAPS‹_Aùive
+:
+
+1118 
+	gkWiFiAPS‹_D—ùiv©šg
+:
+
+1125 
+	gCÚÃùiv™yMªag”Im¶
+::
+ReäeshMes§geLay”
+()
+
+1127 
+WEAVE_ERROR
+ 
+”r
+ = 
+Mes§geLay”
+.
+ReäeshEndpošts
+();
+
+1128 ià(
+	g”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+1130 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "Mes§geLay”.ReäeshEndpošts(èçed: %s", 
+Æ
+::
+E¼ÜSŒ
+(
+”r
+));
+
+1134 
+	gCÚÃùiv™yMªag”Im¶
+::
+HªdËS”viûTuÂ–NÙifiÿtiÚ
+(
+W—veTuÂ–CÚÃùiÚMgr
+::
+TuÂ–CÚnNÙifyR—sÚs
+ 
+»asÚ
+,
+
+1135 
+WEAVE_ERROR
+ 
+”r
+, *
+­pCtxt
+)
+
+1137 
+boŞ
+ 
+	gÃwTuÂ–S‹
+ = 
+çl£
+;
+
+1138 
+boŞ
+ 
+	g´evTuÂ–S‹
+ = 
+G‘FÏg
+(
+sIn¡ªû
+.
+mFÏgs
+, 
+kFÏg_S”viûTuÂ–Up
+);
+
+1139 
+boŞ
+ 
+	gisRe¡riùed
+ = 
+çl£
+;
+
+1141 
+	g»asÚ
+)
+
+1143 
+	gW—veTuÂ–CÚÃùiÚMgr
+::
+kStus_TunDown
+:
+
+1144 
+W—veLogProg»ss
+(
+DeviûLay”
+, "ConnectivityManager: Serviceunnel down");
+
+1146 
+	gW—veTuÂ–CÚÃùiÚMgr
+::
+kStus_TunPrim¬yCÚnE¼Ü
+:
+
+1147 
+W—veLogProg»ss
+(
+DeviûLay”
+, "CÚÃùiv™yMªag”: S”viûuÂ– cÚÃùiÚƒ¼Ü: %s", ::
+Æ
+::
+E¼ÜSŒ
+(
+”r
+));
+
+1149 
+	gW—veTuÂ–CÚÃùiÚMgr
+::
+kStus_TunPrim¬yUp
+:
+
+1150 
+ÃwTuÂ–S‹
+ = 
+Œue
+;
+
+1151 
+	gisRe¡riùed
+ = (
+”r
+ =ğ
+WEAVE_ERROR_TUNNEL_ROUTING_RESTRICTED
+);
+
+1152 
+W—veLogProg»ss
+(
+DeviûLay”
+, "CÚÃùiv™yMªag”: %£rviûuÂ–ƒ¡ablished", (
+isRe¡riùed
+) ? "RESTRICTED s" : "S");
+
+1159 ià(
+	gÃwTuÂ–S‹
+ !ğ
+´evTuÂ–S‹
+)
+
+1162 
+S‘FÏg
+(
+sIn¡ªû
+.
+mFÏgs
+, 
+kFÏg_S”viûTuÂ–Up
+, 
+ÃwTuÂ–S‹
+);
+
+1165 
+W—veDeviûEv’t
+ 
+	gev’t
+;
+
+1166 
+	gev’t
+.
+	gTy³
+ = 
+DeviûEv’tTy³
+::
+kS”viûTuÂ–S‹Chªge
+;
+
+1167 
+	gev’t
+.
+	gS”viûTuÂ–S‹Chªge
+.
+	gResuÉ
+ = 
+G‘CÚÃùiv™yChªge
+(
+´evTuÂ–S‹
+, 
+ÃwTuÂ–S‹
+);
+
+1168 
+	gev’t
+.
+	gS”viûTuÂ–S‹Chªge
+.
+	gIsRe¡riùed
+ = 
+isRe¡riùed
+;
+
+1169 
+PÏtfÜmMgr
+().
+Po¡Ev’t
+(&
+ev’t
+);
+
+1176 ià(
+	gÃwTuÂ–S‹
+)
+
+1178 ià(!
+	gisRe¡riùed
+)
+
+1180 
+	gev’t
+.
+	gTy³
+ = 
+DeviûEv’tTy³
+::
+kS”viûCÚÃùiv™yChªge
+;
+
+1181 
+	gev’t
+.
+	gS”viûCÚÃùiv™yChªge
+.
+	gResuÉ
+ = 
+kCÚÃùiv™y_E¡ablished
+;
+
+1182 
+PÏtfÜmMgr
+().
+Po¡Ev’t
+(&
+ev’t
+);
+
+1188 
+	gev’t
+.
+	gTy³
+ = 
+DeviûEv’tTy³
+::
+kS”viûCÚÃùiv™yChªge
+;
+
+1189 
+	gev’t
+.
+	gS”viûCÚÃùiv™yChªge
+.
+	gResuÉ
+ = 
+kCÚÃùiv™y_Lo¡
+;
+
+1190 
+PÏtfÜmMgr
+().
+Po¡Ev’t
+(&
+ev’t
+);
+
+	@ESP32Config.cpp
+
+24 
+	~<W—ve/DeviûLay”/š‹º®/W—veDeviûLay”IÁ”Çl.h
+>
+
+25 
+	~<W—ve/DeviûLay”/ESP32/ESP32CÚfig.h
+>
+
+27 
+	~"nvs_æash.h
+"
+
+28 
+	~"nvs.h
+"
+
+30 
+Çme¥aû
+ 
+	gÆ
+ {
+
+31 
+Çme¥aû
+ 
+	gW—ve
+ {
+
+32 
+Çme¥aû
+ 
+	gDeviûLay”
+ {
+
+33 
+Çme¥aû
+ 
+	gIÁ”Çl
+ {
+
+36 cÚ¡ 
+	gESP32CÚfig
+::
+kCÚfigName¥aû_W—veFaùÜy
+[] = "weave-factory";
+
+37 cÚ¡ 
+	gESP32CÚfig
+::
+kCÚfigName¥aû_W—veCÚfig
+[] = "weave-config";
+
+38 cÚ¡ 
+	gESP32CÚfig
+::
+kCÚfigName¥aû_W—veCouÁ”s
+[] = "weave-counters";
+
+41 cÚ¡ 
+	gESP32CÚfig
+::
+Key
+ 
+ESP32CÚfig
+::
+kCÚfigKey_S”ŸlNum
+ = { 
+kCÚfigName¥aû_W—veFaùÜy
+, "serial-num" };
+
+42 cÚ¡ 
+	gESP32CÚfig
+::
+Key
+ 
+ESP32CÚfig
+::
+kCÚfigKey_DeviûId
+ = { 
+kCÚfigName¥aû_W—veFaùÜy
+, "device-id" };
+
+43 cÚ¡ 
+	gESP32CÚfig
+::
+Key
+ 
+ESP32CÚfig
+::
+kCÚfigKey_DeviûC”t
+ = { 
+kCÚfigName¥aû_W—veFaùÜy
+, "device-cert" };
+
+44 cÚ¡ 
+	gESP32CÚfig
+::
+Key
+ 
+ESP32CÚfig
+::
+kCÚfigKey_DeviûPriv©eKey
+ = { 
+kCÚfigName¥aû_W—veFaùÜy
+, "device-key" };
+
+45 cÚ¡ 
+	gESP32CÚfig
+::
+Key
+ 
+ESP32CÚfig
+::
+kCÚfigKey_MªuçùuršgD©e
+ = { 
+kCÚfigName¥aû_W—veFaùÜy
+, "mfg-date" };
+
+46 cÚ¡ 
+	gESP32CÚfig
+::
+Key
+ 
+ESP32CÚfig
+::
+kCÚfigKey_PaœšgCode
+ = { 
+kCÚfigName¥aû_W—veFaùÜy
+, "pairing-code" };
+
+49 cÚ¡ 
+	gESP32CÚfig
+::
+Key
+ 
+ESP32CÚfig
+::
+kCÚfigKey_FabricId
+ = { 
+kCÚfigName¥aû_W—veCÚfig
+, "fabric-id" };
+
+50 cÚ¡ 
+	gESP32CÚfig
+::
+Key
+ 
+ESP32CÚfig
+::
+kCÚfigKey_S”viûCÚfig
+ = { 
+kCÚfigName¥aû_W—veCÚfig
+, "service-config" };
+
+51 cÚ¡ 
+	gESP32CÚfig
+::
+Key
+ 
+ESP32CÚfig
+::
+kCÚfigKey_PaœedAccouÁId
+ = { 
+kCÚfigName¥aû_W—veCÚfig
+, "account-id" };
+
+52 cÚ¡ 
+	gESP32CÚfig
+::
+Key
+ 
+ESP32CÚfig
+::
+kCÚfigKey_S”viûId
+ = { 
+kCÚfigName¥aû_W—veCÚfig
+, "service-id" };
+
+53 cÚ¡ 
+	gESP32CÚfig
+::
+Key
+ 
+ESP32CÚfig
+::
+kCÚfigKey_FabricSeü‘
+ = { 
+kCÚfigName¥aû_W—veCÚfig
+, "fabric-secret" };
+
+54 cÚ¡ 
+	gESP32CÚfig
+::
+Key
+ 
+ESP32CÚfig
+::
+kCÚfigKey_GroupKeyIndex
+ = { 
+kCÚfigName¥aû_W—veCÚfig
+, "group-key-index" };
+
+55 cÚ¡ 
+	gESP32CÚfig
+::
+Key
+ 
+ESP32CÚfig
+::
+kCÚfigKey_La¡U£dEpochKeyId
+ = { 
+kCÚfigName¥aû_W—veCÚfig
+, "last-ek-id" };
+
+56 cÚ¡ 
+	gESP32CÚfig
+::
+Key
+ 
+ESP32CÚfig
+::
+kCÚfigKey_FaSaãArmed
+ = { 
+kCÚfigName¥aû_W—veCÚfig
+, "fail-safe-armed" };
+
+57 cÚ¡ 
+	gESP32CÚfig
+::
+Key
+ 
+ESP32CÚfig
+::
+kCÚfigKey_WiFiStiÚSecTy³
+ = { 
+kCÚfigName¥aû_W—veCÚfig
+, "sta-sec-type" };
+
+60 cÚ¡ 
+	gESP32CÚfig
+::
+kGroupKeyNameP»fix
+[] = "gk-";
+
+63 
+WEAVE_ERROR
+ 
+	gESP32CÚfig
+::
+R—dCÚfigV®ue
+(
+Key
+ 
+key
+, 
+boŞ
+ & 
+v®
+)
+
+65 
+WEAVE_ERROR
+ 
+	g”r
+;
+
+66 
+nvs_hªdË
+ 
+	ghªdË
+;
+
+67 
+boŞ
+ 
+	gÃedClo£
+ = 
+çl£
+;
+
+68 
+ušt32_t
+ 
+	gštV®
+;
+
+70 
+	g”r
+ = 
+nvs_İ’
+(
+key
+.
+Name¥aû
+, 
+NVS_READONLY
+, &
+hªdË
+);
+
+71 
+SucûssOrEx™
+(
+”r
+);
+
+72 
+	gÃedClo£
+ = 
+Œue
+;
+
+74 
+	g”r
+ = 
+nvs_g‘_u32
+(
+hªdË
+, 
+key
+.
+Name
+, &
+štV®
+);
+
+75 ià(
+	g”r
+ =ğ
+ESP_ERR_NVS_NOT_FOUND
+)
+
+77 
+”r
+ = 
+WEAVE_DEVICE_ERROR_CONFIG_NOT_FOUND
+;
+
+79 
+SucûssOrEx™
+(
+”r
+);
+
+81 
+	gv®
+ = (
+štV®
+ != 0);
+
+83 
+	gex™
+:
+
+84 ià(
+ÃedClo£
+)
+
+86 
+nvs_şo£
+(
+hªdË
+);
+
+88  
+	g”r
+;
+
+91 
+WEAVE_ERROR
+ 
+	gESP32CÚfig
+::
+R—dCÚfigV®ue
+(
+Key
+ 
+key
+, 
+ušt32_t
+ & 
+v®
+)
+
+93 
+WEAVE_ERROR
+ 
+	g”r
+;
+
+94 
+nvs_hªdË
+ 
+	ghªdË
+;
+
+95 
+boŞ
+ 
+	gÃedClo£
+ = 
+çl£
+;
+
+97 
+	g”r
+ = 
+nvs_İ’
+(
+key
+.
+Name¥aû
+, 
+NVS_READONLY
+, &
+hªdË
+);
+
+98 
+SucûssOrEx™
+(
+”r
+);
+
+99 
+	gÃedClo£
+ = 
+Œue
+;
+
+101 
+	g”r
+ = 
+nvs_g‘_u32
+(
+hªdË
+, 
+key
+.
+Name
+, &
+v®
+);
+
+102 ià(
+	g”r
+ =ğ
+ESP_ERR_NVS_NOT_FOUND
+)
+
+104 
+”r
+ = 
+WEAVE_DEVICE_ERROR_CONFIG_NOT_FOUND
+;
+
+106 
+SucûssOrEx™
+(
+”r
+);
+
+108 
+	gex™
+:
+
+109 ià(
+ÃedClo£
+)
+
+111 
+nvs_şo£
+(
+hªdË
+);
+
+113  
+	g”r
+;
+
+116 
+WEAVE_ERROR
+ 
+	gESP32CÚfig
+::
+R—dCÚfigV®ue
+(
+Key
+ 
+key
+, 
+ušt64_t
+ & 
+v®
+)
+
+118 
+WEAVE_ERROR
+ 
+	g”r
+;
+
+119 
+nvs_hªdË
+ 
+	ghªdË
+;
+
+120 
+boŞ
+ 
+	gÃedClo£
+ = 
+çl£
+;
+
+122 
+	g”r
+ = 
+nvs_İ’
+(
+key
+.
+Name¥aû
+, 
+NVS_READONLY
+, &
+hªdË
+);
+
+123 
+SucûssOrEx™
+(
+”r
+);
+
+124 
+	gÃedClo£
+ = 
+Œue
+;
+
+134 ià(
+	gkey
+ =ğ
+kCÚfigKey_DeviûId
+)
+
+136 
+ušt8_t
+ 
+deviûIdBy‹s
+[(
+ušt64_t
+)];
+
+137 
+size_t
+ 
+	gdeviûIdL’
+ = (
+deviûIdBy‹s
+);
+
+138 
+	g”r
+ = 
+nvs_g‘_blob
+(
+hªdË
+, 
+key
+.
+Name
+, 
+deviûIdBy‹s
+, &
+deviûIdL’
+);
+
+139 ià(
+	g”r
+ =ğ
+ESP_OK
+)
+
+141 
+V”ifyOrEx™
+(
+deviûIdL’
+ =ğ(
+deviûIdBy‹s
+), 
+”r
+ = 
+ESP_ERR_NVS_INVALID_LENGTH
+);
+
+142 
+	gv®
+ = 
+Encodšg
+::
+BigEndŸn
+::
+G‘64
+(
+deviûIdBy‹s
+);
+
+143 
+Ex™Now
+();
+
+147 
+	g”r
+ = 
+nvs_g‘_u64
+(
+hªdË
+, 
+key
+.
+Name
+, &
+v®
+);
+
+148 ià(
+	g”r
+ =ğ
+ESP_ERR_NVS_NOT_FOUND
+)
+
+150 
+”r
+ = 
+WEAVE_DEVICE_ERROR_CONFIG_NOT_FOUND
+;
+
+152 
+SucûssOrEx™
+(
+”r
+);
+
+154 
+	gex™
+:
+
+155 ià(
+ÃedClo£
+)
+
+157 
+nvs_şo£
+(
+hªdË
+);
+
+159  
+	g”r
+;
+
+162 
+WEAVE_ERROR
+ 
+	gESP32CÚfig
+::
+R—dCÚfigV®ueSŒ
+(
+Key
+ 
+key
+, * 
+buf
+, 
+size_t
+ 
+bufSize
+, size_ˆ& 
+outL’
+)
+
+164 
+WEAVE_ERROR
+ 
+	g”r
+;
+
+165 
+nvs_hªdË
+ 
+	ghªdË
+;
+
+166 
+boŞ
+ 
+	gÃedClo£
+ = 
+çl£
+;
+
+168 
+	g”r
+ = 
+nvs_İ’
+(
+key
+.
+Name¥aû
+, 
+NVS_READONLY
+, &
+hªdË
+);
+
+169 
+SucûssOrEx™
+(
+”r
+);
+
+170 
+	gÃedClo£
+ = 
+Œue
+;
+
+172 
+	goutL’
+ = 
+bufSize
+;
+
+173 
+	g”r
+ = 
+nvs_g‘_¡r
+(
+hªdË
+, 
+key
+.
+Name
+, 
+buf
+, &
+outL’
+);
+
+174 ià(
+	g”r
+ =ğ
+ESP_ERR_NVS_NOT_FOUND
+)
+
+176 
+outL’
+ = 0;
+
+177 
+	g”r
+ = 
+WEAVE_DEVICE_ERROR_CONFIG_NOT_FOUND
+;
+
+179 ià(
+	g”r
+ =ğ
+ESP_ERR_NVS_INVALID_LENGTH
+)
+
+181 
+”r
+ = (
+buf
+ =ğ
+NULL
+è? 
+WEAVE_NO_ERROR
+ : 
+WEAVE_ERROR_BUFFER_TOO_SMALL
+;
+
+183 
+SucûssOrEx™
+(
+”r
+);
+
+185 
+	goutL’
+ -= 1;
+
+187 
+	gex™
+:
+
+188 ià(
+ÃedClo£
+)
+
+190 
+nvs_şo£
+(
+hªdË
+);
+
+193  
+	g”r
+;
+
+196 
+WEAVE_ERROR
+ 
+	gESP32CÚfig
+::
+R—dCÚfigV®ueBš
+(
+Key
+ 
+key
+, 
+ušt8_t
+ * 
+buf
+, 
+size_t
+ 
+bufSize
+, size_ˆ& 
+outL’
+)
+
+198 
+WEAVE_ERROR
+ 
+	g”r
+;
+
+199 
+nvs_hªdË
+ 
+	ghªdË
+;
+
+200 
+boŞ
+ 
+	gÃedClo£
+ = 
+çl£
+;
+
+202 
+	g”r
+ = 
+nvs_İ’
+(
+key
+.
+Name¥aû
+, 
+NVS_READONLY
+, &
+hªdË
+);
+
+203 
+SucûssOrEx™
+(
+”r
+);
+
+204 
+	gÃedClo£
+ = 
+Œue
+;
+
+206 
+	goutL’
+ = 
+bufSize
+;
+
+207 
+	g”r
+ = 
+nvs_g‘_blob
+(
+hªdË
+, 
+key
+.
+Name
+, 
+buf
+, &
+outL’
+);
+
+208 ià(
+	g”r
+ =ğ
+ESP_ERR_NVS_NOT_FOUND
+)
+
+210 
+outL’
+ = 0;
+
+211 
+	g”r
+ = 
+WEAVE_DEVICE_ERROR_CONFIG_NOT_FOUND
+;
+
+213 ià(
+	g”r
+ =ğ
+ESP_ERR_NVS_INVALID_LENGTH
+)
+
+215 
+”r
+ = (
+buf
+ =ğ
+NULL
+è? 
+WEAVE_NO_ERROR
+ : 
+WEAVE_ERROR_BUFFER_TOO_SMALL
+;
+
+217 
+SucûssOrEx™
+(
+”r
+);
+
+219 
+	gex™
+:
+
+220 ià(
+ÃedClo£
+)
+
+222 
+nvs_şo£
+(
+hªdË
+);
+
+225  
+	g”r
+;
+
+228 
+WEAVE_ERROR
+ 
+	gESP32CÚfig
+::
+Wr™eCÚfigV®ue
+(
+Key
+ 
+key
+, 
+boŞ
+ 
+v®
+)
+
+230 
+WEAVE_ERROR
+ 
+	g”r
+;
+
+231 
+nvs_hªdË
+ 
+	ghªdË
+;
+
+232 
+boŞ
+ 
+	gÃedClo£
+ = 
+çl£
+;
+
+234 
+	g”r
+ = 
+nvs_İ’
+(
+key
+.
+Name¥aû
+, 
+NVS_READWRITE
+, &
+hªdË
+);
+
+235 
+SucûssOrEx™
+(
+”r
+);
+
+236 
+	gÃedClo£
+ = 
+Œue
+;
+
+238 
+	g”r
+ = 
+nvs_£t_u32
+(
+hªdË
+, 
+key
+.
+Name
+, 
+v®
+ ? 1 : 0);
+
+239 
+SucûssOrEx™
+(
+”r
+);
+
+242 
+	g”r
+ = 
+nvs_comm™
+(
+hªdË
+);
+
+243 
+SucûssOrEx™
+(
+”r
+);
+
+245 
+W—veLogProg»ss
+(
+DeviûLay”
+, "NVS s‘: %s/% ğ%s", 
+key
+.
+Name¥aû
+, key.
+Name
+, 
+v®
+ ? "true" : "false");
+
+247 
+	gex™
+:
+
+248 ià(
+ÃedClo£
+)
+
+250 
+nvs_şo£
+(
+hªdË
+);
+
+253  
+	g”r
+;
+
+256 
+WEAVE_ERROR
+ 
+	gESP32CÚfig
+::
+Wr™eCÚfigV®ue
+(
+Key
+ 
+key
+, 
+ušt32_t
+ 
+v®
+)
+
+258 
+WEAVE_ERROR
+ 
+	g”r
+;
+
+259 
+nvs_hªdË
+ 
+	ghªdË
+;
+
+260 
+boŞ
+ 
+	gÃedClo£
+ = 
+çl£
+;
+
+262 
+	g”r
+ = 
+nvs_İ’
+(
+key
+.
+Name¥aû
+, 
+NVS_READWRITE
+, &
+hªdË
+);
+
+263 
+SucûssOrEx™
+(
+”r
+);
+
+264 
+	gÃedClo£
+ = 
+Œue
+;
+
+266 
+	g”r
+ = 
+nvs_£t_u32
+(
+hªdË
+, 
+key
+.
+Name
+, 
+v®
+);
+
+267 
+SucûssOrEx™
+(
+”r
+);
+
+270 
+	g”r
+ = 
+nvs_comm™
+(
+hªdË
+);
+
+271 
+SucûssOrEx™
+(
+”r
+);
+
+273 
+W—veLogProg»ss
+(
+DeviûLay”
+, "NVS s‘: %s/% ğ%" 
+PRIu32
+ " (0x%" 
+PRIX32
+ ")", 
+key
+.
+Name¥aû
+, key.
+Name
+, 
+v®
+, val);
+
+275 
+	gex™
+:
+
+276 ià(
+ÃedClo£
+)
+
+278 
+nvs_şo£
+(
+hªdË
+);
+
+281  
+	g”r
+;
+
+284 
+WEAVE_ERROR
+ 
+	gESP32CÚfig
+::
+Wr™eCÚfigV®ue
+(
+Key
+ 
+key
+, 
+ušt64_t
+ 
+v®
+)
+
+286 
+WEAVE_ERROR
+ 
+	g”r
+;
+
+287 
+nvs_hªdË
+ 
+	ghªdË
+;
+
+288 
+boŞ
+ 
+	gÃedClo£
+ = 
+çl£
+;
+
+290 
+	g”r
+ = 
+nvs_İ’
+(
+key
+.
+Name¥aû
+, 
+NVS_READWRITE
+, &
+hªdË
+);
+
+291 
+SucûssOrEx™
+(
+”r
+);
+
+292 
+	gÃedClo£
+ = 
+Œue
+;
+
+294 
+	g”r
+ = 
+nvs_£t_u64
+(
+hªdË
+, 
+key
+.
+Name
+, 
+v®
+);
+
+295 
+SucûssOrEx™
+(
+”r
+);
+
+298 
+	g”r
+ = 
+nvs_comm™
+(
+hªdË
+);
+
+299 
+SucûssOrEx™
+(
+”r
+);
+
+301 
+W—veLogProg»ss
+(
+DeviûLay”
+, "NVS s‘: %s/% ğ%" 
+PRIu64
+ " (0x%" 
+PRIX64
+ ")", 
+key
+.
+Name¥aû
+, key.
+Name
+, 
+v®
+, val);
+
+303 
+	gex™
+:
+
+304 ià(
+ÃedClo£
+)
+
+306 
+nvs_şo£
+(
+hªdË
+);
+
+309  
+	g”r
+;
+
+312 
+WEAVE_ERROR
+ 
+	gESP32CÚfig
+::
+Wr™eCÚfigV®ueSŒ
+(
+Key
+ 
+key
+, cÚ¡ * 
+¡r
+)
+
+314 
+WEAVE_ERROR
+ 
+	g”r
+;
+
+315 
+nvs_hªdË
+ 
+	ghªdË
+;
+
+316 
+boŞ
+ 
+	gÃedClo£
+ = 
+çl£
+;
+
+318 ià(
+	g¡r
+ !ğ
+NULL
+)
+
+320 
+”r
+ = 
+nvs_İ’
+(
+key
+.
+Name¥aû
+, 
+NVS_READWRITE
+, &
+hªdË
+);
+
+321 
+SucûssOrEx™
+(
+”r
+);
+
+322 
+	gÃedClo£
+ = 
+Œue
+;
+
+324 
+	g”r
+ = 
+nvs_£t_¡r
+(
+hªdË
+, 
+key
+.
+Name
+, 
+¡r
+);
+
+325 
+SucûssOrEx™
+(
+”r
+);
+
+328 
+	g”r
+ = 
+nvs_comm™
+(
+hªdË
+);
+
+329 
+SucûssOrEx™
+(
+”r
+);
+
+331 
+W—veLogProg»ss
+(
+DeviûLay”
+, "NVS s‘: %s/% ğ\"%s\"", 
+key
+.
+Name¥aû
+, key.
+Name
+, 
+¡r
+);
+
+336 
+	g”r
+ = 
+CË¬CÚfigV®ue
+(
+key
+);
+
+337 
+SucûssOrEx™
+(
+”r
+);
+
+340 
+	gex™
+:
+
+341 ià(
+ÃedClo£
+)
+
+343 
+nvs_şo£
+(
+hªdË
+);
+
+346  
+	g”r
+;
+
+349 
+WEAVE_ERROR
+ 
+	gESP32CÚfig
+::
+Wr™eCÚfigV®ueSŒ
+(
+Key
+ 
+key
+, cÚ¡ * 
+¡r
+, 
+size_t
+ 
+¡rL’
+)
+
+351 
+WEAVE_ERROR
+ 
+	g”r
+;
+
+352 * 
+	g¡rCİy
+ = 
+NULL
+;
+
+354 ià(
+	g¡r
+ !ğ
+NULL
+)
+
+356 
+¡rCİy
+ = 
+¡ºdup
+(
+¡r
+, 
+¡rL’
+);
+
+357 
+V”ifyOrEx™
+(
+¡rCİy
+ !ğ
+NULL
+, 
+”r
+ = 
+WEAVE_ERROR_NO_MEMORY
+);
+
+360 
+	g”r
+ = 
+ESP32CÚfig
+::
+Wr™eCÚfigV®ueSŒ
+(
+key
+, 
+¡rCİy
+);
+
+362 
+	gex™
+:
+
+363 ià(
+¡rCİy
+ !ğ
+NULL
+)
+
+365 
+ä“
+(
+¡rCİy
+);
+
+367  
+	g”r
+;
+
+370 
+WEAVE_ERROR
+ 
+	gESP32CÚfig
+::
+Wr™eCÚfigV®ueBš
+(
+Key
+ 
+key
+, cÚ¡ 
+ušt8_t
+ * 
+d©a
+, 
+size_t
+ 
+d©aL’
+)
+
+372 
+WEAVE_ERROR
+ 
+	g”r
+;
+
+373 
+nvs_hªdË
+ 
+	ghªdË
+;
+
+374 
+boŞ
+ 
+	gÃedClo£
+ = 
+çl£
+;
+
+376 ià(
+	gd©a
+ !ğ
+NULL
+)
+
+378 
+”r
+ = 
+nvs_İ’
+(
+key
+.
+Name¥aû
+, 
+NVS_READWRITE
+, &
+hªdË
+);
+
+379 
+SucûssOrEx™
+(
+”r
+);
+
+380 
+	gÃedClo£
+ = 
+Œue
+;
+
+382 
+	g”r
+ = 
+nvs_£t_blob
+(
+hªdË
+, 
+key
+.
+Name
+, 
+d©a
+, 
+d©aL’
+);
+
+383 
+SucûssOrEx™
+(
+”r
+);
+
+386 
+	g”r
+ = 
+nvs_comm™
+(
+hªdË
+);
+
+387 
+SucûssOrEx™
+(
+”r
+);
+
+389 
+W—veLogProg»ss
+(
+DeviûLay”
+, "NVS s‘: %s/% ğ(blob†’gth %" 
+PRId32
+ ")", 
+key
+.
+Name¥aû
+, key.
+Name
+, 
+d©aL’
+);
+
+394 
+	g”r
+ = 
+CË¬CÚfigV®ue
+(
+key
+);
+
+395 
+SucûssOrEx™
+(
+”r
+);
+
+398 
+	gex™
+:
+
+399 ià(
+ÃedClo£
+)
+
+401 
+nvs_şo£
+(
+hªdË
+);
+
+404  
+	g”r
+;
+
+407 
+WEAVE_ERROR
+ 
+	gESP32CÚfig
+::
+CË¬CÚfigV®ue
+(
+Key
+ 
+key
+)
+
+409 
+WEAVE_ERROR
+ 
+”r
+;
+
+410 
+nvs_hªdË
+ 
+	ghªdË
+;
+
+411 
+boŞ
+ 
+	gÃedClo£
+ = 
+çl£
+;
+
+413 
+	g”r
+ = 
+nvs_İ’
+(
+key
+.
+Name¥aû
+, 
+NVS_READWRITE
+, &
+hªdË
+);
+
+414 
+SucûssOrEx™
+(
+”r
+);
+
+415 
+	gÃedClo£
+ = 
+Œue
+;
+
+417 
+	g”r
+ = 
+nvs_”a£_key
+(
+hªdË
+, 
+key
+.
+Name
+);
+
+418 ià(
+	g”r
+ =ğ
+ESP_ERR_NVS_NOT_FOUND
+)
+
+420 
+Ex™Now
+(
+”r
+ = 
+WEAVE_NO_ERROR
+);
+
+422 
+SucûssOrEx™
+(
+”r
+);
+
+425 
+	g”r
+ = 
+nvs_comm™
+(
+hªdË
+);
+
+426 
+SucûssOrEx™
+(
+”r
+);
+
+428 
+W—veLogProg»ss
+(
+DeviûLay”
+, "NVSƒ¿£: %s/%s", 
+key
+.
+Name¥aû
+, key.
+Name
+);
+
+430 
+	gex™
+:
+
+431 ià(
+ÃedClo£
+)
+
+433 
+nvs_şo£
+(
+hªdË
+);
+
+436  
+	g”r
+;
+
+439 
+boŞ
+ 
+	gESP32CÚfig
+::
+CÚfigV®ueExi¡s
+(
+Key
+ 
+key
+)
+
+441 
+WEAVE_ERROR
+ 
+”r
+;
+
+442 
+nvs_hªdË
+ 
+	ghªdË
+;
+
+443 
+boŞ
+ 
+	gÃedClo£
+ = 
+çl£
+;
+
+445 
+	g”r
+ = 
+nvs_İ’
+(
+key
+.
+Name¥aû
+, 
+NVS_READONLY
+, &
+hªdË
+);
+
+446 
+SucûssOrEx™
+(
+”r
+);
+
+447 
+	gÃedClo£
+ = 
+Œue
+;
+
+460 
+ušt8_t
+ 
+	gv
+;
+
+461 
+	g”r
+ = 
+nvs_g‘_u8
+(
+hªdË
+, 
+key
+.
+Name
+, &
+v
+);
+
+463 ià(
+	g”r
+ =ğ
+ESP_ERR_NVS_NOT_FOUND
+)
+
+465 
+št8_t
+ 
+v
+;
+
+466 
+	g”r
+ = 
+nvs_g‘_i8
+(
+hªdË
+, 
+key
+.
+Name
+, &
+v
+);
+
+468 ià(
+	g”r
+ =ğ
+ESP_ERR_NVS_NOT_FOUND
+)
+
+470 
+ušt16_t
+ 
+v
+;
+
+471 
+	g”r
+ = 
+nvs_g‘_u16
+(
+hªdË
+, 
+key
+.
+Name
+, &
+v
+);
+
+473 ià(
+	g”r
+ =ğ
+ESP_ERR_NVS_NOT_FOUND
+)
+
+475 
+št16_t
+ 
+v
+;
+
+476 
+	g”r
+ = 
+nvs_g‘_i16
+(
+hªdË
+, 
+key
+.
+Name
+, &
+v
+);
+
+478 ià(
+	g”r
+ =ğ
+ESP_ERR_NVS_NOT_FOUND
+)
+
+480 
+ušt32_t
+ 
+v
+;
+
+481 
+	g”r
+ = 
+nvs_g‘_u32
+(
+hªdË
+, 
+key
+.
+Name
+, &
+v
+);
+
+483 ià(
+	g”r
+ =ğ
+ESP_ERR_NVS_NOT_FOUND
+)
+
+485 
+št32_t
+ 
+v
+;
+
+486 
+	g”r
+ = 
+nvs_g‘_i32
+(
+hªdË
+, 
+key
+.
+Name
+, &
+v
+);
+
+488 ià(
+	g”r
+ =ğ
+ESP_ERR_NVS_NOT_FOUND
+)
+
+490 
+ušt64_t
+ 
+v
+;
+
+491 
+	g”r
+ = 
+nvs_g‘_u64
+(
+hªdË
+, 
+key
+.
+Name
+, &
+v
+);
+
+493 ià(
+	g”r
+ =ğ
+ESP_ERR_NVS_NOT_FOUND
+)
+
+495 
+št64_t
+ 
+v
+;
+
+496 
+	g”r
+ = 
+nvs_g‘_i64
+(
+hªdË
+, 
+key
+.
+Name
+, &
+v
+);
+
+498 ià(
+	g”r
+ =ğ
+ESP_ERR_NVS_NOT_FOUND
+)
+
+500 
+size_t
+ 
+sz
+;
+
+501 
+	g”r
+ = 
+nvs_g‘_¡r
+(
+hªdË
+, 
+key
+.
+Name
+, 
+NULL
+, &
+sz
+);
+
+503 ià(
+	g”r
+ =ğ
+ESP_ERR_NVS_NOT_FOUND
+)
+
+505 
+size_t
+ 
+sz
+;
+
+506 
+	g”r
+ = 
+nvs_g‘_blob
+(
+hªdË
+, 
+key
+.
+Name
+, 
+NULL
+, &
+sz
+);
+
+511 ià(
+	g”r
+ =ğ
+ESP_ERR_NVS_INVALID_LENGTH
+)
+
+513 
+”r
+ = 
+ESP_OK
+;
+
+516 
+	gex™
+:
+
+517 ià(
+ÃedClo£
+)
+
+519 
+nvs_şo£
+(
+hªdË
+);
+
+521  
+	g”r
+ =ğ
+ESP_OK
+;
+
+524 
+WEAVE_ERROR
+ 
+	gESP32CÚfig
+::
+Ensu»Name¥aû
+(cÚ¡ * 
+ns
+)
+
+526 
+WEAVE_ERROR
+ 
+”r
+;
+
+527 
+nvs_hªdË
+ 
+	ghªdË
+;
+
+528 
+boŞ
+ 
+	gÃedClo£
+ = 
+çl£
+;
+
+530 
+	g”r
+ = 
+nvs_İ’
+(
+ns
+, 
+NVS_READONLY
+, &
+hªdË
+);
+
+531 ià(
+	g”r
+ =ğ
+ESP_ERR_NVS_NOT_FOUND
+)
+
+533 
+”r
+ = 
+nvs_İ’
+(
+ns
+, 
+NVS_READWRITE
+, &
+hªdË
+);
+
+534 
+SucûssOrEx™
+(
+”r
+);
+
+535 
+	gÃedClo£
+ = 
+Œue
+;
+
+537 
+	g”r
+ = 
+nvs_comm™
+(
+hªdË
+);
+
+538 
+SucûssOrEx™
+(
+”r
+);
+
+540 
+SucûssOrEx™
+(
+”r
+);
+
+541 
+	gÃedClo£
+ = 
+Œue
+;
+
+543 
+	gex™
+:
+
+544 ià(
+ÃedClo£
+)
+
+546 
+nvs_şo£
+(
+hªdË
+);
+
+548  
+	g”r
+;
+
+551 
+WEAVE_ERROR
+ 
+	gESP32CÚfig
+::
+CË¬Name¥aû
+(cÚ¡ * 
+ns
+)
+
+553 
+WEAVE_ERROR
+ 
+”r
+;
+
+554 
+nvs_hªdË
+ 
+	ghªdË
+;
+
+555 
+boŞ
+ 
+	gÃedClo£
+ = 
+çl£
+;
+
+557 
+	g”r
+ = 
+nvs_İ’
+(
+ns
+, 
+NVS_READWRITE
+, &
+hªdË
+);
+
+558 
+SucûssOrEx™
+(
+”r
+);
+
+559 
+	gÃedClo£
+ = 
+Œue
+;
+
+561 
+	g”r
+ = 
+nvs_”a£_®l
+(
+hªdË
+);
+
+562 
+SucûssOrEx™
+(
+”r
+);
+
+564 
+	g”r
+ = 
+nvs_comm™
+(
+hªdË
+);
+
+565 
+SucûssOrEx™
+(
+”r
+);
+
+567 
+	gex™
+:
+
+568 ià(
+ÃedClo£
+)
+
+570 
+nvs_şo£
+(
+hªdË
+);
+
+572  
+	g”r
+;
+
+	@ESP32Utils.cpp
+
+24 
+	~<W—ve/DeviûLay”/š‹º®/W—veDeviûLay”IÁ”Çl.h
+>
+
+26 
+	~<W—ve/DeviûLay”/ESP32/ESP32Uts.h
+>
+
+28 
+	~"e¥_ev’t.h
+"
+
+29 
+	~"e¥_wifi.h
+"
+
+31 
+usšg
+ 
+	gÇme¥aû
+ ::
+Æ
+::
+W—ve
+::
+DeviûLay”
+::
+IÁ”Çl
+;
+
+32 
+usšg
+ 
+	gÇme¥aû
+ ::
+Æ
+::
+W—ve
+::
+Profes
+::
+N‘wÜkProvisiÚšg
+;
+
+34 
+WEAVE_ERROR
+ 
+	gESP32Uts
+::
+	$IsAPEÇbËd
+(
+boŞ
+ & 
+­EÇbËd
+)
+
+36 
+WEAVE_ERROR
+ 
+”r
+;
+
+37 
+wifi_mode_t
+ 
+curWiFiMode
+;
+
+39 
+”r
+ = 
+	`e¥_wifi_g‘_mode
+(&
+curWiFiMode
+);
+
+40 ià(
+”r
+ !ğ
+ESP_OK
+)
+
+42 
+	`W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_wifi_g‘_mode(èçed: %s", 
+Æ
+::
+	`E¼ÜSŒ
+(
+”r
+));
+
+43  
+”r
+;
+
+46 
+­EÇbËd
+ = (
+curWiFiMode
+ =ğ
+WIFI_MODE_AP
+ || curWiFiMod=ğ
+WIFI_MODE_APSTA
+);
+
+48  
+WEAVE_NO_ERROR
+;
+
+49 
+	}
+}
+
+51 
+boŞ
+ 
+	gESP32Uts
+::
+	$IsStiÚProvisiÚed
+()
+
+53 
+wifi_cÚfig_t
+ 
+¡©iÚCÚfig
+;
+
+54  (
+	`e¥_wifi_g‘_cÚfig
+(
+ESP_IF_WIFI_STA
+, &
+¡©iÚCÚfig
+è=ğ
+ERR_OK
+ && stiÚCÚfig.
+¡a
+.
+ssid
+[0] != 0);
+
+55 
+	}
+}
+
+57 
+WEAVE_ERROR
+ 
+	gESP32Uts
+::
+	$IsStiÚCÚÃùed
+(
+boŞ
+ & 
+cÚÃùed
+)
+
+59 
+wifi_­_»cÜd_t
+ 
+­Info
+;
+
+60 
+cÚÃùed
+ = (
+	`e¥_wifi_¡a_g‘_­_šfo
+(&
+­Info
+è=ğ
+ESP_OK
+);
+
+61  
+WEAVE_NO_ERROR
+;
+
+62 
+	}
+}
+
+64 
+WEAVE_ERROR
+ 
+	gESP32Uts
+::
+	$S¹WiFiLay”
+()
+
+66 
+WEAVE_ERROR
+ 
+”r
+;
+
+67 
+št8_t
+ 
+ignÜed
+;
+
+68 
+boŞ
+ 
+wifiS¹ed
+;
+
+73 
+”r
+ = 
+	`e¥_wifi_g‘_max_tx_pow”
+(&
+ignÜed
+);
+
+74 
+”r
+)
+
+76 
+ESP_OK
+:
+
+77 
+wifiS¹ed
+ = 
+Œue
+;
+
+79 
+ESP_ERR_WIFI_NOT_STARTED
+:
+
+80 
+wifiS¹ed
+ = 
+çl£
+;
+
+81 
+”r
+ = 
+ESP_OK
+;
+
+84 
+	`Ex™Now
+();
+
+87 ià(!
+wifiS¹ed
+)
+
+89 
+	`W—veLogProg»ss
+(
+DeviûLay”
+, "Starting ESP WiFi†ayer");
+
+91 
+”r
+ = 
+	`e¥_wifi_¡¬t
+();
+
+92 ià(
+”r
+ !ğ
+ESP_OK
+)
+
+94 
+	`W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_wifi_¡¬t(èçed: %s", 
+Æ
+::
+	`E¼ÜSŒ
+(
+”r
+));
+
+98 
+ex™
+:
+
+99  
+”r
+;
+
+100 
+	}
+}
+
+102 
+WEAVE_ERROR
+ 
+	gESP32Uts
+::
+	$EÇbËStiÚMode
+()
+
+104 
+WEAVE_ERROR
+ 
+”r
+;
+
+105 
+wifi_mode_t
+ 
+curWiFiMode
+;
+
+108 
+”r
+ = 
+	`e¥_wifi_g‘_mode
+(&
+curWiFiMode
+);
+
+109 ià(
+”r
+ !ğ
+ESP_OK
+)
+
+111 
+	`W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_wifi_g‘_mode(èçed: %s", 
+Æ
+::
+	`E¼ÜSŒ
+(
+”r
+));
+
+113 
+	`SucûssOrEx™
+(
+”r
+);
+
+117 ià(
+curWiFiMode
+ =ğ
+WIFI_MODE_AP
+)
+
+119 
+	`W—veLogProg»ss
+(
+DeviûLay”
+, "Chªgšg ESP WiF˜mode: % -> %s", 
+	`WiFiModeToSŒ
+(
+WIFI_MODE_AP
+), WiFiModeToSŒ(
+WIFI_MODE_APSTA
+));
+
+121 
+”r
+ = 
+	`e¥_wifi_£t_mode
+(
+WIFI_MODE_APSTA
+);
+
+122 ià(
+”r
+ !ğ
+ESP_OK
+)
+
+124 
+	`W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_wifi_£t_mode(èçed: %s", 
+Æ
+::
+	`E¼ÜSŒ
+(
+”r
+));
+
+126 
+	`SucûssOrEx™
+(
+”r
+);
+
+129 
+ex™
+:
+
+130  
+”r
+;
+
+131 
+	}
+}
+
+133 
+WEAVE_ERROR
+ 
+	gESP32Uts
+::
+	$S‘APMode
+(
+boŞ
+ 
+’abËd
+)
+
+135 
+WEAVE_ERROR
+ 
+”r
+;
+
+136 
+wifi_mode_t
+ 
+curWiFiMode
+, 
+rg‘WiFiMode
+;
+
+138 
+rg‘WiFiMode
+ = (
+’abËd
+è? 
+WIFI_MODE_APSTA
+ : 
+WIFI_MODE_STA
+;
+
+141 
+”r
+ = 
+	`e¥_wifi_g‘_mode
+(&
+curWiFiMode
+);
+
+142 ià(
+”r
+ !ğ
+ESP_OK
+)
+
+144 
+	`W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_wifi_g‘_mode(èçed: %s", 
+Æ
+::
+	`E¼ÜSŒ
+(
+”r
+));
+
+146 
+	`SucûssOrEx™
+(
+”r
+);
+
+150 ià(
+Œue
+ )
+
+152 
+	`W—veLogProg»ss
+(
+DeviûLay”
+, "Chªgšg ESP WiF˜mode: % -> %s", 
+	`WiFiModeToSŒ
+(
+curWiFiMode
+), WiFiModeToSŒ(
+rg‘WiFiMode
+));
+
+154 
+”r
+ = 
+	`e¥_wifi_£t_mode
+(
+rg‘WiFiMode
+);
+
+155 ià(
+”r
+ !ğ
+ESP_OK
+)
+
+157 
+	`W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_wifi_£t_mode(èçed: %s", 
+Æ
+::
+	`E¼ÜSŒ
+(
+”r
+));
+
+159 
+	`SucûssOrEx™
+(
+”r
+);
+
+162 
+ex™
+:
+
+163  
+”r
+;
+
+164 
+	}
+}
+
+166 
+WiFiSecur™yTy³
+ 
+	gESP32Uts
+::
+	$WiFiAuthModeToW—veWiFiSecur™yTy³
+(
+wifi_auth_mode_t
+ 
+authMode
+)
+
+168 
+authMode
+)
+
+170 
+WIFI_AUTH_OPEN
+:
+
+171  
+kWiFiSecur™yTy³_NÚe
+;
+
+172 
+WIFI_AUTH_WEP
+:
+
+173  
+kWiFiSecur™yTy³_WEP
+;
+
+174 
+WIFI_AUTH_WPA_PSK
+:
+
+175  
+kWiFiSecur™yTy³_WPAP”sÚ®
+;
+
+176 
+WIFI_AUTH_WPA2_PSK
+:
+
+177  
+kWiFiSecur™yTy³_WPA2P”sÚ®
+;
+
+178 
+WIFI_AUTH_WPA_WPA2_PSK
+:
+
+179  
+kWiFiSecur™yTy³_WPA2MixedP”sÚ®
+;
+
+180 
+WIFI_AUTH_WPA2_ENTERPRISE
+:
+
+181  
+kWiFiSecur™yTy³_WPA2EÁ”´i£
+;
+
+183  
+kWiFiSecur™yTy³_NÙS³cif›d
+;
+
+185 
+	}
+}
+
+187 
+	gESP32Uts
+::
+	$Ord”SÿnResuÉsByRSSI
+(cÚ¡ * 
+_»s1
+, cÚ¡ * 
+_»s2
+)
+
+189 cÚ¡ 
+wifi_­_»cÜd_t
+ * 
+»s1
+ = (cÚ¡ wifi_­_»cÜd_ˆ*è
+_»s1
+;
+
+190 cÚ¡ 
+wifi_­_»cÜd_t
+ * 
+»s2
+ = (cÚ¡ wifi_­_»cÜd_ˆ*è
+_»s2
+;
+
+192 ià(
+»s1
+->
+rssi
+ > 
+»s2
+->rssi)
+
+196 ià(
+»s1
+->
+rssi
+ < 
+»s2
+->rssi)
+
+201 
+	}
+}
+
+203 cÚ¡ * 
+	gESP32Uts
+::
+	$WiFiModeToSŒ
+(
+wifi_mode_t
+ 
+wifiMode
+)
+
+205 
+wifiMode
+)
+
+207 
+WIFI_MODE_NULL
+:
+
+209 
+WIFI_MODE_STA
+:
+
+211 
+WIFI_MODE_AP
+:
+
+213 
+WIFI_MODE_APSTA
+:
+
+218 
+	}
+}
+
+220 
+Ãtif
+ * 
+	gESP32Uts
+::
+	$G‘StiÚN‘if
+()
+
+222  
+	`G‘N‘if
+(
+TCPIP_ADAPTER_IF_STA
+);
+
+223 
+	}
+}
+
+225 
+Ãtif
+ * 
+	gESP32Uts
+::
+	$G‘N‘if
+(
+tı_ad­‹r_if_t
+ 
+štfId
+)
+
+227 
+Ãtif
+ *‚etif;
+
+228  (
+	`tı_ad­‹r_g‘_Ãtif
+(
+štfId
+, (**)&
+Ãtif
+è=ğ
+ESP_OK
+è?‚‘ià: 
+NULL
+;
+
+229 
+	}
+}
+
+231 
+boŞ
+ 
+	gESP32Uts
+::
+	$IsIÁ”çûUp
+(
+tı_ad­‹r_if_t
+ 
+štfId
+)
+
+233 
+Ãtif
+ *‚‘iàğ
+	`G‘N‘if
+(
+štfId
+);
+
+234  
+Ãtif
+ !ğ
+NULL
+ && 
+	`Ãtif_is_up
+(netif);
+
+235 
+	}
+}
+
+237 cÚ¡ * 
+	gESP32Uts
+::
+	$IÁ”çûIdToName
+(
+tı_ad­‹r_if_t
+ 
+štfId
+)
+
+239 
+štfId
+)
+
+241 
+TCPIP_ADAPTER_IF_STA
+:
+
+243 
+TCPIP_ADAPTER_IF_AP
+:
+
+245 
+TCPIP_ADAPTER_IF_ETH
+:
+
+250 
+	}
+}
+
+252 
+boŞ
+ 
+	gESP32Uts
+::
+	$HasIPv6LškLoÿlAdd»ss
+(
+tı_ad­‹r_if_t
+ 
+štfId
+)
+
+254 
+6_addr_t
+ 
+unu£d
+;
+
+255  
+	`tı_ad­‹r_g‘_6_lškloÿl
+(
+štfId
+, &
+unu£d
+è=ğ
+ESP_OK
+;
+
+256 
+	}
+}
+
+	@Entropy.cpp
+
+25 
+	~<W—ve/DeviûLay”/š‹º®/W—veDeviûLay”IÁ”Çl.h
+>
+
+26 
+	~<W—ve/SuµÜt/üy±o/W—veRNG.h
+>
+
+28 
+	~"e¥_log.h
+"
+
+30 
+usšg
+ 
+	gÇme¥aû
+ ::
+Æ
+;
+
+31 
+usšg
+ 
+	gÇme¥aû
+ ::
+Æ
+::
+W—ve
+;
+
+33 
+Çme¥aû
+ 
+	gÆ
+ {
+
+34 
+Çme¥aû
+ 
+	gW—ve
+ {
+
+35 
+Çme¥aû
+ 
+	gDeviûLay”
+ {
+
+36 
+Çme¥aû
+ 
+	gIÁ”Çl
+ {
+
+38 
+	gÇme¥aû
+ {
+
+40 
+G‘EÁrİy_ESP32
+(
+ušt8_t
+ *
+buf
+, 
+size_t
+ 
+bufSize
+)
+
+42 
+	gbufSize
+ > 0)
+
+45 
+ušt32_t
+ 
+	gasIÁ
+;
+
+46 
+ušt8_t
+ 
+	gasBy‹s
+[(
+asIÁ
+)];
+
+47 } 
+	gºd
+;
+
+49 
+	gºd
+.
+	gasIÁ
+ = 
+e¥_¿ndom
+();
+
+51 
+size_t
+ 
+	gn
+ = 
+Æ
+::
+W—ve
+::
+mš
+(
+bufSize
+, (
+ºd
+.
+asBy‹s
+));
+
+53 
+memıy
+(
+buf
+, 
+ºd
+.
+asBy‹s
+, 
+n
+);
+
+55 
+	gbuf
+ +ğ
+n
+;
+
+56 
+	gbufSize
+ -ğ
+n
+;
+
+64 
+WEAVE_ERROR
+ 
+In™EÁrİy
+()
+
+66 
+WEAVE_ERROR
+ 
+	g”r
+;
+
+67 
+	g£ed
+;
+
+70 
+	g”r
+ = ::
+Æ
+::
+W—ve
+::
+PÏtfÜm
+::
+Secur™y
+::
+In™Secu»RªdomD©aSourû
+(
+G‘EÁrİy_ESP32
+, 64, 
+NULL
+, 0);
+
+71 
+SucûssOrEx™
+(
+”r
+);
+
+74 
+	g”r
+ = ::
+Æ
+::
+W—ve
+::
+PÏtfÜm
+::
+Secur™y
+::
+G‘Secu»RªdomD©a
+((
+ušt8_t
+ *)&
+£ed
+, (seed));
+
+75 
+SucûssOrEx™
+(
+”r
+);
+
+76 
+¤ªd
+(
+£ed
+);
+
+77 
+ESP_LOGI
+(
+TAG
+, "¤ªd s“d s‘: %u", 
+£ed
+);
+
+79 
+	gex™
+:
+
+80 ià(
+”r
+ !ğ
+WEAVE_NO_ERROR
+)
+
+82 
+ESP_LOGE
+(
+TAG
+, "In™EÁrİy(èçed: %s", 
+E¼ÜSŒ
+(
+”r
+));
+
+84  
+	g”r
+;
+
+	@GroupKeyStoreImpl.cpp
+
+25 
+	~<W—ve/DeviûLay”/š‹º®/W—veDeviûLay”IÁ”Çl.h
+>
+
+26 
+	~<W—ve/DeviûLay”/ESP32/GroupKeyStÜeIm¶.h
+>
+
+28 
+	~"nvs_æash.h
+"
+
+29 
+	~"nvs.h
+"
+
+31 
+usšg
+ 
+	gÇme¥aû
+ ::
+Æ
+;
+
+32 
+usšg
+ 
+	gÇme¥aû
+ ::
+Æ
+::
+W—ve
+;
+
+33 
+usšg
+ 
+	gÇme¥aû
+ ::
+Æ
+::
+W—ve
+::
+Profes
+::
+Secur™y
+::
+AµKeys
+;
+
+35 
+Çme¥aû
+ 
+	gÆ
+ {
+
+36 
+Çme¥aû
+ 
+	gW—ve
+ {
+
+37 
+Çme¥aû
+ 
+	gDeviûLay”
+ {
+
+38 
+Çme¥aû
+ 
+	gIÁ”Çl
+ {
+
+40 
+WEAVE_ERROR
+ 
+	gGroupKeyStÜeIm¶
+::
+R‘r›veGroupKey
+(
+ušt32_t
+ 
+keyId
+, 
+W—veGroupKey
+ & 
+key
+)
+
+42 
+WEAVE_ERROR
+ 
+	g”r
+;
+
+43 
+size_t
+ 
+	gkeyL’
+;
+
+44 
+	gkeyName
+[
+kMaxCÚfigKeyNameL’gth
+ + 1];
+
+45 
+	gESP32CÚfig
+::
+Key
+ 
+cÚfigKey
+ { 
+kCÚfigName¥aû_W—veCÚfig
+, 
+	gkeyName
+ };
+
+47 
+	g”r
+ = 
+FÜmKeyName
+(
+keyId
+, 
+keyName
+, (keyName));
+
+48 
+SucûssOrEx™
+(
+”r
+);
+
+50 
+	g”r
+ = 
+R—dCÚfigV®ueBš
+(
+cÚfigKey
+, 
+key
+.
+Key
+, (key.Key), 
+keyL’
+);
+
+51 ià(
+	g”r
+ =ğ
+WEAVE_DEVICE_ERROR_CONFIG_NOT_FOUND
+)
+
+53 
+”r
+ = 
+WEAVE_ERROR_KEY_NOT_FOUND
+;
+
+55 
+SucûssOrEx™
+(
+”r
+);
+
+57 ià(
+	gkeyId
+ !ğ
+W—veKeyId
+::
+kFabricSeü‘
+)
+
+59 
+memıy
+(&
+key
+.
+S¹Time
+, key.
+Key
+ + 
+kW—veAµGroupKeySize
+, (
+ušt32_t
+));
+
+60 
+	gkeyL’
+ -ğ(
+ušt32_t
+);
+
+63 
+	gkey
+.
+	gKeyId
+ = 
+keyId
+;
+
+64 
+	gkey
+.
+	gKeyL’
+ = 
+keyL’
+;
+
+66 
+	gex™
+:
+
+67  
+”r
+;
+
+70 
+WEAVE_ERROR
+ 
+	gGroupKeyStÜeIm¶
+::
+StÜeGroupKey
+(cÚ¡ 
+W—veGroupKey
+ & 
+key
+)
+
+72 
+WEAVE_ERROR
+ 
+”r
+;
+
+73 
+nvs_hªdË
+ 
+	ghªdË
+;
+
+74 
+	gkeyName
+[
+kMaxCÚfigKeyNameL’gth
+ + 1];
+
+75 
+ušt8_t
+ 
+	gkeyD©a
+[
+W—veGroupKey
+::
+MaxKeySize
+];
+
+76 
+boŞ
+ 
+	gÃedClo£
+ = 
+çl£
+;
+
+77 
+boŞ
+ 
+	gšdexUpd©ed
+ = 
+çl£
+;
+
+79 
+	g”r
+ = 
+FÜmKeyName
+(
+key
+.
+KeyId
+, 
+keyName
+, (keyName));
+
+80 
+SucûssOrEx™
+(
+”r
+);
+
+82 
+	g”r
+ = 
+AddKeyToIndex
+(
+key
+.
+KeyId
+, 
+šdexUpd©ed
+);
+
+83 
+SucûssOrEx™
+(
+”r
+);
+
+85 
+	g”r
+ = 
+nvs_İ’
+(
+kCÚfigName¥aû_W—veCÚfig
+, 
+NVS_READWRITE
+, &
+hªdË
+);
+
+86 
+SucûssOrEx™
+(
+”r
+);
+
+87 
+	gÃedClo£
+ = 
+Œue
+;
+
+89 
+memıy
+(
+keyD©a
+, 
+key
+.
+Key
+, 
+W—veGroupKey
+::
+MaxKeySize
+);
+
+90 ià(
+	gkey
+.
+	gKeyId
+ !ğ
+W—veKeyId
+::
+kFabricSeü‘
+)
+
+92 
+memıy
+(
+keyD©a
+ + 
+kW—veAµGroupKeySize
+, (cÚ¡ *)&
+key
+.
+S¹Time
+, (
+ušt32_t
+));
+
+95 #ià
+WEAVE_PROGRESS_LOGGING
+
+
+96 ià(
+	gW—veKeyId
+::
+IsAµEpochKey
+(
+key
+.
+KeyId
+))
+
+98 
+W—veLogProg»ss
+(
+DeviûLay”
+, "GroupKeyStÜe: stÜšgƒpoch key %s/% (key†’ %" 
+PRId8
+ ", s¹im%" 
+PRIu32
+ ")",
+
+99 
+kCÚfigName¥aû_W—veCÚfig
+, 
+keyName
+, 
+key
+.
+KeyL’
+, key.
+S¹Time
+);
+
+101 ià(
+	gW—veKeyId
+::
+IsAµGroupMa¡”Key
+(
+key
+.
+KeyId
+))
+
+103 
+W—veLogProg»ss
+(
+DeviûLay”
+, "GroupKeyStÜe: stÜšg‡µ ma¡” key %s/% (key†’ %" 
+PRId8
+ ", glob® id 0x%" 
+PRIX32
+ ")",
+
+104 
+kCÚfigName¥aû_W—veCÚfig
+, 
+keyName
+, 
+key
+.
+KeyL’
+, key.
+Glob®Id
+);
+
+108 cÚ¡ * 
+	gkeyTy³
+ = (
+W—veKeyId
+::
+IsAµRoÙKey
+(
+key
+.
+KeyId
+)) ? "root": "general";
+
+109 
+W—veLogProg»ss
+(
+DeviûLay”
+, "GroupKeyStÜe: stÜšg % key %s/% (key†’ %" 
+PRId8
+ ")", 
+keyTy³
+,
+
+110 
+kCÚfigName¥aû_W—veCÚfig
+, 
+keyName
+, 
+key
+.
+KeyL’
+);
+
+114 
+	g”r
+ = 
+nvs_£t_blob
+(
+hªdË
+, 
+keyName
+, 
+keyD©a
+, 
+W—veGroupKey
+::
+MaxKeySize
+);
+
+115 
+SucûssOrEx™
+(
+”r
+);
+
+117 ià(
+	gšdexUpd©ed
+)
+
+119 
+	g”r
+ = 
+Wr™eKeyIndex
+(
+hªdË
+);
+
+120 
+SucûssOrEx™
+(
+”r
+);
+
+124 
+	g”r
+ = 
+nvs_comm™
+(
+hªdË
+);
+
+125 
+SucûssOrEx™
+(
+”r
+);
+
+127 
+	gex™
+:
+
+128 ià(
+ÃedClo£
+)
+
+130 
+nvs_şo£
+(
+hªdË
+);
+
+132 ià(
+	g”r
+ !ğ
+WEAVE_NO_ERROR
+ && 
+šdexUpd©ed
+)
+
+134 
+mNumKeys
+--;
+
+136 
+CË¬Seü‘D©a
+(
+keyD©a
+, (keyData));
+
+137  
+	g”r
+;
+
+140 
+WEAVE_ERROR
+ 
+	gGroupKeyStÜeIm¶
+::
+D–‘eGroupKey
+(
+ušt32_t
+ 
+keyId
+)
+
+142  
+D–‘eKeyOrKeys
+(
+keyId
+, 
+W—veKeyId
+::
+kTy³_NÚe
+);
+
+145 
+WEAVE_ERROR
+ 
+	gGroupKeyStÜeIm¶
+::
+D–‘eGroupKeysOfATy³
+(
+ušt32_t
+ 
+keyTy³
+)
+
+147  
+D–‘eKeyOrKeys
+(
+W—veKeyId
+::
+kNÚe
+, 
+keyTy³
+);
+
+150 
+WEAVE_ERROR
+ 
+	gGroupKeyStÜeIm¶
+::
+Enum”©eGroupKeys
+(
+ušt32_t
+ 
+keyTy³
+, ušt32_ˆ* 
+keyIds
+,
+
+151 
+ušt8_t
+ 
+keyIdsA¼aySize
+, ušt8_ˆ& 
+keyCouÁ
+)
+
+153 
+	gkeyCouÁ
+ = 0;
+
+155 
+ušt8_t
+ 
+	gi
+ = 0; i < 
+	gmNumKeys
+ && 
+	gkeyCouÁ
+ < 
+	gkeyIdsA¼aySize
+; i++)
+
+157 ià(
+	gkeyTy³
+ =ğ
+W—veKeyId
+::
+kTy³_NÚe
+ || W—veKeyId::
+G‘Ty³
+(
+mKeyIndex
+[
+i
+]è=ğ
+keyTy³
+)
+
+159 
+keyIds
+[
+keyCouÁ
+++] = 
+mKeyIndex
+[
+i
+];
+
+163  
+	gWEAVE_NO_ERROR
+;
+
+166 
+WEAVE_ERROR
+ 
+	gGroupKeyStÜeIm¶
+::
+CË¬
+()
+
+168  
+D–‘eKeyOrKeys
+(
+W—veKeyId
+::
+kNÚe
+, W—veKeyId::
+kTy³_NÚe
+);
+
+171 
+WEAVE_ERROR
+ 
+	gGroupKeyStÜeIm¶
+::
+R‘r›veLa¡U£dEpochKeyId
+()
+
+173 
+WEAVE_ERROR
+ 
+”r
+;
+
+175 
+	g”r
+ = 
+R—dCÚfigV®ue
+(
+kCÚfigKey_La¡U£dEpochKeyId
+, 
+La¡U£dEpochKeyId
+);
+
+176 ià(
+	g”r
+ =ğ
+WEAVE_DEVICE_ERROR_CONFIG_NOT_FOUND
+)
+
+178 
+La¡U£dEpochKeyId
+ = 
+W—veKeyId
+::
+kNÚe
+;
+
+179 
+	g”r
+ = 
+WEAVE_NO_ERROR
+;
+
+181  
+	g”r
+;
+
+184 
+WEAVE_ERROR
+ 
+	gGroupKeyStÜeIm¶
+::
+StÜeLa¡U£dEpochKeyId
+()
+
+186  
+Wr™eCÚfigV®ue
+(
+kCÚfigKey_La¡U£dEpochKeyId
+, 
+La¡U£dEpochKeyId
+);
+
+189 
+WEAVE_ERROR
+ 
+	gGroupKeyStÜeIm¶
+::
+In™
+()
+
+191 
+WEAVE_ERROR
+ 
+”r
+;
+
+192 
+size_t
+ 
+	gšdexSizeBy‹s
+;
+
+194 
+	g”r
+ = 
+R—dCÚfigV®ueBš
+(
+kCÚfigKey_GroupKeyIndex
+,
+
+195 (
+ušt8_t
+ *)
+mKeyIndex
+, (mKeyIndex), 
+šdexSizeBy‹s
+);
+
+196 ià(
+	g”r
+ =ğ
+WEAVE_DEVICE_ERROR_CONFIG_NOT_FOUND
+)
+
+198 
+”r
+ = 
+WEAVE_NO_ERROR
+;
+
+199 
+	gšdexSizeBy‹s
+ = 0;
+
+201 
+SucûssOrEx™
+(
+”r
+);
+
+203 
+	gmNumKeys
+ = 
+šdexSizeBy‹s
+ / (
+ušt32_t
+);
+
+205 
+	gex™
+:
+
+206  
+”r
+;
+
+209 
+WEAVE_ERROR
+ 
+	gGroupKeyStÜeIm¶
+::
+AddKeyToIndex
+(
+ušt32_t
+ 
+keyId
+, 
+boŞ
+ & 
+šdexUpd©ed
+)
+
+211 
+WEAVE_ERROR
+ 
+	g”r
+ = 
+WEAVE_NO_ERROR
+;
+
+213 
+	gšdexUpd©ed
+ = 
+çl£
+;
+
+215 
+ušt8_t
+ 
+	gi
+ = 0; i < 
+	gmNumKeys
+; i++)
+
+217 ià(
+	gmKeyIndex
+[
+i
+] =ğ
+keyId
+)
+
+219 
+Ex™Now
+(
+”r
+ = 
+WEAVE_NO_ERROR
+);
+
+223 
+V”ifyOrEx™
+(
+mNumKeys
+ < 
+kMaxGroupKeys
+, 
+”r
+ = 
+WEAVE_ERROR_TOO_MANY_KEYS
+);
+
+225 
+	gmKeyIndex
+[
+mNumKeys
+++] = 
+keyId
+;
+
+226 
+	gšdexUpd©ed
+ = 
+Œue
+;
+
+228 
+	gex™
+:
+
+229  
+”r
+;
+
+232 
+WEAVE_ERROR
+ 
+	gGroupKeyStÜeIm¶
+::
+Wr™eKeyIndex
+(
+nvs_hªdË
+ 
+hªdË
+)
+
+234 
+W—veLogProg»ss
+(
+DeviûLay”
+, "GroupKeyStÜe: wr™šg key index %s/% Òum key %" 
+PRIu8
+ ")",
+
+235 
+kCÚfigKey_GroupKeyIndex
+.
+Name¥aû
+, kCÚfigKey_GroupKeyIndex.
+Name
+, 
+mNumKeys
+);
+
+236  
+nvs_£t_blob
+(
+hªdË
+, 
+kCÚfigKey_GroupKeyIndex
+.
+Name
+, 
+mKeyIndex
+, 
+mNumKeys
+ * (
+ušt32_t
+));
+
+239 
+WEAVE_ERROR
+ 
+	gGroupKeyStÜeIm¶
+::
+D–‘eKeyOrKeys
+(
+ušt32_t
+ 
+rg‘KeyId
+, ušt32_ˆ
+rg‘KeyTy³
+)
+
+241 
+WEAVE_ERROR
+ 
+	g”r
+ = 
+WEAVE_NO_ERROR
+;
+
+242 
+nvs_hªdË
+ 
+	ghªdË
+;
+
+243 
+	gkeyName
+[
+kMaxCÚfigKeyNameL’gth
+ + 1];
+
+244 
+boŞ
+ 
+	gÃedClo£
+ = 
+çl£
+;
+
+246 
+ušt8_t
+ 
+	gi
+ = 0; i < 
+	gmNumKeys
+; )
+
+248 
+ušt32_t
+ 
+	gcurKeyId
+ = 
+mKeyIndex
+[
+i
+];
+
+250 ià((
+	grg‘KeyId
+ =ğ
+W—veKeyId
+::
+kNÚe
+ && 
+rg‘KeyTy³
+ =ğW—veKeyId::
+kTy³_NÚe
+) ||
+
+251 
+curKeyId
+ =ğ
+rg‘KeyId
+ ||
+
+252 
+W—veKeyId
+::
+G‘Ty³
+(
+curKeyId
+è=ğ
+rg‘KeyTy³
+)
+
+254 ià(!
+ÃedClo£
+)
+
+256 
+”r
+ = 
+nvs_İ’
+(
+kCÚfigName¥aû_W—veCÚfig
+, 
+NVS_READWRITE
+, &
+hªdË
+);
+
+257 
+SucûssOrEx™
+(
+”r
+);
+
+258 
+	gÃedClo£
+ = 
+Œue
+;
+
+261 
+	g”r
+ = 
+FÜmKeyName
+(
+curKeyId
+, 
+keyName
+, (keyName));
+
+262 
+SucûssOrEx™
+(
+”r
+);
+
+264 
+	g”r
+ = 
+nvs_”a£_key
+(
+hªdË
+, 
+keyName
+);
+
+265 #ià
+WEAVE_PROGRESS_LOGGING
+
+
+266 ià(
+	g”r
+ =ğ
+ESP_OK
+)
+
+268 cÚ¡ * 
+keyTy³
+;
+
+269 ià(
+	gW—veKeyId
+::
+IsAµRoÙKey
+(
+curKeyId
+))
+
+271 
+keyTy³
+ = "root";
+
+273 ià(
+	gW—veKeyId
+::
+IsAµGroupMa¡”Key
+(
+curKeyId
+))
+
+275 
+keyTy³
+ = "app master";
+
+277 ià(
+	gW—veKeyId
+::
+IsAµEpochKey
+(
+curKeyId
+))
+
+279 
+keyTy³
+ = "epoch";
+
+283 
+	gkeyTy³
+ = "general";
+
+285 
+W—veLogProg»ss
+(
+DeviûLay”
+, "GroupKeyStÜe:ƒ¿sšg % key %s/%s", 
+keyTy³
+,
+
+286 
+kCÚfigName¥aû_W—veCÚfig
+, 
+keyName
+);
+
+290 ià(
+	g”r
+ =ğ
+ESP_ERR_NVS_NOT_FOUND
+)
+
+292 
+”r
+ = 
+WEAVE_NO_ERROR
+;
+
+294 
+SucûssOrEx™
+(
+”r
+);
+
+296 
+	gmNumKeys
+--;
+
+298 
+memmove
+(&
+mKeyIndex
+[
+i
+], &mKeyIndex[i+1], (
+mNumKeys
+ - iè* (
+ušt32_t
+));
+
+302 
+	gi
+++;
+
+306 ià(
+	gÃedClo£
+)
+
+308 
+	g”r
+ = 
+Wr™eKeyIndex
+(
+hªdË
+);
+
+309 
+SucûssOrEx™
+(
+”r
+);
+
+312 
+	g”r
+ = 
+nvs_comm™
+(
+hªdË
+);
+
+313 
+SucûssOrEx™
+(
+”r
+);
+
+316 
+	gex™
+:
+
+317 ià(
+ÃedClo£
+)
+
+319 
+nvs_şo£
+(
+hªdË
+);
+
+321  
+	g”r
+;
+
+324 
+WEAVE_ERROR
+ 
+	gGroupKeyStÜeIm¶
+::
+FÜmKeyName
+(
+ušt32_t
+ 
+keyId
+, * 
+buf
+, 
+size_t
+ 
+bufSize
+)
+
+326 
+WEAVE_ERROR
+ 
+	g”r
+ = 
+WEAVE_NO_ERROR
+;
+
+328 
+V”ifyOrEx™
+(
+bufSize
+ >ğ
+kMaxCÚfigKeyNameL’gth
+, 
+”r
+ = 
+WEAVE_ERROR_BUFFER_TOO_SMALL
+);
+
+330 ià(
+	gkeyId
+ =ğ
+W—veKeyId
+::
+kFabricSeü‘
+)
+
+332 
+¡rıy
+(
+buf
+, 
+kCÚfigKey_FabricSeü‘
+.
+Name
+);
+
+336 
+¢´štf
+(
+buf
+, 
+bufSize
+, "%s%08" 
+PRIX32
+, 
+kGroupKeyNameP»fix
+, 
+keyId
+);
+
+339 
+	gex™
+:
+
+340  
+”r
+;
+
+	@Logging.cpp
+
+25 
+	~<W—ve/DeviûLay”/š‹º®/W—veDeviûLay”IÁ”Çl.h
+>
+
+26 
+	~<W—ve/SuµÜt/loggšg/W—veLoggšg.h
+>
+
+28 
+	~"e¥_log.h
+"
+
+30 
+usšg
+ 
+	gÇme¥aû
+ ::
+Æ
+::
+W—ve
+;
+
+31 
+usšg
+ 
+	gÇme¥aû
+ ::
+Æ
+::
+W—ve
+::
+DeviûLay”
+::
+IÁ”Çl
+;
+
+33 
+	gÇme¥aû
+ {
+
+35 
+G‘ModuËName
+(*
+buf
+, 
+ušt8_t
+ 
+moduË
+)
+
+37 ià(
+	gmoduË
+ =ğ::
+Æ
+::
+W—ve
+::
+Loggšg
+::
+kLogModuË_DeviûLay”
+)
+
+39 
+memıy
+(
+buf
+, "DL", 3);
+
+43 ::
+Æ
+::
+W—ve
+::
+Loggšg
+::
+G‘ModuËName
+(
+buf
+, 
+moduË
+);
+
+49 
+Çme¥aû
+ 
+	gÆ
+ {
+
+50 
+Çme¥aû
+ 
+	gW—ve
+ {
+
+51 
+Çme¥aû
+ 
+	gLoggšg
+ {
+
+53 
+Log
+(
+ušt8_t
+ 
+moduË
+, ušt8_ˆ
+ÿ‹gÜy
+, cÚ¡ *
+msg
+, ...)
+
+55 
+va_li¡
+ 
+	gv
+;
+
+57 
+va_¡¬t
+(
+v
+, 
+msg
+);
+
+59 ià(
+IsC©egÜyEÇbËd
+(
+ÿ‹gÜy
+))
+
+62 
+	gkMaxTagL’
+ = 7 + 
+ÆW—veLoggšgModuËNameL’
+
+
+64 
+	gg
+[
+kMaxTagL’
+ + 1];
+
+65 
+size_t
+ 
+	ggL’
+;
+
+66 
+	gfÜm©‹dMsg
+[256];
+
+68 
+¡rıy
+(
+g
+, "weave[");
+
+69 
+	ggL’
+ = 
+¡¾’
+(
+g
+);
+
+70 ::
+G‘ModuËName
+(
+g
+ + 
+gL’
+, 
+moduË
+);
+
+71 
+	ggL’
+ = 
+¡¾’
+(
+g
+);
+
+72 
+	gg
+[
+gL’
+++] = ']';
+
+73 
+	gg
+[
+gL’
+] = 0;
+
+75 
+v¢´štf
+(
+fÜm©‹dMsg
+, (fÜm©‹dMsg), 
+msg
+, 
+v
+);
+
+77 
+	gÿ‹gÜy
+) {
+
+78 
+	gkLogC©egÜy_E¼Ü
+:
+
+79 
+ESP_LOGE
+(
+g
+, "%s", 
+fÜm©‹dMsg
+);
+
+81 
+	gkLogC©egÜy_Prog»ss
+:
+
+82 
+kLogC©egÜy_R‘aš
+:
+
+84 
+ESP_LOGI
+(
+g
+, "%s", 
+fÜm©‹dMsg
+);
+
+86 
+	gkLogC©egÜy_D‘a
+:
+
+87 
+ESP_LOGV
+(
+g
+, "%s", 
+fÜm©‹dMsg
+);
+
+92 
+va_’d
+(
+v
+);
+
+	@LwIPCoreLock.cpp
+
+19 
+	~<W—ve/DeviûLay”/š‹º®/W—veDeviûLay”IÁ”Çl.h
+>
+
+21 
+	gÇme¥aû
+ {
+
+23 
+Sem­hÜeHªdË_t
+ 
+	gLwIPCÜeLock
+;
+
+27 
+Çme¥aû
+ 
+	gÆ
+ {
+
+28 
+Çme¥aû
+ 
+	gW—ve
+ {
+
+29 
+Çme¥aû
+ 
+	gDeviûLay”
+ {
+
+30 
+Çme¥aû
+ 
+	gIÁ”Çl
+ {
+
+32 
+WEAVE_ERROR
+ 
+In™LwIPCÜeLock
+()
+
+34 ià(
+	gLwIPCÜeLock
+ =ğ
+NULL
+)
+
+36 
+LwIPCÜeLock
+ = 
+xSem­hÜeC»©eMu‹x
+();
+
+37 ià(
+	gLwIPCÜeLock
+ =ğ
+NULL
+)
+
+39 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "Failedo create LwIP core†ock");
+
+40  
+	gWEAVE_ERROR_NO_MEMORY
+;
+
+44  
+	gWEAVE_NO_ERROR
+;
+
+52 "C" 
+	$lock_lw_cÜe
+()
+
+54 
+	`xSem­hÜeTake
+(
+LwIPCÜeLock
+, 
+pÜtMAX_DELAY
+);
+
+55 
+	}
+}
+
+57 "C" 
+	$uÆock_lw_cÜe
+()
+
+59 
+	`xSem­hÜeGive
+(
+LwIPCÜeLock
+);
+
+60 
+	}
+}
+
+	@NetworkProvisioningServerImpl.cpp
+
+19 
+	~<W—ve/DeviûLay”/š‹º®/W—veDeviûLay”IÁ”Çl.h
+>
+
+20 
+	~<W—ve/DeviûLay”/š‹º®/N‘wÜkProvisiÚšgS”v”.h
+>
+
+21 
+	~<W—ve/DeviûLay”/š‹º®/N‘wÜkInfo.h
+>
+
+22 
+	~<W—ve/CÜe/W—veTLV.h
+>
+
+23 
+	~<W—ve/Profes/W—veProfes.h
+>
+
+24 
+	~<W—ve/Profes/commÚ/CommÚProfe.h
+>
+
+25 
+	~<W—ve/DeviûLay”/ESP32/ESP32Uts.h
+>
+
+26 
+	~<W—ve/DeviûLay”/š‹º®/G’”icN‘wÜkProvisiÚšgS”v”Im¶.p
+>
+
+28 
+	~"e¥_ev’t.h
+"
+
+29 
+	~"e¥_wifi.h
+"
+
+31 
+usšg
+ 
+	gÇme¥aû
+ ::
+Æ
+;
+
+32 
+usšg
+ 
+	gÇme¥aû
+ ::
+Æ
+::
+W—ve
+;
+
+33 
+usšg
+ 
+	gÇme¥aû
+ ::
+Æ
+::
+W—ve
+::
+TLV
+;
+
+34 
+usšg
+ 
+	gÇme¥aû
+ ::
+Æ
+::
+W—ve
+::
+Profes
+::
+CommÚ
+;
+
+35 
+usšg
+ 
+	gÇme¥aû
+ ::
+Æ
+::
+W—ve
+::
+Profes
+::
+N‘wÜkProvisiÚšg
+;
+
+37 
+usšg
+ 
+	gProfes
+::
+kW—veProfe_CommÚ
+;
+
+39 
+Çme¥aû
+ 
+	gÆ
+ {
+
+40 
+Çme¥aû
+ 
+	gW—ve
+ {
+
+41 
+Çme¥aû
+ 
+	gDeviûLay”
+ {
+
+42 
+Çme¥aû
+ 
+	gIÁ”Çl
+ {
+
+46 
+‹m¶©e
+ 
+şass
+ 
+	gG’”icN‘wÜkProvisiÚšgS”v”Im¶
+<
+	gN‘wÜkProvisiÚšgS”v”Im¶
+>;
+
+48 
+N‘wÜkProvisiÚšgS”v”Im¶
+ 
+	gN‘wÜkProvisiÚšgS”v”Im¶
+::
+sIn¡ªû
+;
+
+50 
+	gN‘wÜkProvisiÚšgS”v”Im¶
+::
+_OnPÏtfÜmEv’t
+(cÚ¡ 
+W—veDeviûEv’t
+ * 
+ev’t
+)
+
+52 
+WEAVE_ERROR
+ 
+”r
+;
+
+55 ià(
+	gev’t
+->
+	gTy³
+ =ğ
+DeviûEv’tTy³
+::
+kESPSy¡emEv’t
+)
+
+57 
+ev’t
+->
+PÏtfÜm
+.
+ESPSy¡emEv’t
+.
+ev’t_id
+) {
+
+58 
+SYSTEM_EVENT_SCAN_DONE
+:
+
+59 
+W—veLogProg»ss
+(
+DeviûLay”
+, "SYSTEM_EVENT_SCAN_DONE");
+
+60 
+HªdËSÿnDÚe
+();
+
+68 ià(
+	gev’t
+->
+	gTy³
+ =ğ
+DeviûEv’tTy³
+::
+kWiFiCÚÃùiv™yChªge
+)
+
+72 ià(
+ev’t
+->
+WiFiCÚÃùiv™yChªge
+.
+ResuÉ
+ =ğ
+kCÚÃùiv™y_E¡ablished
+)
+
+74 
+wifi_­_»cÜd_t
+ 
+­_šfo
+;
+
+76 
+	g”r
+ = 
+e¥_wifi_¡a_g‘_­_šfo
+(&
+­_šfo
+);
+
+77 
+SucûssOrEx™
+(
+”r
+);
+
+79 
+WiFiSecur™yTy³
+ 
+	g£cTy³
+ = 
+ESP32Uts
+::
+WiFiAuthModeToW—veWiFiSecur™yTy³
+(
+­_šfo
+.
+authmode
+);
+
+81 
+	g”r
+ = 
+CÚfigu¿tiÚMgrIm¶
+().
+Upd©eWiFiStiÚSecur™yTy³
+(
+£cTy³
+);
+
+82 
+SucûssOrEx™
+(
+”r
+);
+
+88 
+	gG’”icIm¶CÏss
+::
+_OnPÏtfÜmEv’t
+(
+ev’t
+);
+
+90 
+	gex™
+:
+
+94 
+WEAVE_ERROR
+ 
+	gN‘wÜkProvisiÚšgS”v”Im¶
+::
+G‘WiFiStiÚProvisiÚ
+(
+N‘wÜkInfo
+ & 
+ÃtInfo
+, 
+boŞ
+ 
+šşudeC»d’tŸls
+)
+
+96 
+WEAVE_ERROR
+ 
+	g”r
+ = 
+WEAVE_NO_ERROR
+;
+
+97 
+wifi_cÚfig_t
+ 
+	g¡©iÚCÚfig
+;
+
+99 
+	gÃtInfo
+.
+Re£t
+();
+
+101 
+	g”r
+ = 
+e¥_wifi_g‘_cÚfig
+(
+ESP_IF_WIFI_STA
+, &
+¡©iÚCÚfig
+);
+
+102 
+SucûssOrEx™
+(
+”r
+);
+
+104 
+V”ifyOrEx™
+(
+¡©iÚCÚfig
+.
+¡a
+.
+ssid
+[0] !ğ0, 
+”r
+ = 
+WEAVE_ERROR_INCORRECT_STATE
+);
+
+106 
+	gÃtInfo
+.
+	gN‘wÜkId
+ = 
+kWiFiStiÚN‘wÜkId
+;
+
+107 
+	gÃtInfo
+.
+	gN‘wÜkIdP»£Á
+ = 
+Œue
+;
+
+108 
+	gÃtInfo
+.
+	gN‘wÜkTy³
+ = 
+kN‘wÜkTy³_WiFi
+;
+
+109 
+memıy
+(
+ÃtInfo
+.
+WiFiSSID
+, 
+¡©iÚCÚfig
+.
+¡a
+.
+ssid
+, 
+mš
+(
+¡¾’
+((*)stationConfig.sta.ssid) + 1, (netInfo.WiFiSSID)));
+
+110 
+	gÃtInfo
+.
+	gWiFiMode
+ = 
+kWiFiMode_Mªaged
+;
+
+111 
+	gÃtInfo
+.
+	gWiFiRŞe
+ = 
+kWiFiRŞe_StiÚ
+;
+
+113 
+	g”r
+ = 
+CÚfigu¿tiÚMgrIm¶
+().
+G‘WiFiStiÚSecur™yTy³
+(
+ÃtInfo
+.
+WiFiSecur™yTy³
+);
+
+114 ià(
+	g”r
+ =ğ
+WEAVE_DEVICE_ERROR_CONFIG_NOT_FOUND
+)
+
+116 
+”r
+ = 
+WEAVE_NO_ERROR
+;
+
+118 
+SucûssOrEx™
+(
+”r
+);
+
+120 ià(
+	gšşudeC»d’tŸls
+)
+
+122 
+	gÃtInfo
+.
+	gWiFiKeyL’
+ = 
+mš
+(
+¡¾’
+((*)
+¡©iÚCÚfig
+.
+¡a
+.
+·sswÜd
+), (
+ÃtInfo
+.
+WiFiKey
+));
+
+123 
+memıy
+(
+ÃtInfo
+.
+WiFiKey
+, 
+¡©iÚCÚfig
+.
+¡a
+.
+·sswÜd
+,‚‘Info.
+WiFiKeyL’
+);
+
+126 
+	gex™
+:
+
+127  
+”r
+;
+
+130 
+WEAVE_ERROR
+ 
+	gN‘wÜkProvisiÚšgS”v”Im¶
+::
+S‘WiFiStiÚProvisiÚ
+(cÚ¡ 
+N‘wÜkInfo
+ & 
+ÃtInfo
+)
+
+132 
+WEAVE_ERROR
+ 
+”r
+ = 
+WEAVE_NO_ERROR
+;
+
+133 
+wifi_cÚfig_t
+ 
+	gwifiCÚfig
+;
+
+137 
+	g”r
+ = 
+ESP32Uts
+::
+EÇbËStiÚMode
+();
+
+138 
+SucûssOrEx™
+(
+”r
+);
+
+141 
+mem£t
+(&
+wifiCÚfig
+, 0, (wifiConfig));
+
+142 
+memıy
+(
+wifiCÚfig
+.
+¡a
+.
+ssid
+, 
+ÃtInfo
+.
+WiFiSSID
+, 
+mš
+(
+¡¾’
+(netInfo.WiFiSSID) + 1, (wifiConfig.sta.ssid)));
+
+143 
+memıy
+(
+wifiCÚfig
+.
+¡a
+.
+·sswÜd
+, 
+ÃtInfo
+.
+WiFiKey
+, 
+mš
+((
+size_t
+ê‘Info.
+WiFiKeyL’
+, (wifiConfig.sta.password)));
+
+144 ià(
+	gÃtInfo
+.
+	gWiFiSecur™yTy³
+ =ğ
+kWiFiSecur™yTy³_NÙS³cif›d
+)
+
+146 
+wifiCÚfig
+.
+¡a
+.
+sÿn_m‘hod
+ = 
+WIFI_ALL_CHANNEL_SCAN
+;
+
+150 
+	gwifiCÚfig
+.
+	g¡a
+.
+	gsÿn_m‘hod
+ = 
+WIFI_FAST_SCAN
+;
+
+151 
+	gwifiCÚfig
+.
+	g¡a
+.
+	gth»shŞd
+.
+	grssi
+ = 0;
+
+152 
+	gÃtInfo
+.
+	gWiFiSecur™yTy³
+)
+
+154 
+	gkWiFiSecur™yTy³_NÚe
+:
+
+155 
+wifiCÚfig
+.
+¡a
+.
+th»shŞd
+.
+authmode
+ = 
+WIFI_AUTH_OPEN
+;
+
+157 
+	gkWiFiSecur™yTy³_WEP
+:
+
+158 
+wifiCÚfig
+.
+¡a
+.
+th»shŞd
+.
+authmode
+ = 
+WIFI_AUTH_WEP
+;
+
+160 
+	gkWiFiSecur™yTy³_WPAP”sÚ®
+:
+
+161 
+wifiCÚfig
+.
+¡a
+.
+th»shŞd
+.
+authmode
+ = 
+WIFI_AUTH_WPA_PSK
+;
+
+163 
+	gkWiFiSecur™yTy³_WPA2P”sÚ®
+:
+
+164 
+wifiCÚfig
+.
+¡a
+.
+th»shŞd
+.
+authmode
+ = 
+WIFI_AUTH_WPA2_PSK
+;
+
+166 
+	gkWiFiSecur™yTy³_WPA2EÁ”´i£
+:
+
+167 
+wifiCÚfig
+.
+¡a
+.
+th»shŞd
+.
+authmode
+ = 
+WIFI_AUTH_WPA2_ENTERPRISE
+;
+
+170 
+Ex™Now
+(
+”r
+ = 
+WEAVE_ERROR_INVALID_ARGUMENT
+);
+
+173 
+	gwifiCÚfig
+.
+	g¡a
+.
+	gsÜt_m‘hod
+ = 
+WIFI_CONNECT_AP_BY_SIGNAL
+;
+
+176 
+	g”r
+ = 
+e¥_wifi_£t_cÚfig
+(
+ESP_IF_WIFI_STA
+, &
+wifiCÚfig
+);
+
+177 ià(
+	g”r
+ !ğ
+ESP_OK
+)
+
+179 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "e¥_wifi_£t_cÚfig(èçed: %s", 
+Æ
+::
+E¼ÜSŒ
+(
+”r
+));
+
+181 
+SucûssOrEx™
+(
+”r
+);
+
+185 
+	g”r
+ = 
+CÚfigu¿tiÚMgrIm¶
+().
+Upd©eWiFiStiÚSecur™yTy³
+(
+ÃtInfo
+.
+WiFiSecur™yTy³
+);
+
+186 
+SucûssOrEx™
+(
+”r
+);
+
+188 
+W—veLogProg»ss
+(
+DeviûLay”
+, "WiF˜¡©iÚ…rovisiÚ s‘ (SSID: %s)", 
+ÃtInfo
+.
+WiFiSSID
+);
+
+190 
+	gex™
+:
+
+191  
+”r
+;
+
+194 
+WEAVE_ERROR
+ 
+	gN‘wÜkProvisiÚšgS”v”Im¶
+::
+CË¬WiFiStiÚProvisiÚ
+()
+
+196 
+WEAVE_ERROR
+ 
+”r
+ = 
+WEAVE_NO_ERROR
+;
+
+197 
+wifi_cÚfig_t
+ 
+	g¡©iÚCÚfig
+;
+
+200 
+mem£t
+(&
+¡©iÚCÚfig
+, 0, (stationConfig));
+
+201 
+e¥_wifi_£t_cÚfig
+(
+ESP_IF_WIFI_STA
+, &
+¡©iÚCÚfig
+);
+
+204 
+CÚfigu¿tiÚMgrIm¶
+().
+Upd©eWiFiStiÚSecur™yTy³
+(
+kWiFiSecur™yTy³_NÙS³cif›d
+);
+
+206  
+	g”r
+;
+
+209 
+WEAVE_ERROR
+ 
+	gN‘wÜkProvisiÚšgS”v”Im¶
+::
+In™Ÿ‹WiFiSÿn
+()
+
+211 
+WEAVE_ERROR
+ 
+”r
+ = 
+WEAVE_NO_ERROR
+;
+
+212 
+wifi_sÿn_cÚfig_t
+ 
+	gsÿnCÚfig
+;
+
+215 
+mem£t
+(&
+sÿnCÚfig
+, 0, (scanConfig));
+
+216 
+	gsÿnCÚfig
+.
+	gshow_hidd’
+ = 1;
+
+217 
+	gsÿnCÚfig
+.
+	gsÿn_ty³
+ = 
+WIFI_SCAN_TYPE_ACTIVE
+;
+
+218 
+	g”r
+ = 
+e¥_wifi_sÿn_¡¬t
+(&
+sÿnCÚfig
+, 
+çl£
+);
+
+219 
+SucûssOrEx™
+(
+”r
+);
+
+221 #ià
+WEAVE_DEVICE_CONFIG_WIFI_SCAN_COMPLETION_TIMEOUT
+
+
+223 
+	gSy¡emLay”
+.
+S¹Tim”
+(
+WEAVE_DEVICE_CONFIG_WIFI_SCAN_COMPLETION_TIMEOUT
+, 
+HªdËSÿnTimeOut
+, 
+NULL
+);
+
+226 
+	gex™
+:
+
+227  
+”r
+;
+
+230 
+	gN‘wÜkProvisiÚšgS”v”Im¶
+::
+HªdËSÿnDÚe
+()
+
+232 
+WEAVE_ERROR
+ 
+”r
+;
+
+233 
+wifi_­_»cÜd_t
+ * 
+	gsÿnResuÉs
+ = 
+NULL
+;
+
+234 
+ušt16_t
+ 
+	gsÿnResuÉCouÁ
+;
+
+235 
+ušt16_t
+ 
+	g’codedResuÉCouÁ
+;
+
+236 
+Pack‘Bufãr
+ * 
+	g»¥Buf
+ = 
+NULL
+;
+
+239 
+V”ifyOrEx™
+(
+mS‹
+ =ğ
+kS‹_SÿnN‘wÜks_InProg»ss
+, 
+”r
+ = 
+WEAVE_NO_ERROR
+);
+
+241 
+	gmS‹
+ = 
+kS‹_IdË
+;
+
+243 #ià
+WEAVE_DEVICE_CONFIG_WIFI_SCAN_COMPLETION_TIMEOUT
+
+
+245 
+	gSy¡emLay”
+.
+CªûlTim”
+(
+HªdËSÿnTimeOut
+, 
+NULL
+);
+
+249 
+	g”r
+ = 
+e¥_wifi_sÿn_g‘_­_num
+(&
+sÿnResuÉCouÁ
+);
+
+250 
+SucûssOrEx™
+(
+”r
+);
+
+253 
+	gsÿnResuÉCouÁ
+ = 
+mš
+(
+sÿnResuÉCouÁ
+, (
+ušt16_t
+)
+WEAVE_DEVICE_CONFIG_MAX_SCAN_NETWORKS_RESULTS
+);
+
+256 
+	gsÿnResuÉs
+ = (
+wifi_­_»cÜd_t
+ *)
+m®loc
+(
+sÿnResuÉCouÁ
+ * (wifi_ap_record_t));
+
+257 
+V”ifyOrEx™
+(
+sÿnResuÉs
+ !ğ
+NULL
+, 
+”r
+ = 
+WEAVE_ERROR_NO_MEMORY
+);
+
+261 
+	g”r
+ = 
+e¥_wifi_sÿn_g‘_­_»cÜds
+(&
+sÿnResuÉCouÁ
+, 
+sÿnResuÉs
+);
+
+262 
+SucûssOrEx™
+(
+”r
+);
+
+265 ià(
+G‘Cu¼’tOp
+(è=ğ
+kMsgTy³_SÿnN‘wÜks
+)
+
+267 
+Æ
+::
+W—ve
+::
+TLV
+::
+TLVWr™”
+ 
+wr™”
+;
+
+268 
+TLVTy³
+ 
+	gou‹rCÚš”Ty³
+;
+
+271 
+qsÜt
+(
+sÿnResuÉs
+, 
+sÿnResuÉCouÁ
+, (*sÿnResuÉs), 
+ESP32Uts
+::
+Ord”SÿnResuÉsByRSSI
+);
+
+274 
+	g»¥Buf
+ = 
+Pack‘Bufãr
+::
+New
+(
+WEAVE_SYSTEM_CONFIG_HEADER_RESERVE_SIZE
+ + 1);
+
+275 
+V”ifyOrEx™
+(
+»¥Buf
+ !ğ
+NULL
+, 
+”r
+ = 
+WEAVE_ERROR_NO_MEMORY
+);
+
+279 
+	gwr™”
+.
+In™
+(
+»¥Buf
+,„e¥Buf->
+AvaabËD©aL’gth
+() - 1);
+
+280 
+	g”r
+ = 
+wr™”
+.
+S¹CÚš”
+(
+AnÚymousTag
+, 
+kTLVTy³_A¼ay
+, 
+ou‹rCÚš”Ty³
+);
+
+281 
+SucûssOrEx™
+(
+”r
+);
+
+282 
+	g’codedResuÉCouÁ
+ = 0;ƒncodedResuÉCouÁ < 
+	gsÿnResuÉCouÁ
+;ƒncodedResultCount++)
+
+284 
+N‘wÜkInfo
+ 
+	gÃtInfo
+;
+
+285 cÚ¡ 
+	gwifi_­_»cÜd_t
+ & 
+	gsÿnResuÉ
+ = 
+sÿnResuÉs
+[
+’codedResuÉCouÁ
+];
+
+287 
+	gÃtInfo
+.
+Re£t
+();
+
+288 
+	gÃtInfo
+.
+	gN‘wÜkTy³
+ = 
+kN‘wÜkTy³_WiFi
+;
+
+289 
+memıy
+(
+ÃtInfo
+.
+WiFiSSID
+, 
+sÿnResuÉ
+.
+ssid
+, 
+mš
+(
+¡¾’
+((*)sÿnResuÉ.ssidè+ 1, (
+size_t
+)
+N‘wÜkInfo
+::
+kMaxWiFiSSIDL’gth
+));
+
+290 
+	gÃtInfo
+.
+	gWiFiSSID
+[
+N‘wÜkInfo
+::
+kMaxWiFiSSIDL’gth
+] = 0;
+
+291 
+	gÃtInfo
+.
+	gWiFiMode
+ = 
+kWiFiMode_Mªaged
+;
+
+292 
+	gÃtInfo
+.
+	gWiFiRŞe
+ = 
+kWiFiRŞe_StiÚ
+;
+
+293 
+	gÃtInfo
+.
+	gWiFiSecur™yTy³
+ = 
+ESP32Uts
+::
+WiFiAuthModeToW—veWiFiSecur™yTy³
+(
+sÿnResuÉ
+.
+authmode
+);
+
+294 
+	gÃtInfo
+.
+	gWœ–essSigÇlSŒ’gth
+ = 
+sÿnResuÉ
+.
+rssi
+;
+
+297 
+	gÆ
+::
+W—ve
+::
+TLV
+::
+TLVWr™”
+ 
+§vePošt
+ = 
+wr™”
+;
+
+298 
+	g”r
+ = 
+ÃtInfo
+.
+Encode
+(
+wr™”
+);
+
+299 ià(
+	g”r
+ =ğ
+WEAVE_ERROR_BUFFER_TOO_SMALL
+)
+
+301 
+wr™”
+ = 
+§vePošt
+;
+
+305 
+SucûssOrEx™
+(
+”r
+);
+
+307 
+	g”r
+ = 
+wr™”
+.
+EndCÚš”
+(
+ou‹rCÚš”Ty³
+);
+
+308 
+SucûssOrEx™
+(
+”r
+);
+
+309 
+	g”r
+ = 
+wr™”
+.
+Fš®ize
+();
+
+310 
+SucûssOrEx™
+(
+”r
+);
+
+314 
+	g”r
+ = 
+S’dN‘wÜkSÿnCom¶‘e
+(
+’codedResuÉCouÁ
+, 
+»¥Buf
+);
+
+315 
+	g»¥Buf
+ = 
+NULL
+;
+
+316 
+SucûssOrEx™
+(
+”r
+);
+
+319 
+	gex™
+:
+
+320 
+Pack‘Bufãr
+::
+F»e
+(
+»¥Buf
+);
+
+324 ià(
+	g”r
+ !ğ
+WEAVE_NO_ERROR
+ && 
+G‘Cu¼’tOp
+(è=ğ
+kMsgTy³_SÿnN‘wÜks
+)
+
+326 
+S’dStusR•Üt
+(
+kW—veProfe_CommÚ
+, 
+kStus_IÁ”ÇlE¼Ü
+, 
+”r
+);
+
+331 
+CÚÃùiv™yMgr
+().
+OnWiFiSÿnDÚe
+();
+
+334 #ià
+WEAVE_DEVICE_CONFIG_WIFI_SCAN_COMPLETION_TIMEOUT
+
+
+336 
+	gN‘wÜkProvisiÚšgS”v”Im¶
+::
+HªdËSÿnTimeOut
+(::
+Æ
+::
+W—ve
+::
+Sy¡em
+::
+Lay”
+ * 
+aLay”
+, * 
+aAµS‹
+, ::Æ::W—ve::Sy¡em::
+E¼Ü
+ 
+aE¼Ü
+)
+
+338 
+W—veLogE¼Ü
+(
+DeviûLay”
+, "WiFi scanimed out");
+
+341 
+	gsIn¡ªû
+.
+	gmS‹
+ = 
+kS‹_IdË
+;
+
+345 ià(
+	gsIn¡ªû
+.
+G‘Cu¼’tOp
+(è=ğ
+kMsgTy³_SÿnN‘wÜks
+)
+
+347 
+sIn¡ªû
+.
+S’dStusR•Üt
+(
+kW—veProfe_CommÚ
+, 
+kStus_IÁ”ÇlE¼Ü
+, 
+WEAVE_ERROR_TIMEOUT
+);
+
+351 
+CÚÃùiv™yMgr
+().
+OnWiFiSÿnDÚe
+();
+
+	@PlatformManagerImpl.cpp
+
+25 
+	~<W—ve/DeviûLay”/š‹º®/W—veDeviûLay”IÁ”Çl.h
+>
+
+26 
+	~<W—ve/DeviûLay”/PÏtfÜmMªag”.h
+>
+
+27 
+	~<W—ve/DeviûLay”/F»eRTOS/G’”icPÏtfÜmMªag”Im¶_F»eRTOS.p
+>
+
+29 
+Çme¥aû
+ 
+	gÆ
+ {
+
+30 
+Çme¥aû
+ 
+	gW—ve
+ {
+
+31 
+Çme¥aû
+ 
+	gDeviûLay”
+ {
+
+33 
+Çme¥aû
+ 
+	gIÁ”Çl
+ {
+
+34 
+WEAVE_ERROR
+ 
+In™LwIPCÜeLock
+();
+
+38 
+‹m¶©e
+ 
+şass
+ 
+	gIÁ”Çl
+::
+G’”icPÏtfÜmMªag”Im¶
+<
+PÏtfÜmMªag”Im¶
+>;
+
+39 
+‹m¶©e
+ 
+şass
+ 
+	gIÁ”Çl
+::
+G’”icPÏtfÜmMªag”Im¶_F»eRTOS
+<
+PÏtfÜmMªag”Im¶
+>;
+
+41 
+PÏtfÜmMªag”Im¶
+ 
+	gPÏtfÜmMªag”Im¶
+::
+sIn¡ªû
+;
+
+43 
+WEAVE_ERROR
+ 
+	gPÏtfÜmMªag”Im¶
+::
+_In™W—veSck
+()
+
+45 
+WEAVE_ERROR
+ 
+”r
+;
+
+48 
+	g”r
+ = 
+IÁ”Çl
+::
+In™LwIPCÜeLock
+();
+
+49 
+SucûssOrEx™
+(
+”r
+);
+
+53 
+	g”r
+ = 
+IÁ”Çl
+::
+G’”icPÏtfÜmMªag”Im¶_F»eRTOS
+<
+PÏtfÜmMªag”Im¶
+>::
+_In™W—veSck
+();
+
+54 
+SucûssOrEx™
+(
+”r
+);
+
+56 
+	gex™
+:
+
+57  
+”r
+;
+
+60 
+WEAVE_ERROR
+ 
+	gPÏtfÜmMªag”Im¶
+::
+In™LwIPCÜeLock
+()
+
+62  
+IÁ”Çl
+::
+In™LwIPCÜeLock
+();
+
+65 
+e¥_”r_t
+ 
+	gPÏtfÜmMªag”Im¶
+::
+HªdËESPSy¡emEv’t
+(* 
+ùx
+, 
+sy¡em_ev’t_t
+ * 
+e¥Ev’t
+)
+
+67 
+W—veDeviûEv’t
+ 
+	gev’t
+;
+
+68 
+	gev’t
+.
+	gTy³
+ = 
+DeviûEv’tTy³
+::
+kESPSy¡emEv’t
+;
+
+69 
+	gev’t
+.
+	gPÏtfÜm
+.
+	gESPSy¡emEv’t
+ = *
+e¥Ev’t
+;
+
+71 
+	gsIn¡ªû
+.
+Po¡Ev’t
+(&
+ev’t
+);
+
+73  
+	gESP_OK
+;
+
+	@SystemTimeSupport.cpp
+
+26 
+	~<W—ve/DeviûLay”/š‹º®/W—veDeviûLay”IÁ”Çl.h
+>
+
+27 
+	~<W—ve/SuµÜt/TimeUts.h
+>
+
+28 
+	~<e¥_tim”.h
+>
+
+30 
+Çme¥aû
+ 
+	gÆ
+ {
+
+31 
+Çme¥aû
+ 
+	gW—ve
+ {
+
+32 
+Çme¥aû
+ 
+	gSy¡em
+ {
+
+33 
+Çme¥aû
+ 
+	gPÏtfÜm
+ {
+
+34 
+Çme¥aû
+ 
+	gLay”
+ {
+
+36 
+ušt64_t
+ 
+G‘Clock_MÚÙÚic
+()
+
+38  (
+	gušt64_t
+)::
+e¥_tim”_g‘_time
+();
+
+41 
+ušt64_t
+ 
+G‘Clock_MÚÙÚicMS
+()
+
+43  (
+	gušt64_t
+)::
+e¥_tim”_g‘_time
+() / 1000;
+
+46 
+ušt64_t
+ 
+G‘Clock_MÚÙÚicHiRes
+()
+
+48  (
+	gušt64_t
+)::
+e¥_tim”_g‘_time
+();
+
+51 
+E¼Ü
+ 
+G‘Clock_R—lTime
+(
+ušt64_t
+ & 
+curTime
+)
+
+53 
+timev®
+ 
+	gtv
+;
+
+54 
+	g»s
+ = 
+g‘timeofday
+(&
+tv
+, 
+NULL
+);
+
+55 ià(
+	g»s
+ != 0)
+
+57  
+M­E¼ÜPOSIX
+(
+”ºo
+);
+
+59 ià(
+	gtv
+.
+	gtv_£c
+ < 
+	gWEAVE_SYSTEM_CONFIG_VALID_REAL_TIME_THRESHOLD
+)
+
+61  
+	gWEAVE_SYSTEM_ERROR_REAL_TIME_NOT_SYNCED
+;
+
+63 
+	gcurTime
+ = (
+tv
+.
+tv_£c
+ * 
+UINT64_C
+(1000000)è+v.
+tv_u£c
+;
+
+64  
+	gWEAVE_SYSTEM_NO_ERROR
+;
+
+67 
+E¼Ü
+ 
+G‘Clock_R—lTimeMS
+(
+ušt64_t
+ & 
+curTime
+)
+
+69 
+timev®
+ 
+	gtv
+;
+
+70 
+	g»s
+ = 
+g‘timeofday
+(&
+tv
+, 
+NULL
+);
+
+71 ià(
+	g»s
+ != 0)
+
+73  
+M­E¼ÜPOSIX
+(
+”ºo
+);
+
+75 ià(
+	gtv
+.
+	gtv_£c
+ < 
+	gWEAVE_SYSTEM_CONFIG_VALID_REAL_TIME_THRESHOLD
+)
+
+77  
+	gWEAVE_SYSTEM_ERROR_REAL_TIME_NOT_SYNCED
+;
+
+79 
+	gcurTime
+ = (
+tv
+.
+tv_£c
+ * 
+UINT64_C
+(1000)è+ (tv.
+tv_u£c
+ / 1000);
+
+80  
+	gWEAVE_SYSTEM_NO_ERROR
+;
+
+83 
+E¼Ü
+ 
+S‘Clock_R—lTime
+(
+ušt64_t
+ 
+ÃwCurTime
+)
+
+85 
+timev®
+ 
+	gtv
+;
+
+86 
+	gtv
+.
+	gtv_£c
+ = 
+¡©ic_ÿ¡
+<
+time_t
+>(
+ÃwCurTime
+ / 
+UINT64_C
+(1000000));
+
+87 
+	gtv
+.
+	gtv_u£c
+ = 
+¡©ic_ÿ¡
+<>(
+ÃwCurTime
+ % 
+UINT64_C
+(1000000));
+
+88 
+	g»s
+ = 
+£‰imeofday
+(&
+tv
+, 
+NULL
+);
+
+89 ià(
+	g»s
+ != 0)
+
+91  (
+”ºo
+ =ğ
+EPERM
+è? 
+WEAVE_SYSTEM_ERROR_ACCESS_DENIED
+ : 
+M­E¼ÜPOSIX
+(errno);
+
+93 #ià
+WEAVE_PROGRESS_LOGGING
+
+
+95 
+ušt16_t
+ 
+	gy—r
+;
+
+96 
+ušt8_t
+ 
+	gmÚth
+, 
+	gdayOfMÚth
+, 
+	ghour
+, 
+	gmšu‹
+, 
+	g£cÚd
+;
+
+97 
+SecÚdsSšûEpochToC®’d¬Time
+(
+tv
+.
+tv_£c
+, 
+y—r
+, 
+mÚth
+, 
+dayOfMÚth
+, 
+hour
+, 
+mšu‹
+, 
+£cÚd
+);
+
+98 
+W—veLogProg»ss
+(
+DeviûLay”
+, "R—Ètimşock s‘Ø%ld (%04" 
+PRId16
+ "/%02" 
+PRId8
+ "/%02" PRId8 " %02" PRId8 ":%02" PRId8 ":%02" PRId8 " UTC)",
+
+99 
+tv
+.
+tv_£c
+, 
+y—r
+, 
+mÚth
+, 
+dayOfMÚth
+, 
+hour
+, 
+mšu‹
+, 
+£cÚd
+);
+
+102  
+	gWEAVE_SYSTEM_NO_ERROR
+;
+
+	@/usr/include/string.h
+
+22 #iâdef 
+_STRING_H
+
+
+23 
+	#_STRING_H
+ 1
+
+	)
+
+25 
+	#__GLIBC_INTERNAL_STARTING_HEADER_IMPLEMENTATION
+
+
+	)
+
+26 
+	~<b™s/libc-h—d”-¡¬t.h
+>
+
+28 
+	g__BEGIN_DECLS
+
+
+31 
+	#__Ãed_size_t
+
+
+	)
+
+32 
+	#__Ãed_NULL
+
+
+	)
+
+33 
+	~<¡ddef.h
+>
+
+36 #ià
+defšed
+ 
+__ılu¥lus
+ && 
+__GNUC_PREREQ
+ (4, 4)
+
+37 
+	#__CORRECT_ISO_CPP_STRING_H_PROTO
+
+
+	)
+
+42 *
+	$memıy
+ (*
+__»¡riù
+ 
+__de¡
+, cÚ¡ *__»¡riù 
+__¤c
+,
+
+43 
+size_t
+ 
+__n
+è
+__THROW
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+46 *
+	$memmove
+ (*
+__de¡
+, cÚ¡ *
+__¤c
+, 
+size_t
+ 
+__n
+)
+
+47 
+__THROW
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+52 #ià
+defšed
+ 
+__USE_MISC
+ || defšed 
+__USE_XOPEN
+
+
+53 *
+	$memcıy
+ (*
+__»¡riù
+ 
+__de¡
+, cÚ¡ *__»¡riù 
+__¤c
+,
+
+54 
+__c
+, 
+size_t
+ 
+__n
+)
+
+55 
+__THROW
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+60 *
+	$mem£t
+ (*
+__s
+, 
+__c
+, 
+size_t
+ 
+__n
+è
+__THROW
+ 
+	`__nÚnuÎ
+ ((1));
+
+63 
+	$memcmp
+ (cÚ¡ *
+__s1
+, cÚ¡ *
+__s2
+, 
+size_t
+ 
+__n
+)
+
+64 
+__THROW
+ 
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+67 #ifdeà
+__CORRECT_ISO_CPP_STRING_H_PROTO
+
+
+70 *
+	`memchr
+ (*
+__s
+, 
+__c
+, 
+size_t
+ 
+__n
+)
+
+71 
+__THROW
+ 
+	`__asm
+ ("memchr"è
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1));
+
+72 cÚ¡ *
+	`memchr
+ (cÚ¡ *
+__s
+, 
+__c
+, 
+size_t
+ 
+__n
+)
+
+73 
+__THROW
+ 
+	`__asm
+ ("memchr"è
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1));
+
+75 #ifdeà
+__OPTIMIZE__
+
+
+76 
+__ex‹º_®ways_šlše
+ *
+
+77 
+	`memchr
+ (*
+__s
+, 
+__c
+, 
+size_t
+ 
+__n
+è
+__THROW
+
+
+79  
+	`__butš_memchr
+ (
+__s
+, 
+__c
+, 
+__n
+);
+
+82 
+__ex‹º_®ways_šlše
+ const *
+
+83 
+	`memchr
+ (cÚ¡ *
+__s
+, 
+__c
+, 
+size_t
+ 
+__n
+è
+__THROW
+
+
+85  
+	`__butš_memchr
+ (
+__s
+, 
+__c
+, 
+__n
+);
+
+88 
+	}
+}
+
+90 *
+	$memchr
+ (cÚ¡ *
+__s
+, 
+__c
+, 
+size_t
+ 
+__n
+)
+
+91 
+__THROW
+ 
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1));
+
+94 #ifdeà
+__USE_GNU
+
+
+97 #ifdeà
+__CORRECT_ISO_CPP_STRING_H_PROTO
+
+
+98 "C++" *
+	$¿wmemchr
+ (*
+__s
+, 
+__c
+)
+
+99 
+__THROW
+ 
+	`__asm
+ ("¿wmemchr"è
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1));
+
+100 "C++" cÚ¡ *
+	$¿wmemchr
+ (cÚ¡ *
+__s
+, 
+__c
+)
+
+101 
+__THROW
+ 
+	`__asm
+ ("¿wmemchr"è
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1));
+
+103 *
+	$¿wmemchr
+ (cÚ¡ *
+__s
+, 
+__c
+)
+
+104 
+__THROW
+ 
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1));
+
+108 #ifdeà
+__CORRECT_ISO_CPP_STRING_H_PROTO
+
+
+109 "C++" *
+	$memrchr
+ (*
+__s
+, 
+__c
+, 
+size_t
+ 
+__n
+)
+
+110 
+__THROW
+ 
+	`__asm
+ ("memrchr"è
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1));
+
+111 "C++" cÚ¡ *
+	$memrchr
+ (cÚ¡ *
+__s
+, 
+__c
+, 
+size_t
+ 
+__n
+)
+
+112 
+__THROW
+ 
+	`__asm
+ ("memrchr"è
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1));
+
+114 *
+	$memrchr
+ (cÚ¡ *
+__s
+, 
+__c
+, 
+size_t
+ 
+__n
+)
+
+115 
+__THROW
+ 
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1));
+
+121 *
+	$¡rıy
+ (*
+__»¡riù
+ 
+__de¡
+, cÚ¡ *__»¡riù 
+__¤c
+)
+
+122 
+__THROW
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+124 *
+	$¡ºıy
+ (*
+__»¡riù
+ 
+__de¡
+,
+
+125 cÚ¡ *
+__»¡riù
+ 
+__¤c
+, 
+size_t
+ 
+__n
+)
+
+126 
+__THROW
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+129 *
+	$¡rÿt
+ (*
+__»¡riù
+ 
+__de¡
+, cÚ¡ *__»¡riù 
+__¤c
+)
+
+130 
+__THROW
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+132 *
+	$¡ºÿt
+ (*
+__»¡riù
+ 
+__de¡
+, cÚ¡ *__»¡riù 
+__¤c
+,
+
+133 
+size_t
+ 
+__n
+è
+__THROW
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+136 
+	$¡rcmp
+ (cÚ¡ *
+__s1
+, cÚ¡ *
+__s2
+)
+
+137 
+__THROW
+ 
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+139 
+	$¡ºcmp
+ (cÚ¡ *
+__s1
+, cÚ¡ *
+__s2
+, 
+size_t
+ 
+__n
+)
+
+140 
+__THROW
+ 
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+143 
+	$¡rcŞl
+ (cÚ¡ *
+__s1
+, cÚ¡ *
+__s2
+)
+
+144 
+__THROW
+ 
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+146 
+size_t
+ 
+	$¡rxäm
+ (*
+__»¡riù
+ 
+__de¡
+,
+
+147 cÚ¡ *
+__»¡riù
+ 
+__¤c
+, 
+size_t
+ 
+__n
+)
+
+148 
+__THROW
+ 
+	`__nÚnuÎ
+ ((2));
+
+150 #ifdeà
+__USE_XOPEN2K8
+
+
+152 
+	~<b™s/ty³s/loÿË_t.h
+>
+
+155 
+	$¡rcŞl_l
+ (cÚ¡ *
+__s1
+, cÚ¡ *
+__s2
+, 
+loÿË_t
+ 
+__l
+)
+
+156 
+__THROW
+ 
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1, 2, 3));
+
+159 
+size_t
+ 
+	$¡rxäm_l
+ (*
+__de¡
+, cÚ¡ *
+__¤c
+, 
+size_t
+ 
+__n
+,
+
+160 
+loÿË_t
+ 
+__l
+è
+__THROW
+ 
+	`__nÚnuÎ
+ ((2, 4));
+
+163 #ià(
+defšed
+ 
+__USE_XOPEN_EXTENDED
+ || defšed 
+__USE_XOPEN2K8
+ \
+
+164 || 
+	$__GLIBC_USE
+ (
+LIB_EXT2
+))
+
+166 *
+	$¡rdup
+ (cÚ¡ *
+__s
+)
+
+167 
+__THROW
+ 
+__©Œibu‹_m®loc__
+ 
+	`__nÚnuÎ
+ ((1));
+
+173 #ià
+defšed
+ 
+__USE_XOPEN2K8
+ || 
+	`__GLIBC_USE
+ (
+LIB_EXT2
+)
+
+174 *
+	$¡ºdup
+ (cÚ¡ *
+__¡ršg
+, 
+size_t
+ 
+__n
+)
+
+175 
+__THROW
+ 
+__©Œibu‹_m®loc__
+ 
+	`__nÚnuÎ
+ ((1));
+
+178 #ià
+defšed
+ 
+__USE_GNU
+ && defšed 
+__GNUC__
+
+
+180 
+	#¡rdu·
+(
+s
+) \
+
+181 (
+__ex‹nsiÚ__
+ \
+
+183 cÚ¡ *
+__Şd
+ = (
+s
+); \
+
+184 
+size_t
+ 
+__Ën
+ = 
+	`¡¾’
+ (
+__Şd
+) + 1; \
+
+185 *
+__Ãw
+ = (*è
+	`__butš_®loÿ
+ (
+__Ën
+); \
+
+186 (*è
+	`memıy
+ (
+__Ãw
+, 
+__Şd
+, 
+__Ën
+); \
+
+187 
+	}
+}))
+
+	)
+
+190 
+	#¡ºdu·
+(
+s
+, 
+n
+) \
+
+191 (
+__ex‹nsiÚ__
+ \
+
+193 cÚ¡ *
+__Şd
+ = (
+s
+); \
+
+194 
+size_t
+ 
+__Ën
+ = 
+	`¡ºËn
+ (
+__Şd
+, (
+n
+)); \
+
+195 *
+__Ãw
+ = (*è
+	`__butš_®loÿ
+ (
+__Ën
+ + 1); \
+
+196 
+__Ãw
+[
+__Ën
+] = '\0'; \
+
+197 (*è
+	`memıy
+ (
+__Ãw
+, 
+__Şd
+, 
+__Ën
+); \
+
+198 }))
+
+	)
+
+202 #ifdeà
+__CORRECT_ISO_CPP_STRING_H_PROTO
+
+
+205 *
+¡rchr
+ (*
+__s
+, 
+__c
+)
+
+206 
+__THROW
+ 
+__asm
+ ("¡rchr"è
+__©Œibu‹_pu»__
+ 
+__nÚnuÎ
+ ((1));
+
+207 cÚ¡ *
+¡rchr
+ (cÚ¡ *
+__s
+, 
+__c
+)
+
+208 
+__THROW
+ 
+__asm
+ ("¡rchr"è
+__©Œibu‹_pu»__
+ 
+__nÚnuÎ
+ ((1));
+
+210 #ifdeà
+__OPTIMIZE__
+
+
+211 
+__ex‹º_®ways_šlše
+ *
+
+212 
+¡rchr
+ (*
+__s
+, 
+__c
+è
+	g__THROW
+
+
+214  
+__butš_¡rchr
+ (
+__s
+, 
+__c
+);
+
+217 
+__ex‹º_®ways_šlše
+ const *
+
+218 
+¡rchr
+ (cÚ¡ *
+__s
+, 
+__c
+è
+	g__THROW
+
+
+220  
+__butš_¡rchr
+ (
+__s
+, 
+__c
+);
+
+225 *
+	$¡rchr
+ (cÚ¡ *
+__s
+, 
+__c
+)
+
+226 
+__THROW
+ 
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1));
+
+229 #ifdeà
+__CORRECT_ISO_CPP_STRING_H_PROTO
+
+
+232 *
+	`¡¼chr
+ (*
+__s
+, 
+__c
+)
+
+233 
+__THROW
+ 
+	`__asm
+ ("¡¼chr"è
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1));
+
+234 cÚ¡ *
+	`¡¼chr
+ (cÚ¡ *
+__s
+, 
+__c
+)
+
+235 
+__THROW
+ 
+	`__asm
+ ("¡¼chr"è
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1));
+
+237 #ifdeà
+__OPTIMIZE__
+
+
+238 
+__ex‹º_®ways_šlše
+ *
+
+239 
+	`¡¼chr
+ (*
+__s
+, 
+__c
+è
+__THROW
+
+
+241  
+	`__butš_¡¼chr
+ (
+__s
+, 
+__c
+);
+
+244 
+__ex‹º_®ways_šlše
+ const *
+
+245 
+	`¡¼chr
+ (cÚ¡ *
+__s
+, 
+__c
+è
+__THROW
+
+
+247  
+	`__butš_¡¼chr
+ (
+__s
+, 
+__c
+);
+
+250 
+	}
+}
+
+252 *
+	$¡¼chr
+ (cÚ¡ *
+__s
+, 
+__c
+)
+
+253 
+__THROW
+ 
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1));
+
+256 #ifdeà
+__USE_GNU
+
+
+259 #ifdeà
+__CORRECT_ISO_CPP_STRING_H_PROTO
+
+
+260 "C++" *
+	$¡rchºul
+ (*
+__s
+, 
+__c
+)
+
+261 
+__THROW
+ 
+	`__asm
+ ("¡rchºul"è
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1));
+
+262 "C++" cÚ¡ *
+	$¡rchºul
+ (cÚ¡ *
+__s
+, 
+__c
+)
+
+263 
+__THROW
+ 
+	`__asm
+ ("¡rchºul"è
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1));
+
+265 *
+	$¡rchºul
+ (cÚ¡ *
+__s
+, 
+__c
+)
+
+266 
+__THROW
+ 
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1));
+
+272 
+size_t
+ 
+	$¡rc¥n
+ (cÚ¡ *
+__s
+, cÚ¡ *
+__»jeù
+)
+
+273 
+__THROW
+ 
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+276 
+size_t
+ 
+	$¡r¥n
+ (cÚ¡ *
+__s
+, cÚ¡ *
+__acû±
+)
+
+277 
+__THROW
+ 
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+279 #ifdeà
+__CORRECT_ISO_CPP_STRING_H_PROTO
+
+
+282 *
+	`¡½brk
+ (*
+__s
+, cÚ¡ *
+__acû±
+)
+
+283 
+__THROW
+ 
+	`__asm
+ ("¡½brk"è
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+284 cÚ¡ *
+	`¡½brk
+ (cÚ¡ *
+__s
+, cÚ¡ *
+__acû±
+)
+
+285 
+__THROW
+ 
+	`__asm
+ ("¡½brk"è
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+287 #ifdeà
+__OPTIMIZE__
+
+
+288 
+__ex‹º_®ways_šlše
+ *
+
+289 
+	`¡½brk
+ (*
+__s
+, cÚ¡ *
+__acû±
+è
+__THROW
+
+
+291  
+	`__butš_¡½brk
+ (
+__s
+, 
+__acû±
+);
+
+294 
+__ex‹º_®ways_šlše
+ const *
+
+295 
+	`¡½brk
+ (cÚ¡ *
+__s
+, cÚ¡ *
+__acû±
+è
+__THROW
+
+
+297  
+	`__butš_¡½brk
+ (
+__s
+, 
+__acû±
+);
+
+300 
+	}
+}
+
+302 *
+	$¡½brk
+ (cÚ¡ *
+__s
+, cÚ¡ *
+__acû±
+)
+
+303 
+__THROW
+ 
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+306 #ifdeà
+__CORRECT_ISO_CPP_STRING_H_PROTO
+
+
+309 *
+	`¡r¡r
+ (*
+__hay¡ack
+, cÚ¡ *
+__ÃedË
+)
+
+310 
+__THROW
+ 
+	`__asm
+ ("¡r¡r"è
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+311 cÚ¡ *
+	`¡r¡r
+ (cÚ¡ *
+__hay¡ack
+, cÚ¡ *
+__ÃedË
+)
+
+312 
+__THROW
+ 
+	`__asm
+ ("¡r¡r"è
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+314 #ifdeà
+__OPTIMIZE__
+
+
+315 
+__ex‹º_®ways_šlše
+ *
+
+316 
+	`¡r¡r
+ (*
+__hay¡ack
+, cÚ¡ *
+__ÃedË
+è
+__THROW
+
+
+318  
+	`__butš_¡r¡r
+ (
+__hay¡ack
+, 
+__ÃedË
+);
+
+321 
+__ex‹º_®ways_šlše
+ const *
+
+322 
+	`¡r¡r
+ (cÚ¡ *
+__hay¡ack
+, cÚ¡ *
+__ÃedË
+è
+__THROW
+
+
+324  
+	`__butš_¡r¡r
+ (
+__hay¡ack
+, 
+__ÃedË
+);
+
+327 
+	}
+}
+
+329 *
+	$¡r¡r
+ (cÚ¡ *
+__hay¡ack
+, cÚ¡ *
+__ÃedË
+)
+
+330 
+__THROW
+ 
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+335 *
+	$¡¹ok
+ (*
+__»¡riù
+ 
+__s
+, cÚ¡ *__»¡riù 
+__d–im
+)
+
+336 
+__THROW
+ 
+	`__nÚnuÎ
+ ((2));
+
+340 *
+	$__¡¹ok_r
+ (*
+__»¡riù
+ 
+__s
+,
+
+341 cÚ¡ *
+__»¡riù
+ 
+__d–im
+,
+
+342 **
+__»¡riù
+ 
+__§ve_±r
+)
+
+343 
+__THROW
+ 
+	`__nÚnuÎ
+ ((2, 3));
+
+344 #ifdeà
+__USE_POSIX
+
+
+345 *
+	$¡¹ok_r
+ (*
+__»¡riù
+ 
+__s
+, cÚ¡ *__»¡riù 
+__d–im
+,
+
+346 **
+__»¡riù
+ 
+__§ve_±r
+)
+
+347 
+__THROW
+ 
+	`__nÚnuÎ
+ ((2, 3));
+
+350 #ifdeà
+__USE_GNU
+
+
+352 #ifdeà
+__CORRECT_ISO_CPP_STRING_H_PROTO
+
+
+353 "C++" *
+	$¡rÿ£¡r
+ (*
+__hay¡ack
+, cÚ¡ *
+__ÃedË
+)
+
+354 
+__THROW
+ 
+	`__asm
+ ("¡rÿ£¡r"è
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+355 "C++" cÚ¡ *
+	$¡rÿ£¡r
+ (cÚ¡ *
+__hay¡ack
+,
+
+356 cÚ¡ *
+__ÃedË
+)
+
+357 
+__THROW
+ 
+	`__asm
+ ("¡rÿ£¡r"è
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+359 *
+	$¡rÿ£¡r
+ (cÚ¡ *
+__hay¡ack
+, cÚ¡ *
+__ÃedË
+)
+
+360 
+__THROW
+ 
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+364 #ifdeà
+__USE_GNU
+
+
+368 *
+	$memmem
+ (cÚ¡ *
+__hay¡ack
+, 
+size_t
+ 
+__hay¡ackËn
+,
+
+369 cÚ¡ *
+__ÃedË
+, 
+size_t
+ 
+__ÃedËËn
+)
+
+370 
+__THROW
+ 
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1, 3));
+
+374 *
+	$__mempıy
+ (*
+__»¡riù
+ 
+__de¡
+,
+
+375 cÚ¡ *
+__»¡riù
+ 
+__¤c
+, 
+size_t
+ 
+__n
+)
+
+376 
+__THROW
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+377 *
+	$mempıy
+ (*
+__»¡riù
+ 
+__de¡
+,
+
+378 cÚ¡ *
+__»¡riù
+ 
+__¤c
+, 
+size_t
+ 
+__n
+)
+
+379 
+__THROW
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+384 
+size_t
+ 
+	$¡¾’
+ (cÚ¡ *
+__s
+)
+
+385 
+__THROW
+ 
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1));
+
+387 #ifdef 
+__USE_XOPEN2K8
+
+
+390 
+size_t
+ 
+	$¡ºËn
+ (cÚ¡ *
+__¡ršg
+, 
+size_t
+ 
+__maxËn
+)
+
+391 
+__THROW
+ 
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1));
+
+396 *
+	$¡»¼Ü
+ (
+__”ºum
+è
+__THROW
+;
+
+397 #ifdeà
+__USE_XOPEN2K
+
+
+405 #ià
+defšed
+ 
+__USE_XOPEN2K
+ && !defšed 
+__USE_GNU
+
+
+408 #ifdeà
+__REDIRECT_NTH
+
+
+409 
+	`__REDIRECT_NTH
+ (
+¡»¼Ü_r
+,
+
+410 (
+__”ºum
+, *
+__buf
+, 
+size_t
+ 
+__buæ’
+),
+
+411 
+__xpg_¡»¼Ü_r
+è
+	`__nÚnuÎ
+ ((2));
+
+413 
+	$__xpg_¡»¼Ü_r
+ (
+__”ºum
+, *
+__buf
+, 
+size_t
+ 
+__buæ’
+)
+
+414 
+__THROW
+ 
+	`__nÚnuÎ
+ ((2));
+
+415 
+	#¡»¼Ü_r
+ 
+__xpg_¡»¼Ü_r
+
+
+	)
+
+420 *
+	$¡»¼Ü_r
+ (
+__”ºum
+, *
+__buf
+, 
+size_t
+ 
+__buæ’
+)
+
+421 
+__THROW
+ 
+	`__nÚnuÎ
+ ((2)è
+__wur
+;
+
+425 #ifdeà
+__USE_XOPEN2K8
+
+
+427 *
+	$¡»¼Ü_l
+ (
+__”ºum
+, 
+loÿË_t
+ 
+__l
+è
+__THROW
+;
+
+430 #ifdeà
+__USE_MISC
+
+
+431 
+	~<¡ršgs.h
+>
+
+435 
+	$ex¶ic™_bz”o
+ (*
+__s
+, 
+size_t
+ 
+__n
+è
+__THROW
+ 
+	`__nÚnuÎ
+ ((1));
+
+439 *
+	$¡r£p
+ (**
+__»¡riù
+ 
+__¡ršgp
+,
+
+440 cÚ¡ *
+__»¡riù
+ 
+__d–im
+)
+
+441 
+__THROW
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+444 #ifdef 
+__USE_XOPEN2K8
+
+
+446 *
+	$¡rsigÇl
+ (
+__sig
+è
+__THROW
+;
+
+449 *
+	$__¡pıy
+ (*
+__»¡riù
+ 
+__de¡
+, cÚ¡ *__»¡riù 
+__¤c
+)
+
+450 
+__THROW
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+451 *
+	$¡pıy
+ (*
+__»¡riù
+ 
+__de¡
+, cÚ¡ *__»¡riù 
+__¤c
+)
+
+452 
+__THROW
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+456 *
+	$__¡²ıy
+ (*
+__»¡riù
+ 
+__de¡
+,
+
+457 cÚ¡ *
+__»¡riù
+ 
+__¤c
+, 
+size_t
+ 
+__n
+)
+
+458 
+__THROW
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+459 *
+	$¡²ıy
+ (*
+__»¡riù
+ 
+__de¡
+,
+
+460 cÚ¡ *
+__»¡riù
+ 
+__¤c
+, 
+size_t
+ 
+__n
+)
+
+461 
+__THROW
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+464 #ifdef 
+__USE_GNU
+
+
+466 
+	$¡rv”scmp
+ (cÚ¡ *
+__s1
+, cÚ¡ *
+__s2
+)
+
+467 
+__THROW
+ 
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+470 *
+	$¡räy
+ (*
+__¡ršg
+è
+__THROW
+ 
+	`__nÚnuÎ
+ ((1));
+
+473 *
+	$memäob
+ (*
+__s
+, 
+size_t
+ 
+__n
+è
+__THROW
+ 
+	`__nÚnuÎ
+ ((1));
+
+475 #iâdeà
+ba£Çme
+
+
+480 #ifdeà
+__CORRECT_ISO_CPP_STRING_H_PROTO
+
+
+481 "C++" *
+	$ba£Çme
+ (*
+__f’ame
+)
+
+482 
+__THROW
+ 
+	`__asm
+ ("ba£Çme"è
+	`__nÚnuÎ
+ ((1));
+
+483 "C++" cÚ¡ *
+	$ba£Çme
+ (cÚ¡ *
+__f’ame
+)
+
+484 
+__THROW
+ 
+	`__asm
+ ("ba£Çme"è
+	`__nÚnuÎ
+ ((1));
+
+486 *
+	$ba£Çme
+ (cÚ¡ *
+__f’ame
+è
+__THROW
+ 
+	`__nÚnuÎ
+ ((1));
+
+491 #ià
+	`__GNUC_PREREQ
+ (3,4)
+
+492 #ià
+__USE_FORTIFY_LEVEL
+ > 0 && 
+defšed
+ 
+__fÜtify_funùiÚ
+
+
+494 
+	~<b™s/¡ršg_fÜtif›d.h
+>
+
+498 
+__END_DECLS
+
+
+	@/usr/include/strings.h
+
+18 #iâdef 
+_STRINGS_H
+
+
+19 
+	#_STRINGS_H
+ 1
+
+	)
+
+21 
+	~<ã©u»s.h
+>
+
+22 
+	#__Ãed_size_t
+
+
+	)
+
+23 
+	~<¡ddef.h
+>
+
+26 #ià
+defšed
+ 
+__ılu¥lus
+ && 
+__GNUC_PREREQ
+ (4, 4)
+
+27 
+	#__CORRECT_ISO_CPP_STRINGS_H_PROTO
+
+
+	)
+
+30 
+	g__BEGIN_DECLS
+
+
+32 #ià
+defšed
+ 
+__USE_MISC
+ || !defšed 
+__USE_XOPEN2K8
+
+
+34 
+	$bcmp
+ (cÚ¡ *
+__s1
+, cÚ¡ *
+__s2
+, 
+size_t
+ 
+__n
+)
+
+35 
+__THROW
+ 
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+38 
+	$bcİy
+ (cÚ¡ *
+__¤c
+, *
+__de¡
+, 
+size_t
+ 
+__n
+)
+
+39 
+__THROW
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+42 
+	$bz”o
+ (*
+__s
+, 
+size_t
+ 
+__n
+è
+__THROW
+ 
+	`__nÚnuÎ
+ ((1));
+
+45 #ifdeà
+__CORRECT_ISO_CPP_STRINGS_H_PROTO
+
+
+48 *
+	`šdex
+ (*
+__s
+, 
+__c
+)
+
+49 
+__THROW
+ 
+	`__asm
+ ("šdex"è
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1));
+
+50 cÚ¡ *
+	`šdex
+ (cÚ¡ *
+__s
+, 
+__c
+)
+
+51 
+__THROW
+ 
+	`__asm
+ ("šdex"è
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1));
+
+53 #ià
+defšed
+ 
+__OPTIMIZE__
+
+
+54 
+__ex‹º_®ways_šlše
+ *
+
+55 
+	`šdex
+ (*
+__s
+, 
+__c
+è
+__THROW
+
+
+57  
+	`__butš_šdex
+ (
+__s
+, 
+__c
+);
+
+60 
+__ex‹º_®ways_šlše
+ const *
+
+61 
+	`šdex
+ (cÚ¡ *
+__s
+, 
+__c
+è
+__THROW
+
+
+63  
+	`__butš_šdex
+ (
+__s
+, 
+__c
+);
+
+66 
+	}
+}
+
+68 *
+	$šdex
+ (cÚ¡ *
+__s
+, 
+__c
+)
+
+69 
+__THROW
+ 
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1));
+
+73 #ifdeà
+__CORRECT_ISO_CPP_STRINGS_H_PROTO
+
+
+76 *
+	`ršdex
+ (*
+__s
+, 
+__c
+)
+
+77 
+__THROW
+ 
+	`__asm
+ ("ršdex"è
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1));
+
+78 cÚ¡ *
+	`ršdex
+ (cÚ¡ *
+__s
+, 
+__c
+)
+
+79 
+__THROW
+ 
+	`__asm
+ ("ršdex"è
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1));
+
+81 #ià
+defšed
+ 
+__OPTIMIZE__
+
+
+82 
+__ex‹º_®ways_šlše
+ *
+
+83 
+	`ršdex
+ (*
+__s
+, 
+__c
+è
+__THROW
+
+
+85  
+	`__butš_ršdex
+ (
+__s
+, 
+__c
+);
+
+88 
+__ex‹º_®ways_šlše
+ const *
+
+89 
+	`ršdex
+ (cÚ¡ *
+__s
+, 
+__c
+è
+__THROW
+
+
+91  
+	`__butš_ršdex
+ (
+__s
+, 
+__c
+);
+
+94 
+	}
+}
+
+96 *
+	$ršdex
+ (cÚ¡ *
+__s
+, 
+__c
+)
+
+97 
+__THROW
+ 
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1));
+
+101 #ià
+defšed
+ 
+__USE_MISC
+ || !defšed 
+__USE_XOPEN2K8
+ || defšed 
+__USE_XOPEN2K8XSI
+
+
+104 
+	$ffs
+ (
+__i
+è
+__THROW
+ 
+__©Œibu‹_cÚ¡__
+;
+
+109 #ifdef 
+__USE_MISC
+
+
+110 
+	$ff¦
+ (
+__l
+è
+__THROW
+ 
+__©Œibu‹_cÚ¡__
+;
+
+111 
+__ex‹nsiÚ__
+ 
+	$ff¦l
+ (
+__Î
+)
+
+112 
+__THROW
+ 
+__©Œibu‹_cÚ¡__
+;
+
+116 
+	$¡rÿ£cmp
+ (cÚ¡ *
+__s1
+, cÚ¡ *
+__s2
+)
+
+117 
+__THROW
+ 
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+120 
+	$¡ºÿ£cmp
+ (cÚ¡ *
+__s1
+, cÚ¡ *
+__s2
+, 
+size_t
+ 
+__n
+)
+
+121 
+__THROW
+ 
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1, 2));
+
+123 #ifdef 
+__USE_XOPEN2K8
+
+
+125 
+	~<b™s/ty³s/loÿË_t.h
+>
+
+128 
+	$¡rÿ£cmp_l
+ (cÚ¡ *
+__s1
+, cÚ¡ *
+__s2
+, 
+loÿË_t
+ 
+__loc
+)
+
+129 
+__THROW
+ 
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1, 2, 3));
+
+133 
+	$¡ºÿ£cmp_l
+ (cÚ¡ *
+__s1
+, cÚ¡ *
+__s2
+,
+
+134 
+size_t
+ 
+__n
+, 
+loÿË_t
+ 
+__loc
+)
+
+135 
+__THROW
+ 
+__©Œibu‹_pu»__
+ 
+	`__nÚnuÎ
+ ((1, 2, 4));
+
+138 
+__END_DECLS
+
+
+140 #ià
+	`__GNUC_PREREQ
+ (3,4è&& 
+__USE_FORTIFY_LEVEL
+ > 0 \
+
+141 && 
+defšed
+ 
+__fÜtify_funùiÚ
+
+
+143 #ià
+defšed
+ 
+__USE_MISC
+ || !defšed 
+__USE_XOPEN2K8
+
+
+144 
+	~<b™s/¡ršgs_fÜtif›d.h
+>
+
+	@/usr/include/features.h
+
+18 #iâdef 
+_FEATURES_H
+
+
+19 
+	#_FEATURES_H
+ 1
+
+	)
+
+119 #undeà
+__USE_ISOC11
+
+
+120 #undeà
+__USE_ISOC99
+
+
+121 #undeà
+__USE_ISOC95
+
+
+122 #undeà
+__USE_ISOCXX11
+
+
+123 #undeà
+__USE_POSIX
+
+
+124 #undeà
+__USE_POSIX2
+
+
+125 #undeà
+__USE_POSIX199309
+
+
+126 #undeà
+__USE_POSIX199506
+
+
+127 #undeà
+__USE_XOPEN
+
+
+128 #undeà
+__USE_XOPEN_EXTENDED
+
+
+129 #undeà
+__USE_UNIX98
+
+
+130 #undeà
+__USE_XOPEN2K
+
+
+131 #undeà
+__USE_XOPEN2KXSI
+
+
+132 #undeà
+__USE_XOPEN2K8
+
+
+133 #undeà
+__USE_XOPEN2K8XSI
+
+
+134 #undeà
+__USE_LARGEFILE
+
+
+135 #undeà
+__USE_LARGEFILE64
+
+
+136 #undeà
+__USE_FILE_OFFSET64
+
+
+137 #undeà
+__USE_MISC
+
+
+138 #undeà
+__USE_ATFILE
+
+
+139 #undeà
+__USE_GNU
+
+
+140 #undeà
+__USE_FORTIFY_LEVEL
+
+
+141 #undeà
+__KERNEL_STRICT_NAMES
+
+
+142 #undeà
+__GLIBC_USE_DEPRECATED_GETS
+
+
+146 #iâdeà
+_LOOSE_KERNEL_NAMES
+
+
+147 
+	#__KERNEL_STRICT_NAMES
+
+
+	)
+
+157 #ià
+defšed
+ 
+__GNUC__
+ && defšed 
+__GNUC_MINOR__
+
+
+158 
+	#__GNUC_PREREQ
+(
+maj
+, 
+mš
+) \
+
+159 ((
+__GNUC__
+ << 16è+ 
+__GNUC_MINOR__
+ >ğ((
+maj
+è<< 16è+ (
+mš
+))
+
+	)
+
+161 
+	#__GNUC_PREREQ
+(
+maj
+, 
+mš
+è0
+
+	)
+
+168 #ià
+defšed
+ 
+__şªg_majÜ__
+ && defšed 
+__şªg_mšÜ__
+
+
+169 
+	#__glibc_şªg_´”eq
+(
+maj
+, 
+mš
+) \
+
+170 ((
+__şªg_majÜ__
+ << 16è+ 
+__şªg_mšÜ__
+ >ğ((
+maj
+è<< 16è+ (
+mš
+))
+
+	)
+
+172 
+	#__glibc_şªg_´”eq
+(
+maj
+, 
+mš
+è0
+
+	)
+
+176 
+	#__GLIBC_USE
+(
+F
+è
+__GLIBC_USE_
+ ## 
+	)
+F
+
+182 #ià(
+defšed
+ 
+_BSD_SOURCE
+ || defšed 
+_SVID_SOURCE
+) \
+
+183 && !
+defšed
+ 
+	g_DEFAULT_SOURCE
+
+
+185 #undeà
+_DEFAULT_SOURCE
+
+
+186 
+	#_DEFAULT_SOURCE
+ 1
+
+	)
+
+190 #ifdeà
+_GNU_SOURCE
+
+
+191 #undeà
+_ISOC95_SOURCE
+
+
+192 
+	#_ISOC95_SOURCE
+ 1
+
+	)
+
+193 #undeà
+_ISOC99_SOURCE
+
+
+194 
+	#_ISOC99_SOURCE
+ 1
+
+	)
+
+195 #undeà
+_ISOC11_SOURCE
+
+
+196 
+	#_ISOC11_SOURCE
+ 1
+
+	)
+
+197 #undeà
+_POSIX_SOURCE
+
+
+198 
+	#_POSIX_SOURCE
+ 1
+
+	)
+
+199 #undeà
+_POSIX_C_SOURCE
+
+
+200 
+	#_POSIX_C_SOURCE
+ 200809L
+
+	)
+
+201 #undeà
+_XOPEN_SOURCE
+
+
+202 
+	#_XOPEN_SOURCE
+ 700
+
+	)
+
+203 #undeà
+_XOPEN_SOURCE_EXTENDED
+
+
+204 
+	#_XOPEN_SOURCE_EXTENDED
+ 1
+
+	)
+
+205 #undeà
+_LARGEFILE64_SOURCE
+
+
+206 
+	#_LARGEFILE64_SOURCE
+ 1
+
+	)
+
+207 #undeà
+_DEFAULT_SOURCE
+
+
+208 
+	#_DEFAULT_SOURCE
+ 1
+
+	)
+
+209 #undeà
+_ATFILE_SOURCE
+
+
+210 
+	#_ATFILE_SOURCE
+ 1
+
+	)
+
+215 #ià(
+defšed
+ 
+_DEFAULT_SOURCE
+ \
+
+216 || (!
+defšed
+ 
+	g__STRICT_ANSI__
+ \
+
+217 && !
+defšed
+ 
+	g_ISOC99_SOURCE
+ \
+
+218 && !
+defšed
+ 
+	g_POSIX_SOURCE
+ && !defšed 
+	g_POSIX_C_SOURCE
+ \
+
+219 && !
+defšed
+ 
+	g_XOPEN_SOURCE
+))
+
+220 #undeà
+_DEFAULT_SOURCE
+
+
+221 
+	#_DEFAULT_SOURCE
+ 1
+
+	)
+
+225 #ià(
+defšed
+ 
+_ISOC11_SOURCE
+ \
+
+226 || (
+defšed
+ 
+	g__STDC_VERSION__
+ && __STDC_VERSION__ >= 201112L))
+
+227 
+	#__USE_ISOC11
+ 1
+
+	)
+
+231 #ià(
+defšed
+ 
+_ISOC99_SOURCE
+ || defšed 
+_ISOC11_SOURCE
+ \
+
+232 || (
+defšed
+ 
+__STDC_VERSION__
+ && __STDC_VERSION__ >= 199901L))
+
+233 
+	#__USE_ISOC99
+ 1
+
+	)
+
+237 #ià(
+defšed
+ 
+_ISOC99_SOURCE
+ || defšed 
+_ISOC11_SOURCE
+ \
+
+238 || (
+defšed
+ 
+__STDC_VERSION__
+ && __STDC_VERSION__ >= 199409L))
+
+239 
+	#__USE_ISOC95
+ 1
+
+	)
+
+242 #ifdeà
+__ılu¥lus
+
+
+244 #ià
+__ılu¥lus
+ >= 201703L
+
+245 
+	#__USE_ISOC11
+ 1
+
+	)
+
+249 #ià
+__ılu¥lus
+ >ğ201103L || 
+defšed
+ 
+__GXX_EXPERIMENTAL_CXX0X__
+
+
+250 
+	#__USE_ISOCXX11
+ 1
+
+	)
+
+251 
+	#__USE_ISOC99
+ 1
+
+	)
+
+258 #ifdeà
+_DEFAULT_SOURCE
+
+
+259 #ià!
+defšed
+ 
+_POSIX_SOURCE
+ && !defšed 
+_POSIX_C_SOURCE
+
+
+260 
+	#__USE_POSIX_IMPLICITLY
+ 1
+
+	)
+
+262 #undeà
+_POSIX_SOURCE
+
+
+263 
+	#_POSIX_SOURCE
+ 1
+
+	)
+
+264 #undeà
+_POSIX_C_SOURCE
+
+
+265 
+	#_POSIX_C_SOURCE
+ 200809L
+
+	)
+
+268 #ià((!
+defšed
+ 
+__STRICT_ANSI__
+ \
+
+269 || (
+defšed
+ 
+_XOPEN_SOURCE
+ && (_XOPEN_SOURCE - 0) >= 500)) \
+
+270 && !
+defšed
+ 
+_POSIX_SOURCE
+ && !defšed 
+_POSIX_C_SOURCE
+)
+
+271 
+	#_POSIX_SOURCE
+ 1
+
+	)
+
+272 #ià
+defšed
+ 
+_XOPEN_SOURCE
+ && (_XOPEN_SOURCE - 0) < 500
+
+273 
+	#_POSIX_C_SOURCE
+ 2
+
+	)
+
+274 #–ià
+defšed
+ 
+_XOPEN_SOURCE
+ && (_XOPEN_SOURCE - 0) < 600
+
+275 
+	#_POSIX_C_SOURCE
+ 199506L
+
+	)
+
+276 #–ià
+defšed
+ 
+_XOPEN_SOURCE
+ && (_XOPEN_SOURCE - 0) < 700
+
+277 
+	#_POSIX_C_SOURCE
+ 200112L
+
+	)
+
+279 
+	#_POSIX_C_SOURCE
+ 200809L
+
+	)
+
+281 
+	#__USE_POSIX_IMPLICITLY
+ 1
+
+	)
+
+290 #ià((!
+defšed
+ 
+_POSIX_C_SOURCE
+ || (_POSIX_C_SOURCE - 0) < 199506L) \
+
+291 && (
+defšed
+ 
+_REENTRANT
+ || defšed 
+_THREAD_SAFE
+))
+
+292 
+	#_POSIX_SOURCE
+ 1
+
+	)
+
+293 #undeà
+_POSIX_C_SOURCE
+
+
+294 
+	#_POSIX_C_SOURCE
+ 199506L
+
+	)
+
+297 #ià(
+defšed
+ 
+_POSIX_SOURCE
+ \
+
+298 || (
+defšed
+ 
+_POSIX_C_SOURCE
+ && _POSIX_C_SOURCE >= 1) \
+
+299 || 
+defšed
+ 
+_XOPEN_SOURCE
+)
+
+300 
+	#__USE_POSIX
+ 1
+
+	)
+
+303 #ià
+defšed
+ 
+_POSIX_C_SOURCE
+ && _POSIX_C_SOURCE >ğ2 || defšed 
+_XOPEN_SOURCE
+
+
+304 
+	#__USE_POSIX2
+ 1
+
+	)
+
+307 #ià
+defšed
+ 
+_POSIX_C_SOURCE
+ && (_POSIX_C_SOURCE - 0) >= 199309L
+
+308 
+	#__USE_POSIX199309
+ 1
+
+	)
+
+311 #ià
+defšed
+ 
+_POSIX_C_SOURCE
+ && (_POSIX_C_SOURCE - 0) >= 199506L
+
+312 
+	#__USE_POSIX199506
+ 1
+
+	)
+
+315 #ià
+defšed
+ 
+_POSIX_C_SOURCE
+ && (_POSIX_C_SOURCE - 0) >= 200112L
+
+316 
+	#__USE_XOPEN2K
+ 1
+
+	)
+
+317 #undeà
+__USE_ISOC95
+
+
+318 
+	#__USE_ISOC95
+ 1
+
+	)
+
+319 #undeà
+__USE_ISOC99
+
+
+320 
+	#__USE_ISOC99
+ 1
+
+	)
+
+323 #ià
+defšed
+ 
+_POSIX_C_SOURCE
+ && (_POSIX_C_SOURCE - 0) >= 200809L
+
+324 
+	#__USE_XOPEN2K8
+ 1
+
+	)
+
+325 #undeà
+_ATFILE_SOURCE
+
+
+326 
+	#_ATFILE_SOURCE
+ 1
+
+	)
+
+329 #ifdef 
+_XOPEN_SOURCE
+
+
+330 
+	#__USE_XOPEN
+ 1
+
+	)
+
+331 #ià(
+_XOPEN_SOURCE
+ - 0) >= 500
+
+332 
+	#__USE_XOPEN_EXTENDED
+ 1
+
+	)
+
+333 
+	#__USE_UNIX98
+ 1
+
+	)
+
+334 #undeà
+_LARGEFILE_SOURCE
+
+
+335 
+	#_LARGEFILE_SOURCE
+ 1
+
+	)
+
+336 #ià(
+_XOPEN_SOURCE
+ - 0) >= 600
+
+337 #ià(
+_XOPEN_SOURCE
+ - 0) >= 700
+
+338 
+	#__USE_XOPEN2K8
+ 1
+
+	)
+
+339 
+	#__USE_XOPEN2K8XSI
+ 1
+
+	)
+
+341 
+	#__USE_XOPEN2K
+ 1
+
+	)
+
+342 
+	#__USE_XOPEN2KXSI
+ 1
+
+	)
+
+343 #undeà
+__USE_ISOC95
+
+
+344 
+	#__USE_ISOC95
+ 1
+
+	)
+
+345 #undeà
+__USE_ISOC99
+
+
+346 
+	#__USE_ISOC99
+ 1
+
+	)
+
+349 #ifdeà
+_XOPEN_SOURCE_EXTENDED
+
+
+350 
+	#__USE_XOPEN_EXTENDED
+ 1
+
+	)
+
+355 #ifdeà
+_LARGEFILE_SOURCE
+
+
+356 
+	#__USE_LARGEFILE
+ 1
+
+	)
+
+359 #ifdeà
+_LARGEFILE64_SOURCE
+
+
+360 
+	#__USE_LARGEFILE64
+ 1
+
+	)
+
+363 #ià
+defšed
+ 
+_FILE_OFFSET_BITS
+ && _FILE_OFFSET_BITS == 64
+
+364 
+	#__USE_FILE_OFFSET64
+ 1
+
+	)
+
+367 #ià
+defšed
+ 
+_DEFAULT_SOURCE
+
+
+368 
+	#__USE_MISC
+ 1
+
+	)
+
+371 #ifdef 
+_ATFILE_SOURCE
+
+
+372 
+	#__USE_ATFILE
+ 1
+
+	)
+
+375 #ifdef 
+_GNU_SOURCE
+
+
+376 
+	#__USE_GNU
+ 1
+
+	)
+
+379 #ià
+defšed
+ 
+_FORTIFY_SOURCE
+ && _FORTIFY_SOURCE > 0 \
+
+380 && 
+__GNUC_PREREQ
+ (4, 1è&& 
+defšed
+ 
+	g__OPTIMIZE__
+ && __OPTIMIZE__ > 0
+
+381 #ià
+_FORTIFY_SOURCE
+ > 1
+
+382 
+	#__USE_FORTIFY_LEVEL
+ 2
+
+	)
+
+384 
+	#__USE_FORTIFY_LEVEL
+ 1
+
+	)
+
+387 
+	#__USE_FORTIFY_LEVEL
+ 0
+
+	)
+
+394 #ià
+defšed
+ 
+__ılu¥lus
+ ? __ılu¥lu >ğ201402L : defšed 
+__USE_ISOC11
+
+
+395 
+	#__GLIBC_USE_DEPRECATED_GETS
+ 0
+
+	)
+
+397 
+	#__GLIBC_USE_DEPRECATED_GETS
+ 1
+
+	)
+
+402 
+	~<¡dc-´edef.h
+>
+
+410 #undeà
+__GNU_LIBRARY__
+
+
+411 
+	#__GNU_LIBRARY__
+ 6
+
+	)
+
+415 
+	#__GLIBC__
+ 2
+
+	)
+
+416 
+	#__GLIBC_MINOR__
+ 27
+
+	)
+
+418 
+	#__GLIBC_PREREQ
+(
+maj
+, 
+mš
+) \
+
+419 ((
+__GLIBC__
+ << 16è+ 
+__GLIBC_MINOR__
+ >ğ((
+maj
+è<< 16è+ (
+mš
+))
+
+	)
+
+422 #iâdeà
+__ASSEMBLER__
+
+
+423 #iâdeà
+_SYS_CDEFS_H
+
+
+424 
+	~<sys/cdefs.h
+>
+
+429 #ià
+defšed
+ 
+__USE_FILE_OFFSET64
+ && !defšed 
+__REDIRECT
+
+
+430 
+	#__USE_LARGEFILE
+ 1
+
+	)
+
+431 
+	#__USE_LARGEFILE64
+ 1
+
+	)
+
+437 #ià
+__GNUC_PREREQ
+ (2, 7è&& 
+defšed
+ 
+__OPTIMIZE__
+ \
+
+438 && !
+defšed
+ 
+	g__OPTIMIZE_SIZE__
+ && !defšed 
+	g__NO_INLINE__
+ \
+
+439 && 
+defšed
+ 
+	g__ex‹º_šlše
+
+
+440 
+	#__USE_EXTERN_INLINES
+ 1
+
+	)
+
+448 
+	~<gnu/¡ubs.h
+>
+
+	@/usr/include/stdc-predef.h
+
+18 #iâdef 
+_STDC_PREDEF_H
+
+
+19 
+	#_STDC_PREDEF_H
+ 1
+
+	)
+
+36 #ifdeà
+__GCC_IEC_559
+
+
+37 #ià
+__GCC_IEC_559
+ > 0
+
+38 
+	#__STDC_IEC_559__
+ 1
+
+	)
+
+41 
+	#__STDC_IEC_559__
+ 1
+
+	)
+
+44 #ifdeà
+__GCC_IEC_559_COMPLEX
+
+
+45 #ià
+__GCC_IEC_559_COMPLEX
+ > 0
+
+46 
+	#__STDC_IEC_559_COMPLEX__
+ 1
+
+	)
+
+49 
+	#__STDC_IEC_559_COMPLEX__
+ 1
+
+	)
+
+58 
+	#__STDC_ISO_10646__
+ 201706L
+
+	)
+
+61 
+	#__STDC_NO_THREADS__
+ 1
+
+	)
+
+	@
+1
+.
+1
+/usr/include
+17
+365
+AESBlockCipher.cpp
+BLEManagerImpl.cpp
+ConfigurationManagerImpl.cpp
+ConnectivityManagerImpl.cpp
+ESP32Config.cpp
+ESP32Utils.cpp
+Entropy.cpp
+GroupKeyStoreImpl.cpp
+Logging.cpp
+LwIPCoreLock.cpp
+NetworkProvisioningServerImpl.cpp
+PlatformManagerImpl.cpp
+SystemTimeSupport.cpp
+/usr/include/string.h
+/usr/include/strings.h
+/usr/include/features.h
+/usr/include/stdc-predef.h
