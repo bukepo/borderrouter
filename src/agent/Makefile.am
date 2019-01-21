@@ -28,6 +28,9 @@
 
 include $(abs_top_nlbuild_autotools_dir)/automake/pre.am
 
+include $(top_srcdir)/third_party/openthread/mbedtls.mk
+include $(top_srcdir)/third_party/openthread/openthread.mk
+
 sbin_PROGRAMS=otbr-agent
 
 otbr_agent_SOURCES = \
@@ -36,6 +39,8 @@ otbr_agent_SOURCES = \
 
 otbr_agent_LDADD     = \
     libotbr-agent.la   \
+    $(MBEDTLS_LIBS)    \
+    $(OPENTHREAD_LIBS) \
     $(NULL)
 
 otbr_agent_LDFLAGS = \
@@ -62,7 +67,6 @@ libotbr_agent_la_SOURCES                                      = \
 
 libotbr_agent_la_LIBADD                                       = \
     $(top_builddir)/third_party/libcoap/repo/libcoap-1.la       \
-    $(top_builddir)/openthread/output/otbr/lib/libmbedtls.la    \
     $(top_builddir)/third_party/wpantund/libwpanctl.la          \
     $(top_builddir)/src/common/libotbr-logging.la               \
     $(top_builddir)/src/common/libotbr-event-emitter.la         \
@@ -75,9 +79,8 @@ libotbr_agent_la_LDFLAGS = \
     $(NULL)
 
 libotbr_agent_la_CPPFLAGS                                                  = \
-    -DMBEDTLS_CONFIG_FILE='<config-thread.h>'                                \
-    -I$(top_srcdir)/third_party/mbedtls/repo/configs                         \
-    -I$(top_srcdir)/third_party/mbedtls/repo/include                         \
+    $(MBEDTLS_CPPFLAGS)                                                      \
+    $(OPENTHREAD_CPPFLAGS)                                                   \
     -I$(top_builddir)/third_party/libcoap/repo                               \
     -I$(top_srcdir)/src                                                      \
     -I$(top_srcdir)/third_party/libcoap/repo                                 \
