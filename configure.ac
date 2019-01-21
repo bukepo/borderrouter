@@ -470,6 +470,7 @@ third_party/Makefile
 third_party/Simple-web-server/Makefile
 third_party/libcoap/Makefile
 third_party/mbedtls/Makefile
+third_party/openthread/Makefile
 third_party/wpantund/Makefile
 third_party/mdl/Makefile
 third_party/angular/Makefile

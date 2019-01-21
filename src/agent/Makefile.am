@@ -62,7 +62,7 @@ libotbr_agent_la_SOURCES                                      = \
 
 libotbr_agent_la_LIBADD                                       = \
     $(top_builddir)/third_party/libcoap/repo/libcoap-1.la       \
-    $(top_builddir)/third_party/mbedtls/libmbedtls.la           \
+    $(top_builddir)/openthread/output/otbr/lib/libmbedtls.la    \
     $(top_builddir)/third_party/wpantund/libwpanctl.la          \
     $(top_builddir)/src/common/libotbr-logging.la               \
     $(top_builddir)/src/common/libotbr-event-emitter.la         \

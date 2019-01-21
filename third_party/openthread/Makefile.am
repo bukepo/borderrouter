@@ -28,38 +28,7 @@
 
 include $(abs_top_nlbuild_autotools_dir)/automake/pre.am
 
-LIBRARIES=libmbedtlscrypto.a
-
-all: build/config.status $(LIBRARIES)
-
-repo/configure:
-	(cd repo && ./bootstrap)
-
-build/config.status: repo/configure
-	(cd build && ./configure --prefix=    \
-		--exec-prefix=/usr                \
-		--enable-border-agent             \
-		--enable-border-router            \
-		--enable-child-supervision        \
-		--enable-cli                      \
-		--enable-commissioner             \
-		--enable-dhcp6-client             \
-		--enable-dhcp6-server             \
-		--enable-diag                     \
-		--enable-dns-client               \
-		--enable-ftd                      \
-		--enable-jam-detection            \
-		--enable-joiner                   \
-		--enable-legacy                   \
-		--enable-mac-filter               \
-		--enable-posix-app                \
-		--enable-service                  \
-		$(NULL)
-
-build/third_party/mbedtls/libmbedtlscrypto.a:
-	make -j$(shell getconf _NPROCESSORS_ONLN)
-
-libmbedtlscrypto.a: build/third_party/mbedtls/libmbedtlscrypto.a
-	cp build/third_party/mbedtls/libmbedtlscrypto.a libmbedtlscrypto.a
+all:
+	make -f repo/src/posix/Makefile-posix DISABLE_EXECUTABLE=0 PLATFORM_NETIF=1 PLATFORM_UDP=1 TargetTuple=otbr
 
 include $(abs_top_nlbuild_autotools_dir)/automake/post.am
