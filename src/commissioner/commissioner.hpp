@@ -69,20 +69,20 @@ public:
     /**
      * The constructor to initialize Commissioner
      *
-     * @param[in]    aPskcBin           binary form of pskc
-     * @param[in]    aKeepAliveRate     send keep alive packet every aKeepAliveRate seconds
+     * @param[in]    aPSKc              A pointer to the PSKc.
+     * @param[in]    aKeepAliveInterval Intervals between keep-alive packets.
      *
      */
-    Commissioner(const uint8_t *aPskcBin, int aKeepAliveRate);
+    Commissioner(const uint8_t *aPSKc, int aKeepAliveInterval);
 
     /**
      * This method sets the joiner to join the thread network
      *
-     * @param[in]    aPskdAscii         ascii form of pskd
-     * @param[in]    aSteeringData      steering data to filter joiner
+     * @param[in]    aPSKd              A pointer to the joiner's PSKd.
+     * @param[in]    aSteeringData      A reference to steering data to filter joiner.
      *
      */
-    void SetJoiner(const char *aPskdAscii, const SteeringData &aSteeringData);
+    void SetJoiner(const char *aPSKd, const SteeringData &aSteeringData);
 
     /**
      * This method updates the fd_set and timeout for mainloop.
@@ -226,7 +226,7 @@ private:
     uint8_t        mJoinerIid[8];
     uint16_t       mJoinerRouterLocator;
 
-    int     mKeepAliveRate;
+    int     mKeepAliveInterval;
     timeval mLastKeepAliveTime;
     int     mKeepAliveTxCount;
     int     mKeepAliveRxCount;

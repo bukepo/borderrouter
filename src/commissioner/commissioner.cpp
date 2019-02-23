@@ -99,12 +99,12 @@ static int DummyKeyExport(void *               aContext,
     return 0;
 }
 
-Commissioner::Commissioner(const uint8_t *aPskcBin, int aKeepAliveRate)
+Commissioner::Commissioner(const uint8_t *aPskcBin, int aKeepAliveInterval)
     : mDtlsInitDone(false)
     , mRelayReceiveHandler(OT_URI_PATH_RELAY_RX, Commissioner::HandleRelayReceive, this)
     , mPetitionRetryCount(0)
     , mJoinerSession(NULL)
-    , mKeepAliveRate(aKeepAliveRate)
+    , mKeepAliveInterval(aKeepAliveInterval)
     , mNumFinializeJoiners(0)
 {
     sockaddr_in addr;
@@ -119,17 +119,18 @@ Commissioner::Commissioner(const uint8_t *aPskcBin, int aKeepAliveRate)
     mCommissionState = kStateInvalid;
     VerifyOrExit((mJoinerSessionClientFd = socket(AF_INET, SOCK_DGRAM, 0)) > 0);
     SuccessOrExit(connect(mJoinerSessionClientFd, reinterpret_cast<struct sockaddr *>(&addr), sizeof(addr)));
+
 exit:
     return;
 }
 
-void Commissioner::SetJoiner(const char *aPskdAscii, const SteeringData &aSteeringData)
+void Commissioner::SetJoiner(const char *aPSKd, const SteeringData &aSteeringData)
 {
     if (mJoinerSession)
     {
         delete mJoinerSession;
     }
-    mJoinerSession = new JoinerSession(kPortJoinerSession, aPskdAscii);
+    mJoinerSession = new JoinerSession(kPortJoinerSession, aPSKd);
     CommissionerSet(aSteeringData);
 }
 
@@ -450,8 +451,8 @@ void Commissioner::Process(const fd_set &aReadFdSet, const fd_set &aWriteFdSet, 
         }
     }
     gettimeofday(&nowTime, NULL);
-    if (mCommissionState == kStateAccepted && mKeepAliveRate > 0 &&
-        nowTime.tv_sec - mLastKeepAliveTime.tv_sec > mKeepAliveRate)
+    if (mCommissionState == kStateAccepted && mKeepAliveInterval > 0 &&
+        nowTime.tv_sec - mLastKeepAliveTime.tv_sec > mKeepAliveInterval)
     {
         CommissionerKeepAlive();
     }
