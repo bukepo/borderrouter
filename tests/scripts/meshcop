@@ -503,7 +503,7 @@ main()
   ba_start
   web_start
   network_form
-  if [ "${COMMISSIONER_WEB}" ]; then
+  if [ "${COMMISSIONER_WEB}" = 1 ]; then
     web_commissioner_start
   else
     commissioner_start
