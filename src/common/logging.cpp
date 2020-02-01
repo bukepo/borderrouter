@@ -27,6 +27,7 @@
  */
 
 #include "logging.hpp"
+#include "code_utils.hpp"
 
 #include <assert.h>
 #include <errno.h>
@@ -44,8 +45,7 @@ static int        sLevel      = LOG_INFO;
 static const char kHexChars[] = "0123456789abcdef";
 
 static unsigned long sMsecsStart;
-static bool          sLogCol0 = true; /* we start at col0 */
-static FILE *        sLogFp;
+static FILE *        sLogFp         = nullptr;
 static bool          sSyslogEnabled = true;
 static bool          sSyslogOpened  = false;
 
@@ -53,24 +53,23 @@ static bool          sSyslogOpened  = false;
 #define LOGFLAG_file 2
 
 /** Set/Clear syslog enable flag */
-void otbrLogEnableSyslog(bool b)
+void otbrLogEnableSyslog(bool aEnable)
 {
-    sSyslogEnabled = b;
+    sSyslogEnabled = aEnable;
 }
 
 /** Enable logging to a specific file */
-void otbrLogSetFilename(const char *filename)
+void otbrLogSetFilename(const char *aFilename)
 {
     if (sLogFp)
     {
         fclose(sLogFp);
         sLogFp = NULL;
     }
-    sLogFp = fopen(filename, "w");
+    sLogFp = fopen(aFilename, "w");
     if (sLogFp == NULL)
     {
-        fprintf(stderr, "Cannot open log file: %s\n", filename);
-        perror(filename);
+        fprintf(stderr, "Cannot open log file %s: %s\n", aFilename, strerror(errno));
         exit(EXIT_FAILURE);
     }
 }
@@ -91,13 +90,13 @@ void otbrLogSetLevel(int aLevel)
 /** Determine if we should not or not log, and if so where to */
 static int LogCheck(int aLevel)
 {
-    int r = 0;
+    int flags = 0;
 
     assert(aLevel >= LOG_EMERG && aLevel <= LOG_DEBUG);
 
     if (sSyslogOpened && sSyslogEnabled && (aLevel <= sLevel))
     {
-        r = r | LOGFLAG_syslog;
+        flags = flags | LOGFLAG_syslog;
     }
 
     /* if someone has turned on the seperate file the most likely
@@ -106,9 +105,9 @@ static int LogCheck(int aLevel)
      */
     if (sLogFp != NULL)
     {
-        r = r | LOGFLAG_file;
+        flags = flags | LOGFLAG_file;
     }
-    return r;
+    return flags;
 }
 
 /** return the time, in milliseconds since application start */
@@ -121,26 +120,27 @@ static unsigned long GetMsecsNow(void)
 }
 
 /** Write this string to the private log file, inserting the timestamp at column 0 */
-static void LogString(const char *cp)
+static void LogString(const char *aString)
 {
+    static bool sLogCol0 = true; /* we start at col0 */
+
     int ch;
 
-    while ((ch = *cp++) != 0)
+    while ((ch = *aString++) != 0)
     {
         if (sLogCol0)
         {
+            unsigned long now = GetMsecsNow();
+
             sLogCol0 = false;
-            unsigned long n;
-            n = GetMsecsNow();
-            fprintf(sLogFp, "%4lu.%03lu | ", (n / 1000), (n % 1000));
+            fprintf(sLogFp, "%4lu.%03lu | ", (now / 1000), (now % 1000));
         }
+
+        fputc(ch, sLogFp);
+
         if (ch == '\n')
         {
             sLogCol0 = true;
-        }
-        fputc(ch, sLogFp);
-        if (ch == '\n')
-        {
             /* force flush (in case something crashes) */
             fflush(sLogFp);
         }
@@ -148,28 +148,23 @@ static void LogString(const char *cp)
 }
 
 /** Print to the private log file */
-static void LogVprintf(const char *fmt, va_list ap)
+static void LogVprintf(const char *aFormat, va_list aArguments)
 {
     char buf[1024];
 
-    /* if not enabled ... leave */
-    if (sLogFp == NULL)
-    {
-        return;
-    }
-    vsnprintf(buf, sizeof(buf), fmt, ap);
+    vsnprintf(buf, sizeof(buf), aFormat, aArguments);
 
     LogString(buf);
 }
 
 /** Print to the private log file */
-static void LogPrintf(const char *fmt, ...)
+static void LogPrintf(const char *aFormat, ...)
 {
-    va_list ap;
+    va_list aArguments;
 
-    va_start(ap, fmt);
-    LogVprintf(fmt, ap);
-    va_end(ap);
+    va_start(aArguments, aFormat);
+    LogVprintf(aFormat, aArguments);
+    va_end(aArguments);
 }
 
 /** Initialize logging */
@@ -192,24 +187,24 @@ void otbrLogInit(const char *aIdent, int aLevel, bool aPrintStderr)
 /** log to the syslog or log file */
 void otbrLog(int aLevel, const char *aFormat, ...)
 {
-    va_list ap;
+    va_list aArguments;
 
-    va_start(ap, aFormat);
-    otbrLogv(aLevel, aFormat, ap);
-    va_end(ap);
+    va_start(aArguments, aFormat);
+    otbrLogv(aLevel, aFormat, aArguments);
+    va_end(aArguments);
 }
 
 /** log to the syslog or log file */
-void otbrLogv(int aLevel, const char *aFormat, va_list ap)
+void otbrLogv(int aLevel, const char *aFormat, va_list aArguments)
 {
-    int r = LogCheck(aLevel);
+    int flags = LogCheck(aLevel);
 
     assert(aFormat);
 
-    if (r & LOGFLAG_file)
+    if (flags & LOGFLAG_file)
     {
         va_list cpy;
-        va_copy(cpy, ap);
+        va_copy(cpy, aArguments);
         LogVprintf(aFormat, cpy);
         va_end(cpy);
 
@@ -217,23 +212,21 @@ void otbrLogv(int aLevel, const char *aFormat, va_list ap)
         LogString("\n");
     }
 
-    if (r & LOGFLAG_syslog)
+    if (flags & LOGFLAG_syslog)
     {
-        vsyslog(aLevel, aFormat, ap);
+        vsyslog(aLevel, aFormat, aArguments);
     }
 }
 
 /** Hex dump data to the log */
 void otbrDump(int aLevel, const char *aPrefix, const void *aMemory, size_t aSize)
 {
-    assert(aPrefix && (aMemory || aSize == 0));
     int addr;
-    int r = LogCheck(aLevel);
+    int flags;
 
-    if (r == 0)
-    {
-        return;
-    }
+    assert(aPrefix && (aMemory || aSize == 0));
+
+    VerifyOrExit((flags = LogCheck(aLevel)) != 0);
 
     /* break hex dumps into 16byte lines
      * In the form ADDR: XX XX XX XX ...
@@ -268,15 +261,18 @@ void otbrDump(int aLevel, const char *aPrefix, const void *aMemory, size_t aSize
         }
         *ch = 0;
 
-        if (r & LOGFLAG_syslog)
+        if (flags & LOGFLAG_syslog)
         {
             syslog(aLevel, "%s: %04x: %s", aPrefix, addr, hex);
         }
-        if (r & LOGFLAG_file)
+        if (flags & LOGFLAG_file)
         {
             LogPrintf("%s: %04x: %s\n", aPrefix, addr, hex);
         }
     }
+
+exit:
+    return;
 }
 
 const char *otbrErrorString(otbrError aError)
