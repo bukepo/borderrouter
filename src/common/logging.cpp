@@ -91,11 +91,9 @@ void otbrLogSetLevel(int aLevel)
 /** Determine if we should not or not log, and if so where to */
 static int LogCheck(int aLevel)
 {
-    int r;
+    int r = 0;
 
     assert(aLevel >= LOG_EMERG && aLevel <= LOG_DEBUG);
-
-    r = 0;
 
     if (sSyslogOpened && sSyslogEnabled && (aLevel <= sLevel))
     {
@@ -204,11 +202,9 @@ void otbrLog(int aLevel, const char *aFormat, ...)
 /** log to the syslog or log file */
 void otbrLogv(int aLevel, const char *aFormat, va_list ap)
 {
-    int r;
+    int r = LogCheck(aLevel);
 
     assert(aFormat);
-
-    r = LogCheck(aLevel);
 
     if (r & LOGFLAG_file)
     {
@@ -231,12 +227,9 @@ void otbrLogv(int aLevel, const char *aFormat, va_list ap)
 void otbrDump(int aLevel, const char *aPrefix, const void *aMemory, size_t aSize)
 {
     assert(aPrefix && (aMemory || aSize == 0));
-    const uint8_t *pEnd;
-    const uint8_t *p8;
-    int            r;
-    int            addr;
+    int addr;
+    int r = LogCheck(aLevel);
 
-    r = LogCheck(aLevel);
     if (r == 0)
     {
         return;
@@ -254,8 +247,8 @@ void otbrDump(int aLevel, const char *aPrefix, const void *aMemory, size_t aSize
         size_t this_size;
         char   hex[16 * 3 + 1];
 
-        addr = addr + 16;
-        p8   = (const uint8_t *)(aMemory) + addr;
+        addr              = addr + 16;
+        const uint8_t *p8 = (const uint8_t *)(aMemory) + addr;
 
         /* truncate line to max 16 bytes */
         this_size = aSize;
@@ -267,7 +260,7 @@ void otbrDump(int aLevel, const char *aPrefix, const void *aMemory, size_t aSize
 
         char *ch = hex - 1;
 
-        for (pEnd = p8 + this_size; p8 < pEnd; p8++)
+        for (const uint8_t *pEnd = p8 + this_size; p8 < pEnd; p8++)
         {
             *++ch = kHexChars[(*p8) >> 4];
             *++ch = kHexChars[(*p8) & 0x0f];

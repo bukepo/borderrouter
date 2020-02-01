@@ -426,9 +426,11 @@ network_form()
   avahi-browse -aprt | grep -q "${OT_NETWORK_NAME}"
 }
 
-commissioner_start()
+otbr_commissioner_start()
 {
-  local args
+  # initial arguments for improving logging code coverage
+  local args="--logfile commissioner.log --disable-syslog"
+
   write_syslog "COMMISSIONER: kill old"
   sudo killall "${OTBR_COMMISSIONER}" || true
 
@@ -489,6 +491,15 @@ web_commissioner_start()
   sleep 15
 }
 
+commissioner_start()
+{
+  if [ "${COMMISSIONER_WEB}" ]; then
+    web_commissioner_start
+  else
+    otbr_commissioner_start
+  fi
+}
+
 joiner_start()
 {
   write_syslog 'JOINER START'
@@ -520,11 +531,7 @@ main()
   ba_start
   web_start
   network_form
-  if [ "${COMMISSIONER_WEB}" ]; then
-    web_commissioner_start
-  else
-    commissioner_start
-  fi
+  commissioner_start
   joiner_start
 }
 
