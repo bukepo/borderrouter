@@ -41,6 +41,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include <jsoncpp/json/json.h>
 #include <jsoncpp/json/writer.h>
@@ -146,7 +147,7 @@ public:
      * @param[in]  aIfName  The pointer to the interface name of wpantund.
      *
      */
-    void SetInterfaceName(const char *aIfName) { strncpy(mIfName, aIfName, sizeof(mIfName)); }
+    void SetInterfaceName(const char *aIfName) { strncpy(mIfName, aIfName, sizeof(mIfName) - 1); }
 
     /**
      * This method gets status of wpan service.

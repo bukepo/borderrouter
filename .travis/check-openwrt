@@ -1,3 +1,4 @@
+#!/bin/bash
 #
 #  Copyright (c) 2020, The OpenThread Authors.
 #  All rights reserved.
@@ -26,43 +27,54 @@
 #  POSSIBILITY OF SUCH DAMAGE.
 #
 
-include $(abs_top_nlbuild_autotools_dir)/automake/pre.am
+set -euxo pipefail
 
-if OTBR_ENABLE_DBUS_SERVER
-noinst_LTLIBRARIES = libotbr-dbus.la
-endif
+readonly OPENWRT_VERSION=openwrt-18.06
+readonly OPENWRT_GIT_REMOTE=https://github.com/openwrt/openwrt.git
+readonly PACKAGE_NAME=openthread-br
 
-libotbr_dbus_la_CXXFLAGS          = \
-    -fno-exceptions                 \
-    -Wno-missing-field-initializers \
-    -Wno-unused-parameter           \
-    $(NULL)
+do_prepare()
+{
+    if [ ! -d "${OPENWRT_TOP_SRCDIR}" ]; then
+        git clone -b "${OPENWRT_VERSION}" --depth 1 --recurse-submodules --shallow-submodules "${OPENWRT_GIT_REMOTE}" "${OPENWRT_TOP_SRCDIR}"
+    fi
 
-libotbr_dbus_la_SOURCES   = \
-    dbus_object.cpp         \
-    dbus_message_helper.cpp \
-    error.cpp               \
-    $(NULL)
+    cp etc/openwrt/openthread-br/.config "${OPENWRT_TOP_SRCDIR}"
 
-libotbr_dbus_la_CPPFLAGS                                   = \
-    -I$(top_srcdir)                                          \
-    -I$(top_srcdir)/src                                      \
-    -I$(top_srcdir)/third_party/openthread/repo/src/         \
-    -I$(top_srcdir)/third_party/openthread/repo/include/     \
-    $(DBUS_CFLAGS)          \
-    $(NULL)
+    if ! grep -q openthread "${OPENWRT_TOP_SRCDIR}/feeds.conf"; then
+        echo src-link openthread "$(pwd)/etc/openwrt" >> ${OPENWRT_TOP_SRCDIR}/feeds.conf
+    fi
 
-libotbr_dbus_la_LIBADD    = \
-    $(DBUS_LIBS)            \
-    $(NULL)
+    (cd ${OPENWRT_TOP_SRCDIR} \
+        && ./scripts/feeds update openthread \
+        && ./scripts/feeds install -a \
+        && echo 'y' | make oldconfig \
+        && make -j${BUILD_JOBS} tools/install \
+        && make -j${BUILD_JOBS} toolchain/install)
+}
 
-noinst_HEADERS            = \
-    constants.hpp           \
-    dbus_object.hpp         \
-    dbus_request.hpp        \
-    dbus_resources.hpp      \
-    dbus_message_helper.hpp \
-    error.hpp               \
-    $(NULL)
+do_build()
+{
+    (cd ${OPENWRT_TOP_SRCDIR} \
+        && make -j${BUILD_JOBS} package/${PACKAGE_NAME}/compile \
+        && find * -name "${PACKAGE_NAME}*.ipk" | grep "${PACKAGE_NAME}")
+}
 
-include $(abs_top_nlbuild_autotools_dir)/automake/post.am
+main()
+{
+    if [[ $# = 0 ]]; then
+        do_prepare
+        do_build
+    else
+        case "$1" in
+            prepare)
+                do_prepare
+                ;;
+            build)
+                do_build
+                ;;
+        esac
+    fi
+}
+
+main "$@"

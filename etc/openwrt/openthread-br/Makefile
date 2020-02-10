@@ -26,43 +26,46 @@
 #  POSSIBILITY OF SUCH DAMAGE.
 #
 
-include $(abs_top_nlbuild_autotools_dir)/automake/pre.am
+LOCAL_SOURCE_DIR := $(abspath $(realpath $(dir $(lastword $(MAKEFILE_LIST))))/../../..)
 
-if OTBR_ENABLE_DBUS_SERVER
-noinst_LTLIBRARIES = libotbr-dbus.la
-endif
+#$(error $(LOCAL_SOURCE_DIR))
+include $(TOPDIR)/rules.mk
 
-libotbr_dbus_la_CXXFLAGS          = \
-    -fno-exceptions                 \
-    -Wno-missing-field-initializers \
-    -Wno-unused-parameter           \
-    $(NULL)
+PKG_NAME := openthread-br
+PKG_VERSION := 1.0
+PKG_RELEASE := 1
 
-libotbr_dbus_la_SOURCES   = \
-    dbus_object.cpp         \
-    dbus_message_helper.cpp \
-    error.cpp               \
-    $(NULL)
+include $(INCLUDE_DIR)/package.mk
 
-libotbr_dbus_la_CPPFLAGS                                   = \
-    -I$(top_srcdir)                                          \
-    -I$(top_srcdir)/src                                      \
-    -I$(top_srcdir)/third_party/openthread/repo/src/         \
-    -I$(top_srcdir)/third_party/openthread/repo/include/     \
-    $(DBUS_CFLAGS)          \
-    $(NULL)
+CONFIGURE_CMD = $(LOCAL_SOURCE_DIR)/configure
 
-libotbr_dbus_la_LIBADD    = \
-    $(DBUS_LIBS)            \
-    $(NULL)
+CONFIGURE_ARGS += \
+	--disable-docs \
+	--disable-web-service \
+	--disable-commissioner \
+	--with-ncp=openthread \
+	--with-mdns=none \
 
-noinst_HEADERS            = \
-    constants.hpp           \
-    dbus_object.hpp         \
-    dbus_request.hpp        \
-    dbus_resources.hpp      \
-    dbus_message_helper.hpp \
-    error.hpp               \
-    $(NULL)
+define Package/openthread-br
+	SECTION := base
+	CATEGORY := Network
+	TITLE := OpenThread Border Router
+	DEPENDS := +libjson-c +libubox +libubus +libblobmsg-json
+endef
 
-include $(abs_top_nlbuild_autotools_dir)/automake/post.am
+define Package/openthread-br/description
+    A Thread border router for POSIX-based platforms.
+endef
+
+define Build/Prepare
+	cd $(LOCAL_SOURCE_DIR) && ./bootstrap
+endef
+
+define Package/openthread-br/install
+	$(INSTALL_DIR) $(1)/usr/bin
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/agent/otbr-agent $(1)/usr/bin
+	$(INSTALL_DIR) $(1)/usr/lib
+	$(INSTALL_DATA) $(TOOLCHAIN_DIR)/lib/libstdc++.so.6 $(1)/usr/lib
+endef
+
+$(eval $(call BuildPackage,openthread-br))

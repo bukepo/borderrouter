@@ -70,6 +70,10 @@ meshcop)
     COMMISSIONER_WEB=1 ./script/test meshcop
     ;;
 
+openwrt-check)
+    ./script/test openwrt
+    ;;
+
 scan-build)
     .travis/check-scan-build
     ;;
