@@ -34,10 +34,6 @@ otbr_test_dbus_server_SOURCES = \
     test-dbus-server.cpp \
     $(NULL)
 
-otbr_test_dbus_server_CXXFLAGS = \
-    -fno-exceptions \
-    $(NULL)
-
 otbr_test_dbus_server_CPPFLAGS = \
     -I$(top_srcdir) \
     -I$(top_srcdir)/src \

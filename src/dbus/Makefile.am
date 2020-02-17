@@ -31,7 +31,6 @@ include $(abs_top_nlbuild_autotools_dir)/automake/pre.am
 noinst_LTLIBRARIES = libotbr-dbus.la
 
 libotbr_dbus_la_CXXFLAGS          = \
-    -fno-exceptions                 \
     -Wno-missing-field-initializers \
     -Wno-unused-parameter           \
     $(NULL)

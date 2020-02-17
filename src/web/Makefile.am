@@ -33,7 +33,7 @@ include $(top_srcdir)/third_party/openthread/openthread.mk
 
 # Temporary disable -Werror for the included third party server_http
 
-override CXXFLAGS := $(filter-out -Wshadow -Werror,$(CXXFLAGS))
+override CXXFLAGS := $(filter-out -Wshadow -Werror -fno-exceptions -fno-rtti,$(CXXFLAGS))
 
 sbin_PROGRAMS = otbr-web
 
