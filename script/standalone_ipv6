@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/bash
 #
 #  Copyright (c) 2017, The OpenThread Authors.
 #  All rights reserved.
@@ -35,19 +35,16 @@
 # remember the name of this script
 SCRIPT_NAME=$0
 
-CWD=`pwd`
-DATE=`date`
+DATE=$(date)
 
-# source our common stuff
+# shellcheck source=_initrc
 . "$(dirname "$0")"/_initrc
 
-OPENTHREAD_ONMESH_PREFIX=fd11:22
 ETH0_IPV6_BASE_PREFIX=fd11:33
 
 debug_echo() {
-    if [ x"${_DEBUG_IPV6}" == x"true" ]
-    then
-	echo "${@}"
+    if [[ ${_DEBUG_IPV6} == true ]]; then
+        echo "${@}"
     fi
 }
 
@@ -57,8 +54,7 @@ determine_eth0_name()
 
     #
     # this gives us a sorted list of network interface names
-    for devname in `cd /sys/class/net ; ls`
-    do
+    for devname in $(cd /sys/class/net ; ls); do
         # We want the physical device
         # Not things like "usb0" or "wpan0"
         # And we assume the first one is what we want
@@ -82,15 +78,15 @@ determine_eth0_name()
         fi
 
         debug_echo "Consider: ${devname}"
-        if [ ! -L /sys/class/net/${devname}/device ]
+        if [[ ! -L /sys/class/net/${devname}/device ]]
         then
             debug_echo "Not a DEVICE ${devname}"
             continue
         fi
 
-        type=`cat /sys/class/net/${devname}/type`
+        type=$(cat "/sys/class/net/${devname}/type")
         # Type1 = ARPHRD_ETHER
-        if [ $type -ne 1 ]
+        if [[ $type != 1 ]]
         then
             debug_echo "Not ARPHRD_ETHER"
             continue
@@ -136,10 +132,10 @@ choose_random_eth0_address()
     # cut gives us the items 2 and 3 on the line
     # tr  converts the space into a ':'
     #
-    RANDOM_32BIT_VALUE=`od --read-bytes=4 --format=x2 /dev/urandom | \
+    RANDOM_32BIT_VALUE=$(od --read-bytes=4 --format=x2 /dev/urandom | \
         head -1 | \
         cut -d' ' -f2,3 | \
-        tr ' ' ':'`
+        tr ' ' ':')
 
     # thus, "RANDOM_32BIT_VALUE=1234:5678"
 
@@ -163,7 +159,7 @@ configure_radvd()
 #
 # This RADVD configuration file was created
 # by the OpenThread configuration script $SCRIPT_NAME
-# Executed in the directory ${CWD} on ${DATE}
+# Executed in the directory ${PWD} on ${DATE}
 #
 # The purpose is to configure IPV6 in an issolated and
 # standalone network configuration for the purpose of test only
@@ -201,7 +197,7 @@ assign_eth0_static_ipv6() {
 
 # This configuration was created by
 # the openthread ${SCRIPT_NAME}
-# executing in the directory ${CWD}
+# executing in the directory ${PWD}
 # and executed on ${DATE}
 #
 # for the purposes of testing ipv6 addresses

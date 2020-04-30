@@ -31,9 +31,9 @@ wpantund_uninstall()
 {
     sudo killall wpantund || true
 
-    test -d $BUILD_DIR/wpantund || return 0
+    test -d "$BUILD_DIR"/wpantund || return 0
 
-    (cd $BUILD_DIR/wpantund &&
+    (cd "$BUILD_DIR"/wpantund &&
         (test ! -f config.status || sudo make uninstall))
 }
 
@@ -45,11 +45,11 @@ wpantund_install()
         CLONE_ARGS="--depth 1"
     fi
 
-    test -d $BUILD_DIR/wpantund || (cd $BUILD_DIR &&
-        git clone $CLONE_ARGS https://github.com/openthread/wpantund.git) || die 'Failed to download source code of wpantund!'
+    test -d "$BUILD_DIR"/wpantund || (cd "$BUILD_DIR" &&
+        git clone "$CLONE_ARGS" https://github.com/openthread/wpantund.git) || die 'Failed to download source code of wpantund!'
 
-    (cd $BUILD_DIR/wpantund &&
-	((test -n "$WPANTUND_COMMIT" && git reset $WPANTUND_COMMIT --hard) || echo "WPANTUND_COMMIT value has not been set or something went wrong during switching to the set commit.") &&
+    (cd "$BUILD_DIR"/wpantund \
+    && ( (test -n "$WPANTUND_COMMIT" && git reset "$WPANTUND_COMMIT" --hard) || echo "WPANTUND_COMMIT value has not been set or something went wrong during switching to the set commit.") &&
         (test -f configure || ./bootstrap.sh) &&
         (test -f config.status || ./configure --prefix= --exec-prefix=/usr --sysconfdir=/etc \
         --disable-ncp-dummy --enable-static-link-ncp-plugin=spinel) &&
@@ -59,7 +59,7 @@ wpantund_install()
 
 wpantund_update()
 {
-    test ! -d $BUILD_DIR/wpantund || (cd $BUILD_DIR/wpantund &&
+    test ! -d "$BUILD_DIR"/wpantund || (cd "$BUILD_DIR"/wpantund &&
         REMOTE_COMMIT=$(git ls-remote https://github.com/openthread/wpantund.git refs/heads/master | cut -f1) &&
         LOCAL_COMMIT=$(git rev-parse HEAD) &&
         cd .. &&

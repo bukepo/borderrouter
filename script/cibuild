@@ -30,6 +30,7 @@
 #       This script runs CI tests on travis.
 #
 
+# shellcheck source=_initrc
 . "$(dirname "$0")"/_initrc
 
 main()

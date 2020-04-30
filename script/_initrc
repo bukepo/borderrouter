@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 #  Copyright (c) 2017, The OpenThread Authors.
 #  All rights reserved.
@@ -27,13 +27,13 @@
 #  POSSIBILITY OF SUCH DAMAGE.
 #
 
-set -e
-_HERE=$(dirname "$0")
-cd "${_HERE}/.."
+set -euo pipefail
+
+cd "$(dirname "$0")/.."
 
 die()
 {
-    >&2 echo ' *** ERROR: ' $*
+    >&2 echo " *** ERROR:  $*"
     exit 1
 }
 
@@ -42,7 +42,7 @@ have()
     # This function checks if a tool is available
     #
 
-    which "$1" > /dev/null 2> /dev/null
+    command -v "$1" > /dev/null 2> /dev/null
 }
 
 have_or_die()
@@ -63,8 +63,9 @@ with()
 
     VALUE=$(printenv "$1")
     if test -z "$VALUE"; then
-        if test -f examples/platforms/$PLATFORM/default; then
-            VALUE="$(. examples/platforms/$PLATFORM/default && eval echo "\$$1")"
+        if test -f examples/platforms/"${PLATFORM}"/default; then
+            # shellcheck disable=SC1090
+            VALUE="$(. examples/platforms/"${PLATFORM}"/default && eval echo "\$$1")"
         fi
     fi
 
@@ -88,7 +89,7 @@ without()
 if [ -f /sys/firmware/devicetree/base/model ]
 then
     # Note: 'model' is a binary file with no newline
-    cat /sys/firmware/devicetree/base/model | grep -s "BeagleBone Black" && PLATFORM=beagleboneblack
+    grep -s "BeagleBone Black" /sys/firmware/devicetree/base/model && PLATFORM=beagleboneblack
 fi
 
 if test -z "$PLATFORM"; then
@@ -107,17 +108,17 @@ echo "Current platform is $PLATFORM"
 STAGE_DIR=$(pwd)/._stage
 BUILD_DIR=$(pwd)/._build
 
-[ -d $STAGE_DIR ] || mkdir -v -p $STAGE_DIR
-[ -d $BUILD_DIR ] || mkdir -v -p $BUILD_DIR
+[ -d "$STAGE_DIR" ] || mkdir -v -p "$STAGE_DIR"
+[ -d "$BUILD_DIR" ] || mkdir -v -p "$BUILD_DIR"
 
 export PATH=$STAGE_DIR/usr/bin:$STAGE_DIR/usr/sbin:$PATH
 
-TASKNAME=$(basename $0)
-BEFORE_HOOK=examples/platforms/$PLATFORM/before_$TASKNAME
-AFTER_HOOK=examples/platforms/$PLATFORM/after_$TASKNAME
-if test ! -f $BEFORE_HOOK; then
+TASKNAME=$(basename "$0")
+BEFORE_HOOK="examples/platforms/$PLATFORM/before_$TASKNAME"
+AFTER_HOOK="examples/platforms/$PLATFORM/after_$TASKNAME"
+if test ! -f "$BEFORE_HOOK"; then
     BEFORE_HOOK=/dev/null
 fi
-if test ! -f $AFTER_HOOK; then
+if test ! -f "$AFTER_HOOK"; then
     AFTER_HOOK=/dev/null
 fi

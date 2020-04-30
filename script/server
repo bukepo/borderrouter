@@ -30,6 +30,7 @@
 #       This script starts all border router services.
 #
 
+# shellcheck source=_initrc
 . "$(dirname "$0")"/_initrc
 . script/_nat64
 . script/_dns64
@@ -47,7 +48,7 @@ main()
         systemctl is-active wpantund || sudo systemctl start wpantund || die 'Failed to start wpantund!'
         systemctl is-active otbr-web || sudo systemctl start otbr-web || die 'Failed to start otbr-web!'
         systemctl is-active otbr-agent || sudo systemctl start otbr-agent || die 'Failed to start otbr-agent!'
-    elif which service; then
+    elif command -v service; then
         sudo service rsyslog status || sudo service rsyslog start || die 'Failed to start rsyslog!'
         sudo service dbus status || sudo service dbus start  || die 'Failed to start dbus!'
         sudo service avahi-daemon status || sudo service avahi-daemon start  || die 'Failed to start avahi!'

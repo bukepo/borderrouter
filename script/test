@@ -30,6 +30,7 @@
 #       This script runs border router tests.
 #
 
+# shellcheck source=_initrc
 . "$(dirname "$0")"/_initrc
 set -o pipefail
 
@@ -57,7 +58,7 @@ readonly TOP_BUILDDIR="${BUILD_DIR}/otbr"
 print_result() {
     local exit_code=0
 
-    echo -e "$(date) Running $@"
+    echo -e "$(date) Running $*"
 
     if [[ "${QUIET}" = 1 ]]; then
         "$@" &> test.log || exit_code=$?
@@ -71,7 +72,7 @@ print_result() {
         prefix="${COLOR_FAIL}FAIL${COLOR_NONE}"
     fi
 
-    echo -e "${prefix}" $*
+    echo -e "${prefix} $*"
 
     # only output log on failure
     if [[ "${QUIET}" = 1 && "${exit_code}" != 0 ]]; then
@@ -96,7 +97,7 @@ COMMAND:
 EXAMPLES:
     $0 clean build
 EOF
-    exit $1
+    exit "$1"
 }
 
 do_build() {
@@ -110,9 +111,9 @@ do_build() {
             --disable-docs \
             --exec-prefix=/usr \
             --prefix= \
-            ${configure_options}
+            "${configure_options[@]}"
 
-        make -j${BUILD_JOBS}
+        make -j"${BUILD_JOBS}"
     )
 }
 
@@ -151,20 +152,21 @@ do_prepare() {
         sudo mdnsd
     fi
 
+    configure_options=()
     if [[ -n "${WITH_MDNS}" ]]; then
-        configure_options="${configure_options} --with-mdns=${WITH_MDNS}"
+        configure_options+=("--with-mdns=${WITH_MDNS}")
     fi
 
     if [[ -n "${WITH_NCP}" ]]; then
-        configure_options="${configure_options} --with-ncp=${WITH_NCP}"
+        configure_options+=("--with-ncp=${WITH_NCP}")
     fi
 
     if [[ "${COVERAGE}" = 1 ]]; then
-        configure_options="${configure_options} --enable-debug --enable-coverage"
+        configure_options+=('--enable-debug' '--enable-coverage')
     fi
 
     if [[ "${DEBUG}" = 1 ]]; then
-        configure_options="${configure_options} --enable-debug"
+        configure_options+=('--enable-debug')
     fi
 }
 

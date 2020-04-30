@@ -46,13 +46,13 @@ otbr_uninstall()
 
 otbr_install()
 {
-    test -f config.status || $(pwd)/configure \
+    test -f config.status || "$PWD"/configure \
         --exec-prefix=/usr \
         --prefix= \
         --sysconfdir=/etc \
-        $(without COVERAGE || echo '--enable-coverage') \
+        "$(without COVERAGE || echo '--enable-coverage')" \
 
-    make -j$(getconf _NPROCESSORS_ONLN)
+    make -j"$(getconf _NPROCESSORS_ONLN)"
     sudo make install
     if have systemctl; then
         sudo systemctl reload dbus
@@ -69,7 +69,7 @@ otbr_install()
 otbr_update()
 {
     test ! -f config.status || make distclean
-    test ! -f configure || find * -name Makefile.in -o -name configure | grep -v nlbuild-autotools | xargs rm -v
+    test ! -f configure || find ./* -name Makefile.in -o -name configure | grep -v nlbuild-autotools | xargs rm -v
     script/bootstrap
 
     otbr_install

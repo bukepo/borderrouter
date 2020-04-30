@@ -31,6 +31,7 @@
 #       router services and dependencies.
 #
 
+# shellcheck source=_initrc
 . "$(dirname "$0")"/_initrc
 . script/_otbr
 . script/_wpantund

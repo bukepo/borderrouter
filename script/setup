@@ -30,6 +30,7 @@
 #       This script builds and installs border router and dependencies.
 #
 
+# shellcheck source=_initrc
 . "$(dirname "$0")"/_initrc
 . script/_wpantund
 . script/_otbr

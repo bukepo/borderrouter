@@ -30,6 +30,7 @@
 #       This script starts all border router services in console mode.
 #
 
+# shellcheck source=_initrc
 . "$(dirname "$0")"/_initrc
 . script/_ipforward
 
