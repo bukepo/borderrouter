@@ -48,6 +48,8 @@ if (OTBR_COVERAGE AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
     add_link_options(--coverage)
 endif()
 
+add_compile_options(-Wall -Wextra -Werror -Wfatal-errors -Wno-missing-braces)
+
 
 execute_process(
     COMMAND git describe --dirty --always
@@ -90,7 +92,7 @@ if(OTBR_WEB)
     pkg_check_modules(JSONCPP jsoncpp REQUIRED)
     find_package(Boost REQUIRED
         COMPONENTS filesystem system)
-    set(OTBR_WEB_DATADIR ${CMAKE_INSTALL_DATADIR}/otbr-web)
+    set(OTBR_WEB_DATADIR ${CMAKE_INSTALL_FULL_DATADIR}/otbr-web)
 endif()
 
 if(OTBR_OPENWRT)
@@ -109,7 +111,7 @@ if(SYSTEMD_FOUND)
 endif()
 
 
-add_subdirectory(third_party EXCLUDE_FROM_ALL)
+add_subdirectory(third_party)
 add_subdirectory(src)
 add_subdirectory(tools)
 
