@@ -18,7 +18,8 @@ jobs:
     - env: BUILD_TARGET="cmake-check"
       script: script/test package
     - env: BUILD_TARGET="openwrt-check" VERBOSE=1
-    - env: BUILD_TARGET="raspbian-gcc" VERBOSE=1 IMAGE_NAME=2018-04-18-raspbian-stretch-lite IMAGE_URL=http://director.downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2018-04-19/2018-04-18-raspbian-stretch-lite.zip
+    - env: BUILD_TARGET="raspbian-gcc" VERBOSE=1 IMAGE_NAME=2018-04-18-raspbian-stretch-lite IMAGE_URL=https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2018-04-19/2018-04-18-raspbian-stretch-lite.zip
+    - env: BUILD_TARGET="raspbian-gcc" VERBOSE=1 IMAGE_NAME=2020-02-13-raspbian-buster-lite  IMAGE_URL=https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2020-02-14/2020-02-13-raspbian-buster-lite.zip
     - env: BUILD_TARGET="meshcop" OTBR_COVERAGE=1 VERBOSE=1
     - env: BUILD_TARGET="docker-check" OTBR_COVERAGE=1 VERBOSE=1
     - env: BUILD_TARGET="script-check" OTBR_COVERAGE=1
