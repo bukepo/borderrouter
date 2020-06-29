@@ -31,6 +31,7 @@
 # This script tests stop publishing service.
 #
 
+# shellcheck source=tests/mdns/test_init
 . "$(dirname "$0")/test_init"
 
 main()
@@ -47,9 +48,9 @@ main()
     /bin/kill -USR1 $PID
     sleep 1
     if [[ ${OTBR_MDNS} == 'mDNSResponder' ]]; then
-        ! dns_sd_check SingleService _meshcop._udp 'nn=cool xp=ABCDEFGH'
+        dns_sd_check SingleService _meshcop._udp 'nn=cool xp=ABCDEFGH' && exit 1
     else
-        ! avahi_check 'SingleService;_meshcop._udp;.\+"xp=ABCDEFGH.\+"nn=cool"'
+        avahi_check 'SingleService;_meshcop._udp;.\+"xp=ABCDEFGH.\+"nn=cool"' && exit 1
     fi
 
     # start service
