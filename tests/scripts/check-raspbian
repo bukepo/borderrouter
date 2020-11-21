@@ -58,7 +58,7 @@ echo 1 | sudo tee /proc/sys/net/ipv6/conf/all/disable_ipv6
 apt-get update
 apt-get install -y --no-install-recommends git
 su -m -c 'script/bootstrap' pi
-su -m -c 'NETWORK_MANAGER=0 script/setup' pi
+su -m -c 'NETWORK_MANAGER=1 script/setup' pi
 EOF
 
     (
