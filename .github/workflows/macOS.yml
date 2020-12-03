@@ -20,6 +20,7 @@ jobs:
         submodules: true
     - name: Bootstrap
       run: |
+        ./script/git-tool update third_party/openthread/repo
         brew reinstall boost cmake cpputest dbus jsoncpp ninja
     - name: Build
       run: |

@@ -61,7 +61,8 @@ jobs:
     - name: Check
       env:
         OTBR_MDNS: ${{ matrix.mdns }}
-      run: >
+      run: |
+        ./script/git-tool update third_party/openthread/repo
         docker run --rm -v $PWD:/build/ot-br-posix openthread/android-trusty bash -c
         "BUILD_TARGET=android-check ot-br-posix/tests/scripts/bootstrap.sh && \
          ot-br-posix/tests/scripts/check-android-build"
@@ -80,7 +81,9 @@ jobs:
       with:
         submodules: true
     - name: Bootstrap
-      run: tests/scripts/bootstrap.sh
+      run: |
+        ./script/git-tool update third_party/openthread/repo
+        tests/scripts/bootstrap.sh
     - name: Run
       run: script/test build check
     - name: Codecov
@@ -100,7 +103,9 @@ jobs:
       with:
         submodules: true
     - name: Bootstrap
-      run: tests/scripts/bootstrap.sh
+      run: |
+        ./script/git-tool update third_party/openthread/repo
+        tests/scripts/bootstrap.sh
     - name: Run
       run: script/test build check
     - name: Codecov
@@ -116,7 +121,9 @@ jobs:
       with:
         submodules: true
     - name: Bootstrap
-      run: tests/scripts/bootstrap.sh
+      run: |
+        ./script/git-tool update third_party/openthread/repo
+        tests/scripts/bootstrap.sh
     - name: Run
       run: tests/scripts/check-scripts
     - name: Codecov
@@ -133,7 +140,9 @@ jobs:
       with:
         submodules: true
     - name: Bootstrap
-      run: tests/scripts/bootstrap.sh
+      run: |
+        ./script/git-tool update third_party/openthread/repo
+        tests/scripts/bootstrap.sh
     - name: Run
       run: tests/scripts/check-scan-build
 
@@ -147,6 +156,7 @@ jobs:
         submodules: true
     - name: Bootstrap
       run: |
+        ./script/git-tool update third_party/openthread/repo
         tests/scripts/bootstrap.sh
         sudo pip3 install --system -U cmake==3.10.3
         cmake --version | grep 3.10.3
@@ -167,6 +177,9 @@ jobs:
       - uses: actions/checkout@v2
         with:
           submodules: true
+      - name: Bootstrap
+        run: |
+          ./script/git-tool update third_party/openthread/repo
       - name: Build OTBR Docker Image
         run: |
           otbr_options="-DOT_DUA=ON -DOT_MLR=ON -DOTBR_COVERAGE=ON"

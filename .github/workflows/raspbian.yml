@@ -50,6 +50,8 @@ jobs:
       with:
         submodules: true
     - name: Bootstrap
-      run: tests/scripts/bootstrap.sh
+      run: |
+        ./script/git-tool update third_party/openthread/repo
+        tests/scripts/bootstrap.sh
     - name: Build
       run: tests/scripts/check-raspbian
