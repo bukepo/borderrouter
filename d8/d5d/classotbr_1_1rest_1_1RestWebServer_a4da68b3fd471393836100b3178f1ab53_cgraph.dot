@@ -1,0 +1,15 @@
+digraph "otbr::rest::RestWebServer::Process"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4 [label="otbr::rest::RestWebServer\l::Process",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="otbr::rest::Connection\l::Process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/db3/classotbr_1_1rest_1_1Connection.html#a5ee43e629ac052c13f1fb3808bf894f2",tooltip="This method performs processing. "];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="otbr::rest::Connection\l::IsComplete",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/db3/classotbr_1_1rest_1_1Connection.html#a21704f6af0f8b07b0755989241897e17",tooltip="This method indicates whether this connection no longer need to be processed. "];
+  Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="otbr::rest::Connection\l::Init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/db3/classotbr_1_1rest_1_1Connection.html#afa7dfadb1f42d43446627c8d8a00bb83",tooltip="This method initializes the connection. "];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="otbr::rest::Parser\l::Init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/def/classotbr_1_1rest_1_1Parser.html#a5902787870eb5bb767fd0bdd66bf126c",tooltip="This method initializea the http-parser. "];
+}

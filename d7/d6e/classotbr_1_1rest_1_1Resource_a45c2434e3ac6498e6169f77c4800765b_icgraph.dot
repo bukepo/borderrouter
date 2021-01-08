@@ -1,0 +1,9 @@
+digraph "otbr::rest::Resource::ErrorHandler"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node10 [label="otbr::rest::Resource\l::ErrorHandler",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="otbr::rest::Resource\l::Handle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d6e/classotbr_1_1rest_1_1Resource.html#a003b7ef33aa48f1ec6d4a654c0d400d5",tooltip="This method is the main entry of resource handler, which find corresponding handler according to requ..."];
+}

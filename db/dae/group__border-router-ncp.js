@@ -1,0 +1,38 @@
+var group__border_router_ncp =
+[
+    [ "Controller", "da/d6a/classotbr_1_1Ncp_1_1Controller.html", [
+      [ "~Controller", "db/dae/group__border-router-ncp.html#ga734415f437480197c1aa3825c7133069", null ],
+      [ "Init", "db/dae/group__border-router-ncp.html#gae3b8029c55774634c21363cd2e7b051e", null ],
+      [ "IsResetRequested", "db/dae/group__border-router-ncp.html#ga7fc69ac2520487f7cd8d8a686c7e82ae", null ],
+      [ "Process", "db/dae/group__border-router-ncp.html#gae3f89e92e7e2a33f3c7709dfb3056340", null ],
+      [ "RequestEvent", "db/dae/group__border-router-ncp.html#ga782ea989840ead62a7f99822f5e6679a", null ],
+      [ "Reset", "db/dae/group__border-router-ncp.html#ga021b198819062851ea5153464c57c39f", null ],
+      [ "UpdateFdSet", "db/dae/group__border-router-ncp.html#gaa6e411ecc13d0c084d13557975b1a7e0", null ],
+      [ "kEventExtPanId", "db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56ad7b4e10081a1792227eddba5bb11e459", null ],
+      [ "kEventNetworkName", "db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56ad848f5997a28a2087bc1c61ac3a6be37", null ],
+      [ "kEventPSKc", "db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56af0cd1d228bc4502ba72570c363679a65", null ],
+      [ "kEventThreadState", "db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56afad602666ab014d108278a49082f154f", null ],
+      [ "kEventThreadVersion", "db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56a8e2185943147e3a6029442f97ed341d7", null ],
+      [ "kEventUdpForwardStream", "db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56aa9471cdaaab4557cc34186d9cbdbad98", null ],
+      [ "kEventBackboneRouterState", "db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56a6f5a639f874fa2a88b7b398a3d089bda", null ],
+      [ "kEventBackboneRouterDomainPrefixEvent", "db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56aaebe3500cfb08e9ae3b8d4299ac99789", null ],
+      [ "kEventBackboneRouterNdProxyEvent", "db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56a1b70f65751d23e287832f62232fae493", null ]
+    ] ],
+    [ "kEventBackboneRouterDomainPrefixEvent", "db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56aaebe3500cfb08e9ae3b8d4299ac99789", null ],
+    [ "kEventBackboneRouterNdProxyEvent", "db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56a1b70f65751d23e287832f62232fae493", null ],
+    [ "kEventBackboneRouterState", "db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56a6f5a639f874fa2a88b7b398a3d089bda", null ],
+    [ "kEventExtPanId", "db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56ad7b4e10081a1792227eddba5bb11e459", null ],
+    [ "kEventNetworkName", "db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56ad848f5997a28a2087bc1c61ac3a6be37", null ],
+    [ "kEventPSKc", "db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56af0cd1d228bc4502ba72570c363679a65", null ],
+    [ "kEventThreadState", "db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56afad602666ab014d108278a49082f154f", null ],
+    [ "kEventThreadVersion", "db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56a8e2185943147e3a6029442f97ed341d7", null ],
+    [ "kEventUdpForwardStream", "db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56aa9471cdaaab4557cc34186d9cbdbad98", null ],
+    [ "Create", "db/dae/group__border-router-ncp.html#ga9f7019d3b0be9d173e424bfe27c3efb1", null ],
+    [ "Destroy", "db/dae/group__border-router-ncp.html#ga8c3223f6b1b7ac0f5f7e1ed037576206", null ],
+    [ "Init", "db/dae/group__border-router-ncp.html#gae3b8029c55774634c21363cd2e7b051e", null ],
+    [ "IsResetRequested", "db/dae/group__border-router-ncp.html#ga7fc69ac2520487f7cd8d8a686c7e82ae", null ],
+    [ "Process", "db/dae/group__border-router-ncp.html#gae3f89e92e7e2a33f3c7709dfb3056340", null ],
+    [ "RequestEvent", "db/dae/group__border-router-ncp.html#ga782ea989840ead62a7f99822f5e6679a", null ],
+    [ "Reset", "db/dae/group__border-router-ncp.html#ga021b198819062851ea5153464c57c39f", null ],
+    [ "UpdateFdSet", "db/dae/group__border-router-ncp.html#gaa6e411ecc13d0c084d13557975b1a7e0", null ]
+];

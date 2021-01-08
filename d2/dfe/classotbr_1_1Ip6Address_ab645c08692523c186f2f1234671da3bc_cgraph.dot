@@ -1,0 +1,17 @@
+digraph "otbr::Ip6Address::ToLocator"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node48 [label="otbr::Ip6Address::ToLocator",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node48 -> Node49 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node49 [label="otbr::Ip6Address::ToSolicited\lNodeMulticastAddress",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dfe/classotbr_1_1Ip6Address.html#a18990d0ba95c35dc3f5b018a8fb27bbd",tooltip="This method returns the solicited node multicast address. "];
+  Node49 -> Node50 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node50 [label="otbr::Ip6Address::GetSolicited\lMulticastAddressPrefix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dfe/classotbr_1_1Ip6Address.html#a7da3c5ebc9c062f30a56983be0852b00",tooltip="This function returns the wellknown Solicited Node Multicast Address Prefix (ff02::01:ff00:0). "];
+  Node50 -> Node51 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node51 [label="otbr::Ip6Address::FromString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dfe/classotbr_1_1Ip6Address.html#aea29483ec22a607a9fcd95cadc42cee7",tooltip="This function converts Ip6 addresses from text to Ip6Address. "];
+  Node50 -> Node52 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node52 [label="otbr::Ip6Address::CopyTo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dfe/classotbr_1_1Ip6Address.html#af17eb7c1fd8a9c5d54434fbd84c3f173",tooltip="This method copies the Ip6 address to a sockaddr_in6 structure. "];
+  Node48 -> Node53 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node53 [label="otbr::Ip6Address::ToString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dfe/classotbr_1_1Ip6Address.html#a3f7999dd25add01aa2b52a104de17b9e",tooltip="This method returns the string representation for the Ip6 address. "];
+}

@@ -1,0 +1,25 @@
+digraph "otbr::Ip6Address::ToString"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node65 [label="otbr::Ip6Address::ToString",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node65 -> Node66 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node66 [label="otbr::BackboneRouter\l::NdProxyManager::Process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d58/classotbr_1_1BackboneRouter_1_1NdProxyManager.html#ae621a1ddc1bcecaa2334cfbe8ab49a5a",tooltip="This method performs border agent processing. "];
+  Node66 -> Node67 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node67 [label="otbr::BackboneRouter\l::BackboneAgent::Process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d5a/classotbr_1_1BackboneRouter_1_1BackboneAgent.html#a929098fffbd0e74ec1471a3d8f80e120",tooltip="This method performs border agent processing. "];
+  Node66 -> Node68 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node68 [label="otbr::BackboneRouter\l::NdProxyManager::NdProxyManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d58/classotbr_1_1BackboneRouter_1_1NdProxyManager.html#a76a903dbbdb43d1af0c0dd234cf97848",tooltip="This constructor initializes a NdProxyManager instance. "];
+  Node65 -> Node69 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node69 [label="otbr::BackboneRouter\l::NdProxyManager::HandleBackbone\lRouterNdProxyEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d58/classotbr_1_1BackboneRouter_1_1NdProxyManager.html#a1e85826c06f3d1468966af835f2d92a5",tooltip="This method handles a Backbone Router ND Proxy event. "];
+  Node69 -> Node67 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node69 -> Node68 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node65 -> Node70 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node70 [label="otbr::Ip6Address::ToLocator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dfe/classotbr_1_1Ip6Address.html#ab645c08692523c186f2f1234671da3bc",tooltip="Retrieve the 16-bit Thread locator. "];
+  Node65 -> Node71 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node71 [label="otbr::Ip6Prefix::Ip6Prefix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d3a/classotbr_1_1Ip6Prefix.html#ac6b578d2623e99df2efe19aef4fa04e7",tooltip="Default constructor. "];
+  Node65 -> Node72 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node72 [label="otbr::MacAddress::MacAddress",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d8f/classotbr_1_1MacAddress.html#a2f480004ad0ab8789f5a7433e41e14c9",tooltip="Default constructor. "];
+  Node65 -> Node73 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node73 [label="otbr::rest::Json::String2\lJsonString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d6c/namespaceotbr_1_1rest_1_1Json.html#a9825acdf9bc3300aa48852d9a193a619",tooltip="This method formats a string to a Json string and serialize it to a string. "];
+}

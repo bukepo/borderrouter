@@ -1,0 +1,13 @@
+digraph "otbr::rest::Resource::HandleCallback"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node21 [label="otbr::rest::Resource\l::HandleCallback",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node21 -> Node22 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="otbr::rest::Request\l::GetUrl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/df0/classotbr_1_1rest_1_1Request.html#a11f6c0ebf75e354af095885b9b604198",tooltip="This method returns the url for this request. "];
+  Node21 -> Node23 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 [label="otbr::rest::Response\l::GetStartTime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/db0/classotbr_1_1rest_1_1Response.html#ab8a89fbffc91477d2b6a92f656060bf6",tooltip="This method returns a timestamp of start time. "];
+  Node21 -> Node24 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 [label="otbr::rest::Json::Diag2Json\lString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d6c/namespaceotbr_1_1rest_1_1Json.html#a1d5fb81fc1a65c3d90406d6e1e9c5f35",tooltip="This method formats a vector including serveral Diagnostic object to a Json array and serialize it to..."];
+}

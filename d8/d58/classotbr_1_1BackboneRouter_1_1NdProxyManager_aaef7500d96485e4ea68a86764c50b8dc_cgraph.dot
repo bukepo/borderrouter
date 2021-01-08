@@ -1,0 +1,13 @@
+digraph "otbr::BackboneRouter::NdProxyManager::Enable"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="otbr::BackboneRouter\l::NdProxyManager::Enable",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="otbr::BackboneRouter\l::NdProxyManager::IsEnabled",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d58/classotbr_1_1BackboneRouter_1_1NdProxyManager.html#a44f189f2db9cd2d13a77aa0749f0a827",tooltip="This method returns if the ND Proxy manager is enabled. "];
+  Node0 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="otbr::Ip6Prefix::IsValid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d3a/classotbr_1_1Ip6Prefix.html#a21a9c868856a4f23677821285bf35614",tooltip="This method returns if the Ip6 prefix is valid. "];
+  Node0 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="otbr::InstanceParams::Get",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dd0/classotbr_1_1InstanceParams.html#a25f242442787cbc7eb7b0ed23f2a1d58",tooltip="This method gets the single InstanceParams instance. "];
+}

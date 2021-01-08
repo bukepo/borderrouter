@@ -1,0 +1,11 @@
+digraph "src/openwrt/ubus" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_6e5ce34ee694521d888b5c7eb302174e {
+    graph [ bgcolor="#ddddee", pencolor="black", label="openwrt" fontname="Helvetica", fontsize="10", URL="dir_6e5ce34ee694521d888b5c7eb302174e.html"]
+  dir_94d185a0150442cb034fbad8c59009ba [shape=box, label="ubus", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_94d185a0150442cb034fbad8c59009ba.html"];
+  }
+  dir_7a595b6a07cd8b16c4e5e314d67cc75b [shape=box label="agent" URL="dir_7a595b6a07cd8b16c4e5e314d67cc75b.html"];
+  dir_94d185a0150442cb034fbad8c59009ba->dir_7a595b6a07cd8b16c4e5e314d67cc75b [headlabel="1", labeldistance=1.5 headhref="dir_000014_000003.html"];
+}

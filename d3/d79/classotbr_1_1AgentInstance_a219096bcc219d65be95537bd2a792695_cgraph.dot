@@ -1,0 +1,13 @@
+digraph "otbr::AgentInstance::UpdateFdSet"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node14 [label="otbr::AgentInstance\l::UpdateFdSet",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node14 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="otbr::Ncp::Controller\l::UpdateFdSet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dae/group__border-router-ncp.html#gaa6e411ecc13d0c084d13557975b1a7e0",tooltip="This method updates the fd_set to poll. "];
+  Node14 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="otbr::BorderAgent::\lUpdateFdSet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/dfd/classotbr_1_1BorderAgent.html#ae670a61a5b0810a67827d5d625449ee2",tooltip="This method updates the fd_set and timeout for mainloop. "];
+  Node16 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="otbr::Mdns::Publisher\l::UpdateFdSet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/ddc/classotbr_1_1Mdns_1_1Publisher.html#a24477dcc899760d181373fd3208f3d01",tooltip="This method updates the fd_set and timeout for mainloop. "];
+}

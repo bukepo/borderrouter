@@ -1,0 +1,15 @@
+digraph "otbr::Tlv::GetValue"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node14 [label="otbr::Tlv::GetValue",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="otbr::Tlv::GetValueUInt16",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d02/classotbr_1_1Tlv.html#a468a2320b7c02132b8f51126eee62a5a",tooltip="This method returns the value as a uint16_t. "];
+  Node14 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="otbr::Tlv::GetValueUInt8",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d02/classotbr_1_1Tlv.html#ac3a89c1d55affd83750553d95b0cc0fa",tooltip="This method returns the value as a uint8_t. "];
+  Node14 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="otbr::Tlv::SetValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d02/classotbr_1_1Tlv.html#a25edc927c35c02beec2d21da901033b6",tooltip="This method sets uint16_t as the value. "];
+  Node14 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="otbr::Tlv::GetNext",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d02/classotbr_1_1Tlv.html#a1a60754848f533b48f4761ca6364ab0c",tooltip="This method returns the pointer to the next Tlv. "];
+}

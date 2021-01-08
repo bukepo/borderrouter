@@ -1,0 +1,11 @@
+digraph "otbr::BackboneRouter::NdProxyManager::UpdateFdSet"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node37 [label="otbr::BackboneRouter\l::NdProxyManager::UpdateFdSet",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node37 -> Node38 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node38 [label="otbr::BackboneRouter\l::BackboneAgent::UpdateFdSet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d5a/classotbr_1_1BackboneRouter_1_1BackboneAgent.html#a3f88dd4de8b2de54497b550eb60283c6",tooltip="This method updates the fd_set and timeout for mainloop. "];
+  Node37 -> Node39 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node39 [label="otbr::BackboneRouter\l::NdProxyManager::NdProxyManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d58/classotbr_1_1BackboneRouter_1_1NdProxyManager.html#a76a903dbbdb43d1af0c0dd234cf97848",tooltip="This constructor initializes a NdProxyManager instance. "];
+}

@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="otbr::BackboneRouter\l::NdProxyManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d58/classotbr_1_1BackboneRouter_1_1NdProxyManager.html",tooltip="This class implements ND Proxy manager. "];
+}

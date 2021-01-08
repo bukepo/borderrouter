@@ -1,0 +1,29 @@
+digraph "otbr::BackboneRouter::NdProxyManager::HandleBackboneRouterNdProxyEvent"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node8 [label="otbr::BackboneRouter\l::NdProxyManager::HandleBackbone\lRouterNdProxyEvent",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="otbr::Ip6Address::GetLink\lLocalAllNodesMulticastAddress",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dfe/classotbr_1_1Ip6Address.html#ac80080b641b1ee8d8dce8d62960a6ed1",tooltip="This function returns the wellknown Link Local All Nodes Multicast Address (ff02::1). "];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="otbr::Ip6Address::FromString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dfe/classotbr_1_1Ip6Address.html#aea29483ec22a607a9fcd95cadc42cee7",tooltip="This function converts Ip6 addresses from text to Ip6Address. "];
+  Node8 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="otbr::Ip6Address::IsMulticast",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dfe/classotbr_1_1Ip6Address.html#a72f4ceeb43f1a642fc88aad229e81a4c",tooltip="This method returns if the Ip6 address is a multicast address. "];
+  Node8 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="otbr::Ncp::ControllerOpen\lThread::GetInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d17/classotbr_1_1Ncp_1_1ControllerOpenThread.html#a2047cded3e4273a4d1209dc5e1ac5f61",tooltip="This method get mInstance pointer. "];
+  Node8 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="otbr::Ip6Address::CopyTo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dfe/classotbr_1_1Ip6Address.html#af17eb7c1fd8a9c5d54434fbd84c3f173",tooltip="This method copies the Ip6 address to a sockaddr_in6 structure. "];
+  Node8 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="otbr::InstanceParams::Get",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dd0/classotbr_1_1InstanceParams.html#a25f242442787cbc7eb7b0ed23f2a1d58",tooltip="This method gets the single InstanceParams instance. "];
+  Node8 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="otbr::MacAddress::ToString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d8f/classotbr_1_1MacAddress.html#a62969db1a12fb7a4910d75cb830796c7",tooltip="This method returns the string representation for the MAC address. "];
+  Node8 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="otbr::Ip6Address::ToString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dfe/classotbr_1_1Ip6Address.html#a3f7999dd25add01aa2b52a104de17b9e",tooltip="This method returns the string representation for the Ip6 address. "];
+  Node8 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="otbr::Ip6Address::ToSolicited\lNodeMulticastAddress",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dfe/classotbr_1_1Ip6Address.html#a18990d0ba95c35dc3f5b018a8fb27bbd",tooltip="This method returns the solicited node multicast address. "];
+  Node17 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="otbr::Ip6Address::GetSolicited\lMulticastAddressPrefix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dfe/classotbr_1_1Ip6Address.html#a7da3c5ebc9c062f30a56983be0852b00",tooltip="This function returns the wellknown Solicited Node Multicast Address Prefix (ff02::01:ff00:0). "];
+  Node18 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

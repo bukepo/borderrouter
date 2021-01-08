@@ -1,0 +1,11 @@
+digraph "otbr::Tlv::GetNext"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3 [label="otbr::Tlv::GetNext",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="otbr::Tlv::GetValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d02/classotbr_1_1Tlv.html#ad82a79591f301f46b6395e789fe96543",tooltip="This method returns a pointer to the value. "];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="otbr::Tlv::GetLength",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d02/classotbr_1_1Tlv.html#a0ff2f7ab82626ba9e11475f77d137f0d",tooltip="This method returns the Tlv length. "];
+}
