@@ -9,13 +9,6 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
-<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../navtreedata.js"></script>
-<script type="text/javascript" src="../../navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -29,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">openthread-br
-   &#160;<span id="projectnumber">0.2.0-faf7389</span>
+   &#160;<span id="projectnumber">0.2.0-efedf3f</span>
    </div>
   </td>
  </tr>
@@ -50,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('dd/dca/wpan__service_8hpp.html','../../');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -79,6 +57,11 @@ $(document).ready(function(){initNavTree('dd/dca/wpan__service_8hpp.html','../..
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_0d4dde2834ed44e47b6207c19e4aac26.html">web</a></li><li class="navelem"><a class="el" href="../../dir_9c2c15f288e12373e327a76e299cd79d.html">web-service</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -87,9 +70,6 @@ $(document).ready(function(){initNavTree('dd/dca/wpan__service_8hpp.html','../..
 <div class="title">wpan_service.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>This file implements the wpan controller service.  
-<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;openthread-br/config.h&quot;</code><br />
 <code>#include &lt;net/if.h&gt;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
@@ -102,33 +82,17 @@ $(document).ready(function(){initNavTree('dd/dca/wpan__service_8hpp.html','../..
 <code>#include &quot;<a class="el" href="../../df/d51/hex_8hpp_source.html">utils/hex.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d7/dc9/pskc_8hpp_source.html">utils/pskc.hpp</a>&quot;</code><br />
 <code>#include &quot;web/web-service/ot_client.hpp&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for wpan_service.hpp:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../da/d8c/wpan__service_8hpp__incl.png" border="0" usemap="#src_2web_2web-service_2wpan__service_8hpp" alt=""/></div>
-<map name="src_2web_2web-service_2wpan__service_8hpp" id="src_2web_2web-service_2wpan__service_8hpp">
-</map>
-</div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../dc/d0c/wpan__service_8hpp__dep__incl.png" border="0" usemap="#src_2web_2web-service_2wpan__service_8hppdep" alt=""/></div>
-<map name="src_2web_2web-service_2wpan__service_8hppdep" id="src_2web_2web-service_2wpan__service_8hppdep">
-</map>
-</div>
 </div>
 <p><a href="../../dd/dca/wpan__service_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d46/classotbr_1_1Web_1_1WpanService.html">otbr::Web::WpanService</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class provides web service to manage WPAN.  <a href="../../d3/d46/classotbr_1_1Web_1_1WpanService.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a6118411ba35d0f562ff4b8a5a72f1e02"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/wpan__service_8hpp.html#a6118411ba35d0f562ff4b8a5a72f1e02">OT_EXTENDED_PANID_LENGTH</a>&#160;&#160;&#160;8</td></tr>
-<tr class="memdesc:a6118411ba35d0f562ff4b8a5a72f1e02"><td class="mdescLeft">&#160;</td><td class="mdescRight">WPAN parameter constants.  <a href="#a6118411ba35d0f562ff4b8a5a72f1e02">More...</a><br /></td></tr>
 <tr class="separator:a6118411ba35d0f562ff4b8a5a72f1e02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bc35a91b9420475472d396b42ed5fe8"><td class="memItemLeft" align="right" valign="top"><a id="a7bc35a91b9420475472d396b42ed5fe8"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>OT_HARDWARE_ADDRESS_LENGTH</b>&#160;&#160;&#160;8</td></tr>
@@ -150,7 +114,7 @@ Macros</h2></td></tr>
 <tr class="separator:a86335cda09f960c6da8ae4461051dd29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This file implements the wpan controller service. </p>
+<div class="textblock"><p>This file implements the wpan controller service </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a6118411ba35d0f562ff4b8a5a72f1e02"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6118411ba35d0f562ff4b8a5a72f1e02">&#9670;&nbsp;</a></span>OT_EXTENDED_PANID_LENGTH</h2>
@@ -163,21 +127,16 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>WPAN parameter constants. </p>
+<p>WPAN parameter constants </p>
 
 </div>
 </div>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_0d4dde2834ed44e47b6207c19e4aac26.html">web</a></li><li class="navelem"><a class="el" href="../../dir_9c2c15f288e12373e327a76e299cd79d.html">web-service</a></li><li class="navelem"><a class="el" href="../../dd/dca/wpan__service_8hpp.html">wpan_service.hpp</a></li>
-    <li class="footer">Generated on Fri Jan 8 2021 12:38:41 for openthread-br by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

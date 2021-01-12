@@ -1,7 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="otbr::Web::WpanService",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d46/classotbr_1_1Web_1_1WpanService.html",tooltip="This class provides web service to manage WPAN. "];
-}

@@ -1,7 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="otbr::rest::Response",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/db0/classotbr_1_1rest_1_1Response.html",tooltip="This class implements a response class for OTBR_REST, it could be manipulated by connection instance ..."];
-}

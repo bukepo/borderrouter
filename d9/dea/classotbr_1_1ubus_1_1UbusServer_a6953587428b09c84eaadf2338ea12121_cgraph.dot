@@ -1,9 +1,0 @@
-digraph "otbr::ubus::UbusServer::UbusNetworkdataHandler"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node182 [label="otbr::ubus::UbusServer\l::UbusNetworkdataHandler",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node182 -> Node183 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node183 [label="otbr::ubus::UbusServer\l::GetInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dea/classotbr_1_1ubus_1_1UbusServer.html#a869e5a269f8df9231e60b8b23de90362",tooltip="This method return the instance of the global UbusServer. "];
-}

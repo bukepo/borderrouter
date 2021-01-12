@@ -9,13 +9,6 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
-<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../navtreedata.js"></script>
-<script type="text/javascript" src="../../navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -29,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">openthread-br
-   &#160;<span id="projectnumber">0.2.0-faf7389</span>
+   &#160;<span id="projectnumber">0.2.0-efedf3f</span>
    </div>
   </td>
  </tr>
@@ -50,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('d3/d46/classotbr_1_1Web_1_1WpanService.html','../../');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -79,6 +57,11 @@ $(document).ready(function(){initNavTree('d3/d46/classotbr_1_1Web_1_1WpanService
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>otbr</b></li><li class="navelem"><b>Web</b></li><li class="navelem"><a class="el" href="../../d3/d46/classotbr_1_1Web_1_1WpanService.html">WpanService</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -88,42 +71,29 @@ $(document).ready(function(){initNavTree('d3/d46/classotbr_1_1Web_1_1WpanService
 </div><!--header-->
 <div class="contents">
 
-<p>This class provides web service to manage WPAN.  
- <a href="../../d3/d46/classotbr_1_1Web_1_1WpanService.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="../../dd/dca/wpan__service_8hpp_source.html">src/web/web-service/wpan_service.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3e1c5febcdf61b3ccd155ca8bd1fa3cd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d46/classotbr_1_1Web_1_1WpanService.html#a3e1c5febcdf61b3ccd155ca8bd1fa3cd">HandleJoinNetworkRequest</a> (const std::string &amp;aJoinRequest)</td></tr>
-<tr class="memdesc:a3e1c5febcdf61b3ccd155ca8bd1fa3cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method handles the http request to join network.  <a href="#a3e1c5febcdf61b3ccd155ca8bd1fa3cd">More...</a><br /></td></tr>
 <tr class="separator:a3e1c5febcdf61b3ccd155ca8bd1fa3cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2ce93b6cbfa8411d656e90d3d84e868"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d46/classotbr_1_1Web_1_1WpanService.html#ad2ce93b6cbfa8411d656e90d3d84e868">HandleFormNetworkRequest</a> (const std::string &amp;aFormRequest)</td></tr>
-<tr class="memdesc:ad2ce93b6cbfa8411d656e90d3d84e868"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method handles the http request to form network.  <a href="#ad2ce93b6cbfa8411d656e90d3d84e868">More...</a><br /></td></tr>
 <tr class="separator:ad2ce93b6cbfa8411d656e90d3d84e868"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56d1365cbe1849845ebbb3c0135309e3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d46/classotbr_1_1Web_1_1WpanService.html#a56d1365cbe1849845ebbb3c0135309e3">HandleAddPrefixRequest</a> (const std::string &amp;aAddPrefixRequest)</td></tr>
-<tr class="memdesc:a56d1365cbe1849845ebbb3c0135309e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method handles the http request to add on-mesh prefix.  <a href="#a56d1365cbe1849845ebbb3c0135309e3">More...</a><br /></td></tr>
 <tr class="separator:a56d1365cbe1849845ebbb3c0135309e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a626ebf30c66c1d48ba6a71a7625cf3dc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d46/classotbr_1_1Web_1_1WpanService.html#a626ebf30c66c1d48ba6a71a7625cf3dc">HandleDeletePrefixRequest</a> (const std::string &amp;aDeleteRequest)</td></tr>
-<tr class="memdesc:a626ebf30c66c1d48ba6a71a7625cf3dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method handles the http request to delete on-mesh prefix http request.  <a href="#a626ebf30c66c1d48ba6a71a7625cf3dc">More...</a><br /></td></tr>
 <tr class="separator:a626ebf30c66c1d48ba6a71a7625cf3dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a988847b3ca6b43e85212d6fba9079869"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d46/classotbr_1_1Web_1_1WpanService.html#a988847b3ca6b43e85212d6fba9079869">HandleStatusRequest</a> (void)</td></tr>
-<tr class="memdesc:a988847b3ca6b43e85212d6fba9079869"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method handles http request to get netowrk status.  <a href="#a988847b3ca6b43e85212d6fba9079869">More...</a><br /></td></tr>
 <tr class="separator:a988847b3ca6b43e85212d6fba9079869"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab557ee4484e76d077ddde6298d7c63d3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d46/classotbr_1_1Web_1_1WpanService.html#ab557ee4484e76d077ddde6298d7c63d3">HandleAvailableNetworkRequest</a> (void)</td></tr>
-<tr class="memdesc:ab557ee4484e76d077ddde6298d7c63d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method handles http request to get available networks.  <a href="#ab557ee4484e76d077ddde6298d7c63d3">More...</a><br /></td></tr>
 <tr class="separator:ab557ee4484e76d077ddde6298d7c63d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af57748f77490a51a2c356fe4f359544f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d46/classotbr_1_1Web_1_1WpanService.html#af57748f77490a51a2c356fe4f359544f">HandleCommission</a> (const std::string &amp;aCommissionRequest)</td></tr>
-<tr class="memdesc:af57748f77490a51a2c356fe4f359544f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method handles http request to commission device.  <a href="#af57748f77490a51a2c356fe4f359544f">More...</a><br /></td></tr>
 <tr class="separator:af57748f77490a51a2c356fe4f359544f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27dac82c1cf47b5930a512b200fdbfbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d46/classotbr_1_1Web_1_1WpanService.html#a27dac82c1cf47b5930a512b200fdbfbb">SetInterfaceName</a> (const char *aIfName)</td></tr>
-<tr class="memdesc:a27dac82c1cf47b5930a512b200fdbfbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method sets the Thread interface name.  <a href="#a27dac82c1cf47b5930a512b200fdbfbb">More...</a><br /></td></tr>
 <tr class="separator:a27dac82c1cf47b5930a512b200fdbfbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a817c556f7e9cd0ab0939661d3a82fe89"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d46/classotbr_1_1Web_1_1WpanService.html#a817c556f7e9cd0ab0939661d3a82fe89">GetWpanServiceStatus</a> (std::string &amp;aNetworkName, std::string &amp;aExtPanId) const</td></tr>
-<tr class="memdesc:a817c556f7e9cd0ab0939661d3a82fe89"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method gets status of wpan service.  <a href="#a817c556f7e9cd0ab0939661d3a82fe89">More...</a><br /></td></tr>
 <tr class="separator:a817c556f7e9cd0ab0939661d3a82fe89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac58d95616f1c3d8de612f6339e17faa6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d46/classotbr_1_1Web_1_1WpanService.html#ac58d95616f1c3d8de612f6339e17faa6">CommissionDevice</a> (const char *aPskd, const char *aNetworkPassword)</td></tr>
-<tr class="memdesc:ac58d95616f1c3d8de612f6339e17faa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method starts commissioner and wait for a device to join.  <a href="#ac58d95616f1c3d8de612f6339e17faa6">More...</a><br /></td></tr>
 <tr class="separator:ac58d95616f1c3d8de612f6339e17faa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -154,8 +124,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method starts commissioner and wait for a device to join. </p>
+<p>This method starts commissioner and wait for a device to join</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aPskd</td><td>Joiner pskd </td></tr>
@@ -164,13 +133,6 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The string to the http response of getting available networks. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d3/d46/classotbr_1_1Web_1_1WpanService_ac58d95616f1c3d8de612f6339e17faa6_icgraph.png" border="0" usemap="#d3/d46/classotbr_1_1Web_1_1WpanService_ac58d95616f1c3d8de612f6339e17faa6_icgraph" alt=""/></div>
-<map name="d3/d46/classotbr_1_1Web_1_1WpanService_ac58d95616f1c3d8de612f6339e17faa6_icgraph" id="d3/d46/classotbr_1_1Web_1_1WpanService_ac58d95616f1c3d8de612f6339e17faa6_icgraph">
-</map>
-</div>
 
 </div>
 </div>
@@ -199,8 +161,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method gets status of wpan service. </p>
+<p>This method gets status of wpan service.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">aNetworkName</td><td>The pointer to the network name. </td></tr>
@@ -216,20 +177,6 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d3/d46/classotbr_1_1Web_1_1WpanService_a817c556f7e9cd0ab0939661d3a82fe89_cgraph.png" border="0" usemap="#d3/d46/classotbr_1_1Web_1_1WpanService_a817c556f7e9cd0ab0939661d3a82fe89_cgraph" alt=""/></div>
-<map name="d3/d46/classotbr_1_1Web_1_1WpanService_a817c556f7e9cd0ab0939661d3a82fe89_cgraph" id="d3/d46/classotbr_1_1Web_1_1WpanService_a817c556f7e9cd0ab0939661d3a82fe89_cgraph">
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d3/d46/classotbr_1_1Web_1_1WpanService_a817c556f7e9cd0ab0939661d3a82fe89_icgraph.png" border="0" usemap="#d3/d46/classotbr_1_1Web_1_1WpanService_a817c556f7e9cd0ab0939661d3a82fe89_icgraph" alt=""/></div>
-<map name="d3/d46/classotbr_1_1Web_1_1WpanService_a817c556f7e9cd0ab0939661d3a82fe89_icgraph" id="d3/d46/classotbr_1_1Web_1_1WpanService_a817c556f7e9cd0ab0939661d3a82fe89_icgraph">
-</map>
-</div>
 
 </div>
 </div>
@@ -248,8 +195,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method handles the http request to add on-mesh prefix. </p>
+<p>This method handles the http request to add on-mesh prefix.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aAddPrefixRequest</td><td>A reference to the http request of adding on-mesh prefix.</td></tr>
@@ -257,13 +203,6 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The string to the http response of adding on-mesh prefix. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d3/d46/classotbr_1_1Web_1_1WpanService_a56d1365cbe1849845ebbb3c0135309e3_cgraph.png" border="0" usemap="#d3/d46/classotbr_1_1Web_1_1WpanService_a56d1365cbe1849845ebbb3c0135309e3_cgraph" alt=""/></div>
-<map name="d3/d46/classotbr_1_1Web_1_1WpanService_a56d1365cbe1849845ebbb3c0135309e3_cgraph" id="d3/d46/classotbr_1_1Web_1_1WpanService_a56d1365cbe1849845ebbb3c0135309e3_cgraph">
-</map>
-</div>
 
 </div>
 </div>
@@ -282,16 +221,8 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method handles http request to get available networks. </p>
+<p>This method handles http request to get available networks.</p>
 <dl class="section return"><dt>Returns</dt><dd>The string to the http response of getting available networks. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d3/d46/classotbr_1_1Web_1_1WpanService_ab557ee4484e76d077ddde6298d7c63d3_cgraph.png" border="0" usemap="#d3/d46/classotbr_1_1Web_1_1WpanService_ab557ee4484e76d077ddde6298d7c63d3_cgraph" alt=""/></div>
-<map name="d3/d46/classotbr_1_1Web_1_1WpanService_ab557ee4484e76d077ddde6298d7c63d3_cgraph" id="d3/d46/classotbr_1_1Web_1_1WpanService_ab557ee4484e76d077ddde6298d7c63d3_cgraph">
-</map>
-</div>
 
 </div>
 </div>
@@ -310,16 +241,8 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method handles http request to commission device. </p>
+<p>This method handles http request to commission device</p>
 <dl class="section return"><dt>Returns</dt><dd>The string to the http response of commissioning </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d3/d46/classotbr_1_1Web_1_1WpanService_af57748f77490a51a2c356fe4f359544f_cgraph.png" border="0" usemap="#d3/d46/classotbr_1_1Web_1_1WpanService_af57748f77490a51a2c356fe4f359544f_cgraph" alt=""/></div>
-<map name="d3/d46/classotbr_1_1Web_1_1WpanService_af57748f77490a51a2c356fe4f359544f_cgraph" id="d3/d46/classotbr_1_1Web_1_1WpanService_af57748f77490a51a2c356fe4f359544f_cgraph">
-</map>
-</div>
 
 </div>
 </div>
@@ -338,8 +261,7 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method handles the http request to delete on-mesh prefix http request. </p>
+<p>This method handles the http request to delete on-mesh prefix http request.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aDeleteRequest</td><td>A reference to the http request of deleting on-mesh prefix.</td></tr>
@@ -347,13 +269,6 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The string to the http response of deleting on-mesh prefix. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d3/d46/classotbr_1_1Web_1_1WpanService_a626ebf30c66c1d48ba6a71a7625cf3dc_cgraph.png" border="0" usemap="#d3/d46/classotbr_1_1Web_1_1WpanService_a626ebf30c66c1d48ba6a71a7625cf3dc_cgraph" alt=""/></div>
-<map name="d3/d46/classotbr_1_1Web_1_1WpanService_a626ebf30c66c1d48ba6a71a7625cf3dc_cgraph" id="d3/d46/classotbr_1_1Web_1_1WpanService_a626ebf30c66c1d48ba6a71a7625cf3dc_cgraph">
-</map>
-</div>
 
 </div>
 </div>
@@ -372,8 +287,7 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method handles the http request to form network. </p>
+<p>This method handles the http request to form network.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aFormRequest</td><td>A reference to the http request of forming network.</td></tr>
@@ -399,8 +313,7 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method handles the http request to join network. </p>
+<p>This method handles the http request to join network.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aJoinRequest</td><td>A reference to the http request of joining network.</td></tr>
@@ -408,13 +321,6 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The string to the http response of joining network. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d3/d46/classotbr_1_1Web_1_1WpanService_a3e1c5febcdf61b3ccd155ca8bd1fa3cd_cgraph.png" border="0" usemap="#d3/d46/classotbr_1_1Web_1_1WpanService_a3e1c5febcdf61b3ccd155ca8bd1fa3cd_cgraph" alt=""/></div>
-<map name="d3/d46/classotbr_1_1Web_1_1WpanService_a3e1c5febcdf61b3ccd155ca8bd1fa3cd_cgraph" id="d3/d46/classotbr_1_1Web_1_1WpanService_a3e1c5febcdf61b3ccd155ca8bd1fa3cd_cgraph">
-</map>
-</div>
 
 </div>
 </div>
@@ -433,16 +339,8 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method handles http request to get netowrk status. </p>
+<p>This method handles http request to get netowrk status.</p>
 <dl class="section return"><dt>Returns</dt><dd>The string to the http response of getting status. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d3/d46/classotbr_1_1Web_1_1WpanService_a988847b3ca6b43e85212d6fba9079869_cgraph.png" border="0" usemap="#d3/d46/classotbr_1_1Web_1_1WpanService_a988847b3ca6b43e85212d6fba9079869_cgraph" alt=""/></div>
-<map name="d3/d46/classotbr_1_1Web_1_1WpanService_a988847b3ca6b43e85212d6fba9079869_cgraph" id="d3/d46/classotbr_1_1Web_1_1WpanService_a988847b3ca6b43e85212d6fba9079869_cgraph">
-</map>
-</div>
 
 </div>
 </div>
@@ -469,28 +367,13 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>This method sets the Thread interface name. </p>
+<p>This method sets the Thread interface name.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aIfName</td><td>The pointer to the Thread interface name. </td></tr>
   </table>
   </dd>
 </dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d3/d46/classotbr_1_1Web_1_1WpanService_a27dac82c1cf47b5930a512b200fdbfbb_cgraph.png" border="0" usemap="#d3/d46/classotbr_1_1Web_1_1WpanService_a27dac82c1cf47b5930a512b200fdbfbb_cgraph" alt=""/></div>
-<map name="d3/d46/classotbr_1_1Web_1_1WpanService_a27dac82c1cf47b5930a512b200fdbfbb_cgraph" id="d3/d46/classotbr_1_1Web_1_1WpanService_a27dac82c1cf47b5930a512b200fdbfbb_cgraph">
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d3/d46/classotbr_1_1Web_1_1WpanService_a27dac82c1cf47b5930a512b200fdbfbb_icgraph.png" border="0" usemap="#d3/d46/classotbr_1_1Web_1_1WpanService_a27dac82c1cf47b5930a512b200fdbfbb_icgraph" alt=""/></div>
-<map name="d3/d46/classotbr_1_1Web_1_1WpanService_a27dac82c1cf47b5930a512b200fdbfbb_icgraph" id="d3/d46/classotbr_1_1Web_1_1WpanService_a27dac82c1cf47b5930a512b200fdbfbb_icgraph">
-</map>
-</div>
 
 </div>
 </div>
@@ -499,15 +382,11 @@ Here is the caller graph for this function:</div>
 <li>src/web/web-service/<a class="el" href="../../db/dc0/wpan__service_8cpp.html">wpan_service.cpp</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><b>otbr</b></li><li class="navelem"><b>Web</b></li><li class="navelem"><a class="el" href="../../d3/d46/classotbr_1_1Web_1_1WpanService.html">WpanService</a></li>
-    <li class="footer">Generated on Fri Jan 8 2021 12:38:42 for openthread-br by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

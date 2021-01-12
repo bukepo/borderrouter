@@ -9,13 +9,6 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
-<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../navtreedata.js"></script>
-<script type="text/javascript" src="../../navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -29,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">openthread-br
-   &#160;<span id="projectnumber">0.2.0-faf7389</span>
+   &#160;<span id="projectnumber">0.2.0-efedf3f</span>
    </div>
   </td>
  </tr>
@@ -50,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('dc/d53/common_2types_8hpp.html','../../');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -79,6 +57,11 @@ $(document).ready(function(){initNavTree('dc/d53/common_2types_8hpp.html','../..
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -89,42 +72,27 @@ $(document).ready(function(){initNavTree('dc/d53/common_2types_8hpp.html','../..
 <div class="title">types.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>This file includes definition for data types used by Thread border agent.  
-<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;openthread-br/config.h&quot;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;common/code_utils.hpp&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for types.hpp:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d7/dab/common_2types_8hpp__incl.png" border="0" usemap="#src_2common_2types_8hpp" alt=""/></div>
-<map name="src_2common_2types_8hpp" id="src_2common_2types_8hpp">
-</map>
-</div>
 </div>
 <p><a href="../../dc/d53/common_2types_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dfe/classotbr_1_1Ip6Address.html">otbr::Ip6Address</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class implements the Ipv6 address functionality.  <a href="../../d2/dfe/classotbr_1_1Ip6Address.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3a/classotbr_1_1Ip6Prefix.html">otbr::Ip6Prefix</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class represents a Ipv6 prefix.  <a href="../../da/d3a/classotbr_1_1Ip6Prefix.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d8f/classotbr_1_1MacAddress.html">otbr::MacAddress</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class represents an ethernet MAC address.  <a href="../../db/d8f/classotbr_1_1MacAddress.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a8614e10ffaf2e4486d2a5a901255b714"><td class="memItemLeft" align="right" valign="top"><a id="a8614e10ffaf2e4486d2a5a901255b714"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d53/common_2types_8hpp.html#a8614e10ffaf2e4486d2a5a901255b714">IN6ADDR_ANY</a>&#160;&#160;&#160;&quot;::&quot;</td></tr>
-<tr class="memdesc:a8614e10ffaf2e4486d2a5a901255b714"><td class="mdescLeft">&#160;</td><td class="mdescRight">Any IPv6 address literal. <br /></td></tr>
+<tr class="memitem:a8614e10ffaf2e4486d2a5a901255b714"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d53/common_2types_8hpp.html#a8614e10ffaf2e4486d2a5a901255b714">IN6ADDR_ANY</a>&#160;&#160;&#160;&quot;::&quot;</td></tr>
 <tr class="separator:a8614e10ffaf2e4486d2a5a901255b714"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afeca19db060fe31655516bf3171590a3"><td class="memItemLeft" align="right" valign="top"><a id="afeca19db060fe31655516bf3171590a3"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>OTBR_IP6_ADDRESS_SIZE</b>&#160;&#160;&#160;16</td></tr>
@@ -143,39 +111,25 @@ Macros</h2></td></tr>
 Enumerations</h2></td></tr>
 <tr class="memitem:a9addd74a14dca1dab1b3e7a8205455aa"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aa">otbrError</a> { <br />
 &#160;&#160;<a class="el" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aaad50a28e34d631b46f6b959681e42a432">OTBR_ERROR_NONE</a> = 0, 
-<br />
-&#160;&#160;<a class="el" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aaaa40d3cebb126a37687ab4fbb2ec94785">OTBR_ERROR_ERRNO</a> = -1, 
-<br />
-&#160;&#160;<a class="el" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aaa64d15646223a2ceea9bfde5574f4ea42">OTBR_ERROR_DBUS</a> = -2, 
-<br />
-&#160;&#160;<a class="el" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aaa4d0b494d58398fb57e7b8fc875a8be77">OTBR_ERROR_MDNS</a> = -3, 
+<a class="el" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aaaa40d3cebb126a37687ab4fbb2ec94785">OTBR_ERROR_ERRNO</a> = -1, 
+<a class="el" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aaa64d15646223a2ceea9bfde5574f4ea42">OTBR_ERROR_DBUS</a> = -2, 
+<a class="el" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aaa4d0b494d58398fb57e7b8fc875a8be77">OTBR_ERROR_MDNS</a> = -3, 
 <br />
 &#160;&#160;<a class="el" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aaab4f21fef1baa23a4473e911f55c99df4">OTBR_ERROR_OPENTHREAD</a> = -4, 
-<br />
-&#160;&#160;<a class="el" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aaa6437b6d6df8dc554b4283823cd9844c2">OTBR_ERROR_REST</a> = -5, 
-<br />
-&#160;&#160;<a class="el" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aaa85e2380516117c5003e635f66339092e">OTBR_ERROR_SMCROUTE</a> = -6, 
-<br />
-&#160;&#160;<a class="el" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aaa09d363df58680bb404df5ebc9408cf60">OTBR_ERROR_NOT_FOUND</a> = -7, 
+<a class="el" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aaa6437b6d6df8dc554b4283823cd9844c2">OTBR_ERROR_REST</a> = -5, 
+<a class="el" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aaa85e2380516117c5003e635f66339092e">OTBR_ERROR_SMCROUTE</a> = -6, 
+<a class="el" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aaa09d363df58680bb404df5ebc9408cf60">OTBR_ERROR_NOT_FOUND</a> = -7, 
 <br />
 &#160;&#160;<a class="el" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aaa0a895d978d38f0119e8fe1b6af0b70e3">OTBR_ERROR_PARSE</a> = -8, 
+<a class="el" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aaa725cc7885966b2ea012b4270eaf92e6e">OTBR_ERROR_NOT_IMPLEMENTED</a> = -9, 
+<a class="el" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aaa0c78adc6972b7a7ad9904a998605cb9d">OTBR_ERROR_INVALID_ARGS</a> = -10
 <br />
-&#160;&#160;<a class="el" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aaa725cc7885966b2ea012b4270eaf92e6e">OTBR_ERROR_NOT_IMPLEMENTED</a> = -9, 
-<br />
-&#160;&#160;<a class="el" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aaa0c78adc6972b7a7ad9904a998605cb9d">OTBR_ERROR_INVALID_ARGS</a> = -10
-<br />
- }<tr class="memdesc:a9addd74a14dca1dab1b3e7a8205455aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">This enumeration represents error codes used throughout OpenThread Border Router.  <a href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aa">More...</a><br /></td></tr>
-</td></tr>
+ }</td></tr>
 <tr class="separator:a9addd74a14dca1dab1b3e7a8205455aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f4a0a1628a3c1fa46cb88cc1dddf207"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
-&#160;&#160;<a class="el" href="../../dc/d53/common_2types_8hpp.html#a0f4a0a1628a3c1fa46cb88cc1dddf207a0858245b829d857f4b4bbd0c38cd3da2">otbr::kSizePSKc</a> = 16, 
-<br />
-&#160;&#160;<a class="el" href="../../dc/d53/common_2types_8hpp.html#a0f4a0a1628a3c1fa46cb88cc1dddf207a9c41072837ffe359b22f3c43f8af4927">otbr::kSizeNetworkName</a> = 16, 
-<br />
-&#160;&#160;<a class="el" href="../../dc/d53/common_2types_8hpp.html#a0f4a0a1628a3c1fa46cb88cc1dddf207acc6b251cc7124d645b9e112596c43388">otbr::kSizeExtPanId</a> = 8, 
-<br />
-&#160;&#160;<a class="el" href="../../dc/d53/common_2types_8hpp.html#a0f4a0a1628a3c1fa46cb88cc1dddf207a3c38522508f5020f29a8ce40fa34a7e7">otbr::kSizeEui64</a> = 8
-<br />
+<tr class="memitem:a0f4a0a1628a3c1fa46cb88cc1dddf207"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="../../dc/d53/common_2types_8hpp.html#a0f4a0a1628a3c1fa46cb88cc1dddf207a0858245b829d857f4b4bbd0c38cd3da2">otbr::kSizePSKc</a> = 16, 
+<a class="el" href="../../dc/d53/common_2types_8hpp.html#a0f4a0a1628a3c1fa46cb88cc1dddf207a9c41072837ffe359b22f3c43f8af4927">otbr::kSizeNetworkName</a> = 16, 
+<a class="el" href="../../dc/d53/common_2types_8hpp.html#a0f4a0a1628a3c1fa46cb88cc1dddf207acc6b251cc7124d645b9e112596c43388">otbr::kSizeExtPanId</a> = 8, 
+<a class="el" href="../../dc/d53/common_2types_8hpp.html#a0f4a0a1628a3c1fa46cb88cc1dddf207a3c38522508f5020f29a8ce40fa34a7e7">otbr::kSizeEui64</a> = 8
  }</td></tr>
 <tr class="separator:a0f4a0a1628a3c1fa46cb88cc1dddf207"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -187,7 +141,23 @@ OTBR_TOOL_PACKED_BEGIN class <a class="el" href="../../d2/dfe/classotbr_1_1Ip6Ad
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file includes definition for data types used by Thread border agent. </p>
-</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a8614e10ffaf2e4486d2a5a901255b714"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8614e10ffaf2e4486d2a5a901255b714">&#9670;&nbsp;</a></span>IN6ADDR_ANY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IN6ADDR_ANY&#160;&#160;&#160;&quot;::&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Any IPv6 address literal. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="file_a0f4a0a1628a3c1fa46cb88cc1dddf207"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#file_a0f4a0a1628a3c1fa46cb88cc1dddf207">&#9670;&nbsp;</a></span>anonymous enum</h2>
 
@@ -223,7 +193,6 @@ OTBR_TOOL_PACKED_BEGIN class <a class="el" href="../../d2/dfe/classotbr_1_1Ip6Ad
         </tr>
       </table>
 </div><div class="memdoc">
-
 <p>This enumeration represents error codes used throughout OpenThread Border Router. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a9addd74a14dca1dab1b3e7a8205455aaad50a28e34d631b46f6b959681e42a432"></a>OTBR_ERROR_NONE&#160;</td><td class="fielddoc"><p>No error. </p>
@@ -253,15 +222,11 @@ OTBR_TOOL_PACKED_BEGIN class <a class="el" href="../../d2/dfe/classotbr_1_1Ip6Ad
 </div>
 </div>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li><li class="navelem"><a class="el" href="../../dc/d53/common_2types_8hpp.html">types.hpp</a></li>
-    <li class="footer">Generated on Fri Jan 8 2021 12:38:41 for openthread-br by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

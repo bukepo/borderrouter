@@ -9,13 +9,6 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
-<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../navtreedata.js"></script>
-<script type="text/javascript" src="../../navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -29,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">openthread-br
-   &#160;<span id="projectnumber">0.2.0-faf7389</span>
+   &#160;<span id="projectnumber">0.2.0-efedf3f</span>
    </div>
   </td>
  </tr>
@@ -50,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('dd/dcb/classotbr_1_1EventEmitter.html','../../');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -79,6 +57,11 @@ $(document).ready(function(){initNavTree('dd/dcb/classotbr_1_1EventEmitter.html'
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>otbr</b></li><li class="navelem"><a class="el" href="../../dd/dcb/classotbr_1_1EventEmitter.html">EventEmitter</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -88,28 +71,25 @@ $(document).ready(function(){initNavTree('dd/dcb/classotbr_1_1EventEmitter.html'
 </div><!--header-->
 <div class="contents">
 
-<p>This class implements the basic functionality of an event emitter.  
- <a href="../../dd/dcb/classotbr_1_1EventEmitter.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="../../d9/def/event__emitter_8hpp_source.html">src/utils/event_emitter.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for otbr::EventEmitter:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d4/df8/classotbr_1_1EventEmitter__inherit__graph.png" border="0" usemap="#otbr_1_1EventEmitter_inherit__map" alt="Inheritance graph"/></div>
-<map name="otbr_1_1EventEmitter_inherit__map" id="otbr_1_1EventEmitter_inherit__map">
+ <div class="center">
+  <img src="../../dd/dcb/classotbr_1_1EventEmitter.png" usemap="#otbr::EventEmitter_map" alt=""/>
+  <map id="otbr::EventEmitter_map" name="otbr::EventEmitter_map">
+<area href="../../da/d6a/classotbr_1_1Ncp_1_1Controller.html" alt="otbr::Ncp::Controller" shape="rect" coords="0,56,196,80"/>
+<area href="../../db/d17/classotbr_1_1Ncp_1_1ControllerOpenThread.html" alt="otbr::Ncp::ControllerOpenThread" shape="rect" coords="0,112,196,136"/>
 </map>
-<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac5b618912e079429da1071d8e3b31b65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dcb/classotbr_1_1EventEmitter.html#ac5b618912e079429da1071d8e3b31b65">On</a> (int aEvent, Callback aCallback, void *aContext)</td></tr>
-<tr class="memdesc:ac5b618912e079429da1071d8e3b31b65"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method register an event handler for <code>aEvent</code>.  <a href="#ac5b618912e079429da1071d8e3b31b65">More...</a><br /></td></tr>
 <tr class="separator:ac5b618912e079429da1071d8e3b31b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59e610d42604ceb9443ec9fa4e364ffb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dcb/classotbr_1_1EventEmitter.html#a59e610d42604ceb9443ec9fa4e364ffb">Off</a> (int aEvent, Callback aCallback, void *aContext)</td></tr>
-<tr class="memdesc:a59e610d42604ceb9443ec9fa4e364ffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method deregister an event handler for <code>aEvent</code>.  <a href="#a59e610d42604ceb9443ec9fa4e364ffb">More...</a><br /></td></tr>
 <tr class="separator:a59e610d42604ceb9443ec9fa4e364ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac16b1dd365337036053e4b7403199fff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dcb/classotbr_1_1EventEmitter.html#ac16b1dd365337036053e4b7403199fff">Emit</a> (int aEvent,...)</td></tr>
-<tr class="memdesc:ac16b1dd365337036053e4b7403199fff"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method emits an event.  <a href="#ac16b1dd365337036053e4b7403199fff">More...</a><br /></td></tr>
 <tr class="separator:ac16b1dd365337036053e4b7403199fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -140,21 +120,13 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method emits an event. </p>
+<p>This method emits an event.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aEvent</td><td>The event id. </td></tr>
   </table>
   </dd>
 </dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../dd/dcb/classotbr_1_1EventEmitter_ac16b1dd365337036053e4b7403199fff_icgraph.png" border="0" usemap="#dd/dcb/classotbr_1_1EventEmitter_ac16b1dd365337036053e4b7403199fff_icgraph" alt=""/></div>
-<map name="dd/dcb/classotbr_1_1EventEmitter_ac16b1dd365337036053e4b7403199fff_icgraph" id="dd/dcb/classotbr_1_1EventEmitter_ac16b1dd365337036053e4b7403199fff_icgraph">
-</map>
-</div>
 
 </div>
 </div>
@@ -189,8 +161,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method deregister an event handler for <code>aEvent</code>. </p>
+<p>This method deregister an event handler for <code>aEvent</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aEvent</td><td>The event id. </td></tr>
@@ -233,8 +204,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method register an event handler for <code>aEvent</code>. </p>
+<p>This method register an event handler for <code>aEvent</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aEvent</td><td>The event id. </td></tr>
@@ -243,13 +213,6 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../dd/dcb/classotbr_1_1EventEmitter_ac5b618912e079429da1071d8e3b31b65_icgraph.png" border="0" usemap="#dd/dcb/classotbr_1_1EventEmitter_ac5b618912e079429da1071d8e3b31b65_icgraph" alt=""/></div>
-<map name="dd/dcb/classotbr_1_1EventEmitter_ac5b618912e079429da1071d8e3b31b65_icgraph" id="dd/dcb/classotbr_1_1EventEmitter_ac5b618912e079429da1071d8e3b31b65_icgraph">
-</map>
-</div>
 
 </div>
 </div>
@@ -258,15 +221,11 @@ Here is the caller graph for this function:</div>
 <li>src/utils/event_emitter.cpp</li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><b>otbr</b></li><li class="navelem"><a class="el" href="../../dd/dcb/classotbr_1_1EventEmitter.html">EventEmitter</a></li>
-    <li class="footer">Generated on Fri Jan 8 2021 12:38:41 for openthread-br by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

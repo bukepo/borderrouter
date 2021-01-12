@@ -9,13 +9,6 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
-<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../navtreedata.js"></script>
-<script type="text/javascript" src="../../navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -29,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">openthread-br
-   &#160;<span id="projectnumber">0.2.0-faf7389</span>
+   &#160;<span id="projectnumber">0.2.0-efedf3f</span>
    </div>
   </td>
  </tr>
@@ -50,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('d2/db0/classotbr_1_1rest_1_1Response.html','../../');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -79,6 +57,11 @@ $(document).ready(function(){initNavTree('d2/db0/classotbr_1_1rest_1_1Response.h
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>otbr</b></li><li class="navelem"><b>rest</b></li><li class="navelem"><a class="el" href="../../d2/db0/classotbr_1_1rest_1_1Response.html">Response</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -88,53 +71,56 @@ $(document).ready(function(){initNavTree('d2/db0/classotbr_1_1rest_1_1Response.h
 </div><!--header-->
 <div class="contents">
 
-<p>This class implements a response class for OTBR_REST, it could be manipulated by connection instance and resource handler.  
- <a href="../../d2/db0/classotbr_1_1rest_1_1Response.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="../../db/da4/response_8hpp_source.html">src/rest/response.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adc1e6ef6d583cf3a9c2f742c4fc133d2"><td class="memItemLeft" align="right" valign="top"><a id="adc1e6ef6d583cf3a9c2f742c4fc133d2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/db0/classotbr_1_1rest_1_1Response.html#adc1e6ef6d583cf3a9c2f742c4fc133d2">Response</a> (void)</td></tr>
-<tr class="memdesc:adc1e6ef6d583cf3a9c2f742c4fc133d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor to initialize a response instance. <br /></td></tr>
+<tr class="memitem:adc1e6ef6d583cf3a9c2f742c4fc133d2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/db0/classotbr_1_1rest_1_1Response.html#adc1e6ef6d583cf3a9c2f742c4fc133d2">Response</a> (void)</td></tr>
 <tr class="separator:adc1e6ef6d583cf3a9c2f742c4fc133d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27e64794404d58d5fb73d6fc307d0b85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/db0/classotbr_1_1rest_1_1Response.html#a27e64794404d58d5fb73d6fc307d0b85">SetBody</a> (std::string &amp;aBody)</td></tr>
-<tr class="memdesc:a27e64794404d58d5fb73d6fc307d0b85"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method set the response body.  <a href="#a27e64794404d58d5fb73d6fc307d0b85">More...</a><br /></td></tr>
 <tr class="separator:a27e64794404d58d5fb73d6fc307d0b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f82f4e3d5ab9b4428525dd12b9dfdc9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/db0/classotbr_1_1rest_1_1Response.html#a5f82f4e3d5ab9b4428525dd12b9dfdc9">GetBody</a> (void) const</td></tr>
-<tr class="memdesc:a5f82f4e3d5ab9b4428525dd12b9dfdc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method return a string contains the body field of this response.  <a href="#a5f82f4e3d5ab9b4428525dd12b9dfdc9">More...</a><br /></td></tr>
 <tr class="separator:a5f82f4e3d5ab9b4428525dd12b9dfdc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9313834a0fb7641c649083d35a73a37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/db0/classotbr_1_1rest_1_1Response.html#ac9313834a0fb7641c649083d35a73a37">SetResponsCode</a> (std::string &amp;aCode)</td></tr>
-<tr class="memdesc:ac9313834a0fb7641c649083d35a73a37"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method set the response code.  <a href="#ac9313834a0fb7641c649083d35a73a37">More...</a><br /></td></tr>
 <tr class="separator:ac9313834a0fb7641c649083d35a73a37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6299f838c2cd88eb56e79a5936c0dc4"><td class="memItemLeft" align="right" valign="top"><a id="aa6299f838c2cd88eb56e79a5936c0dc4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/db0/classotbr_1_1rest_1_1Response.html#aa6299f838c2cd88eb56e79a5936c0dc4">SetCallback</a> (void)</td></tr>
-<tr class="memdesc:aa6299f838c2cd88eb56e79a5936c0dc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method labels the response as need callback. <br /></td></tr>
+<tr class="memitem:aa6299f838c2cd88eb56e79a5936c0dc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/db0/classotbr_1_1rest_1_1Response.html#aa6299f838c2cd88eb56e79a5936c0dc4">SetCallback</a> (void)</td></tr>
 <tr class="separator:aa6299f838c2cd88eb56e79a5936c0dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88b2796012b48ef0af14c614c235597a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/db0/classotbr_1_1rest_1_1Response.html#a88b2796012b48ef0af14c614c235597a">NeedCallback</a> (void)</td></tr>
-<tr class="memdesc:a88b2796012b48ef0af14c614c235597a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method checks whether this response need to be processed by callback handler later.  <a href="#a88b2796012b48ef0af14c614c235597a">More...</a><br /></td></tr>
 <tr class="separator:a88b2796012b48ef0af14c614c235597a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae32fa224413da0a7ffdd8c53e2eac594"><td class="memItemLeft" align="right" valign="top"><a id="ae32fa224413da0a7ffdd8c53e2eac594"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/db0/classotbr_1_1rest_1_1Response.html#ae32fa224413da0a7ffdd8c53e2eac594">SetComplete</a> ()</td></tr>
-<tr class="memdesc:ae32fa224413da0a7ffdd8c53e2eac594"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method labels the response as complete which means all fields has been successfully set. <br /></td></tr>
+<tr class="memitem:ae32fa224413da0a7ffdd8c53e2eac594"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/db0/classotbr_1_1rest_1_1Response.html#ae32fa224413da0a7ffdd8c53e2eac594">SetComplete</a> ()</td></tr>
 <tr class="separator:ae32fa224413da0a7ffdd8c53e2eac594"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd78524cafaaa3f93f510481361a77cd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/db0/classotbr_1_1rest_1_1Response.html#abd78524cafaaa3f93f510481361a77cd">IsComplete</a> ()</td></tr>
-<tr class="memdesc:abd78524cafaaa3f93f510481361a77cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method checks whether this response is ready to be written to buffer.  <a href="#abd78524cafaaa3f93f510481361a77cd">More...</a><br /></td></tr>
 <tr class="separator:abd78524cafaaa3f93f510481361a77cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b23ffbb34abcd1af1cba15cdbf604ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/db0/classotbr_1_1rest_1_1Response.html#a5b23ffbb34abcd1af1cba15cdbf604ae">SetStartTime</a> (steady_clock::time_point aStartTime)</td></tr>
-<tr class="memdesc:a5b23ffbb34abcd1af1cba15cdbf604ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is used to set a timestamp.  <a href="#a5b23ffbb34abcd1af1cba15cdbf604ae">More...</a><br /></td></tr>
 <tr class="separator:a5b23ffbb34abcd1af1cba15cdbf604ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8a89fbffc91477d2b6a92f656060bf6"><td class="memItemLeft" align="right" valign="top">steady_clock::time_point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/db0/classotbr_1_1rest_1_1Response.html#ab8a89fbffc91477d2b6a92f656060bf6">GetStartTime</a> () const</td></tr>
-<tr class="memdesc:ab8a89fbffc91477d2b6a92f656060bf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns a timestamp of start time.  <a href="#ab8a89fbffc91477d2b6a92f656060bf6">More...</a><br /></td></tr>
 <tr class="separator:ab8a89fbffc91477d2b6a92f656060bf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e0b6ef9183ff5a98963ff8d95ca883d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/db0/classotbr_1_1rest_1_1Response.html#a1e0b6ef9183ff5a98963ff8d95ca883d">Serialize</a> (void) const</td></tr>
-<tr class="memdesc:a1e0b6ef9183ff5a98963ff8d95ca883d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method serialize a response to a string that could be sent by socket later.  <a href="#a1e0b6ef9183ff5a98963ff8d95ca883d">More...</a><br /></td></tr>
 <tr class="separator:a1e0b6ef9183ff5a98963ff8d95ca883d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class implements a response class for OTBR_REST, it could be manipulated by connection instance and resource handler. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="adc1e6ef6d583cf3a9c2f742c4fc133d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc1e6ef6d583cf3a9c2f742c4fc133d2">&#9670;&nbsp;</a></span>Response()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">otbr::rest::Response::Response </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The constructor to initialize a response instance. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a5f82f4e3d5ab9b4428525dd12b9dfdc9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5f82f4e3d5ab9b4428525dd12b9dfdc9">&#9670;&nbsp;</a></span>GetBody()</h2>
 
@@ -150,8 +136,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method return a string contains the body field of this response. </p>
+<p>This method return a string contains the body field of this response.</p>
 <dl class="section return"><dt>Returns</dt><dd>A string containing the body field. </dd></dl>
 
 </div>
@@ -170,16 +155,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method returns a timestamp of start time. </p>
+<p>This method returns a timestamp of start time.</p>
 <dl class="section return"><dt>Returns</dt><dd>A timepoint object indicates start time. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d2/db0/classotbr_1_1rest_1_1Response_ab8a89fbffc91477d2b6a92f656060bf6_icgraph.png" border="0" usemap="#d2/db0/classotbr_1_1rest_1_1Response_ab8a89fbffc91477d2b6a92f656060bf6_icgraph" alt=""/></div>
-<map name="d2/db0/classotbr_1_1rest_1_1Response_ab8a89fbffc91477d2b6a92f656060bf6_icgraph" id="d2/db0/classotbr_1_1rest_1_1Response_ab8a89fbffc91477d2b6a92f656060bf6_icgraph">
-</map>
-</div>
 
 </div>
 </div>
@@ -198,8 +175,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method checks whether this response is ready to be written to buffer. </p>
+<p>This method checks whether this response is ready to be written to buffer.</p>
 <dl class="section return"><dt>Returns</dt><dd>A bool value indicates whether this response is ready to be written to buffer.. </dd></dl>
 
 </div>
@@ -219,8 +195,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method checks whether this response need to be processed by callback handler later. </p>
+<p>This method checks whether this response need to be processed by callback handler later.</p>
 <dl class="section return"><dt>Returns</dt><dd>A bool value indicates whether this response need to be processed by callback handler later. </dd></dl>
 
 </div>
@@ -240,8 +215,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method serialize a response to a string that could be sent by socket later. </p>
+<p>This method serialize a response to a string that could be sent by socket later.</p>
 <dl class="section return"><dt>Returns</dt><dd>A string contains status line, headers and body of a response. </dd></dl>
 
 </div>
@@ -261,21 +235,50 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method set the response body. </p>
+<p>This method set the response body.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aBody</td><td>A string to be set as response body. </td></tr>
   </table>
   </dd>
 </dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d2/db0/classotbr_1_1rest_1_1Response_a27e64794404d58d5fb73d6fc307d0b85_icgraph.png" border="0" usemap="#d2/db0/classotbr_1_1rest_1_1Response_a27e64794404d58d5fb73d6fc307d0b85_icgraph" alt=""/></div>
-<map name="d2/db0/classotbr_1_1rest_1_1Response_a27e64794404d58d5fb73d6fc307d0b85_icgraph" id="d2/db0/classotbr_1_1rest_1_1Response_a27e64794404d58d5fb73d6fc307d0b85_icgraph">
-</map>
+
 </div>
+</div>
+<a id="aa6299f838c2cd88eb56e79a5936c0dc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6299f838c2cd88eb56e79a5936c0dc4">&#9670;&nbsp;</a></span>SetCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otbr::rest::Response::SetCallback </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This method labels the response as need callback. </p>
+
+</div>
+</div>
+<a id="ae32fa224413da0a7ffdd8c53e2eac594"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae32fa224413da0a7ffdd8c53e2eac594">&#9670;&nbsp;</a></span>SetComplete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otbr::rest::Response::SetComplete </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This method labels the response as complete which means all fields has been successfully set. </p>
 
 </div>
 </div>
@@ -294,21 +297,13 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method set the response code. </p>
+<p>This method set the response code.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aCode</td><td>A string representing response code such as "404 not found". </td></tr>
   </table>
   </dd>
 </dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d2/db0/classotbr_1_1rest_1_1Response_ac9313834a0fb7641c649083d35a73a37_icgraph.png" border="0" usemap="#d2/db0/classotbr_1_1rest_1_1Response_ac9313834a0fb7641c649083d35a73a37_icgraph" alt=""/></div>
-<map name="d2/db0/classotbr_1_1rest_1_1Response_ac9313834a0fb7641c649083d35a73a37_icgraph" id="d2/db0/classotbr_1_1rest_1_1Response_ac9313834a0fb7641c649083d35a73a37_icgraph">
-</map>
-</div>
 
 </div>
 </div>
@@ -327,9 +322,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method is used to set a timestamp. </p>
-<p>when a callback is needed and this field tells callback handler when to collect all the data and form the response.</p>
+<p>This method is used to set a timestamp. when a callback is needed and this field tells callback handler when to collect all the data and form the response.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aStartTime</td><td>A timestamp indicates when the response start to wait for callback. </td></tr>
@@ -344,15 +337,11 @@ Here is the caller graph for this function:</div>
 <li>src/rest/response.cpp</li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><b>otbr</b></li><li class="navelem"><b>rest</b></li><li class="navelem"><a class="el" href="../../d2/db0/classotbr_1_1rest_1_1Response.html">Response</a></li>
-    <li class="footer">Generated on Fri Jan 8 2021 12:38:42 for openthread-br by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

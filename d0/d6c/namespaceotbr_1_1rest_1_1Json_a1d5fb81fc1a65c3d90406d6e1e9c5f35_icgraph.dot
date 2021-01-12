@@ -1,9 +1,0 @@
-digraph "otbr::rest::Json::Diag2JsonString"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node9 [label="otbr::rest::Json::Diag2Json\lString",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node10 [label="otbr::rest::Resource\l::HandleCallback",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d6e/classotbr_1_1rest_1_1Resource.html#ab295a777534ec33d12ee2212ddf7bd48",tooltip="This method distributes a callback handler for each connection needs a callback. "];
-}

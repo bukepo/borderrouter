@@ -9,13 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -29,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">openthread-br
-   &#160;<span id="projectnumber">0.2.0-faf7389</span>
+   &#160;<span id="projectnumber">0.2.0-efedf3f</span>
    </div>
   </td>
  </tr>
@@ -50,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('dir_d7e94c978dd7652d53b152d482eda33a.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -79,56 +57,42 @@ $(document).ready(function(){initNavTree('dir_d7e94c978dd7652d53b152d482eda33a.h
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_d7e94c978dd7652d53b152d482eda33a.html">rest</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">rest Directory Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Directory dependency graph for rest:</div>
-<div class="dyncontent">
-<div class="center"><img src="dir_d7e94c978dd7652d53b152d482eda33a_dep.png" border="0" usemap="#dir__d7e94c978dd7652d53b152d482eda33a__dep" alt="src/rest"/></div>
-<map name="dir__d7e94c978dd7652d53b152d482eda33a__dep" id="dir__d7e94c978dd7652d53b152d482eda33a__dep">
-</map>
-</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="files"></a>
 Files</h2></td></tr>
 <tr class="memitem:dd/d42/connection_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dd/d42/connection_8hpp.html">connection.hpp</a> <a href="dd/d42/connection_8hpp_source.html">[code]</a></td></tr>
-<tr class="memdesc:dd/d42/connection_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">This file includes connection definition for RESTful HTTP server. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d5/db8/json_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d5/db8/json_8hpp.html">json.hpp</a> <a href="d5/db8/json_8hpp_source.html">[code]</a></td></tr>
-<tr class="memdesc:d5/db8/json_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">This file includes JSON formatter definition for RESTful HTTP server. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d1/d46/parser_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d1/d46/parser_8hpp.html">parser.hpp</a> <a href="d1/d46/parser_8hpp_source.html">[code]</a></td></tr>
-<tr class="memdesc:d1/d46/parser_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">This file includes parser definition for RESTful HTTP server. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d6/d6f/request_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d6/d6f/request_8hpp.html">request.hpp</a> <a href="d6/d6f/request_8hpp_source.html">[code]</a></td></tr>
-<tr class="memdesc:d6/d6f/request_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">This file includes request definition for RESTful HTTP server. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d5/dc7/resource_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d5/dc7/resource_8hpp.html">resource.hpp</a> <a href="d5/dc7/resource_8hpp_source.html">[code]</a></td></tr>
-<tr class="memdesc:d5/dc7/resource_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">This file includes Handler definition for RESTful HTTP server. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:db/da4/response_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="db/da4/response_8hpp.html">response.hpp</a> <a href="db/da4/response_8hpp_source.html">[code]</a></td></tr>
-<tr class="memdesc:db/da4/response_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">This file includes response definition for RESTful HTTP server. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d0/d9f/rest__web__server_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d0/d9f/rest__web__server_8hpp.html">rest_web_server.hpp</a> <a href="d0/d9f/rest__web__server_8hpp_source.html">[code]</a></td></tr>
-<tr class="memdesc:d0/d9f/rest__web__server_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">This file includes definitions for RESTful HTTP server. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:de/daa/rest_2types_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="de/daa/rest_2types_8hpp.html">types.hpp</a> <a href="de/daa/rest_2types_8hpp_source.html">[code]</a></td></tr>
-<tr class="memdesc:de/daa/rest_2types_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">This file includes type definitions for OTBR-REST. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_d7e94c978dd7652d53b152d482eda33a.html">rest</a></li>
-    <li class="footer">Generated on Fri Jan 8 2021 12:38:42 for openthread-br by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

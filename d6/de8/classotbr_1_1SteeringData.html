@@ -9,13 +9,6 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
-<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../navtreedata.js"></script>
-<script type="text/javascript" src="../../navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -29,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">openthread-br
-   &#160;<span id="projectnumber">0.2.0-faf7389</span>
+   &#160;<span id="projectnumber">0.2.0-efedf3f</span>
    </div>
   </td>
  </tr>
@@ -50,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('d6/de8/classotbr_1_1SteeringData.html','../../');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -79,6 +57,11 @@ $(document).ready(function(){initNavTree('d6/de8/classotbr_1_1SteeringData.html'
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>otbr</b></li><li class="navelem"><a class="el" href="../../d6/de8/classotbr_1_1SteeringData.html">SteeringData</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
@@ -90,56 +73,39 @@ $(document).ready(function(){initNavTree('d6/de8/classotbr_1_1SteeringData.html'
 </div><!--header-->
 <div class="contents">
 
-<p>This class represents Steering Data.  
- <a href="../../d6/de8/classotbr_1_1SteeringData.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="../../d1/d80/steering__data_8hpp_source.html">src/utils/steering_data.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:aec7f332b0277764f0f65d5206d05f560"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
-&#160;&#160;<a class="el" href="../../d6/de8/classotbr_1_1SteeringData.html#aec7f332b0277764f0f65d5206d05f560aebc9abf7b3e88ccf7e816fb6579dd023">kMaxSizeOfBloomFilter</a> = 16, 
-<br />
-&#160;&#160;<a class="el" href="../../d6/de8/classotbr_1_1SteeringData.html#aec7f332b0277764f0f65d5206d05f560ad46be1ab9b2f7984f4661ae7a22005e6">kSizeJoinerId</a> = 8
-<br />
+<tr class="memitem:aec7f332b0277764f0f65d5206d05f560"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="../../d6/de8/classotbr_1_1SteeringData.html#aec7f332b0277764f0f65d5206d05f560aebc9abf7b3e88ccf7e816fb6579dd023">kMaxSizeOfBloomFilter</a> = 16, 
+<a class="el" href="../../d6/de8/classotbr_1_1SteeringData.html#aec7f332b0277764f0f65d5206d05f560ad46be1ab9b2f7984f4661ae7a22005e6">kSizeJoinerId</a> = 8
  }</td></tr>
 <tr class="separator:aec7f332b0277764f0f65d5206d05f560"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab587b55eb172be9ea913b31d5cf4dff7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de8/classotbr_1_1SteeringData.html#ab587b55eb172be9ea913b31d5cf4dff7">Init</a> (uint8_t aLength)</td></tr>
-<tr class="memdesc:ab587b55eb172be9ea913b31d5cf4dff7"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method initializes the bloom filter.  <a href="#ab587b55eb172be9ea913b31d5cf4dff7">More...</a><br /></td></tr>
 <tr class="separator:ab587b55eb172be9ea913b31d5cf4dff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab41ef506f5689e2e251b63849ed11994"><td class="memItemLeft" align="right" valign="top"><a id="ab41ef506f5689e2e251b63849ed11994"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de8/classotbr_1_1SteeringData.html#ab41ef506f5689e2e251b63849ed11994">Clear</a> (void)</td></tr>
-<tr class="memdesc:ab41ef506f5689e2e251b63849ed11994"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method sets all bits in the bloom filter to zero. <br /></td></tr>
+<tr class="memitem:ab41ef506f5689e2e251b63849ed11994"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de8/classotbr_1_1SteeringData.html#ab41ef506f5689e2e251b63849ed11994">Clear</a> (void)</td></tr>
 <tr class="separator:ab41ef506f5689e2e251b63849ed11994"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab14302f1d98d02edb29b0da20b979523"><td class="memItemLeft" align="right" valign="top"><a id="ab14302f1d98d02edb29b0da20b979523"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de8/classotbr_1_1SteeringData.html#ab14302f1d98d02edb29b0da20b979523">Set</a> (void)</td></tr>
-<tr class="memdesc:ab14302f1d98d02edb29b0da20b979523"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ths method sets all bits in the bloom filter to one. <br /></td></tr>
+<tr class="memitem:ab14302f1d98d02edb29b0da20b979523"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de8/classotbr_1_1SteeringData.html#ab14302f1d98d02edb29b0da20b979523">Set</a> (void)</td></tr>
 <tr class="separator:ab14302f1d98d02edb29b0da20b979523"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbadfef58d51a386d3d6bcd529987fd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de8/classotbr_1_1SteeringData.html#acbadfef58d51a386d3d6bcd529987fd6">SetBit</a> (uint8_t aBit)</td></tr>
-<tr class="memdesc:acbadfef58d51a386d3d6bcd529987fd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method sets bit <code>aBit</code>.  <a href="#acbadfef58d51a386d3d6bcd529987fd6">More...</a><br /></td></tr>
 <tr class="separator:acbadfef58d51a386d3d6bcd529987fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dde3e4e63981714773d59246142044b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de8/classotbr_1_1SteeringData.html#a0dde3e4e63981714773d59246142044b">ComputeBloomFilter</a> (const uint8_t *aJoinerId)</td></tr>
-<tr class="memdesc:a0dde3e4e63981714773d59246142044b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method computes the Bloom Filter.  <a href="#a0dde3e4e63981714773d59246142044b">More...</a><br /></td></tr>
 <tr class="separator:a0dde3e4e63981714773d59246142044b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9cd3916d56098e8f5ebbefca84392bd"><td class="memItemLeft" align="right" valign="top">const uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de8/classotbr_1_1SteeringData.html#af9cd3916d56098e8f5ebbefca84392bd">GetBloomFilter</a> (void) const</td></tr>
-<tr class="memdesc:af9cd3916d56098e8f5ebbefca84392bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns a pointer to the bloom filter.  <a href="#af9cd3916d56098e8f5ebbefca84392bd">More...</a><br /></td></tr>
 <tr class="separator:af9cd3916d56098e8f5ebbefca84392bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6998d067b2546d41c11b4f87dc31ae55"><td class="memItemLeft" align="right" valign="top"><a id="a6998d067b2546d41c11b4f87dc31ae55"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de8/classotbr_1_1SteeringData.html#a6998d067b2546d41c11b4f87dc31ae55">GetLength</a> (void) const</td></tr>
-<tr class="memdesc:a6998d067b2546d41c11b4f87dc31ae55"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns the length of the bloom filter. <br /></td></tr>
+<tr class="memitem:a6998d067b2546d41c11b4f87dc31ae55"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de8/classotbr_1_1SteeringData.html#a6998d067b2546d41c11b4f87dc31ae55">GetLength</a> (void) const</td></tr>
 <tr class="separator:a6998d067b2546d41c11b4f87dc31ae55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a75538ceaf5fb20f23d17870b03dc0a8d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de8/classotbr_1_1SteeringData.html#a75538ceaf5fb20f23d17870b03dc0a8d">ComputeJoinerId</a> (const uint8_t *aEui64, uint8_t *aJoinerId)</td></tr>
-<tr class="memdesc:a75538ceaf5fb20f23d17870b03dc0a8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method computes joiner id from EUI64.  <a href="#a75538ceaf5fb20f23d17870b03dc0a8d">More...</a><br /></td></tr>
 <tr class="separator:a75538ceaf5fb20f23d17870b03dc0a8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class represents Steering Data. </p>
+<div class="textblock"><p>This class represents Steering Data </p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="aec7f332b0277764f0f65d5206d05f560"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aec7f332b0277764f0f65d5206d05f560">&#9670;&nbsp;</a></span>anonymous enum</h2>
@@ -162,6 +128,33 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab41ef506f5689e2e251b63849ed11994"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab41ef506f5689e2e251b63849ed11994">&#9670;&nbsp;</a></span>Clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otbr::SteeringData::Clear </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method sets all bits in the bloom filter to zero. </p>
+
+</div>
+</div>
 <a id="a0dde3e4e63981714773d59246142044b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0dde3e4e63981714773d59246142044b">&#9670;&nbsp;</a></span>ComputeBloomFilter()</h2>
 
@@ -177,28 +170,13 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method computes the Bloom Filter. </p>
+<p>This method computes the Bloom Filter.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aJoinerId</td><td>Extended address </td></tr>
   </table>
   </dd>
 </dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d6/de8/classotbr_1_1SteeringData_a0dde3e4e63981714773d59246142044b_cgraph.png" border="0" usemap="#d6/de8/classotbr_1_1SteeringData_a0dde3e4e63981714773d59246142044b_cgraph" alt=""/></div>
-<map name="d6/de8/classotbr_1_1SteeringData_a0dde3e4e63981714773d59246142044b_cgraph" id="d6/de8/classotbr_1_1SteeringData_a0dde3e4e63981714773d59246142044b_cgraph">
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d6/de8/classotbr_1_1SteeringData_a0dde3e4e63981714773d59246142044b_icgraph.png" border="0" usemap="#d6/de8/classotbr_1_1SteeringData_a0dde3e4e63981714773d59246142044b_icgraph" alt=""/></div>
-<map name="d6/de8/classotbr_1_1SteeringData_a0dde3e4e63981714773d59246142044b_icgraph" id="d6/de8/classotbr_1_1SteeringData_a0dde3e4e63981714773d59246142044b_icgraph">
-</map>
-</div>
 
 </div>
 </div>
@@ -235,8 +213,7 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>This method computes joiner id from EUI64. </p>
+<p>This method computes joiner id from EUI64.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aEui64</td><td>A pointer to EUI64. </td></tr>
@@ -244,13 +221,6 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d6/de8/classotbr_1_1SteeringData_a75538ceaf5fb20f23d17870b03dc0a8d_icgraph.png" border="0" usemap="#d6/de8/classotbr_1_1SteeringData_a75538ceaf5fb20f23d17870b03dc0a8d_icgraph" alt=""/></div>
-<map name="d6/de8/classotbr_1_1SteeringData_a75538ceaf5fb20f23d17870b03dc0a8d_icgraph" id="d6/de8/classotbr_1_1SteeringData_a75538ceaf5fb20f23d17870b03dc0a8d_icgraph">
-</map>
-</div>
 
 </div>
 </div>
@@ -277,9 +247,35 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>This method returns a pointer to the bloom filter. </p>
+<p>This method returns a pointer to the bloom filter.</p>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the computed bloom filter. </dd></dl>
+
+</div>
+</div>
+<a id="a6998d067b2546d41c11b4f87dc31ae55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6998d067b2546d41c11b4f87dc31ae55">&#9670;&nbsp;</a></span>GetLength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t otbr::SteeringData::GetLength </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method returns the length of the bloom filter. </p>
 
 </div>
 </div>
@@ -298,21 +294,40 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method initializes the bloom filter. </p>
+<p>This method initializes the bloom filter.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aLength</td><td>Length of the bloom filter in bytes. </td></tr>
   </table>
   </dd>
 </dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d6/de8/classotbr_1_1SteeringData_ab587b55eb172be9ea913b31d5cf4dff7_cgraph.png" border="0" usemap="#d6/de8/classotbr_1_1SteeringData_ab587b55eb172be9ea913b31d5cf4dff7_cgraph" alt=""/></div>
-<map name="d6/de8/classotbr_1_1SteeringData_ab587b55eb172be9ea913b31d5cf4dff7_cgraph" id="d6/de8/classotbr_1_1SteeringData_ab587b55eb172be9ea913b31d5cf4dff7_cgraph">
-</map>
+
 </div>
+</div>
+<a id="ab14302f1d98d02edb29b0da20b979523"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab14302f1d98d02edb29b0da20b979523">&#9670;&nbsp;</a></span>Set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otbr::SteeringData::Set </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Ths method sets all bits in the bloom filter to one. </p>
 
 </div>
 </div>
@@ -339,28 +354,13 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>This method sets bit <code>aBit</code>. </p>
+<p>This method sets bit <code>aBit</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aBit</td><td>The bit offset. </td></tr>
   </table>
   </dd>
 </dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d6/de8/classotbr_1_1SteeringData_acbadfef58d51a386d3d6bcd529987fd6_cgraph.png" border="0" usemap="#d6/de8/classotbr_1_1SteeringData_acbadfef58d51a386d3d6bcd529987fd6_cgraph" alt=""/></div>
-<map name="d6/de8/classotbr_1_1SteeringData_acbadfef58d51a386d3d6bcd529987fd6_cgraph" id="d6/de8/classotbr_1_1SteeringData_acbadfef58d51a386d3d6bcd529987fd6_cgraph">
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d6/de8/classotbr_1_1SteeringData_acbadfef58d51a386d3d6bcd529987fd6_icgraph.png" border="0" usemap="#d6/de8/classotbr_1_1SteeringData_acbadfef58d51a386d3d6bcd529987fd6_icgraph" alt=""/></div>
-<map name="d6/de8/classotbr_1_1SteeringData_acbadfef58d51a386d3d6bcd529987fd6_icgraph" id="d6/de8/classotbr_1_1SteeringData_acbadfef58d51a386d3d6bcd529987fd6_icgraph">
-</map>
-</div>
 
 </div>
 </div>
@@ -369,15 +369,11 @@ Here is the caller graph for this function:</div>
 <li>src/utils/steering_data.cpp</li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><b>otbr</b></li><li class="navelem"><a class="el" href="../../d6/de8/classotbr_1_1SteeringData.html">SteeringData</a></li>
-    <li class="footer">Generated on Fri Jan 8 2021 12:38:42 for openthread-br by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

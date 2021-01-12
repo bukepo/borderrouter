@@ -9,13 +9,6 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
-<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../navtreedata.js"></script>
-<script type="text/javascript" src="../../navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -29,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">openthread-br
-   &#160;<span id="projectnumber">0.2.0-faf7389</span>
+   &#160;<span id="projectnumber">0.2.0-efedf3f</span>
    </div>
   </td>
  </tr>
@@ -51,20 +44,6 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('db/dae/group__border-router-ncp.html','../../');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -96,60 +75,43 @@ $(document).ready(function(){initNavTree('db/dae/group__border-router-ncp.html',
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d6a/classotbr_1_1Ncp_1_1Controller.html">otbr::Ncp::Controller</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This interface defines NCP <a class="el" href="../../da/d6a/classotbr_1_1Ncp_1_1Controller.html" title="This interface defines NCP Controller functionality. ">Controller</a> functionality.  <a href="../../da/d6a/classotbr_1_1Ncp_1_1Controller.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:ga0240d4c7cf1f040015974ddbb58efb56"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
 &#160;&#160;<a class="el" href="../../db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56ad7b4e10081a1792227eddba5bb11e459">otbr::Ncp::kEventExtPanId</a>, 
-<br />
-&#160;&#160;<a class="el" href="../../db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56ad848f5997a28a2087bc1c61ac3a6be37">otbr::Ncp::kEventNetworkName</a>, 
-<br />
-&#160;&#160;<a class="el" href="../../db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56af0cd1d228bc4502ba72570c363679a65">otbr::Ncp::kEventPSKc</a>, 
-<br />
-&#160;&#160;<a class="el" href="../../db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56afad602666ab014d108278a49082f154f">otbr::Ncp::kEventThreadState</a>, 
+<a class="el" href="../../db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56ad848f5997a28a2087bc1c61ac3a6be37">otbr::Ncp::kEventNetworkName</a>, 
+<a class="el" href="../../db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56af0cd1d228bc4502ba72570c363679a65">otbr::Ncp::kEventPSKc</a>, 
+<a class="el" href="../../db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56afad602666ab014d108278a49082f154f">otbr::Ncp::kEventThreadState</a>, 
 <br />
 &#160;&#160;<a class="el" href="../../db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56a8e2185943147e3a6029442f97ed341d7">otbr::Ncp::kEventThreadVersion</a>, 
-<br />
-&#160;&#160;<a class="el" href="../../db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56aa9471cdaaab4557cc34186d9cbdbad98">otbr::Ncp::kEventUdpForwardStream</a>, 
-<br />
-&#160;&#160;<a class="el" href="../../db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56a6f5a639f874fa2a88b7b398a3d089bda">otbr::Ncp::kEventBackboneRouterState</a>, 
-<br />
-&#160;&#160;<a class="el" href="../../db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56aaebe3500cfb08e9ae3b8d4299ac99789">otbr::Ncp::kEventBackboneRouterDomainPrefixEvent</a>, 
+<a class="el" href="../../db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56aa9471cdaaab4557cc34186d9cbdbad98">otbr::Ncp::kEventUdpForwardStream</a>, 
+<a class="el" href="../../db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56a6f5a639f874fa2a88b7b398a3d089bda">otbr::Ncp::kEventBackboneRouterState</a>, 
+<a class="el" href="../../db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56aaebe3500cfb08e9ae3b8d4299ac99789">otbr::Ncp::kEventBackboneRouterDomainPrefixEvent</a>, 
 <br />
 &#160;&#160;<a class="el" href="../../db/dae/group__border-router-ncp.html#gga0240d4c7cf1f040015974ddbb58efb56a1b70f65751d23e287832f62232fae493">otbr::Ncp::kEventBackboneRouterNdProxyEvent</a>
 <br />
- }<tr class="memdesc:ga0240d4c7cf1f040015974ddbb58efb56"><td class="mdescLeft">&#160;</td><td class="mdescRight">NCP Events definition according to spinel protocol.  <a href="../../db/dae/group__border-router-ncp.html#ga0240d4c7cf1f040015974ddbb58efb56">More...</a><br /></td></tr>
-</td></tr>
+ }</td></tr>
 <tr class="separator:ga0240d4c7cf1f040015974ddbb58efb56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:gae3b8029c55774634c21363cd2e7b051e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aa">otbrError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dae/group__border-router-ncp.html#gae3b8029c55774634c21363cd2e7b051e">otbr::Ncp::Controller::Init</a> (void)=0</td></tr>
-<tr class="memdesc:gae3b8029c55774634c21363cd2e7b051e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method initalize the NCP controller.  <a href="#gae3b8029c55774634c21363cd2e7b051e">More...</a><br /></td></tr>
 <tr class="separator:gae3b8029c55774634c21363cd2e7b051e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa6e411ecc13d0c084d13557975b1a7e0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dae/group__border-router-ncp.html#gaa6e411ecc13d0c084d13557975b1a7e0">otbr::Ncp::Controller::UpdateFdSet</a> (otSysMainloopContext &amp;aMainloop)=0</td></tr>
-<tr class="memdesc:gaa6e411ecc13d0c084d13557975b1a7e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method updates the fd_set to poll.  <a href="#gaa6e411ecc13d0c084d13557975b1a7e0">More...</a><br /></td></tr>
 <tr class="separator:gaa6e411ecc13d0c084d13557975b1a7e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae3f89e92e7e2a33f3c7709dfb3056340"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dae/group__border-router-ncp.html#gae3f89e92e7e2a33f3c7709dfb3056340">otbr::Ncp::Controller::Process</a> (const otSysMainloopContext &amp;aMainloop)=0</td></tr>
-<tr class="memdesc:gae3f89e92e7e2a33f3c7709dfb3056340"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method performs the Thread processing.  <a href="#gae3f89e92e7e2a33f3c7709dfb3056340">More...</a><br /></td></tr>
 <tr class="separator:gae3f89e92e7e2a33f3c7709dfb3056340"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga021b198819062851ea5153464c57c39f"><td class="memItemLeft" align="right" valign="top"><a id="ga021b198819062851ea5153464c57c39f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dae/group__border-router-ncp.html#ga021b198819062851ea5153464c57c39f">otbr::Ncp::Controller::Reset</a> (void)=0</td></tr>
-<tr class="memdesc:ga021b198819062851ea5153464c57c39f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method reest the Ncp <a class="el" href="../../da/d6a/classotbr_1_1Ncp_1_1Controller.html" title="This interface defines NCP Controller functionality. ">Controller</a>. <br /></td></tr>
+<tr class="memitem:ga021b198819062851ea5153464c57c39f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dae/group__border-router-ncp.html#ga021b198819062851ea5153464c57c39f">otbr::Ncp::Controller::Reset</a> (void)=0</td></tr>
 <tr class="separator:ga021b198819062851ea5153464c57c39f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7fc69ac2520487f7cd8d8a686c7e82ae"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dae/group__border-router-ncp.html#ga7fc69ac2520487f7cd8d8a686c7e82ae">otbr::Ncp::Controller::IsResetRequested</a> (void)=0</td></tr>
-<tr class="memdesc:ga7fc69ac2520487f7cd8d8a686c7e82ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method return whether reset is requested.  <a href="#ga7fc69ac2520487f7cd8d8a686c7e82ae">More...</a><br /></td></tr>
 <tr class="separator:ga7fc69ac2520487f7cd8d8a686c7e82ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga782ea989840ead62a7f99822f5e6679a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aa">otbrError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dae/group__border-router-ncp.html#ga782ea989840ead62a7f99822f5e6679a">otbr::Ncp::Controller::RequestEvent</a> (int aEvent)=0</td></tr>
-<tr class="memdesc:ga782ea989840ead62a7f99822f5e6679a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method request the event.  <a href="#ga782ea989840ead62a7f99822f5e6679a">More...</a><br /></td></tr>
 <tr class="separator:ga782ea989840ead62a7f99822f5e6679a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9f7019d3b0be9d173e424bfe27c3efb1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../da/d6a/classotbr_1_1Ncp_1_1Controller.html">Controller</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dae/group__border-router-ncp.html#ga9f7019d3b0be9d173e424bfe27c3efb1">otbr::Ncp::Controller::Create</a> (const char *aInterfaceName, const char *aRadioUrl, const char *aBackboneInterfaceName=nullptr)</td></tr>
-<tr class="memdesc:ga9f7019d3b0be9d173e424bfe27c3efb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method creates a NCP <a class="el" href="../../da/d6a/classotbr_1_1Ncp_1_1Controller.html" title="This interface defines NCP Controller functionality. ">Controller</a>.  <a href="#ga9f7019d3b0be9d173e424bfe27c3efb1">More...</a><br /></td></tr>
 <tr class="separator:ga9f7019d3b0be9d173e424bfe27c3efb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8c3223f6b1b7ac0f5f7e1ed037576206"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dae/group__border-router-ncp.html#ga8c3223f6b1b7ac0f5f7e1ed037576206">otbr::Ncp::Controller::Destroy</a> (<a class="el" href="../../da/d6a/classotbr_1_1Ncp_1_1Controller.html">Controller</a> *aController)</td></tr>
-<tr class="memdesc:ga8c3223f6b1b7ac0f5f7e1ed037576206"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method destroys a NCP <a class="el" href="../../da/d6a/classotbr_1_1Ncp_1_1Controller.html" title="This interface defines NCP Controller functionality. ">Controller</a>.  <a href="#ga8c3223f6b1b7ac0f5f7e1ed037576206">More...</a><br /></td></tr>
 <tr class="separator:ga8c3223f6b1b7ac0f5f7e1ed037576206"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -166,7 +128,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         </tr>
       </table>
 </div><div class="memdoc">
-
 <p>NCP Events definition according to spinel protocol. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga0240d4c7cf1f040015974ddbb58efb56ad7b4e10081a1792227eddba5bb11e459"></a>kEventExtPanId&#160;</td><td class="fielddoc"><p>Extended PAN ID arrived. </p>
@@ -231,8 +192,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>This method creates a NCP <a class="el" href="../../da/d6a/classotbr_1_1Ncp_1_1Controller.html" title="This interface defines NCP Controller functionality. ">Controller</a>. </p>
+<p>This method creates a NCP <a class="el" href="../../da/d6a/classotbr_1_1Ncp_1_1Controller.html">Controller</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aInterfaceName</td><td>A string of the NCP interface name. </td></tr>
@@ -241,13 +201,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </table>
   </dd>
 </dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../db/dae/group__border-router-ncp_ga9f7019d3b0be9d173e424bfe27c3efb1_cgraph.png" border="0" usemap="#db/dae/group__border-router-ncp_ga9f7019d3b0be9d173e424bfe27c3efb1_cgraph" alt=""/></div>
-<map name="db/dae/group__border-router-ncp_ga9f7019d3b0be9d173e424bfe27c3efb1_cgraph" id="db/dae/group__border-router-ncp_ga9f7019d3b0be9d173e424bfe27c3efb1_cgraph">
-</map>
-</div>
 
 </div>
 </div>
@@ -274,21 +227,13 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>This method destroys a NCP <a class="el" href="../../da/d6a/classotbr_1_1Ncp_1_1Controller.html" title="This interface defines NCP Controller functionality. ">Controller</a>. </p>
+<p>This method destroys a NCP <a class="el" href="../../da/d6a/classotbr_1_1Ncp_1_1Controller.html">Controller</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aController</td><td>A pointer to the NCP contorller. </td></tr>
   </table>
   </dd>
 </dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../db/dae/group__border-router-ncp_ga8c3223f6b1b7ac0f5f7e1ed037576206_icgraph.png" border="0" usemap="#db/dae/group__border-router-ncp_ga8c3223f6b1b7ac0f5f7e1ed037576206_icgraph" alt=""/></div>
-<map name="db/dae/group__border-router-ncp_ga8c3223f6b1b7ac0f5f7e1ed037576206_icgraph" id="db/dae/group__border-router-ncp_ga8c3223f6b1b7ac0f5f7e1ed037576206_icgraph">
-</map>
-</div>
 
 </div>
 </div>
@@ -315,8 +260,7 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>This method initalize the NCP controller. </p>
+<p>This method initalize the NCP controller.</p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">OTBR_ERROR_NONE</td><td>Successfully initialized NCP controller. </td></tr>
@@ -326,13 +270,6 @@ Here is the caller graph for this function:</div>
 </dl>
 
 <p>Implemented in <a class="el" href="../../db/d17/classotbr_1_1Ncp_1_1ControllerOpenThread.html#a186d75e377433267db8c08939250029c">otbr::Ncp::ControllerOpenThread</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../db/dae/group__border-router-ncp_gae3b8029c55774634c21363cd2e7b051e_icgraph.png" border="0" usemap="#db/dae/group__border-router-ncp_gae3b8029c55774634c21363cd2e7b051e_icgraph" alt=""/></div>
-<map name="db/dae/group__border-router-ncp_gae3b8029c55774634c21363cd2e7b051e_icgraph" id="db/dae/group__border-router-ncp_gae3b8029c55774634c21363cd2e7b051e_icgraph">
-</map>
-</div>
 
 </div>
 </div>
@@ -359,8 +296,7 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>This method return whether reset is requested. </p>
+<p>This method return whether reset is requested.</p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">TRUE</td><td>reset is requested. </td></tr>
@@ -396,8 +332,7 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>This method performs the Thread processing. </p>
+<p>This method performs the Thread processing.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aMainloop</td><td>A reference to OpenThread mainloop context. </td></tr>
@@ -406,13 +341,6 @@ Here is the caller graph for this function:</div>
 </dl>
 
 <p>Implemented in <a class="el" href="../../db/d17/classotbr_1_1Ncp_1_1ControllerOpenThread.html#a96cb36e3e8410a97047d8d6910e86ec9">otbr::Ncp::ControllerOpenThread</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../db/dae/group__border-router-ncp_gae3f89e92e7e2a33f3c7709dfb3056340_icgraph.png" border="0" usemap="#db/dae/group__border-router-ncp_gae3f89e92e7e2a33f3c7709dfb3056340_icgraph" alt=""/></div>
-<map name="db/dae/group__border-router-ncp_gae3f89e92e7e2a33f3c7709dfb3056340_icgraph" id="db/dae/group__border-router-ncp_gae3f89e92e7e2a33f3c7709dfb3056340_icgraph">
-</map>
-</div>
 
 </div>
 </div>
@@ -439,8 +367,7 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>This method request the event. </p>
+<p>This method request the event.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aEvent</td><td>The event id to request.</td></tr>
@@ -456,6 +383,35 @@ Here is the caller graph for this function:</div>
 </dl>
 
 <p>Implemented in <a class="el" href="../../db/d17/classotbr_1_1Ncp_1_1ControllerOpenThread.html#a8524d0ecd87b3e5c08882f84ecd823cc">otbr::Ncp::ControllerOpenThread</a>.</p>
+
+</div>
+</div>
+<a id="ga021b198819062851ea5153464c57c39f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga021b198819062851ea5153464c57c39f">&#9670;&nbsp;</a></span>Reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void otbr::Ncp::Controller::Reset </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method reest the Ncp <a class="el" href="../../da/d6a/classotbr_1_1Ncp_1_1Controller.html">Controller</a>. </p>
+
+<p>Implemented in <a class="el" href="../../db/d17/classotbr_1_1Ncp_1_1ControllerOpenThread.html#a5b448faef8d2aac3fb29ad11e66959d2">otbr::Ncp::ControllerOpenThread</a>.</p>
 
 </div>
 </div>
@@ -482,8 +438,7 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>This method updates the fd_set to poll. </p>
+<p>This method updates the fd_set to poll.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">aMainloop</td><td>A reference to OpenThread mainloop context. </td></tr>
@@ -492,25 +447,15 @@ Here is the caller graph for this function:</div>
 </dl>
 
 <p>Implemented in <a class="el" href="../../db/d17/classotbr_1_1Ncp_1_1ControllerOpenThread.html#a92a465227d3a56c64eef89cef6eba8a7">otbr::Ncp::ControllerOpenThread</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../db/dae/group__border-router-ncp_gaa6e411ecc13d0c084d13557975b1a7e0_icgraph.png" border="0" usemap="#db/dae/group__border-router-ncp_gaa6e411ecc13d0c084d13557975b1a7e0_icgraph" alt=""/></div>
-<map name="db/dae/group__border-router-ncp_gaa6e411ecc13d0c084d13557975b1a7e0_icgraph" id="db/dae/group__border-router-ncp_gaa6e411ecc13d0c084d13557975b1a7e0_icgraph">
-</map>
-</div>
 
 </div>
 </div>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Generated on Fri Jan 8 2021 12:38:41 for openthread-br by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

@@ -1,9 +1,0 @@
-digraph "otbr::DBus::DBusObject::RegisterSetPropertyHandler"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node13 [label="otbr::DBus::DBusObject\l::RegisterSetPropertyHandler",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node13 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node14 [label="otbr::DBus::DBusRequest\l::GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d92/classotbr_1_1DBus_1_1DBusRequest.html#a879f418bc6986d20c2bdb6aa07f5afa0",tooltip="This method returns the message sent to call the d-bus method. "];
-}

@@ -9,13 +9,6 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
-<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../navtreedata.js"></script>
-<script type="text/javascript" src="../../navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -29,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">openthread-br
-   &#160;<span id="projectnumber">0.2.0-faf7389</span>
+   &#160;<span id="projectnumber">0.2.0-efedf3f</span>
    </div>
   </td>
  </tr>
@@ -50,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('d9/dd1/web__server_8hpp.html','../../');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -79,6 +57,11 @@ $(document).ready(function(){initNavTree('d9/dd1/web__server_8hpp.html','../../'
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_0d4dde2834ed44e47b6207c19e4aac26.html">web</a></li><li class="navelem"><a class="el" href="../../dir_9c2c15f288e12373e327a76e299cd79d.html">web-service</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -87,9 +70,6 @@ $(document).ready(function(){initNavTree('d9/dd1/web__server_8hpp.html','../../'
 <div class="title">web_server.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>This file implements the web server of border router.  
-<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;openthread-br/config.h&quot;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;fstream&gt;</code><br />
@@ -100,20 +80,6 @@ $(document).ready(function(){initNavTree('d9/dd1/web__server_8hpp.html','../../'
 <code>#include &lt;syslog.h&gt;</code><br />
 <code>#include &lt;boost/asio/ip/tcp.hpp&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../dd/dca/wpan__service_8hpp_source.html">web/web-service/wpan_service.hpp</a>&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for web_server.hpp:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d3/d27/web__server_8hpp__incl.png" border="0" usemap="#src_2web_2web-service_2web__server_8hpp" alt=""/></div>
-<map name="src_2web_2web-service_2web__server_8hpp" id="src_2web_2web-service_2web__server_8hpp">
-</map>
-</div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d5/d74/web__server_8hpp__dep__incl.png" border="0" usemap="#src_2web_2web-service_2web__server_8hppdep" alt=""/></div>
-<map name="src_2web_2web-service_2web__server_8hppdep" id="src_2web_2web-service_2web__server_8hppdep">
-</map>
-</div>
 </div>
 <p><a href="../../d9/dd1/web__server_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -122,7 +88,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d24/classSimpleWeb_1_1Server.html">SimpleWeb::Server&lt; T &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d83/classotbr_1_1Web_1_1WebServer.html">otbr::Web::WebServer</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class implements the http server.  <a href="../../d6/d83/classotbr_1_1Web_1_1WebServer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -135,17 +100,13 @@ typedef <a class="el" href="../../df/d24/classSimpleWeb_1_1Server.html">SimpleWe
 <tr class="separator:a3a86a4cbed0f236bd68685ac72634a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This file implements the web server of border router. </p>
+<div class="textblock"><p>This file implements the web server of border router </p>
 </div></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_0d4dde2834ed44e47b6207c19e4aac26.html">web</a></li><li class="navelem"><a class="el" href="../../dir_9c2c15f288e12373e327a76e299cd79d.html">web-service</a></li><li class="navelem"><a class="el" href="../../d9/dd1/web__server_8hpp.html">web_server.hpp</a></li>
-    <li class="footer">Generated on Fri Jan 8 2021 12:38:41 for openthread-br by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

@@ -9,13 +9,6 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
-<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../navtreedata.js"></script>
-<script type="text/javascript" src="../../navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -29,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">openthread-br
-   &#160;<span id="projectnumber">0.2.0-faf7389</span>
+   &#160;<span id="projectnumber">0.2.0-efedf3f</span>
    </div>
   </td>
  </tr>
@@ -50,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('da/d6a/classotbr_1_1Ncp_1_1Controller.html','../../');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -79,6 +57,11 @@ $(document).ready(function(){initNavTree('da/d6a/classotbr_1_1Ncp_1_1Controller.
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>otbr</b></li><li class="navelem"><b>Ncp</b></li><li class="navelem"><a class="el" href="../../da/d6a/classotbr_1_1Ncp_1_1Controller.html">Controller</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -89,82 +72,59 @@ $(document).ready(function(){initNavTree('da/d6a/classotbr_1_1Ncp_1_1Controller.
 </div><!--header-->
 <div class="contents">
 
-<p>This interface defines NCP <a class="el" href="../../da/d6a/classotbr_1_1Ncp_1_1Controller.html" title="This interface defines NCP Controller functionality. ">Controller</a> functionality.  
- <a href="../../da/d6a/classotbr_1_1Ncp_1_1Controller.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="../../db/de8/ncp_8hpp_source.html">src/agent/ncp.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for otbr::Ncp::Controller:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../dc/d8b/classotbr_1_1Ncp_1_1Controller__inherit__graph.png" border="0" usemap="#otbr_1_1Ncp_1_1Controller_inherit__map" alt="Inheritance graph"/></div>
-<map name="otbr_1_1Ncp_1_1Controller_inherit__map" id="otbr_1_1Ncp_1_1Controller_inherit__map">
+ <div class="center">
+  <img src="../../da/d6a/classotbr_1_1Ncp_1_1Controller.png" usemap="#otbr::Ncp::Controller_map" alt=""/>
+  <map id="otbr::Ncp::Controller_map" name="otbr::Ncp::Controller_map">
+<area href="../../dd/dcb/classotbr_1_1EventEmitter.html" alt="otbr::EventEmitter" shape="rect" coords="0,0,196,24"/>
+<area href="../../db/d17/classotbr_1_1Ncp_1_1ControllerOpenThread.html" alt="otbr::Ncp::ControllerOpenThread" shape="rect" coords="0,112,196,136"/>
 </map>
-<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for otbr::Ncp::Controller:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d0/d4c/classotbr_1_1Ncp_1_1Controller__coll__graph.png" border="0" usemap="#otbr_1_1Ncp_1_1Controller_coll__map" alt="Collaboration graph"/></div>
-<map name="otbr_1_1Ncp_1_1Controller_coll__map" id="otbr_1_1Ncp_1_1Controller_coll__map">
-</map>
-<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:gae3b8029c55774634c21363cd2e7b051e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aa">otbrError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dae/group__border-router-ncp.html#gae3b8029c55774634c21363cd2e7b051e">Init</a> (void)=0</td></tr>
-<tr class="memdesc:gae3b8029c55774634c21363cd2e7b051e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method initalize the NCP controller.  <a href="../../db/dae/group__border-router-ncp.html#gae3b8029c55774634c21363cd2e7b051e">More...</a><br /></td></tr>
 <tr class="separator:gae3b8029c55774634c21363cd2e7b051e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa6e411ecc13d0c084d13557975b1a7e0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dae/group__border-router-ncp.html#gaa6e411ecc13d0c084d13557975b1a7e0">UpdateFdSet</a> (otSysMainloopContext &amp;aMainloop)=0</td></tr>
-<tr class="memdesc:gaa6e411ecc13d0c084d13557975b1a7e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method updates the fd_set to poll.  <a href="../../db/dae/group__border-router-ncp.html#gaa6e411ecc13d0c084d13557975b1a7e0">More...</a><br /></td></tr>
 <tr class="separator:gaa6e411ecc13d0c084d13557975b1a7e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae3f89e92e7e2a33f3c7709dfb3056340"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dae/group__border-router-ncp.html#gae3f89e92e7e2a33f3c7709dfb3056340">Process</a> (const otSysMainloopContext &amp;aMainloop)=0</td></tr>
-<tr class="memdesc:gae3f89e92e7e2a33f3c7709dfb3056340"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method performs the Thread processing.  <a href="../../db/dae/group__border-router-ncp.html#gae3f89e92e7e2a33f3c7709dfb3056340">More...</a><br /></td></tr>
 <tr class="separator:gae3f89e92e7e2a33f3c7709dfb3056340"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga021b198819062851ea5153464c57c39f"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dae/group__border-router-ncp.html#ga021b198819062851ea5153464c57c39f">Reset</a> (void)=0</td></tr>
-<tr class="memdesc:ga021b198819062851ea5153464c57c39f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method reest the Ncp <a class="el" href="../../da/d6a/classotbr_1_1Ncp_1_1Controller.html" title="This interface defines NCP Controller functionality. ">Controller</a>. <br /></td></tr>
+<tr class="memitem:ga021b198819062851ea5153464c57c39f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dae/group__border-router-ncp.html#ga021b198819062851ea5153464c57c39f">Reset</a> (void)=0</td></tr>
 <tr class="separator:ga021b198819062851ea5153464c57c39f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7fc69ac2520487f7cd8d8a686c7e82ae"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dae/group__border-router-ncp.html#ga7fc69ac2520487f7cd8d8a686c7e82ae">IsResetRequested</a> (void)=0</td></tr>
-<tr class="memdesc:ga7fc69ac2520487f7cd8d8a686c7e82ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method return whether reset is requested.  <a href="../../db/dae/group__border-router-ncp.html#ga7fc69ac2520487f7cd8d8a686c7e82ae">More...</a><br /></td></tr>
 <tr class="separator:ga7fc69ac2520487f7cd8d8a686c7e82ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga782ea989840ead62a7f99822f5e6679a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aa">otbrError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dae/group__border-router-ncp.html#ga782ea989840ead62a7f99822f5e6679a">RequestEvent</a> (int aEvent)=0</td></tr>
-<tr class="memdesc:ga782ea989840ead62a7f99822f5e6679a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method request the event.  <a href="../../db/dae/group__border-router-ncp.html#ga782ea989840ead62a7f99822f5e6679a">More...</a><br /></td></tr>
 <tr class="separator:ga782ea989840ead62a7f99822f5e6679a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classotbr_1_1EventEmitter"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classotbr_1_1EventEmitter')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../dd/dcb/classotbr_1_1EventEmitter.html">otbr::EventEmitter</a></td></tr>
 <tr class="memitem:ac5b618912e079429da1071d8e3b31b65 inherit pub_methods_classotbr_1_1EventEmitter"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dcb/classotbr_1_1EventEmitter.html#ac5b618912e079429da1071d8e3b31b65">On</a> (int aEvent, Callback aCallback, void *aContext)</td></tr>
-<tr class="memdesc:ac5b618912e079429da1071d8e3b31b65 inherit pub_methods_classotbr_1_1EventEmitter"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method register an event handler for <code>aEvent</code>.  <a href="../../dd/dcb/classotbr_1_1EventEmitter.html#ac5b618912e079429da1071d8e3b31b65">More...</a><br /></td></tr>
 <tr class="separator:ac5b618912e079429da1071d8e3b31b65 inherit pub_methods_classotbr_1_1EventEmitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59e610d42604ceb9443ec9fa4e364ffb inherit pub_methods_classotbr_1_1EventEmitter"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dcb/classotbr_1_1EventEmitter.html#a59e610d42604ceb9443ec9fa4e364ffb">Off</a> (int aEvent, Callback aCallback, void *aContext)</td></tr>
-<tr class="memdesc:a59e610d42604ceb9443ec9fa4e364ffb inherit pub_methods_classotbr_1_1EventEmitter"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method deregister an event handler for <code>aEvent</code>.  <a href="../../dd/dcb/classotbr_1_1EventEmitter.html#a59e610d42604ceb9443ec9fa4e364ffb">More...</a><br /></td></tr>
 <tr class="separator:a59e610d42604ceb9443ec9fa4e364ffb inherit pub_methods_classotbr_1_1EventEmitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac16b1dd365337036053e4b7403199fff inherit pub_methods_classotbr_1_1EventEmitter"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dcb/classotbr_1_1EventEmitter.html#ac16b1dd365337036053e4b7403199fff">Emit</a> (int aEvent,...)</td></tr>
-<tr class="memdesc:ac16b1dd365337036053e4b7403199fff inherit pub_methods_classotbr_1_1EventEmitter"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method emits an event.  <a href="../../dd/dcb/classotbr_1_1EventEmitter.html#ac16b1dd365337036053e4b7403199fff">More...</a><br /></td></tr>
 <tr class="separator:ac16b1dd365337036053e4b7403199fff inherit pub_methods_classotbr_1_1EventEmitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ga9f7019d3b0be9d173e424bfe27c3efb1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../da/d6a/classotbr_1_1Ncp_1_1Controller.html">Controller</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dae/group__border-router-ncp.html#ga9f7019d3b0be9d173e424bfe27c3efb1">Create</a> (const char *aInterfaceName, const char *aRadioUrl, const char *aBackboneInterfaceName=nullptr)</td></tr>
-<tr class="memdesc:ga9f7019d3b0be9d173e424bfe27c3efb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method creates a NCP <a class="el" href="../../da/d6a/classotbr_1_1Ncp_1_1Controller.html" title="This interface defines NCP Controller functionality. ">Controller</a>.  <a href="../../db/dae/group__border-router-ncp.html#ga9f7019d3b0be9d173e424bfe27c3efb1">More...</a><br /></td></tr>
 <tr class="separator:ga9f7019d3b0be9d173e424bfe27c3efb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8c3223f6b1b7ac0f5f7e1ed037576206"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dae/group__border-router-ncp.html#ga8c3223f6b1b7ac0f5f7e1ed037576206">Destroy</a> (<a class="el" href="../../da/d6a/classotbr_1_1Ncp_1_1Controller.html">Controller</a> *aController)</td></tr>
-<tr class="memdesc:ga8c3223f6b1b7ac0f5f7e1ed037576206"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method destroys a NCP <a class="el" href="../../da/d6a/classotbr_1_1Ncp_1_1Controller.html" title="This interface defines NCP Controller functionality. ">Controller</a>.  <a href="../../db/dae/group__border-router-ncp.html#ga8c3223f6b1b7ac0f5f7e1ed037576206">More...</a><br /></td></tr>
 <tr class="separator:ga8c3223f6b1b7ac0f5f7e1ed037576206"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This interface defines NCP <a class="el" href="../../da/d6a/classotbr_1_1Ncp_1_1Controller.html" title="This interface defines NCP Controller functionality. ">Controller</a> functionality. </p>
+<div class="textblock"><p>This interface defines NCP <a class="el" href="../../da/d6a/classotbr_1_1Ncp_1_1Controller.html">Controller</a> functionality. </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/agent/<a class="el" href="../../db/de8/ncp_8hpp_source.html">ncp.hpp</a></li>
 <li>src/agent/ncp_openthread.cpp</li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><b>otbr</b></li><li class="navelem"><b>Ncp</b></li><li class="navelem"><a class="el" href="../../da/d6a/classotbr_1_1Ncp_1_1Controller.html">Controller</a></li>
-    <li class="footer">Generated on Fri Jan 8 2021 12:38:42 for openthread-br by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

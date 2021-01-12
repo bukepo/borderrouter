@@ -9,13 +9,6 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
-<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../navtreedata.js"></script>
-<script type="text/javascript" src="../../navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -29,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">openthread-br
-   &#160;<span id="projectnumber">0.2.0-faf7389</span>
+   &#160;<span id="projectnumber">0.2.0-efedf3f</span>
    </div>
   </td>
  </tr>
@@ -50,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('d4/db3/classotbr_1_1rest_1_1Connection.html','../../');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -79,6 +57,11 @@ $(document).ready(function(){initNavTree('d4/db3/classotbr_1_1rest_1_1Connection
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>otbr</b></li><li class="navelem"><b>rest</b></li><li class="navelem"><a class="el" href="../../d4/db3/classotbr_1_1rest_1_1Connection.html">Connection</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -88,32 +71,23 @@ $(document).ready(function(){initNavTree('d4/db3/classotbr_1_1rest_1_1Connection
 </div><!--header-->
 <div class="contents">
 
-<p>This class implements a <a class="el" href="../../d4/db3/classotbr_1_1rest_1_1Connection.html" title="This class implements a Connection class of each socket connection. ">Connection</a> class of each socket connection.  
- <a href="../../d4/db3/classotbr_1_1rest_1_1Connection.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="../../dd/d42/connection_8hpp_source.html">src/rest/connection.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a20e579c9ce4871434dc979fb3f317803"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/classotbr_1_1rest_1_1Connection.html#a20e579c9ce4871434dc979fb3f317803">Connection</a> (steady_clock::time_point aStartTime, <a class="el" href="../../d7/d6e/classotbr_1_1rest_1_1Resource.html">Resource</a> *aResource, int aFd)</td></tr>
-<tr class="memdesc:a20e579c9ce4871434dc979fb3f317803"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor is to initialize a socket connection instance.  <a href="#a20e579c9ce4871434dc979fb3f317803">More...</a><br /></td></tr>
 <tr class="separator:a20e579c9ce4871434dc979fb3f317803"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa7dfadb1f42d43446627c8d8a00bb83"><td class="memItemLeft" align="right" valign="top"><a id="afa7dfadb1f42d43446627c8d8a00bb83"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/classotbr_1_1rest_1_1Connection.html#afa7dfadb1f42d43446627c8d8a00bb83">Init</a> (void)</td></tr>
-<tr class="memdesc:afa7dfadb1f42d43446627c8d8a00bb83"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method initializes the connection. <br /></td></tr>
+<tr class="memitem:afa7dfadb1f42d43446627c8d8a00bb83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/classotbr_1_1rest_1_1Connection.html#afa7dfadb1f42d43446627c8d8a00bb83">Init</a> (void)</td></tr>
 <tr class="separator:afa7dfadb1f42d43446627c8d8a00bb83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ee43e629ac052c13f1fb3808bf894f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/classotbr_1_1rest_1_1Connection.html#a5ee43e629ac052c13f1fb3808bf894f2">Process</a> (fd_set &amp;aReadFdSet, fd_set &amp;aWriteFdSet)</td></tr>
-<tr class="memdesc:a5ee43e629ac052c13f1fb3808bf894f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method performs processing.  <a href="#a5ee43e629ac052c13f1fb3808bf894f2">More...</a><br /></td></tr>
 <tr class="separator:a5ee43e629ac052c13f1fb3808bf894f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b3d432d9364e847279beba39982697f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/classotbr_1_1rest_1_1Connection.html#a2b3d432d9364e847279beba39982697f">UpdateFdSet</a> (otSysMainloopContext &amp;aMainloop) const</td></tr>
-<tr class="memdesc:a2b3d432d9364e847279beba39982697f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method updates the file descriptor sets and timeout for mainloop.  <a href="#a2b3d432d9364e847279beba39982697f">More...</a><br /></td></tr>
 <tr class="separator:a2b3d432d9364e847279beba39982697f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21704f6af0f8b07b0755989241897e17"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/classotbr_1_1rest_1_1Connection.html#a21704f6af0f8b07b0755989241897e17">IsComplete</a> (void) const</td></tr>
-<tr class="memdesc:a21704f6af0f8b07b0755989241897e17"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method indicates whether this connection no longer need to be processed.  <a href="#a21704f6af0f8b07b0755989241897e17">More...</a><br /></td></tr>
 <tr class="separator:a21704f6af0f8b07b0755989241897e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class implements a <a class="el" href="../../d4/db3/classotbr_1_1rest_1_1Connection.html" title="This class implements a Connection class of each socket connection. ">Connection</a> class of each socket connection. </p>
+<div class="textblock"><p>This class implements a <a class="el" href="../../d4/db3/classotbr_1_1rest_1_1Connection.html">Connection</a> class of each socket connection. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a20e579c9ce4871434dc979fb3f317803"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a20e579c9ce4871434dc979fb3f317803">&#9670;&nbsp;</a></span>Connection()</h2>
@@ -146,8 +120,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>The constructor is to initialize a socket connection instance. </p>
+<p>The constructor is to initialize a socket connection instance.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aStartTime</td><td>The reference start time of a conneciton which is set when created for the first time and maybe reset when transfer to wait callback or wait write state. </td></tr>
@@ -160,6 +133,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="afa7dfadb1f42d43446627c8d8a00bb83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa7dfadb1f42d43446627c8d8a00bb83">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otbr::rest::Connection::Init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This method initializes the connection. </p>
+
+</div>
+</div>
 <a id="a21704f6af0f8b07b0755989241897e17"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a21704f6af0f8b07b0755989241897e17">&#9670;&nbsp;</a></span>IsComplete()</h2>
 
@@ -175,8 +167,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method indicates whether this connection no longer need to be processed. </p>
+<p>This method indicates whether this connection no longer need to be processed.</p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">true</td><td>This connection could be released in next loop. </td></tr>
@@ -184,13 +175,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
   </table>
   </dd>
 </dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d4/db3/classotbr_1_1rest_1_1Connection_a21704f6af0f8b07b0755989241897e17_icgraph.png" border="0" usemap="#d4/db3/classotbr_1_1rest_1_1Connection_a21704f6af0f8b07b0755989241897e17_icgraph" alt=""/></div>
-<map name="d4/db3/classotbr_1_1rest_1_1Connection_a21704f6af0f8b07b0755989241897e17_icgraph" id="d4/db3/classotbr_1_1rest_1_1Connection_a21704f6af0f8b07b0755989241897e17_icgraph">
-</map>
-</div>
 
 </div>
 </div>
@@ -219,8 +203,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method performs processing. </p>
+<p>This method performs processing.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aReadFdSet</td><td>The read file descriptors. </td></tr>
@@ -228,13 +211,6 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d4/db3/classotbr_1_1rest_1_1Connection_a5ee43e629ac052c13f1fb3808bf894f2_icgraph.png" border="0" usemap="#d4/db3/classotbr_1_1rest_1_1Connection_a5ee43e629ac052c13f1fb3808bf894f2_icgraph" alt=""/></div>
-<map name="d4/db3/classotbr_1_1rest_1_1Connection_a5ee43e629ac052c13f1fb3808bf894f2_icgraph" id="d4/db3/classotbr_1_1rest_1_1Connection_a5ee43e629ac052c13f1fb3808bf894f2_icgraph">
-</map>
-</div>
 
 </div>
 </div>
@@ -253,21 +229,13 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method updates the file descriptor sets and timeout for mainloop. </p>
+<p>This method updates the file descriptor sets and timeout for mainloop.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">aMainloop</td><td>A reference to OpenThread mainloop context. </td></tr>
   </table>
   </dd>
 </dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d4/db3/classotbr_1_1rest_1_1Connection_a2b3d432d9364e847279beba39982697f_icgraph.png" border="0" usemap="#d4/db3/classotbr_1_1rest_1_1Connection_a2b3d432d9364e847279beba39982697f_icgraph" alt=""/></div>
-<map name="d4/db3/classotbr_1_1rest_1_1Connection_a2b3d432d9364e847279beba39982697f_icgraph" id="d4/db3/classotbr_1_1rest_1_1Connection_a2b3d432d9364e847279beba39982697f_icgraph">
-</map>
-</div>
 
 </div>
 </div>
@@ -276,15 +244,11 @@ Here is the caller graph for this function:</div>
 <li>src/rest/connection.cpp</li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><b>otbr</b></li><li class="navelem"><b>rest</b></li><li class="navelem"><a class="el" href="../../d4/db3/classotbr_1_1rest_1_1Connection.html">Connection</a></li>
-    <li class="footer">Generated on Fri Jan 8 2021 12:38:42 for openthread-br by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

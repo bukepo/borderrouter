@@ -9,13 +9,6 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
-<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../navtreedata.js"></script>
-<script type="text/javascript" src="../../navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -29,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">openthread-br
-   &#160;<span id="projectnumber">0.2.0-faf7389</span>
+   &#160;<span id="projectnumber">0.2.0-efedf3f</span>
    </div>
   </td>
  </tr>
@@ -50,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('de/daa/rest_2types_8hpp.html','../../');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -79,6 +57,11 @@ $(document).ready(function(){initNavTree('de/daa/rest_2types_8hpp.html','../../'
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_d7e94c978dd7652d53b152d482eda33a.html">rest</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -87,27 +70,10 @@ $(document).ready(function(){initNavTree('de/daa/rest_2types_8hpp.html','../../'
 <div class="title">types.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>This file includes type definitions for OTBR-REST.  
-<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;chrono&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;openthread/netdiag.h&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for types.hpp:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d9/df4/rest_2types_8hpp__incl.png" border="0" usemap="#src_2rest_2types_8hpp" alt=""/></div>
-<map name="src_2rest_2types_8hpp" id="src_2rest_2types_8hpp">
-</map>
-</div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../df/d55/rest_2types_8hpp__dep__incl.png" border="0" usemap="#src_2rest_2types_8hppdep" alt=""/></div>
-<map name="src_2rest_2types_8hppdep" id="src_2rest_2types_8hppdep">
-</map>
-</div>
 </div>
 <p><a href="../../de/daa/rest_2types_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -122,57 +88,40 @@ Classes</h2></td></tr>
 Enumerations</h2></td></tr>
 <tr class="memitem:a06f5b86d59d177d419e9af98c501151b"><td class="memItemLeft" align="right" valign="top"><a id="a06f5b86d59d177d419e9af98c501151b"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>HttpMethod</b> : std::uint8_t { <br />
 &#160;&#160;<b>otbr::rest::HttpMethod::kDelete</b> = 0, 
-<br />
-&#160;&#160;<b>otbr::rest::HttpMethod::kGet</b> = 1, 
-<br />
-&#160;&#160;<b>otbr::rest::HttpMethod::kHead</b> = 2, 
-<br />
-&#160;&#160;<b>otbr::rest::HttpMethod::kPost</b> = 3, 
+<b>otbr::rest::HttpMethod::kGet</b> = 1, 
+<b>otbr::rest::HttpMethod::kHead</b> = 2, 
+<b>otbr::rest::HttpMethod::kPost</b> = 3, 
 <br />
 &#160;&#160;<b>otbr::rest::HttpMethod::kPut</b> = 4, 
-<br />
-&#160;&#160;<b>otbr::rest::HttpMethod::kOptions</b> = 6
+<b>otbr::rest::HttpMethod::kOptions</b> = 6
 <br />
  }</td></tr>
 <tr class="separator:a06f5b86d59d177d419e9af98c501151b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5a96db8c13680f10fb63675dace3477"><td class="memItemLeft" align="right" valign="top"><a id="ab5a96db8c13680f10fb63675dace3477"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>HttpStatusCode</b> : std::uint16_t { <br />
 &#160;&#160;<b>kStatusOk</b> = 200, 
-<br />
-&#160;&#160;<b>kStatusResourceNotFound</b> = 404, 
-<br />
-&#160;&#160;<b>kStatusMethodNotAllowed</b> = 405, 
-<br />
-&#160;&#160;<b>kStatusRequestTimeout</b> = 408, 
+<b>kStatusResourceNotFound</b> = 404, 
+<b>kStatusMethodNotAllowed</b> = 405, 
+<b>kStatusRequestTimeout</b> = 408, 
 <br />
 &#160;&#160;<b>kStatusInternalServerError</b> = 500
 <br />
  }</td></tr>
 <tr class="separator:ab5a96db8c13680f10fb63675dace3477"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17db696f088dfb810d2d249fc03e6b97"><td class="memItemLeft" align="right" valign="top"><a id="a17db696f088dfb810d2d249fc03e6b97"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>PostError</b> : std::uint8_t { <br />
-&#160;&#160;<b>otbr::rest::PostError::kPostErrorNone</b> = 0, 
-<br />
-&#160;&#160;<b>otbr::rest::PostError::kPostBadRequest</b> = 1, 
-<br />
-&#160;&#160;<b>otbr::rest::PostError::kPostSetFail</b> = 2
-<br />
+<tr class="memitem:a17db696f088dfb810d2d249fc03e6b97"><td class="memItemLeft" align="right" valign="top"><a id="a17db696f088dfb810d2d249fc03e6b97"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>PostError</b> : std::uint8_t { <b>otbr::rest::PostError::kPostErrorNone</b> = 0, 
+<b>otbr::rest::PostError::kPostBadRequest</b> = 1, 
+<b>otbr::rest::PostError::kPostSetFail</b> = 2
  }</td></tr>
 <tr class="separator:a17db696f088dfb810d2d249fc03e6b97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addcd75255725aaedf1056b927da71755"><td class="memItemLeft" align="right" valign="top"><a id="addcd75255725aaedf1056b927da71755"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ConnectionState</b> : std::uint8_t { <br />
 &#160;&#160;<b>otbr::rest::ConnectionState::kInit</b> = 0, 
-<br />
-&#160;&#160;<b>otbr::rest::ConnectionState::kReadWait</b> = 1, 
-<br />
-&#160;&#160;<b>otbr::rest::ConnectionState::kReadTimeout</b> = 2, 
-<br />
-&#160;&#160;<b>otbr::rest::ConnectionState::kCallbackWait</b> = 3, 
+<b>otbr::rest::ConnectionState::kReadWait</b> = 1, 
+<b>otbr::rest::ConnectionState::kReadTimeout</b> = 2, 
+<b>otbr::rest::ConnectionState::kCallbackWait</b> = 3, 
 <br />
 &#160;&#160;<b>otbr::rest::ConnectionState::kWriteWait</b> = 4, 
-<br />
-&#160;&#160;<b>otbr::rest::ConnectionState::kWriteTimeout</b> = 5, 
-<br />
-&#160;&#160;<b>otbr::rest::ConnectionState::kInternalError</b> = 6, 
-<br />
-&#160;&#160;<b>otbr::rest::ConnectionState::kComplete</b> = 7
+<b>otbr::rest::ConnectionState::kWriteTimeout</b> = 5, 
+<b>otbr::rest::ConnectionState::kInternalError</b> = 6, 
+<b>otbr::rest::ConnectionState::kComplete</b> = 7
 <br />
  }</td></tr>
 <tr class="separator:addcd75255725aaedf1056b927da71755"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,15 +129,11 @@ Enumerations</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file includes type definitions for OTBR-REST. </p>
 </div></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_d7e94c978dd7652d53b152d482eda33a.html">rest</a></li><li class="navelem"><a class="el" href="../../de/daa/rest_2types_8hpp.html">types.hpp</a></li>
-    <li class="footer">Generated on Fri Jan 8 2021 12:38:41 for openthread-br by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

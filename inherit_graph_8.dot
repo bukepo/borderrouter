@@ -1,7 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="otbr::DBus::ActiveScanResult",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/da8/structotbr_1_1DBus_1_1ActiveScanResult.html"];
-}

@@ -1,7 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="otbr::DBus::DBusTypeTrait\l\< NeighborInfo \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d42/structotbr_1_1DBus_1_1DBusTypeTrait_3_01NeighborInfo_01_4.html"];
-}

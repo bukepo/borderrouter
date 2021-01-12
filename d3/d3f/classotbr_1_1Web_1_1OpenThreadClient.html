@@ -9,13 +9,6 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
-<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../navtreedata.js"></script>
-<script type="text/javascript" src="../../navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -29,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">openthread-br
-   &#160;<span id="projectnumber">0.2.0-faf7389</span>
+   &#160;<span id="projectnumber">0.2.0-efedf3f</span>
    </div>
   </td>
  </tr>
@@ -50,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('d3/d3f/classotbr_1_1Web_1_1OpenThreadClient.html','../../');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -79,6 +57,11 @@ $(document).ready(function(){initNavTree('d3/d3f/classotbr_1_1Web_1_1OpenThreadC
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>otbr</b></li><li class="navelem"><b>Web</b></li><li class="navelem"><a class="el" href="../../d3/d3f/classotbr_1_1Web_1_1OpenThreadClient.html">OpenThreadClient</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -88,38 +71,65 @@ $(document).ready(function(){initNavTree('d3/d3f/classotbr_1_1Web_1_1OpenThreadC
 </div><!--header-->
 <div class="contents">
 
-<p>This class implements functionality of OpenThread client.  
- <a href="../../d3/d3f/classotbr_1_1Web_1_1OpenThreadClient.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="../../dd/de2/ot__client_8hpp_source.html">src/web/web-service/ot_client.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa77cd688d5144aa6676e56602f5192d0"><td class="memItemLeft" align="right" valign="top"><a id="aa77cd688d5144aa6676e56602f5192d0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d3f/classotbr_1_1Web_1_1OpenThreadClient.html#aa77cd688d5144aa6676e56602f5192d0">OpenThreadClient</a> (void)</td></tr>
-<tr class="memdesc:aa77cd688d5144aa6676e56602f5192d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This constructor creates an OpenThread client. <br /></td></tr>
+<tr class="memitem:aa77cd688d5144aa6676e56602f5192d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d3f/classotbr_1_1Web_1_1OpenThreadClient.html#aa77cd688d5144aa6676e56602f5192d0">OpenThreadClient</a> (void)</td></tr>
 <tr class="separator:aa77cd688d5144aa6676e56602f5192d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ca899c0c9d9ce04b98c7ec41776a5f8"><td class="memItemLeft" align="right" valign="top"><a id="a9ca899c0c9d9ce04b98c7ec41776a5f8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d3f/classotbr_1_1Web_1_1OpenThreadClient.html#a9ca899c0c9d9ce04b98c7ec41776a5f8">~OpenThreadClient</a> (void)</td></tr>
-<tr class="memdesc:a9ca899c0c9d9ce04b98c7ec41776a5f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This destructor destories an OpenThread client. <br /></td></tr>
+<tr class="memitem:a9ca899c0c9d9ce04b98c7ec41776a5f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d3f/classotbr_1_1Web_1_1OpenThreadClient.html#a9ca899c0c9d9ce04b98c7ec41776a5f8">~OpenThreadClient</a> (void)</td></tr>
 <tr class="separator:a9ca899c0c9d9ce04b98c7ec41776a5f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a874758a90cc13e74005caab2f25f016a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d3f/classotbr_1_1Web_1_1OpenThreadClient.html#a874758a90cc13e74005caab2f25f016a">Connect</a> (void)</td></tr>
-<tr class="memdesc:a874758a90cc13e74005caab2f25f016a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method connects to OpenThread daemon.  <a href="#a874758a90cc13e74005caab2f25f016a">More...</a><br /></td></tr>
 <tr class="separator:a874758a90cc13e74005caab2f25f016a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1b52e77c6c062588da9bdd198d25b34"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d3f/classotbr_1_1Web_1_1OpenThreadClient.html#aa1b52e77c6c062588da9bdd198d25b34">Execute</a> (const char *aFormat,...)</td></tr>
-<tr class="memdesc:aa1b52e77c6c062588da9bdd198d25b34"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method executes OpenThread CLI.  <a href="#aa1b52e77c6c062588da9bdd198d25b34">More...</a><br /></td></tr>
 <tr class="separator:aa1b52e77c6c062588da9bdd198d25b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4683127e8efe4022b91eb1590304ef36"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d3f/classotbr_1_1Web_1_1OpenThreadClient.html#a4683127e8efe4022b91eb1590304ef36">Scan</a> (<a class="el" href="../../d9/dc3/structotbr_1_1Web_1_1WpanNetworkInfo.html">WpanNetworkInfo</a> *aNetworks, int aLength)</td></tr>
-<tr class="memdesc:a4683127e8efe4022b91eb1590304ef36"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method scans Thread network.  <a href="#a4683127e8efe4022b91eb1590304ef36">More...</a><br /></td></tr>
 <tr class="separator:a4683127e8efe4022b91eb1590304ef36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1eff6b891617591bfaaac5cbb5ae2c35"><td class="memItemLeft" align="right" valign="top"><a id="a1eff6b891617591bfaaac5cbb5ae2c35"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d3f/classotbr_1_1Web_1_1OpenThreadClient.html#a1eff6b891617591bfaaac5cbb5ae2c35">FactoryReset</a> (void)</td></tr>
-<tr class="memdesc:a1eff6b891617591bfaaac5cbb5ae2c35"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method performs factory reset. <br /></td></tr>
+<tr class="memitem:a1eff6b891617591bfaaac5cbb5ae2c35"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d3f/classotbr_1_1Web_1_1OpenThreadClient.html#a1eff6b891617591bfaaac5cbb5ae2c35">FactoryReset</a> (void)</td></tr>
 <tr class="separator:a1eff6b891617591bfaaac5cbb5ae2c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class implements functionality of OpenThread client. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aa77cd688d5144aa6676e56602f5192d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa77cd688d5144aa6676e56602f5192d0">&#9670;&nbsp;</a></span>OpenThreadClient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">otbr::Web::OpenThreadClient::OpenThreadClient </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This constructor creates an OpenThread client. </p>
+
+</div>
+</div>
+<a id="a9ca899c0c9d9ce04b98c7ec41776a5f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ca899c0c9d9ce04b98c7ec41776a5f8">&#9670;&nbsp;</a></span>~OpenThreadClient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">otbr::Web::OpenThreadClient::~OpenThreadClient </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This destructor destories an OpenThread client. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a874758a90cc13e74005caab2f25f016a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a874758a90cc13e74005caab2f25f016a">&#9670;&nbsp;</a></span>Connect()</h2>
 
@@ -135,8 +145,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method connects to OpenThread daemon. </p>
+<p>This method connects to OpenThread daemon.</p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">true</td><td>Successfully connected to the daemon. </td></tr>
@@ -144,13 +153,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
   </table>
   </dd>
 </dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d3/d3f/classotbr_1_1Web_1_1OpenThreadClient_a874758a90cc13e74005caab2f25f016a_icgraph.png" border="0" usemap="#d3/d3f/classotbr_1_1Web_1_1OpenThreadClient_a874758a90cc13e74005caab2f25f016a_icgraph" alt=""/></div>
-<map name="d3/d3f/classotbr_1_1Web_1_1OpenThreadClient_a874758a90cc13e74005caab2f25f016a_icgraph" id="d3/d3f/classotbr_1_1Web_1_1OpenThreadClient_a874758a90cc13e74005caab2f25f016a_icgraph">
-</map>
-</div>
 
 </div>
 </div>
@@ -179,8 +181,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method executes OpenThread CLI. </p>
+<p>This method executes OpenThread CLI.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aFormat</td><td>C style format string. </td></tr>
@@ -189,13 +190,25 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the output if succeeded, otherwise nullptr. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d3/d3f/classotbr_1_1Web_1_1OpenThreadClient_aa1b52e77c6c062588da9bdd198d25b34_icgraph.png" border="0" usemap="#d3/d3f/classotbr_1_1Web_1_1OpenThreadClient_aa1b52e77c6c062588da9bdd198d25b34_icgraph" alt=""/></div>
-<map name="d3/d3f/classotbr_1_1Web_1_1OpenThreadClient_aa1b52e77c6c062588da9bdd198d25b34_icgraph" id="d3/d3f/classotbr_1_1Web_1_1OpenThreadClient_aa1b52e77c6c062588da9bdd198d25b34_icgraph">
-</map>
+
 </div>
+</div>
+<a id="a1eff6b891617591bfaaac5cbb5ae2c35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1eff6b891617591bfaaac5cbb5ae2c35">&#9670;&nbsp;</a></span>FactoryReset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool otbr::Web::OpenThreadClient::FactoryReset </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This method performs factory reset. </p>
 
 </div>
 </div>
@@ -224,8 +237,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This method scans Thread network. </p>
+<p>This method scans Thread network.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">aNetworks</td><td>A pointer to the buffer to store network information. </td></tr>
@@ -234,20 +246,6 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Number of entries found. 0 if none found. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d3/d3f/classotbr_1_1Web_1_1OpenThreadClient_a4683127e8efe4022b91eb1590304ef36_cgraph.png" border="0" usemap="#d3/d3f/classotbr_1_1Web_1_1OpenThreadClient_a4683127e8efe4022b91eb1590304ef36_cgraph" alt=""/></div>
-<map name="d3/d3f/classotbr_1_1Web_1_1OpenThreadClient_a4683127e8efe4022b91eb1590304ef36_cgraph" id="d3/d3f/classotbr_1_1Web_1_1OpenThreadClient_a4683127e8efe4022b91eb1590304ef36_cgraph">
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d3/d3f/classotbr_1_1Web_1_1OpenThreadClient_a4683127e8efe4022b91eb1590304ef36_icgraph.png" border="0" usemap="#d3/d3f/classotbr_1_1Web_1_1OpenThreadClient_a4683127e8efe4022b91eb1590304ef36_icgraph" alt=""/></div>
-<map name="d3/d3f/classotbr_1_1Web_1_1OpenThreadClient_a4683127e8efe4022b91eb1590304ef36_icgraph" id="d3/d3f/classotbr_1_1Web_1_1OpenThreadClient_a4683127e8efe4022b91eb1590304ef36_icgraph">
-</map>
-</div>
 
 </div>
 </div>
@@ -256,15 +254,11 @@ Here is the caller graph for this function:</div>
 <li>src/web/web-service/ot_client.cpp</li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><b>otbr</b></li><li class="navelem"><b>Web</b></li><li class="navelem"><a class="el" href="../../d3/d3f/classotbr_1_1Web_1_1OpenThreadClient.html">OpenThreadClient</a></li>
-    <li class="footer">Generated on Fri Jan 8 2021 12:38:42 for openthread-br by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

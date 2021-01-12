@@ -1,9 +1,0 @@
-digraph "otbr::Mdns::PublisherAvahi::UpdateFdSet"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node13 [label="otbr::Mdns::PublisherAvahi\l::UpdateFdSet",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node13 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node14 [label="otbr::Mdns::Poller\l::UpdateFdSet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d23/classotbr_1_1Mdns_1_1Poller.html#a65a4682d5adc343e69bfea204411dcdd",tooltip="This method updates the fd_set and timeout for mainloop. "];
-}

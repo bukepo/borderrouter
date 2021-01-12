@@ -9,13 +9,6 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
-<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../navtreedata.js"></script>
-<script type="text/javascript" src="../../navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -29,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">openthread-br
-   &#160;<span id="projectnumber">0.2.0-faf7389</span>
+   &#160;<span id="projectnumber">0.2.0-efedf3f</span>
    </div>
   </td>
  </tr>
@@ -50,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('de/d00/structotbr_1_1DBus_1_1ExternalRoute.html','../../');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -79,6 +57,11 @@ $(document).ready(function(){initNavTree('de/d00/structotbr_1_1DBus_1_1ExternalR
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>otbr</b></li><li class="navelem"><b>DBus</b></li><li class="navelem"><a class="el" href="../../de/d00/structotbr_1_1DBus_1_1ExternalRoute.html">ExternalRoute</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
@@ -87,32 +70,18 @@ $(document).ready(function(){initNavTree('de/d00/structotbr_1_1DBus_1_1ExternalR
 <div class="title">otbr::DBus::ExternalRoute Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Collaboration diagram for otbr::DBus::ExternalRoute:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../dc/d80/structotbr_1_1DBus_1_1ExternalRoute__coll__graph.png" border="0" usemap="#otbr_1_1DBus_1_1ExternalRoute_coll__map" alt="Collaboration graph"/></div>
-<map name="otbr_1_1DBus_1_1ExternalRoute_coll__map" id="otbr_1_1DBus_1_1ExternalRoute_coll__map">
-</map>
-<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a15ffd18874bf27bdcad325452a626fd4"><td class="memItemLeft" align="right" valign="top"><a id="a15ffd18874bf27bdcad325452a626fd4"></a>
-<a class="el" href="../../da/d56/structotbr_1_1DBus_1_1Ip6Prefix.html">Ip6Prefix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d00/structotbr_1_1DBus_1_1ExternalRoute.html#a15ffd18874bf27bdcad325452a626fd4">mPrefix</a></td></tr>
-<tr class="memdesc:a15ffd18874bf27bdcad325452a626fd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The IPv6 prefix. <br /></td></tr>
+<tr class="memitem:a15ffd18874bf27bdcad325452a626fd4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d56/structotbr_1_1DBus_1_1Ip6Prefix.html">Ip6Prefix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d00/structotbr_1_1DBus_1_1ExternalRoute.html#a15ffd18874bf27bdcad325452a626fd4">mPrefix</a></td></tr>
 <tr class="separator:a15ffd18874bf27bdcad325452a626fd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6a9695a5ec5e7a2e05e35d8effa2472"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d00/structotbr_1_1DBus_1_1ExternalRoute.html#ad6a9695a5ec5e7a2e05e35d8effa2472">mRloc16</a></td></tr>
-<tr class="memdesc:ad6a9695a5ec5e7a2e05e35d8effa2472"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Rloc associated with the external route entry.  <a href="#ad6a9695a5ec5e7a2e05e35d8effa2472">More...</a><br /></td></tr>
 <tr class="separator:ad6a9695a5ec5e7a2e05e35d8effa2472"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a2a15f2b5bb5d71568faf18f3d02364"><td class="memItemLeft" align="right" valign="top"><a id="a5a2a15f2b5bb5d71568faf18f3d02364"></a>
-int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d00/structotbr_1_1DBus_1_1ExternalRoute.html#a5a2a15f2b5bb5d71568faf18f3d02364">mPreference</a></td></tr>
-<tr class="memdesc:a5a2a15f2b5bb5d71568faf18f3d02364"><td class="mdescLeft">&#160;</td><td class="mdescRight">A 2-bit signed integer indicating router preference as defined in RFC 4191. <br /></td></tr>
+<tr class="memitem:a5a2a15f2b5bb5d71568faf18f3d02364"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d00/structotbr_1_1DBus_1_1ExternalRoute.html#a5a2a15f2b5bb5d71568faf18f3d02364">mPreference</a></td></tr>
 <tr class="separator:a5a2a15f2b5bb5d71568faf18f3d02364"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9518f22a3b26daded8de4b7769e938f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d00/structotbr_1_1DBus_1_1ExternalRoute.html#a9518f22a3b26daded8de4b7769e938f1">mStable</a></td></tr>
-<tr class="memdesc:a9518f22a3b26daded8de4b7769e938f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">TRUE, if this configuration is considered Stable Network Data.  <a href="#a9518f22a3b26daded8de4b7769e938f1">More...</a><br /></td></tr>
 <tr class="separator:a9518f22a3b26daded8de4b7769e938f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e5049b249826148c0881a916b948661"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d00/structotbr_1_1DBus_1_1ExternalRoute.html#a0e5049b249826148c0881a916b948661">mNextHopIsThisDevice</a></td></tr>
-<tr class="memdesc:a0e5049b249826148c0881a916b948661"><td class="mdescLeft">&#160;</td><td class="mdescRight">TRUE if the external route entry's next hop is this device itself (i.e., the route was added earlier by this device).  <a href="#a0e5049b249826148c0881a916b948661">More...</a><br /></td></tr>
 <tr class="separator:a0e5049b249826148c0881a916b948661"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -127,10 +96,38 @@ int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="..
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>TRUE if the external route entry's next hop is this device itself (i.e., the route was added earlier by this device). </p>
-<p>FALSE otherwise.</p>
+<p>TRUE if the external route entry's next hop is this device itself (i.e., the route was added earlier by this device). FALSE otherwise.</p>
 <p>This value is ignored when adding an external route. For any added route the next hop is this device. </p>
+
+</div>
+</div>
+<a id="a5a2a15f2b5bb5d71568faf18f3d02364"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a2a15f2b5bb5d71568faf18f3d02364">&#9670;&nbsp;</a></span>mPreference</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t otbr::DBus::ExternalRoute::mPreference</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A 2-bit signed integer indicating router preference as defined in RFC 4191. </p>
+
+</div>
+</div>
+<a id="a15ffd18874bf27bdcad325452a626fd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15ffd18874bf27bdcad325452a626fd4">&#9670;&nbsp;</a></span>mPrefix</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d56/structotbr_1_1DBus_1_1Ip6Prefix.html">Ip6Prefix</a> otbr::DBus::ExternalRoute::mPrefix</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The IPv6 prefix. </p>
 
 </div>
 </div>
@@ -145,8 +142,7 @@ int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="..
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>The Rloc associated with the external route entry. </p>
+<p>The Rloc associated with the external route entry.</p>
 <p>This value is ignored when adding an external route. For any added route, the device's Rloc is used. </p>
 
 </div>
@@ -162,9 +158,7 @@ int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="..
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>TRUE, if this configuration is considered Stable Network Data. </p>
-<p>FALSE, otherwise. </p>
+<p>TRUE, if this configuration is considered Stable Network Data. FALSE, otherwise. </p>
 
 </div>
 </div>
@@ -172,15 +166,11 @@ int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="..
 <li>src/dbus/common/<a class="el" href="../../d3/d00/dbus_2common_2types_8hpp_source.html">types.hpp</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><b>otbr</b></li><li class="navelem"><b>DBus</b></li><li class="navelem"><a class="el" href="../../de/d00/structotbr_1_1DBus_1_1ExternalRoute.html">ExternalRoute</a></li>
-    <li class="footer">Generated on Fri Jan 8 2021 12:38:42 for openthread-br by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>
