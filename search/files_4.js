@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['instance_5fparams_2ecpp',['instance_params.cpp',['../d8/d0e/instance__params_8cpp.html',1,'']]],
-  ['instance_5fparams_2ehpp',['instance_params.hpp',['../dd/db1/instance__params_8hpp.html',1,'']]]
+  ['error_2ehpp',['error.hpp',['../d9/d99/error_8hpp.html',1,'']]],
+  ['error_5fhelper_2ehpp',['error_helper.hpp',['../da/da9/error__helper_8hpp.html',1,'']]],
+  ['event_5femitter_2ehpp',['event_emitter.hpp',['../d9/def/event__emitter_8hpp.html',1,'']]]
 ];

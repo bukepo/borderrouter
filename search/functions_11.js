@@ -5,5 +5,6 @@ var searchData=
   ['tolocator',['ToLocator',['../d2/dfe/classotbr_1_1Ip6Address.html#ab645c08692523c186f2f1234671da3bc',1,'otbr::Ip6Address']]],
   ['tosolicitednodemulticastaddress',['ToSolicitedNodeMulticastAddress',['../d2/dfe/classotbr_1_1Ip6Address.html#a18990d0ba95c35dc3f5b018a8fb27bbd',1,'otbr::Ip6Address']]],
   ['tostring',['ToString',['../d2/dfe/classotbr_1_1Ip6Address.html#a3f7999dd25add01aa2b52a104de17b9e',1,'otbr::Ip6Address::ToString()'],['../da/d3a/classotbr_1_1Ip6Prefix.html#a0d6c20d5ebc3ee10819cad4e409961a6',1,'otbr::Ip6Prefix::ToString()'],['../db/d8f/classotbr_1_1MacAddress.html#a62969db1a12fb7a4910d75cb830796c7',1,'otbr::MacAddress::ToString()']]],
-  ['tryresumenetwork',['TryResumeNetwork',['../d4/d44/classotbr_1_1agent_1_1ThreadHelper.html#a091901bf4e19a0a2ab3a93ac701102fa',1,'otbr::agent::ThreadHelper']]]
+  ['tryresumenetwork',['TryResumeNetwork',['../d4/d44/classotbr_1_1agent_1_1ThreadHelper.html#a091901bf4e19a0a2ab3a93ac701102fa',1,'otbr::agent::ThreadHelper']]],
+  ['tupletodbusmessage',['TupleToDBusMessage',['../d0/dea/dbus__message__helper_8hpp.html#a569a0d7730d586e49fece349ee137306',1,'otbr::DBus']]]
 ];

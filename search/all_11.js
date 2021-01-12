@@ -36,7 +36,11 @@ var searchData=
   ['steeringdata',['SteeringData',['../d6/de8/classotbr_1_1SteeringData.html',1,'otbr']]],
   ['stop',['Stop',['../da/ddc/classotbr_1_1Mdns_1_1Publisher.html#adeb467b4e2b34bd533156005f56e0844',1,'otbr::Mdns::Publisher::Stop()'],['../db/dc6/classotbr_1_1Mdns_1_1PublisherAvahi.html#aba76904f7877bb9b96aaa13862bf39b5',1,'otbr::Mdns::PublisherAvahi::Stop()'],['../de/d29/classotbr_1_1Mdns_1_1PublisherMDnsSd.html#a1dc033516c3b4b152d1a10f1d8a0cf97',1,'otbr::Mdns::PublisherMDnsSd::Stop()']]],
   ['stopwebserver',['StopWebServer',['../d6/d83/classotbr_1_1Web_1_1WebServer.html#acde2416312f5b4c0102cc1c8f18d2723',1,'otbr::Web::WebServer']]],
+  ['strcpy_5fsafe',['strcpy_safe',['../d4/deb/strcpy__utils_8hpp.html#a50730d55221ad008064cfc4e78374c7e',1,'strcpy_utils.cpp']]],
+  ['strcpy_5futils_2ehpp',['strcpy_utils.hpp',['../d4/deb/strcpy__utils_8hpp.html',1,'']]],
   ['string2jsonstring',['String2JsonString',['../d0/d6c/namespaceotbr_1_1rest_1_1Json.html#a9825acdf9bc3300aa48852d9a193a619',1,'otbr::rest::Json']]],
+  ['successordie',['SuccessOrDie',['../da/d7b/code__utils_8hpp.html#af38b11ab2e5093086804add4a45f274a',1,'code_utils.hpp']]],
+  ['successorexit',['SuccessOrExit',['../da/d7b/code__utils_8hpp.html#ae0d90ad12fb508f30107b1931f970ab1',1,'code_utils.hpp']]],
   ['system_5futils_2ecpp',['system_utils.cpp',['../d1/da2/system__utils_8cpp.html',1,'']]],
   ['system_5futils_2ehpp',['system_utils.hpp',['../d4/d44/system__utils_8hpp.html',1,'']]]
 ];
