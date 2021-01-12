@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">openthread-br
-   &#160;<span id="projectnumber">0.2.0-71ab829</span>
+   &#160;<span id="projectnumber">0.2.0-886de50</span>
    </div>
   </td>
  </tr>
@@ -64,6 +64,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">client_error.hpp File Reference</div>  </div>
@@ -75,69 +76,22 @@ $(function() {
 </div>
 <p><a href="../../db/d12/client__error_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:df/de9/namespaceotbr_1_1DBus"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/de9/namespaceotbr_1_1DBus.html">otbr::DBus</a></td></tr>
+<tr class="memdesc:df/de9/namespaceotbr_1_1DBus"><td class="mdescLeft">&#160;</td><td class="mdescRight">This namespace contains OpenThread Border Router <a class="el" href="../../df/de9/namespaceotbr_1_1DBus.html" title="This namespace contains OpenThread Border Router DBus API. ">DBus</a> API. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a01663aee099dd6dffd4ea608f9cf5473"><td class="memItemLeft" align="right" valign="top">ClientError&#160;</td><td class="memItemRight" valign="bottom"><b>otbr::DBus::ConvertFromDBusErrorName</b> (const std::string &amp;aErrorName)</td></tr>
+<tr class="memitem:a01663aee099dd6dffd4ea608f9cf5473"><td class="memItemLeft" align="right" valign="top">ClientError&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/de9/namespaceotbr_1_1DBus.html#a01663aee099dd6dffd4ea608f9cf5473">otbr::DBus::ConvertFromDBusErrorName</a> (const std::string &amp;aErrorName)</td></tr>
 <tr class="separator:a01663aee099dd6dffd4ea608f9cf5473"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38d1eb48fd1059e3d245f0e9e0dcc306"><td class="memItemLeft" align="right" valign="top">ClientError&#160;</td><td class="memItemRight" valign="bottom"><b>otbr::DBus::CheckErrorMessage</b> (DBusMessage *aMessage)</td></tr>
+<tr class="memitem:a38d1eb48fd1059e3d245f0e9e0dcc306"><td class="memItemLeft" align="right" valign="top">ClientError&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/de9/namespaceotbr_1_1DBus.html#a38d1eb48fd1059e3d245f0e9e0dcc306">otbr::DBus::CheckErrorMessage</a> (DBusMessage *aMessage)</td></tr>
 <tr class="separator:a38d1eb48fd1059e3d245f0e9e0dcc306"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file includes functions for handling d-bus client errors. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="file_a38d1eb48fd1059e3d245f0e9e0dcc306"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a38d1eb48fd1059e3d245f0e9e0dcc306">&#9670;&nbsp;</a></span>CheckErrorMessage()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ClientError otbr::DBus::CheckErrorMessage </td>
-          <td>(</td>
-          <td class="paramtype">DBusMessage *&#160;</td>
-          <td class="paramname"><em>aMessage</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>This function converts an DBus reply message to otError.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">aMessage</td><td>The dbus reply message.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The error code encoded in the message. </dd></dl>
-
-</div>
-</div>
-<a id="file_a01663aee099dd6dffd4ea608f9cf5473"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a01663aee099dd6dffd4ea608f9cf5473">&#9670;&nbsp;</a></span>ConvertFromDBusErrorName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ClientError otbr::DBus::ConvertFromDBusErrorName </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>aErrorName</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>This function converts an error string to client error.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">aErrorName</td><td>The error string.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The corresponding otError. OT_ERROR_GENERIC will be returned if the error name is not defined in OpenThread. </dd></dl>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
