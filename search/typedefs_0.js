@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['statehandler',['StateHandler',['../de/d7c/mdns_8hpp.html#a2945bd8bcbced9a80c52d90cfc59cd7c',1,'otbr::Mdns']]]
+  ['statehandler',['StateHandler',['../da/ddc/classotbr_1_1Mdns_1_1Publisher.html#a606c109ff3092857eae8a7db0a199d11',1,'otbr::Mdns::Publisher']]]
 ];

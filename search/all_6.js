@@ -1,7 +1,9 @@
 var searchData=
 [
   ['get',['Get',['../d2/dd0/classotbr_1_1InstanceParams.html#a25f242442787cbc7eb7b0ed23f2a1d58',1,'otbr::InstanceParams::Get()'],['../d6/d8f/classotbr_1_1Crc16.html#ac4f699b3cdca9c2cdac55f44ca4c5d2b',1,'otbr::Crc16::Get()']]],
+  ['getactivedatasettlvs',['GetActiveDatasetTlvs',['../df/dcc/classotbr_1_1DBus_1_1ThreadApiDBus.html#a299f816e4b61fb5b08494e4481be7ece',1,'otbr::DBus::ThreadApiDBus']]],
   ['getavahipoll',['GetAvahiPoll',['../d5/d23/classotbr_1_1Mdns_1_1Poller.html#a12c7711328d9cb94ccb562931b6eacfc',1,'otbr::Mdns::Poller']]],
+  ['getbackboneifname',['GetBackboneIfName',['../d2/dd0/classotbr_1_1InstanceParams.html#add5646c234fbb35cb317dbaa35e0c082',1,'otbr::InstanceParams']]],
   ['getbloomfilter',['GetBloomFilter',['../d6/de8/classotbr_1_1SteeringData.html#af9cd3916d56098e8f5ebbefca84392bd',1,'otbr::SteeringData']]],
   ['getbody',['GetBody',['../da/df0/classotbr_1_1rest_1_1Request.html#a28358ce62ac52e27c96d3a1e9d9263a3',1,'otbr::rest::Request::GetBody()'],['../d2/db0/classotbr_1_1rest_1_1Response.html#a5f82f4e3d5ab9b4428525dd12b9dfdc9',1,'otbr::rest::Response::GetBody()']]],
   ['getccafailurerate',['GetCcaFailureRate',['../df/dcc/classotbr_1_1DBus_1_1ThreadApiDBus.html#ac593868629f70b26a85308b49b995c7f',1,'otbr::DBus::ThreadApiDBus']]],
@@ -35,9 +37,8 @@ var searchData=
   ['getnow',['GetNow',['../de/d99/time_8hpp.html#a6aae84ad211a34cbb6c626dc9fd54455',1,'otbr']]],
   ['getpanid',['GetPanId',['../df/dcc/classotbr_1_1DBus_1_1ThreadApiDBus.html#ab44ad11c3bc26ee9c01587e4453b6ab9',1,'otbr::DBus::ThreadApiDBus']]],
   ['getpartitionid',['GetPartitionId',['../df/dcc/classotbr_1_1DBus_1_1ThreadApiDBus.html#a5593a369000b953ccdaaa4e60bbfb327',1,'otbr::DBus::ThreadApiDBus']]],
+  ['getradioregion',['GetRadioRegion',['../df/dcc/classotbr_1_1DBus_1_1ThreadApiDBus.html#a13011428d3f24c2090fb374f210d8c04',1,'otbr::DBus::ThreadApiDBus']]],
   ['getradiotxpower',['GetRadioTxPower',['../df/dcc/classotbr_1_1DBus_1_1ThreadApiDBus.html#a8b3da95b7623cfcfd5babdb94b9d507f',1,'otbr::DBus::ThreadApiDBus']]],
-  ['getregion',['GetRegion',['../df/dcc/classotbr_1_1DBus_1_1ThreadApiDBus.html#af37bbbd2865b9e57db5648d13f7ed150',1,'otbr::DBus::ThreadApiDBus']]],
-  ['getregioncode',['GetRegionCode',['../db/d17/classotbr_1_1Ncp_1_1ControllerOpenThread.html#a8e0d328da9fa976d56084f2afd825559',1,'otbr::Ncp::ControllerOpenThread']]],
   ['getrestwebserver',['GetRestWebServer',['../d8/d5d/classotbr_1_1rest_1_1RestWebServer.html#a3be8d154b91802eed5add67f0a04ca09',1,'otbr::rest::RestWebServer']]],
   ['getrloc16',['GetRloc16',['../df/dcc/classotbr_1_1DBus_1_1ThreadApiDBus.html#a9fb9b83f4625bd851f9d1457d3b6b5b5',1,'otbr::DBus::ThreadApiDBus']]],
   ['getrouterid',['GetRouterId',['../df/dcc/classotbr_1_1DBus_1_1ThreadApiDBus.html#a27ebc59a1b4014b13093afc4a08250ea',1,'otbr::DBus::ThreadApiDBus']]],

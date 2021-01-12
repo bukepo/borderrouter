@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['region_5fcode_2ehpp',['region_code.hpp',['../d3/d6d/region__code_8hpp.html',1,'']]],
   ['registergetpropertyhandler',['RegisterGetPropertyHandler',['../da/d4d/classotbr_1_1DBus_1_1DBusObject.html#aa97d32189556dbfd02f84d46817b18e7',1,'otbr::DBus::DBusObject']]],
   ['registermethod',['RegisterMethod',['../da/d4d/classotbr_1_1DBus_1_1DBusObject.html#a260123f74ab6d1781ad12966c774ba53',1,'otbr::DBus::DBusObject']]],
   ['registerresethandler',['RegisterResetHandler',['../db/d17/classotbr_1_1Ncp_1_1ControllerOpenThread.html#ac48d8ebc69b8654edc2c071648d3e7a8',1,'otbr::Ncp::ControllerOpenThread']]],

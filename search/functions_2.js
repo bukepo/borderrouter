@@ -15,6 +15,6 @@ var searchData=
   ['converttodbuserrorname',['ConvertToDBusErrorName',['../df/de9/namespaceotbr_1_1DBus.html#a58c42079fc5b54e90b4246dbbd93a221',1,'otbr::DBus']]],
   ['copyto',['CopyTo',['../d2/dfe/classotbr_1_1Ip6Address.html#af17eb7c1fd8a9c5d54434fbd84c3f173',1,'otbr::Ip6Address::CopyTo(struct sockaddr_in6 &amp;aSockAddr) const'],['../d2/dfe/classotbr_1_1Ip6Address.html#a2edfb162437d6a4c48edd09120193cee',1,'otbr::Ip6Address::CopyTo(struct in6_addr &amp;aIn6Addr) const']]],
   ['crc16',['Crc16',['../d6/d8f/classotbr_1_1Crc16.html#a5660386f9d83d77b3376d4dc4360a48d',1,'otbr::Crc16']]],
-  ['create',['Create',['../db/dae/group__border-router-ncp.html#ga9f7019d3b0be9d173e424bfe27c3efb1',1,'otbr::Ncp::Controller::Create()'],['../da/ddc/classotbr_1_1Mdns_1_1Publisher.html#afe1f8bf736b77bc59ef8da1edc6cf390',1,'otbr::Mdns::Publisher::Create()']]],
+  ['create',['Create',['../db/dae/group__border-router-ncp.html#ga9f7019d3b0be9d173e424bfe27c3efb1',1,'otbr::Ncp::Controller::Create()'],['../da/ddc/classotbr_1_1Mdns_1_1Publisher.html#ac41f4e7c1fdc6266ef308b20e49dad8a',1,'otbr::Mdns::Publisher::Create()']]],
   ['cstring2jsonstring',['CString2JsonString',['../d0/d6c/namespaceotbr_1_1rest_1_1Json.html#a720cab2892abff5045282cf7bcc9592a',1,'otbr::rest::Json']]]
 ];

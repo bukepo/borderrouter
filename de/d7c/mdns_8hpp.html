@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">openthread-br
-   &#160;<span id="projectnumber">0.2.0-886de50</span>
+   &#160;<span id="projectnumber">0.2.0-8eb8074</span>
    </div>
   </td>
  </tr>
@@ -64,14 +64,13 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
 <div class="title">mdns.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;sys/select.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;sys/select.h&gt;</code><br />
 <code>#include &quot;common/types.hpp&quot;</code><br />
 </div>
 <p><a href="../../de/d7c/mdns_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -80,67 +79,12 @@ $(function() {
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/ddc/classotbr_1_1Mdns_1_1Publisher.html">otbr::Mdns::Publisher</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a2945bd8bcbced9a80c52d90cfc59cd7c"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d7c/mdns_8hpp.html#a2945bd8bcbced9a80c52d90cfc59cd7c">otbr::Mdns::StateHandler</a>) (void *aContext, State aState)</td></tr>
-<tr class="separator:a2945bd8bcbced9a80c52d90cfc59cd7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:af5c39542e082c4e8980383d2ca486f5f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d7c/mdns_8hpp.html#af5c39542e082c4e8980383d2ca486f5f">otbr::Mdns::State</a> { <a class="el" href="../../de/d7c/mdns_8hpp.html#af5c39542e082c4e8980383d2ca486f5fab57e922e1b8d0125deaf6c6f62232aa7">otbr::Mdns::kStateIdle</a>, 
-<a class="el" href="../../de/d7c/mdns_8hpp.html#af5c39542e082c4e8980383d2ca486f5facec3e8bf0e4a20942e2df02b5c83bbb6">otbr::Mdns::kStateReady</a>
- }</td></tr>
-<tr class="separator:af5c39542e082c4e8980383d2ca486f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dee/structotbr_1_1Mdns_1_1Publisher_1_1TxtEntry.html">otbr::Mdns::Publisher::TxtEntry</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file includes definition for MDNS service. </p>
-</div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="file_a2945bd8bcbced9a80c52d90cfc59cd7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a2945bd8bcbced9a80c52d90cfc59cd7c">&#9670;&nbsp;</a></span>StateHandler</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef void(* otbr::Mdns::StateHandler) (void *aContext, State aState)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>This function pointer is called when MDNS service state changed.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">aContext</td><td>A pointer to application-specific context. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">aState</td><td>The new state. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="file_af5c39542e082c4e8980383d2ca486f5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_af5c39542e082c4e8980383d2ca486f5f">&#9670;&nbsp;</a></span>State</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="../../de/d7c/mdns_8hpp.html#af5c39542e082c4e8980383d2ca486f5f">otbr::Mdns::State</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>MDNS state values. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af5c39542e082c4e8980383d2ca486f5fab57e922e1b8d0125deaf6c6f62232aa7"></a>kStateIdle&#160;</td><td class="fielddoc"><p>Unable to publishing service. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="af5c39542e082c4e8980383d2ca486f5facec3e8bf0e4a20942e2df02b5c83bbb6"></a>kStateReady&#160;</td><td class="fielddoc"><p>Ready for publishing service. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

@@ -32,6 +32,7 @@ var searchData=
   ['mlqi',['mLqi',['../d2/da8/structotbr_1_1DBus_1_1ActiveScanResult.html#a6ee63e936089a913445c30f8a534fcac',1,'otbr::DBus::ActiveScanResult']]],
   ['mmessageerrorrate',['mMessageErrorRate',['../db/d06/structotbr_1_1DBus_1_1ChildInfo.html#a05c911116e7656f845cfd06ff2abb10e',1,'otbr::DBus::ChildInfo::mMessageErrorRate()'],['../d2/d47/structotbr_1_1DBus_1_1NeighborInfo.html#ae46b67c5053024e0fb42cf66f48615b8',1,'otbr::DBus::NeighborInfo::mMessageErrorRate()']]],
   ['mmleframecounter',['mMleFrameCounter',['../d2/d47/structotbr_1_1DBus_1_1NeighborInfo.html#a9e4b9b4721a5f762c7ac74a337cf3411',1,'otbr::DBus::NeighborInfo']]],
+  ['mname',['mName',['../d0/dee/structotbr_1_1Mdns_1_1Publisher_1_1TxtEntry.html#a1ece56a4c1dd8beef482064774b748fa',1,'otbr::Mdns::Publisher::TxtEntry']]],
   ['mnetworkdata',['mNetworkData',['../d1/d82/structotbr_1_1DBus_1_1LinkModeConfig.html#a4d76fd7e83e0ceae739889949d1e0598',1,'otbr::DBus::LinkModeConfig']]],
   ['mnetworkdataversion',['mNetworkDataVersion',['../db/d06/structotbr_1_1DBus_1_1ChildInfo.html#a1eff208aa7481453e31871710dbe9b46',1,'otbr::DBus::ChildInfo']]],
   ['mnetworkname',['mNetworkName',['../d2/da8/structotbr_1_1DBus_1_1ActiveScanResult.html#a171dd1c157602e90f16997a84c228f65',1,'otbr::DBus::ActiveScanResult']]],
@@ -89,6 +90,8 @@ var searchData=
   ['mtxsuccess',['mTxSuccess',['../da/d27/structotbr_1_1DBus_1_1IpCounters.html#ac4bd42863856df69429e47cc9aa6e661',1,'otbr::DBus::IpCounters']]],
   ['mtxtotal',['mTxTotal',['../d6/d98/structotbr_1_1DBus_1_1MacCounters.html#a0a1b4aeae89f481c351aab91ef500ffb',1,'otbr::DBus::MacCounters']]],
   ['mtxunicast',['mTxUnicast',['../d6/d98/structotbr_1_1DBus_1_1MacCounters.html#ae0f9b9ab554aeddc799de785fa8308ef',1,'otbr::DBus::MacCounters']]],
+  ['mvalue',['mValue',['../d0/dee/structotbr_1_1Mdns_1_1Publisher_1_1TxtEntry.html#a10c992abd45820d2bf8b75c66898ba1c',1,'otbr::Mdns::Publisher::TxtEntry']]],
+  ['mvaluelength',['mValueLength',['../d0/dee/structotbr_1_1Mdns_1_1Publisher_1_1TxtEntry.html#a4b1fbc493a6dfd6a8878f84403de3201',1,'otbr::Mdns::Publisher::TxtEntry']]],
   ['mversion',['mVersion',['../d2/da8/structotbr_1_1DBus_1_1ActiveScanResult.html#a08d36a98dd0c379c2be3accbbc381eb2',1,'otbr::DBus::ActiveScanResult']]],
   ['mweighting',['mWeighting',['../dd/d1d/structotbr_1_1DBus_1_1LeaderData.html#a00b363143b07704d4c77e345ba884162',1,'otbr::DBus::LeaderData']]]
 ];

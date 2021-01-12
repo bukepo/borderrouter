@@ -26,6 +26,6 @@ var searchData=
   ['crc16',['Crc16',['../d6/d8f/classotbr_1_1Crc16.html',1,'otbr::Crc16'],['../d6/d8f/classotbr_1_1Crc16.html#a5660386f9d83d77b3376d4dc4360a48d',1,'otbr::Crc16::Crc16()']]],
   ['crc16_2ecpp',['crc16.cpp',['../d7/dd9/crc16_8cpp.html',1,'']]],
   ['crc16_2ehpp',['crc16.hpp',['../d4/d31/crc16_8hpp.html',1,'']]],
-  ['create',['Create',['../db/dae/group__border-router-ncp.html#ga9f7019d3b0be9d173e424bfe27c3efb1',1,'otbr::Ncp::Controller::Create()'],['../da/ddc/classotbr_1_1Mdns_1_1Publisher.html#afe1f8bf736b77bc59ef8da1edc6cf390',1,'otbr::Mdns::Publisher::Create()']]],
+  ['create',['Create',['../db/dae/group__border-router-ncp.html#ga9f7019d3b0be9d173e424bfe27c3efb1',1,'otbr::Ncp::Controller::Create()'],['../da/ddc/classotbr_1_1Mdns_1_1Publisher.html#ac41f4e7c1fdc6266ef308b20e49dad8a',1,'otbr::Mdns::Publisher::Create()']]],
   ['cstring2jsonstring',['CString2JsonString',['../d0/d6c/namespaceotbr_1_1rest_1_1Json.html#a720cab2892abff5045282cf7bcc9592a',1,'otbr::rest::Json']]]
 ];
